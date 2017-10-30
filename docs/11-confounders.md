@@ -158,7 +158,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ##  [7] blob_1.1.0              GenomeInfoDbData_0.99.0
 ##  [9] vipor_0.4.5             yaml_2.1.14            
 ## [11] RSQLite_2.0             backports_1.1.1        
-## [13] lattice_0.20-34         glue_1.1.1             
+## [13] lattice_0.20-34         glue_1.2.0             
 ## [15] limma_3.32.10           digest_0.6.12          
 ## [17] XVector_0.16.0          colorspace_1.3-2       
 ## [19] cowplot_0.8.0           htmltools_0.3.6        
@@ -167,7 +167,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [25] pkgconfig_2.0.1         biomaRt_2.32.1         
 ## [27] bookdown_0.5            zlibbioc_1.22.0        
 ## [29] xtable_1.8-2            scales_0.5.0           
-## [31] tibble_1.3.4            lazyeval_0.2.0         
+## [31] tibble_1.3.4            lazyeval_0.2.1         
 ## [33] magrittr_1.5            mime_0.5               
 ## [35] memoise_1.1.0           evaluate_0.10.1        
 ## [37] beeswarm_0.2.3          shinydashboard_0.6.1   

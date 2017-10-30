@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="construction-of-expression-matrix.html">
+<link rel="prev" href="seurat-chapter.html">
+<link rel="next" href="advanced-exercises.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -341,189 +341,114 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-single-cell-rna-seq" class="section level1">
-<h1><span class="header-section-number">2</span> Introduction to single-cell RNA-seq</h1>
-<div id="bulk-rna-seq" class="section level2">
-<h2><span class="header-section-number">2.1</span> Bulk RNA-seq</h2>
+<div id="ideal-scrnaseq-pipeline-as-of-oct-2017" class="section level1">
+<h1><span class="header-section-number">6</span> “Ideal” scRNAseq pipeline (as of Oct 2017)</h1>
+<div id="experimental-design" class="section level2">
+<h2><span class="header-section-number">6.1</span> Experimental Design</h2>
 <ul>
-<li>A major breakthrough (replaced microarrays) in the late 00’s and has been widely used since</li>
-<li>Measures the <strong>average expression level</strong> for each gene across a large population of input cells</li>
-<li>Useful for comparative transcriptomics, e.g. samples of the same tissue from different species</li>
-<li>Useful for quantifying expression signatures from ensembles, e.g. in disease studies</li>
-<li><strong>Insufficient</strong> for studying heterogeneous systems, e.g. early development studies, complex tissues (brain)</li>
-<li>Does <strong>not</strong> provide insights into the stochastic nature of gene expression</li>
-</ul>
-</div>
-<div id="scrna-seq" class="section level2">
-<h2><span class="header-section-number">2.2</span> scRNA-seq</h2>
+<li>Avoid confounding biological and batch effects (Figure <a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#fig:pipeline-batches">6.1</a>)
 <ul>
-<li>A <strong>new</strong> technology, first publication by <span class="citation">(Tang et al. <a href="#ref-Tang2009-bu">2009</a>)</span></li>
-<li>Did not gain widespread popularity until <a href="https://www.ohio.edu/bioinformatics/upload/Single-Cell-RNA-seq-Method-of-the-Year-2013.pdf">~2014</a> when new protocols and lower sequencing costs made it more accessible</li>
-<li>Measures the <strong>distribution of expression levels</strong> for each gene across a population of cells</li>
-<li>Allows to study new biological questions in which <strong>cell-specific changes in transcriptome are important</strong>, e.g. cell type identification, heterogeneity of cell responses, stochasticity of gene expression, inference of gene regulatory networks across the cells.</li>
-<li>Datasets range <strong>from <span class="math inline">\(10^2\)</span> to <span class="math inline">\(10^6\)</span> cells</strong> and increase in size every year</li>
-<li>Currently there are several different protocols in use, e.g. SMART-seq2 <span class="citation">(Picelli et al. <a href="#ref-Picelli2013-sb">2013</a>)</span>, CELL-seq <span class="citation">(Hashimshony et al. <a href="#ref-Hashimshony2012-kd">2012</a>)</span> and Drop-seq <span class="citation">(Macosko et al. <a href="#ref-Macosko2015-ix">2015</a>)</span></li>
-<li>There are also commercial platforms available, including the <a href="https://www.fluidigm.com/products/c1-system">Fluidigm C1</a>, <a href="https://www.wafergen.com/products/icell8-single-cell-system">Wafergen ICELL8</a> and the <a href="https://www.10xgenomics.com/single-cell/">10X Genomics Chromium</a></li>
-<li>Several computational analysis methods from bulk RNA-seq <strong>can</strong> be used</li>
-<li><strong>In most cases</strong> computational analysis requires adaptation of the existing methods or development of new ones</li>
+<li>Multiple conditions should be captured on the same chip if possible</li>
+<li>Perform multiple replicates of each condition where replicates of different conditions should be performed together if possible</li>
+<li>Statistics cannot correct a completely confounded experiment!</li>
+</ul></li>
+<li>Unique molecular identifiers
+<ul>
+<li>Greatly reduce noise in data</li>
+<li>May reduce gene detection rates (unclear if it is UMIs or other protocol differences)</li>
+<li>Lose splicing information</li>
+<li>Use longer UMIs (~10bp)</li>
+<li>Correct for sequencing errors in UMIs using <a href="https://github.com/CGATOxford/UMI-tools">UMI-tools</a></li>
+</ul></li>
+<li>Spike-ins
+<ul>
+<li>Useful for quality control</li>
+<li>May be useful for normalizing read counts</li>
+<li>Can be used to approximate cell-size/RNA content (if relevant to biological question)</li>
+<li>Often exhibit higher noise than endogenous genes (pipetting errors, mixture quality)</li>
+<li>Requires more sequencing to get enough endogenous reads per cell</li>
+</ul></li>
+<li>Cell number vs Read depth
+<ul>
+<li>Gene detection plateaus starting from 1 million reads per cell</li>
+<li>Transcription factor detection (regulatory networks) require high read depth and most sensitive protocols (i.e. Fluidigm C1)</li>
+<li>Cell clustering &amp; cell-type identification benefits from large number of cells and doesn’t requireas high sequencing depth (~100,000 reads per cell).</li>
+</ul></li>
 </ul>
-</div>
-<div id="workflow" class="section level2">
-<h2><span class="header-section-number">2.3</span> Workflow</h2>
-<div class="figure" style="text-align: center"><span id="fig:intro-rna-seq-workflow"></span>
-<img src="figures/RNA-Seq_workflow-5.pdf.jpg" alt="Single cell sequencing (taken from Wikipedia)" width="90%" />
+<div class="figure" style="text-align: center"><span id="fig:pipeline-batches"></span>
+<img src="figures/Pipeline-batches.png" alt="Appropriate approaches to batch effects in scRNASeq. Red arrows indicate batch effects which are (pale) or are not (vibrant) correctable through batch-correction." width="90%" />
 <p class="caption">
-Figure 2.1: Single cell sequencing (taken from Wikipedia)
+Figure 6.1: Appropriate approaches to batch effects in scRNASeq. Red arrows indicate batch effects which are (pale) or are not (vibrant) correctable through batch-correction.
 </p>
 </div>
-<p>Overall, experimental scRNA-seq protocols are similar to the methods used for bulk RNA-seq. We will be discussing some of the most common approaches in the next chapter.</p>
 </div>
-<div id="computational-analysis" class="section level2">
-<h2><span class="header-section-number">2.4</span> Computational Analysis</h2>
-<p>This course is concerned with the computational analysis of the data obtained from scRNA-seq experiments. The first steps (yellow) are general for any highthroughput sequencing data. Later steps (orange) require a mix of existing RNASeq analysis methods and novel methods to address the technical difference of scRNASeq. Finally the biological interpretation <strong>should</strong> be analyzed with methods specifically developed for scRNASeq.</p>
-<div class="figure" style="text-align: center"><span id="fig:intro-flowchart"></span>
-<img src="figures/flowchart.png" alt="Flowchart of the scRNA-seq analysis" width="65%" />
-<p class="caption">
-Figure 2.2: Flowchart of the scRNA-seq analysis
-</p>
-</div>
-<p>There are several reviews of the scRNA-seq analysis available including <span class="citation">(Stegle, Teichmann, and Marioni <a href="#ref-Stegle2015-uv">2015</a>)</span>.</p>
-<p>Today, there are also several different platforms available for carrying out one or more steps in the flowchart above. These include:</p>
+<div id="processing-reads" class="section level2">
+<h2><span class="header-section-number">6.2</span> Processing Reads</h2>
 <ul>
-<li><a href="https://github.com/VCCRI/Falco/">Falco</a> a single-cell RNA-seq processing framework on the cloud.</li>
-<li><a href="https://github.com/YosefLab/scone">SCONE</a> (Single-Cell Overview of Normalized Expression), a package for single-cell RNA-seq data quality control and normalization.</li>
-<li><a href="http://satijalab.org/seurat/">Seurat</a> is an R package designed for QC, analysis, and exploration of single cell RNA-seq data.</li>
-<li><a href="https://asap.epfl.ch/">ASAP</a> (Automated Single-cell Analysis Pipeline) is an interactive web-based platform for single-cell analysis.</li>
+<li>Read QC &amp; Trimming
+<ul>
+<li><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FASTQC</a>, <a href="http://cutadapt.readthedocs.io/en/stable/index.html">cutadapt</a></li>
+</ul></li>
+<li>Mapping
+<ul>
+<li>Small datasets or UMI datasets: align to genome/transcriptome using <a href="https://github.com/alexdobin/STAR">STAR</a></li>
+<li>Large datasets: pseudo-alignment with <a href="http://salmon.readthedocs.io/en/latest/salmon.html">Salmon</a> or <a href="https://pachterlab.github.io/kallisto/about">kallisto</a></li>
+</ul></li>
+<li>Quantification
+<ul>
+<li>Small dataset, no UMIs : <a href="http://subread.sourceforge.net/">featureCounts</a></li>
+<li>Large datasets, no UMIs: <a href="http://salmon.readthedocs.io/en/latest/salmon.html">Salmon</a>, <a href="https://pachterlab.github.io/kallisto/about">kallisto</a></li>
+<li>UMI dataset : <a href="https://github.com/CGATOxford/UMI-tools">UMI-tools</a> + <a href="http://subread.sourceforge.net/">featureCounts</a></li>
+</ul></li>
 </ul>
 </div>
-<div id="challenges" class="section level2">
-<h2><span class="header-section-number">2.5</span> Challenges</h2>
-<p>The main difference between bulk and single cell RNA-seq is that each sequencing library represents a single cell, instead of a population of cells. Therefore, significant attention has to be paid to comparison of the results from different cells (sequencing libraries). The main sources of discrepancy between the libraries are:</p>
+<div id="preparing-expression-matrix" class="section level2">
+<h2><span class="header-section-number">6.3</span> Preparing Expression Matrix</h2>
 <ul>
-<li><strong>Amplification</strong> (up to 1 million fold)</li>
-<li><strong>Gene ‘dropouts’</strong> in which a gene is observed at a moderate expression level in one cell but is not detected in another cell <span class="citation">(Kharchenko, Silberstein, and Scadden <a href="#ref-Kharchenko2014-ts">2014</a>)</span>.</li>
+<li>Cell QC
+<ul>
+<li><a href="http://bioconductor.org/packages/scater">scater</a></li>
+<li>consider: mtRNA, rRNA, spike-ins (if available), number of detected genes per cell, total reads/molecules per cell</li>
+</ul></li>
+<li>Library Size Normalization
+<ul>
+<li><a href="http://bioconductor.org/packages/scran">scran</a></li>
+</ul></li>
+<li>Batch correction (if appropriate)
+<ul>
+<li>Replicates/Confounded <a href="http://bioconductor.org/packages/RUVSeq">RUVs</a></li>
+<li>Unknown or unbalanced biological groups <a href="https://bioconductor.org/packages/release/bioc/html/scran.html">mnnCorrect</a></li>
+<li>Balanced design <a href="https://bioconductor.org/packages/release/bioc/html/sva.html">ComBat</a></li>
+</ul></li>
 </ul>
-<p>In both cases the discrepancies are introduced due to low starting amounts of transcripts since the RNA comes from one cell only. Improving the transcript capture efficiency and reducing the amplification bias are currently active areas of research. However, as we shall see in this course, it is possible to alleviate some of these issues through proper normalization and corrections.</p>
+</div>
+<div id="biological-interpretation" class="section level2">
+<h2><span class="header-section-number">6.4</span> Biological Interpretation</h2>
+<ul>
+<li>Feature Selection
+<ul>
+<li><a href="http://bioconductor.org/packages/M3Drop">M3Drop</a></li>
+</ul></li>
+<li>Clustering and Marker Gene Identification
+<ul>
+<li><span class="math inline">\(\le 5000\)</span> cells : <a href="http://bioconductor.org/packages/SC3">SC3</a></li>
+<li><span class="math inline">\(&gt;5000\)</span> cells : <a href="http://satijalab.org/seurat/">Seurat</a></li>
+</ul></li>
+<li>Pseudotime
+<ul>
+<li>distinct timepoints: <a href="http://bioconductor.org/packages/TSCAN">TSCAN</a></li>
+<li>small dataset/unknown number of branches: <a href="https://bioconductor.org/packages/release/bioc/html/monocle.html">Monocle2</a></li>
+<li>large continuous dataset: <a href="http://bioconductor.org/packages/destiny">destiny</a></li>
+</ul></li>
+<li>Differential Expression
+<ul>
+<li>Small number of cells and few groups : <a href="http://hms-dbmi.github.io/scde/">scde</a></li>
+<li>Replicates with batch effects : mixture/linear models</li>
+<li>Balanced batches: <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">edgeR</a> or <a href="https://bioconductor.org/packages/release/bioc/html/MAST.html">MAST</a></li>
+<li>Large datasets: Kruskal-Wallis test (all groups at once), or Wilcox-test (compare 2-groups at a time).</li>
+</ul></li>
+</ul>
 
-</div>
-<div id="experimental-methods" class="section level2">
-<h2><span class="header-section-number">2.6</span> Experimental methods</h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
-<img src="figures/moores-law.png" alt="Moore's law in single cell transcriptomics (image taken from [Svensson et al](https://arxiv.org/abs/1704.01379))" width="100%" />
-<p class="caption">
-Figure 2.3: Moore’s law in single cell transcriptomics (image taken from <a href="https://arxiv.org/abs/1704.01379">Svensson et al</a>)
-</p>
-</div>
-<p>Development of new methods and protocols for scRNA-seq is currently a very active area of research, and several protocols have been published over the last few years. An non-comprehensive list includes:</p>
-<ul>
-<li>CEL-seq <span class="citation">(Hashimshony et al. <a href="#ref-Hashimshony2012-kd">2012</a>)</span></li>
-<li>CEL-seq2 <span class="citation">(Hashimshony et al. <a href="#ref-Hashimshony2016-lx">2016</a>)</span></li>
-<li>Drop-seq <span class="citation">(Macosko et al. <a href="#ref-Macosko2015-ix">2015</a>)</span></li>
-<li>InDrop-seq <span class="citation">(Klein et al. <a href="#ref-Klein2015-kz">2015</a>)</span></li>
-<li>MARS-seq <span class="citation">(Jaitin et al. <a href="#ref-Jaitin2014-ko">2014</a>)</span></li>
-<li>SCRB-seq <span class="citation">(Soumillon et al. <a href="#ref-Soumillon2014-eu">2014</a>)</span></li>
-<li>Seq-well <span class="citation">(Gierahn et al. <a href="#ref-Gierahn2017-es">2017</a>)</span></li>
-<li>Smart-seq <span class="citation">(Picelli et al. <a href="#ref-Picelli2014-ic">2014</a>)</span></li>
-<li>Smart-seq2 <span class="citation">(Picelli et al. <a href="#ref-Picelli2014-ic">2014</a>)</span></li>
-<li><a href="http://www.clontech.com/US/Products/cDNA_Synthesis_and_Library_Construction/Next_Gen_Sequencing_Kits/Total_RNA-Seq/Universal_RNA_Seq_Random_Primed">SMARTer</a></li>
-<li>STRT-seq <span class="citation">(Islam et al. <a href="#ref-Islam2014-cn">2013</a>)</span></li>
-</ul>
-<p>The methods can be categorized in different ways, but the two most important aspects are <strong>quantification</strong> and <strong>capture</strong>.</p>
-<p>For quantification, there are two types, <strong>full-length</strong> and <strong>tag-based</strong>. The former tries to achieve a uniform read coverage of each transcript. By contrast, tag-based protocols only capture either the 5’- or 3’-end of each RNA. The choice of quantification method has important implications for what types of analyses the data can be used for. In theory, full-length protocols should provide an even coverage of transcripts, but as we shall see, there are often biases in the coverage. The main advantage of tag-based protocol is that they can be combined with unique molecular identifiers (UMIs) which can help improve the quantification (see chapter <a href="construction-of-expression-matrix.html#umichapter">3.6</a>). On the other hand, being restricted to one end of the transcript may reduce the mappability and it also makes it harder to distinguish different isoforms <span class="citation">(Archer et al. <a href="#ref-Archer2016-zq">2016</a>)</span>.</p>
-<p>The strategy used for capture determines throughput, how the cells can be selected as well as what kind of additional information besides the sequencing that can be obtained. The three most widely used options are <strong>microwell-</strong>, <strong>microfluidic-</strong> and <strong>droplet-</strong> based.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
-<img src="figures/300px-Microplates.jpg" alt="Image of microwell plates (image taken from Wikipedia)" width="70%" />
-<p class="caption">
-Figure 2.4: Image of microwell plates (image taken from Wikipedia)
-</p>
-</div>
-<p>For well-based platforms, cells are isolated using for example pipette or laser capture and placed in microfluidic wells. One advantage of well-based methods is that they can be combined with fluorescent activated cell sorting (FACS), making it possible to select cells based on surface markers. This strategy is thus very useful for situations when one wants to isolate a specific subset of cells for sequencing. Another advantage is that one can take pictures of the cells. The image provides an additional modality and a particularly useful application is to identify wells containg damaged cells or doublets. The main drawback of these methods is that they are often low-throughput and the amount of work required per cell may be considerable.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
-<img src="figures/fluidigmC1.jpg" alt="Image of a 96-well Fluidigm C1 chip (image taken from Fluidigm)" width="70%" />
-<p class="caption">
-Figure 2.5: Image of a 96-well Fluidigm C1 chip (image taken from Fluidigm)
-</p>
-</div>
-<p>Microfluidic platforms, such as <a href="https://www.fluidigm.com/products/c1-system#workflow">Fluidigm’s C1</a>, provide a more integrated system for capturing cells and for carrying out the reactions necessary for the library preparations. Thus, they provide a higher throughput than microwell based platforms. Typically, only around 10% of cells are captured in a microfluidic platform and thus they are not appropriate if one is dealing with rare cell-types or very small amounts of input. Moreover, the chip is relatively expensive, but since reactions can be carried out in a smaller volume money can be saved on reagents.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
-<img src="figures/drop-seq.png" alt="Schematic overview of the drop-seq method (Image taken from Macosko et al)" width="60%" />
-<p class="caption">
-Figure 2.6: Schematic overview of the drop-seq method (Image taken from Macosko et al)
-</p>
-</div>
-<p>The idea behind droplet based methods is to encapsulate each individual cell inside a nanoliter droplet together with a bead. The bead is loaded with the enzymes required to construct the library. In particular, each bead contains a unique barcode which is attached to all of the reads originating from that cell. Thus, all of the droplets can be pooled, sequenced together and the reads can subsequently be assigned to the cell of origin based on the barcodes. Droplet platforms typically have the highest throughput since the library preparation costs are on the order of <span class="math inline">\(.05\)</span> USD/cell. Instead, sequencing costs often become the limiting factor and a typical experiment the coverage is low with only a few thousand different transcripts detected <span class="citation">(Ziegenhain et al. <a href="#ref-Ziegenhain2017-cu">2017</a>)</span>.</p>
-</div>
-<div id="what-platform-to-use-for-my-experiment" class="section level2">
-<h2><span class="header-section-number">2.7</span> What platform to use for my experiment?</h2>
-<p>The most suitable platform depends on the biological question at hand. For example, if one is interested in characterizing the composition of a tissue, then a droplet-based method which will allow a very large number of cells to be captured is likely to be the most appropriate. On the other hand, if one is interesting in characterizing a rare cell-population for which there is a known surface marker, then it is probably best to enrich using FACS and then sequence a smaller number of cells.</p>
-<p>Clearly, full-length transcript quantification will be more appropriate if one is interested in studying different isoforms since tagged protocols are much more limited. By contrast, UMIs can only be used with tagged protocols and they can facilitate gene-level quantification.</p>
-<p>Two recent studies from the Enard group <span class="citation">(Ziegenhain et al. <a href="#ref-Ziegenhain2017-cu">2017</a>)</span> and the Teichmann group <span class="citation">(Svensson et al. <a href="#ref-Svensson2017-op">2017</a>)</span> have compared several different protocols. In their study, Ziegenhain et al compared five different protocols on the same sample of mouse embryonic stem cells (mESCs). By controlling for the number of cells as well as the sequencing depth, the authors were able to directly compare the sensitivity, noise-levels and costs of the different protocols. One example of their conclusions is illustrated in the figure below which shows the number of genes detected (for a given detection threshold) for the different methods. As you can see, there is almost a two-fold difference between drop-seq and Smart-seq2, suggesting that the choice of protocol can have a major impact on the study</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
-<img src="figures/ziegenhainEnardFig1.png" alt="Enard group study" width="60%" />
-<p class="caption">
-Figure 2.7: Enard group study
-</p>
-</div>
-<p>Svensson et al take a different approach by using synthetic transcripts (spike-ins, more about these later) with known concentrations to measure the accuracy and sensitivity of different protocols. Comparing a wide range of studies, they also reported substantial differences between the protocols.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
-<img src="figures/svenssonTeichmannFig2.png" alt="Teichmann group study" width="100%" />
-<p class="caption">
-Figure 2.8: Teichmann group study
-</p>
-</div>
-<p>As protocols are developed and computational methods for quantifying the technical noise are improved, it is likely that future studies will help us gain further insights regarding the strengths of the different methods. These comparative studies are helpful not only for helping researchers decide which protocol to use, but also for developing new methods as the benchmarking makes it possible to determine what strategies are the most useful ones.</p>
-
-</div>
-</div>
-<h3> References</h3>
-<div id="refs" class="references">
-<div id="ref-Tang2009-bu">
-<p>Tang, Fuchou, Catalin Barbacioru, Yangzhou Wang, Ellen Nordman, Clarence Lee, Nanlan Xu, Xiaohui Wang, et al. 2009. “mRNA-Seq Whole-Transcriptome Analysis of a Single Cell.” <em>Nat Meth</em> 6 (5). Springer Nature: 377–82. doi:<a href="https://doi.org/10.1038/nmeth.1315">10.1038/nmeth.1315</a>.</p>
-</div>
-<div id="ref-Picelli2013-sb">
-<p>Picelli, Simone, Åsa K Björklund, Omid R Faridani, Sven Sagasser, Gösta Winberg, and Rickard Sandberg. 2013. “Smart-Seq2 for Sensitive Full-Length Transcriptome Profiling in Single Cells.” <em>Nat Meth</em> 10 (11). Springer Nature: 1096–8. doi:<a href="https://doi.org/10.1038/nmeth.2639">10.1038/nmeth.2639</a>.</p>
-</div>
-<div id="ref-Hashimshony2012-kd">
-<p>Hashimshony, Tamar, Florian Wagner, Noa Sher, and Itai Yanai. 2012. “CEL-Seq: Single-cell RNA-Seq by Multiplexed Linear Amplification.” <em>Cell Reports</em> 2 (3). Elsevier BV: 666–73. doi:<a href="https://doi.org/10.1016/j.celrep.2012.08.003">10.1016/j.celrep.2012.08.003</a>.</p>
-</div>
-<div id="ref-Macosko2015-ix">
-<p>Macosko, Evan Z., Anindita Basu, Rahul Satija, James Nemesh, Karthik Shekhar, Melissa Goldman, Itay Tirosh, et al. 2015. “Highly Parallel Genome-Wide Expression Profiling of Individual Cells Using Nanoliter Droplets.” <em>Cell</em> 161 (5). Elsevier BV: 1202–14. doi:<a href="https://doi.org/10.1016/j.cell.2015.05.002">10.1016/j.cell.2015.05.002</a>.</p>
-</div>
-<div id="ref-Stegle2015-uv">
-<p>Stegle, Oliver, Sarah A. Teichmann, and John C. Marioni. 2015. “Computational and Analytical Challenges in Single-Cell Transcriptomics.” <em>Nat Rev Genet</em> 16 (3). Springer Nature: 133–45. doi:<a href="https://doi.org/10.1038/nrg3833">10.1038/nrg3833</a>.</p>
-</div>
-<div id="ref-Kharchenko2014-ts">
-<p>Kharchenko, Peter V, Lev Silberstein, and David T Scadden. 2014. “Bayesian Approach to Single-Cell Differential Expression Analysis.” <em>Nat Meth</em> 11 (7). Springer Nature: 740–42. doi:<a href="https://doi.org/10.1038/nmeth.2967">10.1038/nmeth.2967</a>.</p>
-</div>
-<div id="ref-Hashimshony2016-lx">
-<p>Hashimshony, Tamar, Naftalie Senderovich, Gal Avital, Agnes Klochendler, Yaron de Leeuw, Leon Anavy, Dave Gennert, et al. 2016. “CEL-Seq2: Sensitive Highly-Multiplexed Single-Cell RNA-Seq.” <em>Genome Biol</em> 17 (1). Springer Nature. doi:<a href="https://doi.org/10.1186/s13059-016-0938-8">10.1186/s13059-016-0938-8</a>.</p>
-</div>
-<div id="ref-Klein2015-kz">
-<p>Klein, Allon M., Linas Mazutis, Ilke Akartuna, Naren Tallapragada, Adrian Veres, Victor Li, Leonid Peshkin, David A. Weitz, and Marc W. Kirschner. 2015. “Droplet Barcoding for Single-Cell Transcriptomics Applied to Embryonic Stem Cells.” <em>Cell</em> 161 (5). Elsevier BV: 1187–1201. doi:<a href="https://doi.org/10.1016/j.cell.2015.04.044">10.1016/j.cell.2015.04.044</a>.</p>
-</div>
-<div id="ref-Jaitin2014-ko">
-<p>Jaitin, Diego Adhemar, Ephraim Kenigsberg, Hadas Keren-Shaul, Naama Elefant, Franziska Paul, Irina Zaretsky, Alexander Mildner, et al. 2014. “Massively Parallel Single-Cell RNA-seq for Marker-Free Decomposition of Tissues into Cell Types.” <em>Science</em> 343 (6172): 776–79.</p>
-</div>
-<div id="ref-Soumillon2014-eu">
-<p>Soumillon, Magali, Davide Cacchiarelli, Stefan Semrau, Alexander van Oudenaarden, and Tarjei S Mikkelsen. 2014. “Characterization of Directed Differentiation by High-Throughput Single-Cell RNA-Seq.” <em>bioRxiv</em>, March, 003236.</p>
-</div>
-<div id="ref-Gierahn2017-es">
-<p>Gierahn, Todd M, Marc H Wadsworth 2nd, Travis K Hughes, Bryan D Bryson, Andrew Butler, Rahul Satija, Sarah Fortune, J Christopher Love, and Alex K Shalek. 2017. “Seq-Well: Portable, Low-Cost RNA Sequencing of Single Cells at High Throughput.” <em>Nat. Methods</em> 14 (4): 395–98.</p>
-</div>
-<div id="ref-Picelli2014-ic">
-<p>Picelli, Simone, Omid R Faridani, Asa K Björklund, Gösta Winberg, Sven Sagasser, and Rickard Sandberg. 2014. “Full-Length RNA-seq from Single Cells Using Smart-Seq2.” <em>Nat. Protoc.</em> 9 (1): 171–81.</p>
-</div>
-<div id="ref-Islam2014-cn">
-<p>Islam, Saiful, Amit Zeisel, Simon Joost, Gioele La Manno, Pawel Zajac, Maria Kasper, Peter Lönnerberg, and Sten Linnarsson. 2013. “Quantitative Single-Cell RNA-Seq with Unique Molecular Identifiers.” <em>Nat Meth</em> 11 (2). Springer Nature: 163–66. doi:<a href="https://doi.org/10.1038/nmeth.2772">10.1038/nmeth.2772</a>.</p>
-</div>
-<div id="ref-Archer2016-zq">
-<p>Archer, Nathan, Mark D. Walsh, Vahid Shahrezaei, and Daniel Hebenstreit. 2016. “Modeling Enzyme Processivity Reveals That RNA-Seq Libraries Are Biased in Characteristic and Correctable Ways.” <em>Cell Systems</em> 3 (5). Elsevier BV: 467–479.e12. doi:<a href="https://doi.org/10.1016/j.cels.2016.10.012">10.1016/j.cels.2016.10.012</a>.</p>
-</div>
-<div id="ref-Ziegenhain2017-cu">
-<p>Ziegenhain, Christoph, Beate Vieth, Swati Parekh, Björn Reinius, Amy Guillaumet-Adkins, Martha Smets, Heinrich Leonhardt, Holger Heyn, Ines Hellmann, and Wolfgang Enard. 2017. “Comparative Analysis of Single-Cell RNA Sequencing Methods.” <em>Molecular Cell</em> 65 (4). Elsevier BV: 631–643.e4. doi:<a href="https://doi.org/10.1016/j.molcel.2017.01.023">10.1016/j.molcel.2017.01.023</a>.</p>
-</div>
-<div id="ref-Svensson2017-op">
-<p>Svensson, Valentine, Kedar Nath Natarajan, Lam-Ha Ly, Ricardo J Miragaia, Charlotte Labalette, Iain C Macaulay, Ana Cvejic, and Sarah A Teichmann. 2017. “Power Analysis of Single-Cell RNA-Sequencing Experiments.” <em>Nat Meth</em> 14 (4). Springer Nature: 381–87. doi:<a href="https://doi.org/10.1038/nmeth.4220">10.1038/nmeth.4220</a>.</p>
 </div>
 </div>
             </section>
@@ -531,8 +456,8 @@ Figure 2.8: Teichmann group study
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="construction-of-expression-matrix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="seurat-chapter.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="advanced-exercises.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -21,7 +21,7 @@ set.seed(1)
 To test different single-cell differential expression methods we will be using the Blischak dataset from Chapters 7-17.
 For this experiment bulk RNA-seq data for each cell-line was generated in addition to single-cell data. We will use the
 differentially expressed genes identified using standard methods on the respective bulk data as the ground truth for evaluating the
-accuracy of each single-cell method. To save time we have pre-computed these for you, run the commands below to load these data.
+accuracy of each single-cell method. To save time we have pre-computed these for you. You can run the commands below to load these data.
 
 
 ```r
@@ -476,7 +476,7 @@ DE_Quality_AUC(pVals)
 ##  [5] statmod_1.4.30          GenomeInfoDbData_0.99.0
 ##  [7] yaml_2.1.14             slam_0.1-40            
 ##  [9] ggrepel_0.7.0           backports_1.1.1        
-## [11] lattice_0.20-34         glue_1.1.1             
+## [11] lattice_0.20-34         glue_1.2.0             
 ## [13] densityClust_0.3        digest_0.6.12          
 ## [15] RColorBrewer_1.1-2      XVector_0.16.0         
 ## [17] colorspace_1.3-2        fastICA_1.2-1          
@@ -486,7 +486,7 @@ DE_Quality_AUC(pVals)
 ## [25] zlibbioc_1.22.0         bookdown_0.5           
 ## [27] scales_0.5.0            gdata_2.18.0           
 ## [29] Rtsne_0.13              tibble_1.3.4           
-## [31] combinat_0.0-8          lazyeval_0.2.0         
+## [31] combinat_0.0-8          lazyeval_0.2.1         
 ## [33] magrittr_1.5            evaluate_0.10.1        
 ## [35] MASS_7.3-45             FNN_1.1                
 ## [37] data.table_1.10.4-3     tools_3.4.2            

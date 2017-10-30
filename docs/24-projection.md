@@ -19,7 +19,7 @@ We recently developed `scmap` [@Kiselev2017-nb] - a method for projecting cells 
 
 ### Datasets
 
-We will run `scmap` on two human pancreas datasets: [@Muraro2016-yk] and [@Segerstolpe2016-wc]. These datasets are well annotated. As usual cell type labels are store in the `cell_type1` column of the `colData` slots.
+We will run `scmap` on two human pancreas datasets: [@Muraro2016-yk] and [@Segerstolpe2016-wc]. Since the pancreas has been widely studied, these datasets are well annotated. As usual cell type labels are stored in the `cell_type1` column of the `colData` slots.
 
 ```r
 muraro <- readRDS("pancreas/muraro.rds")
@@ -115,14 +115,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Sun Oct 29 19:05:35 2017 -->
+<!-- Mon Oct 30 17:15:03 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID11c36ae7cc87 () {
+function gvisDataSankeyID11c35bc06696 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -325,8 +325,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID11c36ae7cc87() {
-var data = gvisDataSankeyID11c36ae7cc87();
+function drawChartSankeyID11c35bc06696() {
+var data = gvisDataSankeyID11c35bc06696();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -345,7 +345,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID11c36ae7cc87')
+    document.getElementById('SankeyID11c35bc06696')
     );
     chart.draw(data,options);
     
@@ -369,9 +369,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID11c36ae7cc87);
+callbacks.push(drawChartSankeyID11c35bc06696);
 })();
-function displayChartSankeyID11c36ae7cc87() {
+function displayChartSankeyID11c35bc06696() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -395,11 +395,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID11c36ae7cc87"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID11c35bc06696"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID11c36ae7cc87" 
+<div id="SankeyID11c35bc06696" 
   style="width: 400; height: 600;">
 </div>
 
@@ -495,7 +495,7 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ##  [9] vipor_0.4.5             GenomeInfoDbData_0.99.0
 ## [11] yaml_2.1.14             RSQLite_2.0            
 ## [13] backports_1.1.1         lattice_0.20-34        
-## [15] glue_1.1.1              limma_3.32.10          
+## [15] glue_1.2.0              limma_3.32.10          
 ## [17] digest_0.6.12           XVector_0.16.0         
 ## [19] randomForest_4.6-12     colorspace_1.3-2       
 ## [21] htmltools_0.3.6         httpuv_1.3.5           
@@ -504,7 +504,7 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## [27] biomaRt_2.32.1          bookdown_0.5           
 ## [29] zlibbioc_1.22.0         xtable_1.8-2           
 ## [31] scales_0.5.0            tibble_1.3.4           
-## [33] proxy_0.4-19            lazyeval_0.2.0         
+## [33] proxy_0.4-19            lazyeval_0.2.1         
 ## [35] magrittr_1.5            mime_0.5               
 ## [37] memoise_1.1.0           evaluate_0.10.1        
 ## [39] class_7.3-14            beeswarm_0.2.3         

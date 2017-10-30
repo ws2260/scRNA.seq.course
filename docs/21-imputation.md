@@ -22,9 +22,9 @@ As discussed previously, one of the main challenges when analyzing scRNA-seq dat
 * The gene was expressed, but for some reason the transcripts were lost somewhere prior to sequencing
 * The gene was expressed and transcripts were captured and turned into cDNA, but the sequencing depth was not sufficient to produce any reads.
 
-Thus, dropouts could be result of experimental shortcomings, and if this is the case then we would like to provide computational corrections. One possible solution is to impute the dropouts in the expression matrix. To be able to impute gene expression values, one must have an underlying model. However, since we do not know which dropout events are technical artefacts and which correspond to the transcript being truly absent, imputation is a difficult challenges.
+Thus, dropouts could be result of experimental shortcomings, and if this is the case then we would like to provide computational corrections. One possible solution is to impute the dropouts in the expression matrix. To be able to impute gene expression values, one must have an underlying model. However, since we do not know which dropout events are technical artefacts and which correspond to the transcript being truly absent, imputation is a difficult challenge.
 
-To the best of our knowledge, there are currently two different imputation methods available: MAGIC [@Van_Dijk2017-bh] and scImpute [@Li2017-tz]. [MAGIC](https://github.com/pkathail/magic) is only available for Python or Matlab, but we will run it from within R.
+To the best of our knowledge, there are currently two different imputation methods available: [MAGIC](https://github.com/pkathail/magic) [@Van_Dijk2017-bh] and [scImpute](https://github.com/Vivianstats/scImpute) [@Li2017-tz]. MAGIC is only available for Python or Matlab, but we will run it from within R.
 
 ### scImpute
 
@@ -243,7 +243,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ##  [5] tools_3.4.2             backports_1.1.1        
 ##  [7] doRNG_1.6.6             R6_2.2.2               
 ##  [9] vipor_0.4.5             KernSmooth_2.23-15     
-## [11] DBI_0.7                 lazyeval_0.2.0         
+## [11] DBI_0.7                 lazyeval_0.2.1         
 ## [13] colorspace_1.3-2        gridExtra_2.3          
 ## [15] bit_1.1-12              compiler_3.4.2         
 ## [17] pkgmaker_0.22           labeling_0.3           
@@ -271,7 +271,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [61] splines_3.4.2           locfit_1.5-9.1         
 ## [63] rjson_0.2.15            rngtools_1.2.4         
 ## [65] reshape2_1.4.2          codetools_0.2-15       
-## [67] biomaRt_2.32.1          glue_1.1.1             
+## [67] biomaRt_2.32.1          glue_1.2.0             
 ## [69] XML_3.98-1.9            evaluate_0.10.1        
 ## [71] data.table_1.10.4-3     httpuv_1.3.5           
 ## [73] gtable_0.2.0            assertthat_0.2.0       

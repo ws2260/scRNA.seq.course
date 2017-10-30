@@ -332,7 +332,7 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [27] gdata_2.18.0            magrittr_1.5           
 ## [29] backports_1.1.1         gplots_3.0.1           
 ## [31] htmltools_0.3.6         MASS_7.3-45            
-## [33] bbmle_1.0.19            KernSmooth_2.23-15     
+## [33] bbmle_1.0.20            KernSmooth_2.23-15     
 ## [35] stringi_1.1.5           RCurl_1.95-4.8         
 ## [37] hypergeo_1.2-13
 ```
