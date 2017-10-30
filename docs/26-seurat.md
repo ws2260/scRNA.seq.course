@@ -11,11 +11,13 @@ set.seed(1234567)
 
 # Seurat {#seurat-chapter}
 
-[Seurat](http://satijalab.org/seurat/) was originally developed as a clustering tool for scRNA-seq data, however in the last few years the focus of the package has become less specific and at the moment `Seurat` is a popular R package that can perform QC, analysis, and exploration of scRNA-seq data, i.e. many of the tasks covered in this course. Although the authors provide several [tutorials](http://satijalab.org/seurat/get_started.html), here we provide a brief overview by following an [example](http://satijalab.org/seurat/pbmc3k_tutorial.html) created by the authors of `Seurat` (2,800 Peripheral Blood Mononuclear Cells). We mostly use default values in various function calls, for more details please consult the documentation and the authors. We start by loading the `Deng` data that we have used before:
+[Seurat](http://satijalab.org/seurat/) was originally developed as a clustering tool for scRNA-seq data, however in the last few years the focus of the package has become less specific and at the moment `Seurat` is a popular R package that can perform QC, analysis, and exploration of scRNA-seq data, i.e. many of the tasks covered in this course. Although the authors provide several [tutorials](http://satijalab.org/seurat/get_started.html), here we provide a brief overview by following an [example](http://satijalab.org/seurat/pbmc3k_tutorial.html) created by the authors of `Seurat` (2,800 Peripheral Blood Mononuclear Cells). We mostly use default values in various function calls, for more details please consult the documentation and the authors. For course purpose will use a small `Deng` dataset described in the previous chapters:
 
 ```r
 deng <- readRDS("deng/deng-reads.rds")
 ```
+
+__Note__ Thanks to _community detection_ approach used in `Seurat` clustering, it allows one to work on datasets containing up to $10^5$ cells. We recommend using `Seurat` for datasets with more than $5000$ cells. For smaller dataset a good alternative will be `SC3`.
 
 ## `Seurat` object class
 
@@ -109,6 +111,8 @@ length(x = seuset@var.genes)
 ```
 ## [1] 6127
 ```
+We are not entirely sure what is going on in the lower left hand corner of the plot above. A similar feature can be found in the Satija lab tutorial, so we do not believe that it is due to an error in how we used the method.
+
 
 ## Dealing with confounders
 
@@ -253,7 +257,7 @@ PCHeatmap(
 
 ## Significant PCs
 
-To overcome the extensive technical noise in any single gene for scRNA-seq data, `Seurat` clusters cells based on their `PCA` scores, with each PC essentially representing a _metagene_ that combines information across a correlated gene set. Determining how many PCs to include downstream is therefore an important step. `Seurat` randomly permute a subset of the data (1% by default) and rerun `PCA`, constructing a _null distribution_ of gene scores, and repeat this procedure. We identify _significant_ PCs as those who have a strong enrichment of low p-value genes:
+To overcome the extensive technical noise in any single gene for scRNA-seq data, `Seurat` clusters cells based on their `PCA` scores, with each PC essentially representing a _metagene_ that combines information across a correlated gene set. Determining how many PCs to include downstream is therefore an important step. `Seurat` randomly permutes a subset of the data (1% by default) and reruns `PCA`, constructing a _null distribution_ of gene scores by repeating this procedure. We identify _significant_ PCs as those who have a strong enrichment of low p-value genes:
 
 ```r
 seuset <- JackStraw(
@@ -311,7 +315,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2017-10-29 19:07:55
+## Parameters used in latest FindClusters calculation run on: 2017-10-30 17:17:25
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
@@ -459,7 +463,7 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ##   [1] backports_1.1.1         Hmisc_4.0-3            
 ##   [3] VGAM_1.0-4              NMF_0.20.6             
 ##   [5] sn_1.5-0                plyr_1.8.4             
-##   [7] igraph_1.1.2            lazyeval_0.2.0         
+##   [7] igraph_1.1.2            lazyeval_0.2.1         
 ##   [9] splines_3.4.2           gridBase_0.4-7         
 ##  [11] digest_0.6.12           foreach_1.4.3          
 ##  [13] htmltools_0.3.6         lars_1.2               
@@ -472,7 +476,7 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ##  [27] colorspace_1.3-2        RCurl_1.95-4.8         
 ##  [29] bindr_0.1               survival_2.40-1        
 ##  [31] iterators_1.0.8         ape_4.1                
-##  [33] glue_1.1.1              DRR_0.0.2              
+##  [33] glue_1.2.0              DRR_0.0.2              
 ##  [35] registry_0.3            gtable_0.2.0           
 ##  [37] ipred_0.9-6             zlibbioc_1.22.0        
 ##  [39] XVector_0.16.0          kernlab_0.9-25         
@@ -518,6 +522,6 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ## [119] tidyr_0.7.2             class_7.3-14           
 ## [121] rmarkdown_1.6           segmented_0.5-2.2      
 ## [123] Rtsne_0.13              numDeriv_2016.8-1      
-## [125] scatterplot3d_0.3-40    lubridate_1.6.0        
+## [125] scatterplot3d_0.3-40    lubridate_1.7.0        
 ## [127] base64enc_0.1-3
 ```

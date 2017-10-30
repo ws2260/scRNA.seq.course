@@ -664,7 +664,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ##  [5] tools_3.4.2             backports_1.1.1        
 ##  [7] DT_0.2                  R6_2.2.2               
 ##  [9] hypergeo_1.2-13         vipor_0.4.5            
-## [11] DBI_0.7                 lazyeval_0.2.0         
+## [11] DBI_0.7                 lazyeval_0.2.1         
 ## [13] colorspace_1.3-2        gridExtra_2.3          
 ## [15] moments_0.14            bit_1.1-12             
 ## [17] compiler_3.4.2          orthopolynom_1.0-5     
@@ -691,7 +691,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [59] splines_3.4.2           locfit_1.5-9.1         
 ## [61] igraph_1.1.2            rjson_0.2.15           
 ## [63] reshape2_1.4.2          biomaRt_2.32.1         
-## [65] XML_3.98-1.9            glue_1.1.1             
+## [65] XML_3.98-1.9            glue_1.2.0             
 ## [67] evaluate_0.10.1         data.table_1.10.4-3    
 ## [69] deSolve_1.20            httpuv_1.3.5           
 ## [71] gtable_0.2.0            assertthat_0.2.0       

@@ -549,7 +549,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ## loaded via a namespace (and not attached):
 ##   [1] backports_1.1.1         Hmisc_4.0-3            
 ##   [3] RcppEigen_0.3.3.3.0     plyr_1.8.4             
-##   [5] igraph_1.1.2            lazyeval_0.2.0         
+##   [5] igraph_1.1.2            lazyeval_0.2.1         
 ##   [7] sp_1.2-5                densityClust_0.3       
 ##   [9] fastICA_1.2-1           digest_0.6.12          
 ##  [11] htmltools_0.3.6         gdata_2.18.0           
@@ -562,7 +562,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [25] lme4_1.1-14             spatstat_1.53-2        
 ##  [27] spatstat.data_1.1-1     bindr_0.1              
 ##  [29] survival_2.40-1         zoo_1.8-0              
-##  [31] glue_1.1.1              polyclip_1.6-1         
+##  [31] glue_1.2.0              polyclip_1.6-1         
 ##  [33] gtable_0.2.0            zlibbioc_1.22.0        
 ##  [35] XVector_0.16.0          MatrixModels_0.4-1     
 ##  [37] car_2.1-5               DEoptimR_1.0-8         
@@ -605,6 +605,6 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ## [111] grid_3.4.2              rpart_4.1-10           
 ## [113] class_7.3-14            minqa_1.2.4            
 ## [115] rmarkdown_1.6           Rtsne_0.13             
-## [117] TTR_0.23-2              bbmle_1.0.19           
+## [117] TTR_0.23-2              bbmle_1.0.20           
 ## [119] shiny_1.0.5             base64enc_0.1-3
 ```

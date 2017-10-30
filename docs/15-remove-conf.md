@@ -558,10 +558,10 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [19] shinydashboard_0.6.1    shiny_1.0.5            
 ## [21] compiler_3.4.2          backports_1.1.1        
 ## [23] assertthat_0.2.0        Matrix_1.2-7.1         
-## [25] lazyeval_0.2.0          htmltools_0.3.6        
+## [25] lazyeval_0.2.1          htmltools_0.3.6        
 ## [27] tools_3.4.2             igraph_1.1.2           
 ## [29] bindrcpp_0.2            gtable_0.2.0           
-## [31] glue_1.1.1              GenomeInfoDbData_0.99.0
+## [31] glue_1.2.0              GenomeInfoDbData_0.99.0
 ## [33] dplyr_0.7.4             Rcpp_0.12.13           
 ## [35] rtracklayer_1.36.6      stringr_1.2.0          
 ## [37] mime_0.5                hypergeo_1.2-13        

@@ -178,7 +178,7 @@ sessionInfo()
 ##  [7] blob_1.1.0              GenomeInfoDbData_0.99.0
 ##  [9] vipor_0.4.5             yaml_2.1.14            
 ## [11] RSQLite_2.0             backports_1.1.1        
-## [13] lattice_0.20-34         glue_1.1.1             
+## [13] lattice_0.20-34         glue_1.2.0             
 ## [15] limma_3.32.10           digest_0.6.12          
 ## [17] XVector_0.16.0          colorspace_1.3-2       
 ## [19] cowplot_0.8.0           htmltools_0.3.6        
@@ -188,7 +188,7 @@ sessionInfo()
 ## [27] bookdown_0.5            zlibbioc_1.22.0        
 ## [29] xtable_1.8-2            scales_0.5.0           
 ## [31] Rtsne_0.13              tibble_1.3.4           
-## [33] lazyeval_0.2.0          magrittr_1.5           
+## [33] lazyeval_0.2.1          magrittr_1.5           
 ## [35] mime_0.5                memoise_1.1.0          
 ## [37] evaluate_0.10.1         beeswarm_0.2.3         
 ## [39] shinydashboard_0.6.1    tools_3.4.2            

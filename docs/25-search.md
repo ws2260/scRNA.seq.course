@@ -41,7 +41,7 @@ Now we need to create a gene index using our dataset:
 cellIndex <- buildCellIndex(muraro)
 ```
 
-The gene index contains for each gene indexes of the cells where it is expressed. This is similar to sparcification of the expression matrix. In addition to this the index is also compressed in a way that it can accessed very quickly. We estimated that one can achieve 5-10 compression factor with this method.
+The gene index contains for each gene indexes of the cells where it is expressed. This is similar to sparsification of the expression matrix. In addition to this the index is also compressed in a way that it can accessed very quickly. We estimated that one can achieve 5-10 compression factor with this method.
 
 By default the `cell_type1` column of the `colData` slot of the `SingleCellExperiment` object is used to define cell types, however it can also be defined manually using the `cell_type_column` argument of the `buildCellTypeIndex` function (check `?buildCellTypeIndex`).
 
@@ -240,7 +240,7 @@ sessionInfo()
 ## [17] yaml_2.1.14             bindrcpp_0.2           
 ## [19] GenomeInfoDbData_0.99.0 stringr_1.2.0          
 ## [21] dplyr_0.7.4             rprojroot_1.2          
-## [23] grid_3.4.2              glue_1.1.1             
+## [23] grid_3.4.2              glue_1.2.0             
 ## [25] R6_2.2.2                hash_2.2.6             
 ## [27] rmarkdown_1.6           bookdown_0.5           
 ## [29] reshape2_1.4.2          magrittr_1.5           

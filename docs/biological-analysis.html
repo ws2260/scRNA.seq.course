@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2017-10-29">
+<meta name="date" content="2017-10-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -307,11 +307,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.9" data-path="seurat-chapter.html"><a href="seurat-chapter.html#marker-genes-1"><i class="fa fa-check"></i><b>5.9</b> Marker genes</a></li>
 <li class="chapter" data-level="5.10" data-path="seurat-chapter.html"><a href="seurat-chapter.html#sessioninfo-12"><i class="fa fa-check"></i><b>5.10</b> sessionInfo()</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="ideal-scrnaseq-pipeline-as-of-mar-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-mar-2017.html"><i class="fa fa-check"></i><b>6</b> “Ideal” scRNAseq pipeline (as of Mar 2017)</a><ul>
-<li class="chapter" data-level="6.1" data-path="ideal-scrnaseq-pipeline-as-of-mar-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-mar-2017.html#experimental-design"><i class="fa fa-check"></i><b>6.1</b> Experimental Design</a></li>
-<li class="chapter" data-level="6.2" data-path="ideal-scrnaseq-pipeline-as-of-mar-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-mar-2017.html#processing-reads"><i class="fa fa-check"></i><b>6.2</b> Processing Reads</a></li>
-<li class="chapter" data-level="6.3" data-path="ideal-scrnaseq-pipeline-as-of-mar-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-mar-2017.html#preparing-expression-matrix"><i class="fa fa-check"></i><b>6.3</b> Preparing Expression Matrix</a></li>
-<li class="chapter" data-level="6.4" data-path="ideal-scrnaseq-pipeline-as-of-mar-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-mar-2017.html#biological-interpretation"><i class="fa fa-check"></i><b>6.4</b> Biological Interpretation</a></li>
+<li class="chapter" data-level="6" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><i class="fa fa-check"></i><b>6</b> “Ideal” scRNAseq pipeline (as of Oct 2017)</a><ul>
+<li class="chapter" data-level="6.1" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#experimental-design"><i class="fa fa-check"></i><b>6.1</b> Experimental Design</a></li>
+<li class="chapter" data-level="6.2" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#processing-reads"><i class="fa fa-check"></i><b>6.2</b> Processing Reads</a></li>
+<li class="chapter" data-level="6.3" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#preparing-expression-matrix"><i class="fa fa-check"></i><b>6.3</b> Preparing Expression Matrix</a></li>
+<li class="chapter" data-level="6.4" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#biological-interpretation"><i class="fa fa-check"></i><b>6.4</b> Biological Interpretation</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="advanced-exercises.html"><a href="advanced-exercises.html"><i class="fa fa-check"></i><b>7</b> Advanced exercises</a></li>
 <li class="chapter" data-level="8" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>8</b> Resources</a><ul>
@@ -493,7 +493,7 @@ deng</code></pre></div>
 ##         30         12         60          4</code></pre>
 <p>A simple PCA analysis already separates some strong cell types and provides some insights in the data structure:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotPCA</span>(deng, <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>)</code></pre></div>
-<p><img src="18-clustering_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="18-clustering_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /> As you can see, the early cell types separate quite well, but the three blastocyst timepoints are more difficult to distinguish.</p>
 </div>
 <div id="sc3-1" class="section level3">
 <h3><span class="header-section-number">4.2.2</span> SC3</h3>
@@ -534,9 +534,10 @@ deng</code></pre></div>
 <p>Compare the results of <code>SC3</code> clustering with the original publication cell type labels:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">adjustedRandIndex</span>(<span class="kw">colData</span>(deng)<span class="op">$</span>cell_type2, <span class="kw">colData</span>(deng)<span class="op">$</span>sc3_10_clusters)</code></pre></div>
 <pre><code>## [1] 0.7705208</code></pre>
-<p>Note, that one can also run <code>SC3</code> in an interactive <code>Shiny</code> session:</p>
+<p><strong>Note</strong> <code>SC3</code> can also be run in an interactive <code>Shiny</code> session:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sc3_interactive</span>(deng)</code></pre></div>
 <p>This command will open <code>SC3</code> in a web browser.</p>
+<p><strong>Note</strong> Due to direct calculation of distances <code>SC3</code> becomes very slow when the number of cells is <span class="math inline">\(&gt;5000\)</span>. For large datasets containing up to <span class="math inline">\(10^5\)</span> cells we recomment using <code>Seurat</code> (see chapter <a href="seurat-chapter.html#seurat-chapter">5</a>).</p>
 <ul>
 <li><p><strong>Exercise 1</strong>: Run <code>SC3</code> for <span class="math inline">\(k\)</span> from 8 to 12 and explore different clustering solutions in your web browser.</p></li>
 <li><p><strong>Exercise 2</strong>: Which clusters are the most stable when <span class="math inline">\(k\)</span> is changed from 8 to 12? (Look at the “Stability” tab)</p></li>
@@ -565,7 +566,7 @@ pca.red &lt;-<span class="st"> </span><span class="kw">PCAreduce</span>(<span cl
 Figure 4.6: Clustering solutions of pcaReduce method for <span class="math inline">\(k=2\)</span>.
 </p>
 </div>
-<p><strong>Exercise 6</strong>: Compare the results between <code>SC3</code> and the original publication cell types for <span class="math inline">\(k=10\)</span>.</p>
+<p><strong>Exercise 6</strong>: Compare the results between <code>pcaReduce</code> and the original publication cell types for <span class="math inline">\(k=10\)</span>.</p>
 <p><strong>Our solution</strong>:</p>
 <pre><code>## [1] 0.4216031</code></pre>
 </div>
@@ -725,10 +726,10 @@ Figure 4.9: Clustering solutions of SINCERA method using found <span class="math
 ##  [17] shinydashboard_0.6.1    shiny_1.0.5            
 ##  [19] rrcov_1.4-3             compiler_3.4.2         
 ##  [21] backports_1.1.1         assertthat_0.2.0       
-##  [23] Matrix_1.2-7.1          lazyeval_0.2.0         
+##  [23] Matrix_1.2-7.1          lazyeval_0.2.1         
 ##  [25] limma_3.32.10           htmltools_0.3.6        
 ##  [27] tools_3.4.2             bindrcpp_0.2           
-##  [29] gtable_0.2.0            glue_1.1.1             
+##  [29] gtable_0.2.0            glue_1.2.0             
 ##  [31] GenomeInfoDbData_0.99.0 reshape2_1.4.2         
 ##  [33] dplyr_0.7.4             doRNG_1.6.6            
 ##  [35] Rcpp_0.12.13            gdata_2.18.0           
@@ -927,7 +928,7 @@ PCA_genes =<span class="st"> </span><span class="kw">names</span>(score[<span cl
 ## [27] gdata_2.18.0            magrittr_1.5           
 ## [29] backports_1.1.1         gplots_3.0.1           
 ## [31] htmltools_0.3.6         MASS_7.3-45            
-## [33] bbmle_1.0.19            KernSmooth_2.23-15     
+## [33] bbmle_1.0.20            KernSmooth_2.23-15     
 ## [35] stringi_1.1.5           RCurl_1.95-4.8         
 ## [37] hypergeo_1.2-13</code></pre>
 
@@ -1251,7 +1252,7 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ## loaded via a namespace (and not attached):
 ##   [1] backports_1.1.1         Hmisc_4.0-3            
 ##   [3] RcppEigen_0.3.3.3.0     plyr_1.8.4             
-##   [5] igraph_1.1.2            lazyeval_0.2.0         
+##   [5] igraph_1.1.2            lazyeval_0.2.1         
 ##   [7] sp_1.2-5                densityClust_0.3       
 ##   [9] fastICA_1.2-1           digest_0.6.12          
 ##  [11] htmltools_0.3.6         gdata_2.18.0           
@@ -1264,7 +1265,7 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ##  [25] lme4_1.1-14             spatstat_1.53-2        
 ##  [27] spatstat.data_1.1-1     bindr_0.1              
 ##  [29] survival_2.40-1         zoo_1.8-0              
-##  [31] glue_1.1.1              polyclip_1.6-1         
+##  [31] glue_1.2.0              polyclip_1.6-1         
 ##  [33] gtable_0.2.0            zlibbioc_1.22.0        
 ##  [35] XVector_0.16.0          MatrixModels_0.4-1     
 ##  [37] car_2.1-5               DEoptimR_1.0-8         
@@ -1308,7 +1309,7 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ## [113] rpart_4.1-10            class_7.3-14           
 ## [115] minqa_1.2.4             rmarkdown_1.6          
 ## [117] Rtsne_0.13              TTR_0.23-2             
-## [119] bbmle_1.0.19            shiny_1.0.5            
+## [119] bbmle_1.0.20            shiny_1.0.5            
 ## [121] base64enc_0.1-3</code></pre>
 
 </div>
@@ -1327,8 +1328,8 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 <li>The gene was expressed, but for some reason the transcripts were lost somewhere prior to sequencing</li>
 <li>The gene was expressed and transcripts were captured and turned into cDNA, but the sequencing depth was not sufficient to produce any reads.</li>
 </ul>
-<p>Thus, dropouts could be result of experimental shortcomings, and if this is the case then we would like to provide computational corrections. One possible solution is to impute the dropouts in the expression matrix. To be able to impute gene expression values, one must have an underlying model. However, since we do not know which dropout events are technical artefacts and which correspond to the transcript being truly absent, imputation is a difficult challenges.</p>
-<p>To the best of our knowledge, there are currently two different imputation methods available: MAGIC <span class="citation">(Dijk et al. <a href="#ref-Van_Dijk2017-bh">2017</a>)</span> and scImpute <span class="citation">(W. V. Li and Li <a href="#ref-Li2017-tz">2017</a>)</span>. <a href="https://github.com/pkathail/magic">MAGIC</a> is only available for Python or Matlab, but we will run it from within R.</p>
+<p>Thus, dropouts could be result of experimental shortcomings, and if this is the case then we would like to provide computational corrections. One possible solution is to impute the dropouts in the expression matrix. To be able to impute gene expression values, one must have an underlying model. However, since we do not know which dropout events are technical artefacts and which correspond to the transcript being truly absent, imputation is a difficult challenge.</p>
+<p>To the best of our knowledge, there are currently two different imputation methods available: <a href="https://github.com/pkathail/magic">MAGIC</a> <span class="citation">(Dijk et al. <a href="#ref-Van_Dijk2017-bh">2017</a>)</span> and <a href="https://github.com/Vivianstats/scImpute">scImpute</a> <span class="citation">(W. V. Li and Li <a href="#ref-Li2017-tz">2017</a>)</span>. MAGIC is only available for Python or Matlab, but we will run it from within R.</p>
 <div id="scimpute" class="section level3">
 <h3><span class="header-section-number">4.5.1</span> scImpute</h3>
 <p>To test <code>scImpute</code>, we use the default parameters and we apply it to the Deng dataset that we have worked with before. scImpute takes a .csv or .txt file as an input:</p>
@@ -1467,7 +1468,7 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ##  [5] tools_3.4.2             backports_1.1.1        
 ##  [7] doRNG_1.6.6             R6_2.2.2               
 ##  [9] vipor_0.4.5             KernSmooth_2.23-15     
-## [11] DBI_0.7                 lazyeval_0.2.0         
+## [11] DBI_0.7                 lazyeval_0.2.1         
 ## [13] colorspace_1.3-2        gridExtra_2.3          
 ## [15] bit_1.1-12              compiler_3.4.2         
 ## [17] pkgmaker_0.22           labeling_0.3           
@@ -1495,7 +1496,7 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ## [61] splines_3.4.2           locfit_1.5-9.1         
 ## [63] rjson_0.2.15            rngtools_1.2.4         
 ## [65] reshape2_1.4.2          codetools_0.2-15       
-## [67] biomaRt_2.32.1          glue_1.1.1             
+## [67] biomaRt_2.32.1          glue_1.2.0             
 ## [69] XML_3.98-1.9            evaluate_0.10.1        
 ## [71] data.table_1.10.4-3     httpuv_1.3.5           
 ## [73] gtable_0.2.0            assertthat_0.2.0       
@@ -1514,8 +1515,8 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 <h2><span class="header-section-number">4.6</span> Differential Expression (DE) analysis</h2>
 <div id="bulk-rna-seq-1" class="section level3">
 <h3><span class="header-section-number">4.6.1</span> Bulk RNA-seq</h3>
-<p>One of the most common types of analyses when analyzing bulk RNA-seq data is to identify differentially expressed genes. By comparing the genes that change between two conditions, e.g. mutant and wild-type or stimulated and unstimulated, it is possible to characterize the molecular mechanisms underlying the change.</p>
-<p>Several different methods, e.g. <a href="https://bioconductor.org/packages/DESeq2">DESeq2</a> and <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">edgeR</a>, have been developed for bulk RNA-seq. Moreover, there are also extensive <a href="http://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-9-r95">datasets</a> available where the RNA-seq data has been validated using RT-qPCR. These data can be used to benchmark DE finding algorithms.</p>
+<p>One of the most common types of analyses when working with bulk RNA-seq data is to identify differentially expressed genes. By comparing the genes that change between two conditions, e.g. mutant and wild-type or stimulated and unstimulated, it is possible to characterize the molecular mechanisms underlying the change.</p>
+<p>Several different methods, e.g. <a href="https://bioconductor.org/packages/DESeq2">DESeq2</a> and <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">edgeR</a>, have been developed for bulk RNA-seq. Moreover, there are also extensive <a href="http://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-9-r95">datasets</a> available where the RNA-seq data has been validated using RT-qPCR. These data can be used to benchmark DE finding algorithms and the available evidence suggests that the algorithms are performing quite well.</p>
 </div>
 <div id="single-cell-rna-seq" class="section level3">
 <h3><span class="header-section-number">4.6.2</span> Single cell RNA-seq</h3>
@@ -1525,7 +1526,7 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 <h3><span class="header-section-number">4.6.3</span> Differences in Distribution</h3>
 <p>Unlike bulk RNA-seq, we generally have a large number of samples (i.e. cells) for each group we are comparing in single-cell experiments. Thus we can take advantage of the whole distribution of expression values in each group to identify differences between groups rather than only comparing estimates of mean-expression as is standard for bulk RNASeq.</p>
 <p>There are two main approaches to comparing distributions. Firstly, we can use existing statistical models/distributions and fit the same type of model to the expression in each group then test for differences in the parameters for each model, or test whether the model fits better if a particular paramter is allowed to be different according to group. For instance in Chapter <a href="construction-of-expression-matrix.html#dealing-with-confounders">3.17</a> we used edgeR to test whether allowing mean expression to be different in different batches significantly improved the fit of a negative binomial model of the data.</p>
-<p>Alternatively, we can use a non-parametric test which does not assume expression values follow any particular distribution, e.g. the <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">Kolmogorov-Smirnov test (KS-test)</a>. Non-parametric tests generally convert observed expression values to ranks and test whether the distribution of ranks for one group are signficantly different from the distribution of ranks for the other group. However, some non-parametric methods fail in the presence of a large number of tied values, such as the case for dropouts (zeros) in single-cell RNA-seq expression data. Moreover, if the conditions for a parametric test hold, then it will typically be more powerful than a non-parametric test.</p>
+<p>Alternatively, we can use a non-parametric test which does not assume that expression values follow any particular distribution, e.g. the <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">Kolmogorov-Smirnov test (KS-test)</a>. Non-parametric tests generally convert observed expression values to ranks and test whether the distribution of ranks for one group are signficantly different from the distribution of ranks for the other group. However, some non-parametric methods fail in the presence of a large number of tied values, such as the case for dropouts (zeros) in single-cell RNA-seq expression data. Moreover, if the conditions for a parametric test hold, then it will typically be more powerful than a non-parametric test.</p>
 </div>
 <div id="models-of-single-cell-rnaseq-data" class="section level3">
 <h3><span class="header-section-number">4.6.4</span> Models of single-cell RNASeq data</h3>
@@ -1602,7 +1603,7 @@ counts &lt;-<span class="st"> </span><span class="kw">sapply</span>(g<span class
 <span class="kw">set.seed</span>(<span class="dv">1</span>)</code></pre></div>
 <div id="introduction-7" class="section level3">
 <h3><span class="header-section-number">4.7.1</span> Introduction</h3>
-<p>To test different single-cell differential expression methods we will be using the Blischak dataset from Chapters 7-17. For this experiment bulk RNA-seq data for each cell-line was generated in addition to single-cell data. We will use the differentially expressed genes identified using standard methods on the respective bulk data as the ground truth for evaluating the accuracy of each single-cell method. To save time we have pre-computed these for you, run the commands below to load these data.</p>
+<p>To test different single-cell differential expression methods we will be using the Blischak dataset from Chapters 7-17. For this experiment bulk RNA-seq data for each cell-line was generated in addition to single-cell data. We will use the differentially expressed genes identified using standard methods on the respective bulk data as the ground truth for evaluating the accuracy of each single-cell method. To save time we have pre-computed these for you. You can run the commands below to load these data.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">DE &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;tung/TPs.txt&quot;</span>)
 notDE &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;tung/TNs.txt&quot;</span>)
 GroundTruth &lt;-<span class="st"> </span><span class="kw">list</span>(
@@ -1927,7 +1928,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 ##  [7] GenomeInfoDbData_0.99.0 yaml_2.1.14            
 ##  [9] slam_0.1-40             ggrepel_0.7.0          
 ## [11] backports_1.1.1         lattice_0.20-34        
-## [13] glue_1.1.1              densityClust_0.3       
+## [13] glue_1.2.0              densityClust_0.3       
 ## [15] digest_0.6.12           RColorBrewer_1.1-2     
 ## [17] XVector_0.16.0          colorspace_1.3-2       
 ## [19] fastICA_1.2-1           htmltools_0.3.6        
@@ -1937,7 +1938,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 ## [27] bookdown_0.5            scales_0.5.0           
 ## [29] gdata_2.18.0            Rtsne_0.13             
 ## [31] tibble_1.3.4            combinat_0.0-8         
-## [33] lazyeval_0.2.0          magrittr_1.5           
+## [33] lazyeval_0.2.1          magrittr_1.5           
 ## [35] evaluate_0.10.1         MASS_7.3-45            
 ## [37] FNN_1.1                 data.table_1.10.4-3    
 ## [39] tools_3.4.2             stringr_1.2.0          
@@ -1968,7 +1969,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 <p>We recently developed <code>scmap</code> <span class="citation">(Kiselev and Hemberg <a href="#ref-Kiselev2017-nb">2017</a>)</span> - a method for projecting cells from a scRNA-seq experiment onto the cell-types identified in other experiments. Additionally, a cloud version of <code>scmap</code> can be run for free, without restrictions, from <a href="http://www.hemberg-lab.cloud/scmap" class="uri">http://www.hemberg-lab.cloud/scmap</a>.</p>
 <div id="datasets" class="section level3">
 <h3><span class="header-section-number">4.8.1</span> Datasets</h3>
-<p>We will run <code>scmap</code> on two human pancreas datasets: <span class="citation">(Muraro et al. <a href="#ref-Muraro2016-yk">2016</a>)</span> and <span class="citation">(Segerstolpe et al. <a href="#ref-Segerstolpe2016-wc">2016</a>)</span>. These datasets are well annotated. As usual cell type labels are store in the <code>cell_type1</code> column of the <code>colData</code> slots.</p>
+<p>We will run <code>scmap</code> on two human pancreas datasets: <span class="citation">(Muraro et al. <a href="#ref-Muraro2016-yk">2016</a>)</span> and <span class="citation">(Segerstolpe et al. <a href="#ref-Segerstolpe2016-wc">2016</a>)</span>. Since the pancreas has been widely studied, these datasets are well annotated. As usual cell type labels are stored in the <code>cell_type1</code> column of the <code>colData</code> slots.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">muraro &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;pancreas/muraro.rds&quot;</span>)
 segerstolpe &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;pancreas/segerstolpe.rds&quot;</span>)</code></pre></div>
 <p><code>scmap</code> can be used to perform both types of projections to either a single dataset or to a reference collection of datasets (Atlas):</p>
@@ -2028,12 +2029,12 @@ Figure 2.6:  scmap can also be used to project cells from a new experiment onto 
 <p>Clearly the projection is almost perfect. With <code>scmap</code> one can also plot a <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey">Sankey diagram</a> (however, <code>cell_type1</code> columns have to be provided in the <code>colData</code> slots of both the reference and the projection datasets):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">getSankey</span>(<span class="kw">colData</span>(segerstolpe)<span class="op">$</span>cell_type1, <span class="kw">colData</span>(segerstolpe)<span class="op">$</span>scmap_labs))</code></pre></div>
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Sun Oct 29 18:08:00 2017 -->
+<!-- Mon Oct 30 16:17:28 2017 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID65d7ebd5056 () {
+function gvisDataSankeyID65d434e5902 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2236,8 +2237,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID65d7ebd5056() {
-var data = gvisDataSankeyID65d7ebd5056();
+function drawChartSankeyID65d434e5902() {
+var data = gvisDataSankeyID65d434e5902();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -2256,7 +2257,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID65d7ebd5056')
+    document.getElementById('SankeyID65d434e5902')
     );
     chart.draw(data,options);
     
@@ -2280,9 +2281,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID65d7ebd5056);
+callbacks.push(drawChartSankeyID65d434e5902);
 })();
-function displayChartSankeyID65d7ebd5056() {
+function displayChartSankeyID65d434e5902() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2305,9 +2306,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID65d7ebd5056"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID65d434e5902"></script>
 <!-- divChart -->
-<div id="SankeyID65d7ebd5056" style="width: 400; height: 600;">
+<div id="SankeyID65d434e5902" style="width: 400; height: 600;">
 
 </div>
 </div>
@@ -2378,7 +2379,7 @@ callbacks.shift()();
 ##  [9] blob_1.1.0              vipor_0.4.5            
 ## [11] GenomeInfoDbData_0.99.0 yaml_2.1.14            
 ## [13] RSQLite_2.0             backports_1.1.1        
-## [15] lattice_0.20-34         glue_1.1.1             
+## [15] lattice_0.20-34         glue_1.2.0             
 ## [17] limma_3.32.10           digest_0.6.12          
 ## [19] XVector_0.16.0          randomForest_4.6-12    
 ## [21] colorspace_1.3-2        htmltools_0.3.6        
@@ -2388,7 +2389,7 @@ callbacks.shift()();
 ## [29] bookdown_0.5            zlibbioc_1.22.0        
 ## [31] xtable_1.8-2            scales_0.5.0           
 ## [33] tibble_1.3.4            proxy_0.4-19           
-## [35] lazyeval_0.2.0          magrittr_1.5           
+## [35] lazyeval_0.2.1          magrittr_1.5           
 ## [37] mime_0.5                memoise_1.1.0          
 ## [39] evaluate_0.10.1         class_7.3-14           
 ## [41] beeswarm_0.2.3          shinydashboard_0.6.1   
@@ -2434,7 +2435,7 @@ Figure 2.4: scfind can be used to search large collection of scRNA-seq data by a
 <h3><span class="header-section-number">4.9.3</span> Gene Index</h3>
 <p>Now we need to create a gene index using our dataset:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cellIndex &lt;-<span class="st"> </span><span class="kw">buildCellIndex</span>(muraro)</code></pre></div>
-<p>The gene index contains for each gene indexes of the cells where it is expressed. This is similar to sparcification of the expression matrix. In addition to this the index is also compressed in a way that it can accessed very quickly. We estimated that one can achieve 5-10 compression factor with this method.</p>
+<p>The gene index contains for each gene indexes of the cells where it is expressed. This is similar to sparsification of the expression matrix. In addition to this the index is also compressed in a way that it can accessed very quickly. We estimated that one can achieve 5-10 compression factor with this method.</p>
 <p>By default the <code>cell_type1</code> column of the <code>colData</code> slot of the <code>SingleCellExperiment</code> object is used to define cell types, however it can also be defined manually using the <code>cell_type_column</code> argument of the <code>buildCellTypeIndex</code> function (check <code>?buildCellTypeIndex</code>).</p>
 </div>
 <div id="marker-genes" class="section level3">
@@ -2568,7 +2569,7 @@ muraro_delta &lt;-<span class="st"> </span><span class="kw">c</span>(<span class
 ## [19] bindrcpp_0.2            GenomeInfoDbData_0.99.0
 ## [21] stringr_1.2.0           dplyr_0.7.4            
 ## [23] rprojroot_1.2           grid_3.4.2             
-## [25] glue_1.1.1              R6_2.2.2               
+## [25] glue_1.2.0              R6_2.2.2               
 ## [27] hash_2.2.6              rmarkdown_1.6          
 ## [29] bookdown_0.5            reshape2_1.4.2         
 ## [31] magrittr_1.5            backports_1.1.1        

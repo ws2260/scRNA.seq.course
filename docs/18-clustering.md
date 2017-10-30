@@ -67,6 +67,7 @@ plotPCA(deng, colour_by = "cell_type2")
 
 
 \begin{center}\includegraphics{18-clustering_files/figure-latex/unnamed-chunk-5-1} \end{center}
+As you can see, the early cell types separate quite well, but the three blastocyst timepoints are more difficult to distinguish.
 
 ### SC3
 
@@ -196,13 +197,15 @@ adjustedRandIndex(colData(deng)$cell_type2, colData(deng)$sc3_10_clusters)
 ## [1] 0.7705208
 ```
 
-Note, that one can also run `SC3` in an interactive `Shiny` session:
+__Note__ `SC3` can also be run in an interactive `Shiny` session:
 
 ```r
 sc3_interactive(deng)
 ```
 
 This command will open `SC3` in a web browser.
+
+__Note__ Due to direct calculation of distances `SC3` becomes very slow when the number of cells is $>5000$. For large datasets containing up to $10^5$ cells we recomment using `Seurat` (see chapter \@ref(seurat-chapter)).
 
 * __Exercise 1__: Run `SC3` for $k$ from 8 to 12 and explore different clustering solutions in your web browser.
 
@@ -258,7 +261,7 @@ __Our solution__:
 \caption{Clustering solutions of pcaReduce method for $k=2$.}(\#fig:clust-pca-reduce2)
 \end{figure}
 
-__Exercise 6__: Compare the results between `SC3` and the original publication cell types for $k=10$.
+__Exercise 6__: Compare the results between `pcaReduce` and the original publication cell types for $k=10$.
 
 __Our solution__:
 
@@ -490,10 +493,10 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [17] shinydashboard_0.6.1    shiny_1.0.5            
 ##  [19] rrcov_1.4-3             compiler_3.4.2         
 ##  [21] backports_1.1.1         assertthat_0.2.0       
-##  [23] Matrix_1.2-7.1          lazyeval_0.2.0         
+##  [23] Matrix_1.2-7.1          lazyeval_0.2.1         
 ##  [25] limma_3.32.10           htmltools_0.3.6        
 ##  [27] tools_3.4.2             bindrcpp_0.2           
-##  [29] gtable_0.2.0            glue_1.1.1             
+##  [29] gtable_0.2.0            glue_1.2.0             
 ##  [31] GenomeInfoDbData_0.99.0 reshape2_1.4.2         
 ##  [33] dplyr_0.7.4             doRNG_1.6.6            
 ##  [35] Rcpp_0.12.13            gdata_2.18.0           

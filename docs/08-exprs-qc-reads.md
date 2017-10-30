@@ -428,10 +428,10 @@ sessionInfo()
 ##  [27] shinydashboard_0.6.1    shiny_1.0.5            
 ##  [29] rrcov_1.4-3             compiler_3.4.2         
 ##  [31] backports_1.1.1         assertthat_0.2.0       
-##  [33] Matrix_1.2-7.1          lazyeval_0.2.0         
+##  [33] Matrix_1.2-7.1          lazyeval_0.2.1         
 ##  [35] htmltools_0.3.6         quantreg_5.34          
 ##  [37] tools_3.4.2             bindrcpp_0.2           
-##  [39] gtable_0.2.0            glue_1.1.1             
+##  [39] gtable_0.2.0            glue_1.2.0             
 ##  [41] GenomeInfoDbData_0.99.0 reshape2_1.4.2         
 ##  [43] dplyr_0.7.4             Rcpp_0.12.13           
 ##  [45] trimcluster_0.1-2       sgeostat_1.0-27        
