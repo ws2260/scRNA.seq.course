@@ -94,9 +94,7 @@ plotPCA(
 )
 ```
 
-
-
-\begin{center}\includegraphics{21-imputation_files/figure-latex/unnamed-chunk-4-1} \end{center}
+<img src="21-imputation_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
 
 Compare this result to the original data in Chapter \@ref(clust-methods). What are the most significant differences?
 
@@ -130,9 +128,7 @@ plotPCA(
 )
 ```
 
-
-
-\begin{center}\includegraphics{21-imputation_files/figure-latex/unnamed-chunk-5-1} \end{center}
+<img src="21-imputation_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
 
 __Exercise:__ Based on the PCA and the clustering results, do you think that imputation using `scImpute` is a good idea for the Deng dataset?
 
@@ -159,9 +155,7 @@ plotPCA(
 )
 ```
 
-
-
-\begin{center}\includegraphics{21-imputation_files/figure-latex/unnamed-chunk-7-1} \end{center}
+<img src="21-imputation_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
 
 Compare this result to the original data in Chapter \@ref(clust-methods). What are the most significant differences?
 
@@ -195,9 +189,7 @@ plotPCA(
 )
 ```
 
-
-
-\begin{center}\includegraphics{21-imputation_files/figure-latex/unnamed-chunk-8-1} \end{center}
+<img src="21-imputation_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" />
 __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the PCA and clustering analysis? Which one do you think is best to use?
 
 

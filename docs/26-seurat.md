@@ -47,9 +47,7 @@ VlnPlot(
 )
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-5-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 GenePlot(
@@ -59,9 +57,7 @@ GenePlot(
 )
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-5-2} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-5-2.png" width="672" style="display: block; margin: auto;" />
 
 Now we will exclude cells with a clear outlier number of read counts:
 
@@ -100,9 +96,7 @@ seuset <- FindVariableGenes(
 )
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-8-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 length(x = seuset@var.genes)
@@ -226,17 +220,13 @@ PrintPCA(object = seuset, pcs.print = 1:5, genes.print = 5, use.full = FALSE)
 VizPCA(object = seuset, pcs.use = 1:2)
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-11-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 PCAPlot(object = seuset, dim.1 = 1, dim.2 = 2)
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-11-2} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-11-2.png" width="672" style="display: block; margin: auto;" />
 
 In particular, `PCHeatmap` allows for easy exploration of the primary sources of heterogeneity in a dataset, and can be useful when trying to decide which PCs to include for further downstream analyses. Both cells and genes are ordered according to their `PCA` scores. Setting `cells.use` to a number plots the _extreme_ cells on both ends of the spectrum, which dramatically speeds plotting for large datasets:
 
@@ -251,9 +241,7 @@ PCHeatmap(
 )
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-12-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" />
 
 ## Significant PCs
 
@@ -277,9 +265,7 @@ JackStrawPlot(object = seuset, PCs = 1:9)
 ## Warning: Removed 39410 rows containing missing values (geom_point).
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-14-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" />
 
 A more ad hoc method for determining which PCs to use is to look at a plot of the standard deviations of the principle components and draw your cutoff where there is a clear elbow in the graph. This can be done with `PCElbowPlot`. In this example, it looks like the elbow would fall around PC 5.
 
@@ -287,9 +273,7 @@ A more ad hoc method for determining which PCs to use is to look at a plot of th
 PCElbowPlot(object = seuset)
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-15-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" />
 
 ## Clustering cells
 
@@ -315,7 +299,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2017-10-30 17:17:25
+## Parameters used in latest FindClusters calculation run on: 2017-10-31 15:43:17
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
@@ -361,9 +345,7 @@ seuset <- RunTSNE(
 TSNEPlot(object = seuset)
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-19-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" />
 
 ## Marker genes
 
@@ -379,9 +361,7 @@ Marker genes can then be visualised:
 VlnPlot(object = seuset, features.plot = rownames(markers2)[1:2])
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-21-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 FeaturePlot(
@@ -392,9 +372,7 @@ FeaturePlot(
 )
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-21-2} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-21-2.png" width="672" style="display: block; margin: auto;" />
 
 `FindAllMarkers` automates this process and find markers for all clusters:
 
@@ -419,9 +397,7 @@ DoHeatmap(
 )
 ```
 
-
-
-\begin{center}\includegraphics{26-seurat_files/figure-latex/unnamed-chunk-23-1} \end{center}
+<img src="26-seurat_files/figure-html/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" />
 
 __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 
@@ -475,7 +451,7 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ##  [25] dimRed_0.1.0            R.utils_2.5.0          
 ##  [27] colorspace_1.3-2        RCurl_1.95-4.8         
 ##  [29] bindr_0.1               survival_2.40-1        
-##  [31] iterators_1.0.8         ape_4.1                
+##  [31] iterators_1.0.8         ape_5.0                
 ##  [33] glue_1.2.0              DRR_0.0.2              
 ##  [35] registry_0.3            gtable_0.2.0           
 ##  [37] ipred_0.9-6             zlibbioc_1.22.0        
