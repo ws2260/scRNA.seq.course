@@ -497,20 +497,20 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [8] utils     datasets  base     
 ## 
 ## other attached packages:
-##  [1] lle_1.1                     snowfall_1.84-6.1          
-##  [3] snow_0.4-2                  MASS_7.3-45                
-##  [5] scatterplot3d_0.3-40        SLICER_0.2.0               
-##  [7] destiny_2.4.5               monocle_2.4.0              
-##  [9] DDRTree_0.1.5               irlba_2.3.1                
-## [11] VGAM_1.0-4                  ggplot2_2.2.1              
-## [13] Matrix_1.2-7.1              M3Drop_2.02.00             
-## [15] numDeriv_2016.8-1           TSCAN_1.14.0               
-## [17] SingleCellExperiment_0.99.4 SummarizedExperiment_1.6.5 
-## [19] DelayedArray_0.2.7          matrixStats_0.52.2         
-## [21] Biobase_2.36.2              GenomicRanges_1.28.6       
-## [23] GenomeInfoDb_1.12.3         IRanges_2.10.5             
-## [25] S4Vectors_0.14.7            BiocGenerics_0.22.1        
-## [27] knitr_1.17                 
+##  [1] lle_1.1                    snowfall_1.84-6.1         
+##  [3] snow_0.4-2                 MASS_7.3-45               
+##  [5] scatterplot3d_0.3-40       SLICER_0.2.0              
+##  [7] destiny_2.4.5              monocle_2.4.0             
+##  [9] DDRTree_0.1.5              irlba_2.3.1               
+## [11] VGAM_1.0-4                 ggplot2_2.2.1             
+## [13] Matrix_1.2-7.1             M3Drop_2.02.00            
+## [15] numDeriv_2016.8-1          TSCAN_1.14.0              
+## [17] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
+## [19] DelayedArray_0.2.7         matrixStats_0.52.2        
+## [21] Biobase_2.36.2             GenomicRanges_1.28.6      
+## [23] GenomeInfoDb_1.12.3        IRanges_2.10.5            
+## [25] S4Vectors_0.14.7           BiocGenerics_0.22.1       
+## [27] knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##   [1] backports_1.1.1         Hmisc_4.0-3            

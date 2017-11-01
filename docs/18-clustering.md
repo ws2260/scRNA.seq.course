@@ -436,16 +436,16 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] pheatmap_1.0.8              scater_1.5.21              
-##  [3] ggplot2_2.2.1               SC3_1.5.6                  
-##  [5] SingleCellExperiment_0.99.4 SummarizedExperiment_1.6.5 
-##  [7] DelayedArray_0.2.7          matrixStats_0.52.2         
-##  [9] GenomicRanges_1.28.6        GenomeInfoDb_1.12.3        
-## [11] IRanges_2.10.5              S4Vectors_0.14.7           
-## [13] pcaReduce_1.0               mclust_5.3                 
-## [15] mnormt_1.5-5                pcaMethods_1.68.0          
-## [17] Biobase_2.36.2              BiocGenerics_0.22.1        
-## [19] knitr_1.17                 
+##  [1] pheatmap_1.0.8             scater_1.5.21             
+##  [3] ggplot2_2.2.1              SC3_1.5.6                 
+##  [5] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
+##  [7] DelayedArray_0.2.7         matrixStats_0.52.2        
+##  [9] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
+## [11] IRanges_2.10.5             S4Vectors_0.14.7          
+## [13] pcaReduce_1.0              mclust_5.3                
+## [15] mnormt_1.5-5               pcaMethods_1.68.0         
+## [17] Biobase_2.36.2             BiocGenerics_0.22.1       
+## [19] knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##   [1] Rtsne_0.13              ggbeeswarm_0.6.0       

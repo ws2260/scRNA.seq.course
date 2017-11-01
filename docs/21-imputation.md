@@ -217,17 +217,17 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] mclust_5.3                  scater_1.5.21              
-##  [3] ggplot2_2.2.1               SC3_1.5.6                  
-##  [5] SingleCellExperiment_0.99.4 SummarizedExperiment_1.6.5 
-##  [7] DelayedArray_0.2.7          matrixStats_0.52.2         
-##  [9] Biobase_2.36.2              GenomicRanges_1.28.6       
-## [11] GenomeInfoDb_1.12.3         IRanges_2.10.5             
-## [13] S4Vectors_0.14.7            BiocGenerics_0.22.1        
-## [15] scImpute_0.0.4              doParallel_1.0.11          
-## [17] iterators_1.0.8             foreach_1.4.3              
-## [19] penalized_0.9-50            survival_2.40-1            
-## [21] kernlab_0.9-25              knitr_1.17                 
+##  [1] mclust_5.3                 scater_1.5.21             
+##  [3] ggplot2_2.2.1              SC3_1.5.6                 
+##  [5] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
+##  [7] DelayedArray_0.2.7         matrixStats_0.52.2        
+##  [9] Biobase_2.36.2             GenomicRanges_1.28.6      
+## [11] GenomeInfoDb_1.12.3        IRanges_2.10.5            
+## [13] S4Vectors_0.14.7           BiocGenerics_0.22.1       
+## [15] scImpute_0.0.4             doParallel_1.0.11         
+## [17] iterators_1.0.8            foreach_1.4.3             
+## [19] penalized_0.9-50           survival_2.40-1           
+## [21] kernlab_0.9-25             knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] bitops_1.0-6            bit64_0.9-7            

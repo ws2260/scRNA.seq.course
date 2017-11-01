@@ -585,14 +585,14 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] scran_1.5.15                BiocParallel_1.10.1        
-##  [3] scater_1.5.21               SingleCellExperiment_0.99.4
-##  [5] SummarizedExperiment_1.6.5  DelayedArray_0.2.7         
-##  [7] matrixStats_0.52.2          GenomicRanges_1.28.6       
-##  [9] GenomeInfoDb_1.12.3         IRanges_2.10.5             
-## [11] S4Vectors_0.14.7            ggplot2_2.2.1              
-## [13] Biobase_2.36.2              BiocGenerics_0.22.1        
-## [15] knitr_1.17                  scRNA.seq.funcs_0.1.0      
+##  [1] scran_1.7.1                BiocParallel_1.10.1       
+##  [3] scater_1.5.21              SingleCellExperiment_1.1.0
+##  [5] SummarizedExperiment_1.6.5 DelayedArray_0.2.7        
+##  [7] matrixStats_0.52.2         GenomicRanges_1.28.6      
+##  [9] GenomeInfoDb_1.12.3        IRanges_2.10.5            
+## [11] S4Vectors_0.14.7           ggplot2_2.2.1             
+## [13] Biobase_2.36.2             BiocGenerics_0.22.1       
+## [15] knitr_1.17                 scRNA.seq.funcs_0.1.0     
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] bitops_1.0-6            bit64_0.9-7            
