@@ -105,14 +105,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Tue Oct 31 15:40:55 2017 -->
+<!-- Wed Nov  1 15:40:59 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID65d5a746f66 () {
+function gvisDataSankeyID65d389a47ca () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,8 +315,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID65d5a746f66() {
-var data = gvisDataSankeyID65d5a746f66();
+function drawChartSankeyID65d389a47ca() {
+var data = gvisDataSankeyID65d389a47ca();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -335,7 +335,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID65d5a746f66')
+    document.getElementById('SankeyID65d389a47ca')
     );
     chart.draw(data,options);
     
@@ -359,9 +359,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID65d5a746f66);
+callbacks.push(drawChartSankeyID65d389a47ca);
 })();
-function displayChartSankeyID65d5a746f66() {
+function displayChartSankeyID65d389a47ca() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,11 +385,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID65d5a746f66"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID65d389a47ca"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID65d5a746f66" 
+<div id="SankeyID65d389a47ca" 
   style="width: 400; height: 600;">
 </div>
 
@@ -466,14 +466,14 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] bindrcpp_0.2                scater_1.5.21              
-##  [3] SingleCellExperiment_0.99.4 SummarizedExperiment_1.6.5 
-##  [5] DelayedArray_0.2.7          matrixStats_0.52.2         
-##  [7] GenomicRanges_1.28.6        GenomeInfoDb_1.12.3        
-##  [9] IRanges_2.10.5              S4Vectors_0.14.7           
-## [11] ggplot2_2.2.1               Biobase_2.36.2             
-## [13] BiocGenerics_0.22.1         scmap_0.99.8               
-## [15] googleVis_0.6.2             knitr_1.17                 
+##  [1] bindrcpp_0.2               scater_1.5.21             
+##  [3] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
+##  [5] DelayedArray_0.2.7         matrixStats_0.52.2        
+##  [7] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
+##  [9] IRanges_2.10.5             S4Vectors_0.14.7          
+## [11] ggplot2_2.2.1              Biobase_2.36.2            
+## [13] BiocGenerics_0.22.1        scmap_0.99.8              
+## [15] googleVis_0.6.2            knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] viridis_0.4.0           edgeR_3.18.1           

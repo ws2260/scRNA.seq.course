@@ -135,13 +135,13 @@ sessionInfo()
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] knitr_1.17                  scater_1.5.21              
-##  [3] SingleCellExperiment_0.99.4 SummarizedExperiment_1.6.5 
-##  [5] DelayedArray_0.2.7          matrixStats_0.52.2         
-##  [7] GenomicRanges_1.28.6        GenomeInfoDb_1.12.3        
-##  [9] IRanges_2.10.5              S4Vectors_0.14.7           
-## [11] ggplot2_2.2.1               Biobase_2.36.2             
-## [13] BiocGenerics_0.22.1        
+##  [1] knitr_1.17                 scater_1.5.21             
+##  [3] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
+##  [5] DelayedArray_0.2.7         matrixStats_0.52.2        
+##  [7] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
+##  [9] IRanges_2.10.5             S4Vectors_0.14.7          
+## [11] ggplot2_2.2.1              Biobase_2.36.2            
+## [13] BiocGenerics_0.22.1       
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] viridis_0.4.0           edgeR_3.18.1           

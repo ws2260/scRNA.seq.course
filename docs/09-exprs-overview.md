@@ -210,13 +210,13 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] scater_1.5.21               ggplot2_2.2.1              
-##  [3] SingleCellExperiment_0.99.4 SummarizedExperiment_1.6.5 
-##  [5] DelayedArray_0.2.7          matrixStats_0.52.2         
-##  [7] Biobase_2.36.2              GenomicRanges_1.28.6       
-##  [9] GenomeInfoDb_1.12.3         IRanges_2.10.5             
-## [11] S4Vectors_0.14.7            BiocGenerics_0.22.1        
-## [13] knitr_1.17                 
+##  [1] scater_1.5.21              ggplot2_2.2.1             
+##  [3] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
+##  [5] DelayedArray_0.2.7         matrixStats_0.52.2        
+##  [7] Biobase_2.36.2             GenomicRanges_1.28.6      
+##  [9] GenomeInfoDb_1.12.3        IRanges_2.10.5            
+## [11] S4Vectors_0.14.7           BiocGenerics_0.22.1       
+## [13] knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] viridis_0.4.0           edgeR_3.18.1           
