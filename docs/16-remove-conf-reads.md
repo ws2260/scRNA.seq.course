@@ -172,53 +172,7 @@ for(n in assayNames(reads.qc)) {
 }
 ```
 
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-1} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-2} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-3} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-4} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-5} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-6} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-7} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-8} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-9} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-10} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-11} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-10-12} \end{center}
+<img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-2.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-3.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-4.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-5.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-6.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-7.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-8.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-9.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-10.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-11.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-10-12.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
@@ -230,9 +184,7 @@ par(mar=c(6,4,1,1))
 boxplot(res, las=2)
 ```
 
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-11-1} \end{center}
+<img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
@@ -256,53 +208,7 @@ for(n in assayNames(reads.qc)) {
 }
 ```
 
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-1} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-2} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-3} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-4} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-5} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-6} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-7} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-8} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-9} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-10} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-11} \end{center}
-
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-12-12} \end{center}
+<img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-2.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-3.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-4.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-5.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-6.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-7.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-8.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-9.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-10.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-11.png" width="672" style="display: block; margin: auto;" /><img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-12-12.png" width="672" style="display: block; margin: auto;" />
 
 
 ```r
@@ -359,9 +265,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
     ggtitle("Effect of batch regression methods per individual")
 ```
 
-
-
-\begin{center}\includegraphics{16-remove-conf-reads_files/figure-latex/unnamed-chunk-14-1} \end{center}
+<img src="16-remove-conf-reads_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ```
@@ -385,22 +289,22 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] RColorBrewer_1.1-2          reshape2_1.4.2             
-##  [3] sva_3.24.4                  genefilter_1.58.1          
-##  [5] mgcv_1.8-22                 nlme_3.1-129               
-##  [7] kBET_0.99.0                 scran_1.5.15               
-##  [9] scater_1.5.21               SingleCellExperiment_0.99.4
-## [11] ggplot2_2.2.1               RUVSeq_1.10.0              
-## [13] edgeR_3.18.1                limma_3.32.10              
-## [15] EDASeq_2.10.0               ShortRead_1.34.2           
-## [17] GenomicAlignments_1.12.2    SummarizedExperiment_1.6.5 
-## [19] DelayedArray_0.2.7          matrixStats_0.52.2         
-## [21] Rsamtools_1.28.0            GenomicRanges_1.28.6       
-## [23] GenomeInfoDb_1.12.3         Biostrings_2.44.2          
-## [25] XVector_0.16.0              IRanges_2.10.5             
-## [27] S4Vectors_0.14.7            BiocParallel_1.10.1        
-## [29] Biobase_2.36.2              BiocGenerics_0.22.1        
-## [31] scRNA.seq.funcs_0.1.0       knitr_1.17                 
+##  [1] RColorBrewer_1.1-2         reshape2_1.4.2            
+##  [3] sva_3.24.4                 genefilter_1.58.1         
+##  [5] mgcv_1.8-22                nlme_3.1-129              
+##  [7] kBET_0.99.0                scran_1.7.1               
+##  [9] scater_1.5.21              SingleCellExperiment_1.1.0
+## [11] ggplot2_2.2.1              RUVSeq_1.10.0             
+## [13] edgeR_3.18.1               limma_3.32.10             
+## [15] EDASeq_2.10.0              ShortRead_1.34.2          
+## [17] GenomicAlignments_1.12.2   SummarizedExperiment_1.6.5
+## [19] DelayedArray_0.2.7         matrixStats_0.52.2        
+## [21] Rsamtools_1.28.0           GenomicRanges_1.28.6      
+## [23] GenomeInfoDb_1.12.3        Biostrings_2.44.2         
+## [25] XVector_0.16.0             IRanges_2.10.5            
+## [27] S4Vectors_0.14.7           BiocParallel_1.10.1       
+## [29] Biobase_2.36.2             BiocGenerics_0.22.1       
+## [31] scRNA.seq.funcs_0.1.0      knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rtsne_0.13              ggbeeswarm_0.6.0       
