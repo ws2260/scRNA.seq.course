@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2017-11-01">
+<meta name="date" content="2017-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -703,69 +703,70 @@ Figure 4.9: Clustering solutions of SINCERA method using found <span class="math
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] pheatmap_1.0.8             scater_1.5.21             
-##  [3] ggplot2_2.2.1              SC3_1.5.6                 
-##  [5] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [7] DelayedArray_0.2.7         matrixStats_0.52.2        
-##  [9] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
-## [11] IRanges_2.10.5             S4Vectors_0.14.7          
+##  [1] pheatmap_1.0.8             scater_1.6.0              
+##  [3] ggplot2_2.2.1              SC3_1.6.0                 
+##  [5] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [7] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [9] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+## [11] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [13] pcaReduce_1.0              mclust_5.3                
-## [15] mnormt_1.5-5               pcaMethods_1.68.0         
-## [17] Biobase_2.36.2             BiocGenerics_0.22.1       
+## [15] mnormt_1.5-5               pcaMethods_1.70.0         
+## [17] Biobase_2.38.0             BiocGenerics_0.24.0       
 ## [19] knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##   [1] Rtsne_0.13              ggbeeswarm_0.6.0       
 ##   [3] colorspace_1.3-2        rjson_0.2.15           
 ##   [5] class_7.3-14            rprojroot_1.2          
-##   [7] XVector_0.16.0          bit64_0.9-7            
-##   [9] AnnotationDbi_1.38.2    mvtnorm_1.0-6          
-##  [11] codetools_0.2-15        scRNA.seq.funcs_0.1.0  
-##  [13] tximport_1.4.0          doParallel_1.0.11      
-##  [15] robustbase_0.92-7       cluster_2.0.6          
+##   [7] XVector_0.18.0          bit64_0.9-7            
+##   [9] AnnotationDbi_1.40.0    mvtnorm_1.0-6          
+##  [11] scRNA.seq.funcs_0.1.0   codetools_0.2-15       
+##  [13] tximport_1.6.0          doParallel_1.0.11      
+##  [15] robustbase_0.92-8       cluster_2.0.6          
 ##  [17] shinydashboard_0.6.1    shiny_1.0.5            
 ##  [19] rrcov_1.4-3             compiler_3.4.2         
 ##  [21] backports_1.1.1         assertthat_0.2.0       
 ##  [23] Matrix_1.2-7.1          lazyeval_0.2.1         
-##  [25] limma_3.32.10           htmltools_0.3.6        
-##  [27] tools_3.4.2             bindrcpp_0.2           
-##  [29] gtable_0.2.0            glue_1.2.0             
-##  [31] GenomeInfoDbData_0.99.0 reshape2_1.4.2         
-##  [33] dplyr_0.7.4             doRNG_1.6.6            
-##  [35] Rcpp_0.12.13            gdata_2.18.0           
-##  [37] iterators_1.0.8         stringr_1.2.0          
-##  [39] mime_0.5                rngtools_1.2.4         
-##  [41] gtools_3.5.0            WriteXLS_4.0.0         
-##  [43] hypergeo_1.2-13         statmod_1.4.30         
-##  [45] XML_3.98-1.9            edgeR_3.18.1           
-##  [47] DEoptimR_1.0-8          MASS_7.3-45            
-##  [49] zlibbioc_1.22.0         scales_0.5.0           
-##  [51] rhdf5_2.20.0            RColorBrewer_1.1-2     
-##  [53] yaml_2.1.14             memoise_1.1.0          
-##  [55] gridExtra_2.3           pkgmaker_0.22          
-##  [57] biomaRt_2.32.1          stringi_1.1.5          
-##  [59] RSQLite_2.0             highr_0.6              
-##  [61] pcaPP_1.9-72            foreach_1.4.3          
-##  [63] orthopolynom_1.0-5      e1071_1.6-8            
-##  [65] contfrac_1.1-11         caTools_1.17.1         
-##  [67] moments_0.14            rlang_0.1.2            
-##  [69] pkgconfig_2.0.1         bitops_1.0-6           
-##  [71] evaluate_0.10.1         lattice_0.20-34        
-##  [73] ROCR_1.0-7              bindr_0.1              
-##  [75] labeling_0.3            cowplot_0.8.0          
-##  [77] bit_1.1-12              deSolve_1.20           
-##  [79] plyr_1.8.4              magrittr_1.5           
-##  [81] bookdown_0.5            R6_2.2.2               
-##  [83] gplots_3.0.1            DBI_0.7                
-##  [85] RCurl_1.95-4.8          tibble_1.3.4           
-##  [87] KernSmooth_2.23-15      rmarkdown_1.6          
-##  [89] viridis_0.4.0           locfit_1.5-9.1         
-##  [91] grid_3.4.2              data.table_1.10.4-3    
-##  [93] blob_1.1.0              digest_0.6.12          
-##  [95] xtable_1.8-2            httpuv_1.3.5           
-##  [97] elliptic_1.3-7          munsell_0.4.3          
-##  [99] registry_0.3            beeswarm_0.2.3         
-## [101] viridisLite_0.2.0       vipor_0.4.5</code></pre>
+##  [25] limma_3.34.0            htmltools_0.3.6        
+##  [27] prettyunits_1.0.2       tools_3.4.2            
+##  [29] bindrcpp_0.2            gtable_0.2.0           
+##  [31] glue_1.2.0              GenomeInfoDbData_0.99.1
+##  [33] reshape2_1.4.2          dplyr_0.7.4            
+##  [35] doRNG_1.6.6             Rcpp_0.12.13           
+##  [37] gdata_2.18.0            iterators_1.0.8        
+##  [39] stringr_1.2.0           mime_0.5               
+##  [41] hypergeo_1.2-13         rngtools_1.2.4         
+##  [43] gtools_3.5.0            WriteXLS_4.0.0         
+##  [45] statmod_1.4.30          XML_3.98-1.9           
+##  [47] edgeR_3.20.1            DEoptimR_1.0-8         
+##  [49] MASS_7.3-45             zlibbioc_1.24.0        
+##  [51] scales_0.5.0            rhdf5_2.22.0           
+##  [53] RColorBrewer_1.1-2      yaml_2.1.14            
+##  [55] memoise_1.1.0           gridExtra_2.3          
+##  [57] pkgmaker_0.22           biomaRt_2.34.0         
+##  [59] stringi_1.1.5           RSQLite_2.0            
+##  [61] highr_0.6               pcaPP_1.9-72           
+##  [63] foreach_1.4.3           orthopolynom_1.0-5     
+##  [65] e1071_1.6-8             contfrac_1.1-11        
+##  [67] caTools_1.17.1          moments_0.14           
+##  [69] rlang_0.1.4             pkgconfig_2.0.1        
+##  [71] bitops_1.0-6            evaluate_0.10.1        
+##  [73] lattice_0.20-34         ROCR_1.0-7             
+##  [75] bindr_0.1               labeling_0.3           
+##  [77] cowplot_0.8.0           bit_1.1-12             
+##  [79] deSolve_1.20            plyr_1.8.4             
+##  [81] magrittr_1.5            bookdown_0.5           
+##  [83] R6_2.2.2                gplots_3.0.1           
+##  [85] DBI_0.7                 RCurl_1.95-4.8         
+##  [87] tibble_1.3.4            KernSmooth_2.23-15     
+##  [89] rmarkdown_1.6           viridis_0.4.0          
+##  [91] progress_1.1.2          locfit_1.5-9.1         
+##  [93] grid_3.4.2              data.table_1.10.4-3    
+##  [95] blob_1.1.0              digest_0.6.12          
+##  [97] xtable_1.8-2            httpuv_1.3.5           
+##  [99] elliptic_1.3-7          munsell_0.4.3          
+## [101] registry_0.3            beeswarm_0.2.3         
+## [103] viridisLite_0.2.0       vipor_0.4.5</code></pre>
 
 </div>
 </div>
@@ -802,14 +803,14 @@ cell_colors &lt;-<span class="st"> </span><span class="kw">brewer.pal</span>(<sp
 <h4><span class="header-section-number">4.3.1.1</span> Highly Variable Genes</h4>
 <p>The first method proposed to identify features in scRNASeq datasets was to identify highly variable genes (HVG). HVG assumes that if genes have large differences in expression across cells some of those differences are due to biological difference between the cells rather than technical noise. However, because of the nature of count data, there is a positive relationship between the mean expression of a gene and the variance in the read counts across cells. This relationship must be corrected for to properly identify HVGs.</p>
 <p><strong>Exercise 2</strong> Using the functions rowMeans and rowVars to plot the relationship between mean expression and variance for all genes in this dataset. (Hint: use log=“xy” to plot on a log-scale).</p>
-<p><img src="19-dropouts_files/figure-html/unnamed-chunk-5-1.png" width="816" style="display: block; margin: auto;" /> A popular method to correct for the relationship between variance and mean expression was proposed by <a href="http://www.nature.com/nmeth/journal/v10/n11/full/nmeth.2645.html">Brennecke et al.</a>. To use the Brennecke method, we first normalize for library size then calculate the mean and the square coefficient of variation (variation divided by the squared mean expression). A quadratic curve is fit to the relationship between these two variables for the ERCC spike-in, and then a chi-square test is used to find genes significantly above the curve. This method is included in the M3Drop package as the Brennecke_getVariableGenes(counts, spikes) function. However, this dataset does not contain spike-ins so we will use the entire dataset to estimate the technical noise.</p>
+<p><img src="19-dropouts_files/figure-html/unnamed-chunk-6-1.png" width="816" style="display: block; margin: auto;" /> A popular method to correct for the relationship between variance and mean expression was proposed by <a href="http://www.nature.com/nmeth/journal/v10/n11/full/nmeth.2645.html">Brennecke et al.</a>. To use the Brennecke method, we first normalize for library size then calculate the mean and the square coefficient of variation (variation divided by the squared mean expression). A quadratic curve is fit to the relationship between these two variables for the ERCC spike-in, and then a chi-square test is used to find genes significantly above the curve. This method is included in the M3Drop package as the Brennecke_getVariableGenes(counts, spikes) function. However, this dataset does not contain spike-ins so we will use the entire dataset to estimate the technical noise.</p>
 <p>In the figure below the red curve is the fitted technical noise model and the dashed line is the 95% CI. Pink dots are the genes with significant biological variability after multiple-testing correction.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Brennecke_HVG &lt;-<span class="st"> </span><span class="kw">BrenneckeGetVariableGenes</span>(
     expr_matrix,
     <span class="dt">fdr =</span> <span class="fl">0.01</span>,
     <span class="dt">minBiolDisp =</span> <span class="fl">0.5</span>
 )</code></pre></div>
-<p><img src="19-dropouts_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="19-dropouts_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">HVG_genes &lt;-<span class="st"> </span>Brennecke_HVG<span class="op">$</span>Gene</code></pre></div>
 </div>
 <div id="high-dropout-genes" class="section level4">
@@ -818,16 +819,38 @@ cell_colors &lt;-<span class="st"> </span><span class="kw">brewer.pal</span>(<sp
 <p><span class="math display">\[P_{dropout} = 1 - S/(K + S)\]</span></p>
 <p>where <span class="math inline">\(S\)</span> is the mRNA concentration in the cell (we will estimate this as average expression) and <span class="math inline">\(K\)</span> is the Michaelis-Menten constant.</p>
 <p>Because the Michaelis-Menten equation is a convex non-linear function, genes which are differentially expression across two or more populations of cells in our dataset will be shifted up/right of the Michaelis-Menten model (see Figure below).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">K =<span class="st"> </span><span class="dv">49</span>
-S_sim =<span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="kw">seq</span>(<span class="dt">from=</span><span class="op">-</span><span class="dv">3</span>, <span class="dt">to=</span><span class="dv">4</span>, <span class="dt">by=</span><span class="fl">0.05</span>) <span class="co"># range of expression values</span>
-MM =<span class="st"> </span><span class="dv">1</span><span class="op">-</span>S_sim<span class="op">/</span>(K<span class="op">+</span>S_sim)
-<span class="kw">plot</span>(S_sim, MM, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">lwd=</span><span class="dv">3</span>, <span class="dt">xlab=</span><span class="st">&quot;Expression&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Dropout Rate&quot;</span>, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1000</span>))
-S1 =<span class="st"> </span><span class="dv">10</span>; P1 =<span class="st"> </span><span class="dv">1</span><span class="op">-</span>S1<span class="op">/</span>(K<span class="op">+</span>S1) <span class="co"># Expression &amp; dropouts for cells in condition 1</span>
-S2 =<span class="st"> </span><span class="dv">750</span>; P2 =<span class="st"> </span><span class="dv">1</span><span class="op">-</span>S2<span class="op">/</span>(K<span class="op">+</span>S2) <span class="co"># Expression &amp; dropouts for cells in condition 2</span>
-<span class="kw">points</span>(<span class="kw">c</span>(S1,S2),<span class="kw">c</span>(P1,P2), <span class="dt">pch=</span><span class="dv">16</span>, <span class="dt">col=</span><span class="st">&quot;grey85&quot;</span>, <span class="dt">cex=</span><span class="dv">3</span>)
-mix =<span class="st"> </span><span class="fl">0.5</span>; <span class="co"># proportion of cells in condition 1</span>
-<span class="kw">points</span>(S1<span class="op">*</span>mix<span class="op">+</span>S2<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>mix), P1<span class="op">*</span>mix<span class="op">+</span>P2<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>mix), <span class="dt">pch=</span><span class="dv">16</span>, <span class="dt">col=</span><span class="st">&quot;grey35&quot;</span>, <span class="dt">cex=</span><span class="dv">3</span>)</code></pre></div>
-<p><img src="19-dropouts_files/figure-html/unnamed-chunk-7-1.png" width="816" style="display: block; margin: auto;" /> <strong>Note</strong>: add <code>log=&quot;x&quot;</code> to the <code>plot</code> call above to see how this looks on the log scale, which is used in M3Drop figures.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">K &lt;-<span class="st"> </span><span class="dv">49</span>
+S_sim &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="op">-</span><span class="dv">3</span>, <span class="dt">to =</span> <span class="dv">4</span>, <span class="dt">by =</span> <span class="fl">0.05</span>) <span class="co"># range of expression values</span>
+MM &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>S_sim <span class="op">/</span><span class="st"> </span>(K <span class="op">+</span><span class="st"> </span>S_sim)
+<span class="kw">plot</span>(
+    S_sim, 
+    MM, 
+    <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, 
+    <span class="dt">lwd =</span> <span class="dv">3</span>, 
+    <span class="dt">xlab =</span> <span class="st">&quot;Expression&quot;</span>, 
+    <span class="dt">ylab =</span> <span class="st">&quot;Dropout Rate&quot;</span>, 
+    <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1000</span>)
+)
+S1 &lt;-<span class="st"> </span><span class="dv">10</span>
+P1 &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>S1 <span class="op">/</span><span class="st"> </span>(K <span class="op">+</span><span class="st"> </span>S1) <span class="co"># Expression &amp; dropouts for cells in condition 1</span>
+S2 &lt;-<span class="st"> </span><span class="dv">750</span>
+P2 &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>S2 <span class="op">/</span><span class="st"> </span>(K <span class="op">+</span><span class="st"> </span>S2) <span class="co"># Expression &amp; dropouts for cells in condition 2</span>
+<span class="kw">points</span>(
+    <span class="kw">c</span>(S1, S2),
+    <span class="kw">c</span>(P1, P2), 
+    <span class="dt">pch =</span> <span class="dv">16</span>, 
+    <span class="dt">col =</span> <span class="st">&quot;grey85&quot;</span>, 
+    <span class="dt">cex =</span> <span class="dv">3</span>
+)
+mix &lt;-<span class="st"> </span><span class="fl">0.5</span> <span class="co"># proportion of cells in condition 1</span>
+<span class="kw">points</span>(
+    S1 <span class="op">*</span><span class="st"> </span>mix <span class="op">+</span><span class="st"> </span>S2 <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mix), 
+    P1 <span class="op">*</span><span class="st"> </span>mix <span class="op">+</span><span class="st"> </span>P2 <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mix), 
+    <span class="dt">pch =</span> <span class="dv">16</span>, 
+    <span class="dt">col =</span> <span class="st">&quot;grey35&quot;</span>, 
+    <span class="dt">cex =</span> <span class="dv">3</span>
+)</code></pre></div>
+<p><img src="19-dropouts_files/figure-html/unnamed-chunk-8-1.png" width="816" style="display: block; margin: auto;" /> <strong>Note</strong>: add <code>log=&quot;x&quot;</code> to the <code>plot</code> call above to see how this looks on the log scale, which is used in M3Drop figures.</p>
 <p><strong>Exercise 3</strong>: Produce the same plot as above with different expression levels (S1 &amp; S2) and/or mixtures (mix).</p>
 <p>We use M3Drop to identify significant outliers to the right of the MM curve. We also apply 1% FDR multiple testing correction:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">M3Drop_genes &lt;-<span class="st"> </span><span class="kw">M3DropFeatureSelection</span>(
@@ -835,7 +858,7 @@ mix =<span class="st"> </span><span class="fl">0.5</span>; <span class="co"># pr
     <span class="dt">mt_method =</span> <span class="st">&quot;fdr&quot;</span>,
     <span class="dt">mt_threshold =</span> <span class="fl">0.01</span>
 )</code></pre></div>
-<p><img src="19-dropouts_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="19-dropouts_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">M3Drop_genes &lt;-<span class="st"> </span>M3Drop_genes<span class="op">$</span>Gene</code></pre></div>
 <p>An alternative method is contained in the M3Drop package that is tailored specifically for UMI-tagged data which generally contains many zeros resulting from low sequencing coverage in addition to those resulting from insufficient reverse-transcription. This model is the Depth-Adjusted Negative Binomial (DANB). This method describes each expression observation as a negative binomial model with a mean related to both the mean expression of the respective gene and the sequencing depth of the respective cell, and a variance related to the mean-expression of the gene.</p>
 <p>Unlike the Michaelis-Menten and HVG methods there isn’t a reliable statistical test for features selected by this model, so we will consider the top 1500 genes instead.</p>
@@ -850,21 +873,29 @@ DANB_genes &lt;-<span class="st"> </span><span class="kw">names</span>(DropFS[<s
 <h3><span class="header-section-number">4.3.2</span> Correlated Expression</h3>
 <p>A completely different approach to feature selection is to use gene-gene correlations. This method is based on the idea that multiple genes will be differentially expressed between different cell-types or cell-states. Genes which are expressed in the same cell-population will be positively correlated with each other where as genes expressed in different cell-populations will be negatively correated with each other. Thus important genes can be identified by the magnitude of their correlation with other genes.</p>
 <p>The limitation of this method is that it assumes technical noise is random and independent for each cell, thus shouldn’t produce gene-gene correlations, but this assumption is violated by batch effects which are generally systematic between different experimental batches and will produce gene-gene correlations. As a result it is more appropriate to take the top few thousand genes as ranked by gene-gene correlation than consider the significance of the correlations.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cor_mat &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="kw">t</span>(expr_matrix), <span class="dt">method=</span><span class="st">&quot;spearman&quot;</span>) <span class="co">#Gene-gene correlations</span>
-<span class="kw">diag</span>(cor_mat) &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, <span class="dt">times=</span><span class="kw">nrow</span>(expr_matrix))
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cor_mat &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="kw">t</span>(expr_matrix), <span class="dt">method =</span> <span class="st">&quot;spearman&quot;</span>) <span class="co"># Gene-gene correlations</span>
+<span class="kw">diag</span>(cor_mat) &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, <span class="dt">times =</span> <span class="kw">nrow</span>(expr_matrix))
 score &lt;-<span class="st"> </span><span class="kw">apply</span>(cor_mat, <span class="dv">1</span>, <span class="cf">function</span>(x) {<span class="kw">max</span>(<span class="kw">abs</span>(x))}) <span class="co">#Correlation of highest magnitude</span>
 <span class="kw">names</span>(score) &lt;-<span class="st"> </span><span class="kw">rownames</span>(expr_matrix);
 score &lt;-<span class="st"> </span>score[<span class="kw">order</span>(<span class="op">-</span>score)]
-Cor_genes =<span class="st"> </span><span class="kw">names</span>(score[<span class="dv">1</span><span class="op">:</span><span class="dv">1500</span>])</code></pre></div>
+Cor_genes &lt;-<span class="st"> </span><span class="kw">names</span>(score[<span class="dv">1</span><span class="op">:</span><span class="dv">1500</span>])</code></pre></div>
 <p>Lastly, another common method for feature selection in scRNASeq data is to use PCA loadings. Genes with high PCA loadings are likely to be highly variable and correlated with many other variable genes, thus may be relevant to the underlying biology. However, as with gene-gene correlations PCA loadings tend to be susceptible to detecting systematic variation due to batch effects; thus it is recommended to plot the PCA results to determine those components corresponding to the biological variation rather than batch effects.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pca &lt;-<span class="st"> </span><span class="kw">prcomp</span>(<span class="kw">log</span>(expr_matrix<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="kw">log</span>(<span class="dv">2</span>)); <span class="co"># PCA is typically performed on log-transformed expression data</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># PCA is typically performed on log-transformed expression data</span>
+pca &lt;-<span class="st"> </span><span class="kw">prcomp</span>(<span class="kw">log</span>(expr_matrix <span class="op">+</span><span class="st"> </span><span class="dv">1</span>) <span class="op">/</span><span class="st"> </span><span class="kw">log</span>(<span class="dv">2</span>))
 
-<span class="kw">plot</span>(pca<span class="op">$</span>rotation[,<span class="dv">1</span>], pca<span class="op">$</span>rotation[,<span class="dv">2</span>], <span class="dt">pch=</span><span class="dv">16</span>, <span class="dt">col=</span>cell_colors[<span class="kw">as.factor</span>(celltype_labs)]) <span class="co"># plot projection</span></code></pre></div>
-<p><img src="19-dropouts_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">score &lt;-<span class="st"> </span><span class="kw">rowSums</span>(<span class="kw">abs</span>(pca<span class="op">$</span>x[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)])) <span class="co"># calculate loadings for components 1 and 2</span>
+<span class="co"># plot projection</span>
+<span class="kw">plot</span>(
+    pca<span class="op">$</span>rotation[,<span class="dv">1</span>], 
+    pca<span class="op">$</span>rotation[,<span class="dv">2</span>], 
+    <span class="dt">pch =</span> <span class="dv">16</span>, 
+    <span class="dt">col =</span> cell_colors[<span class="kw">as.factor</span>(celltype_labs)]
+) </code></pre></div>
+<p><img src="19-dropouts_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># calculate loadings for components 1 and 2</span>
+score &lt;-<span class="st"> </span><span class="kw">rowSums</span>(<span class="kw">abs</span>(pca<span class="op">$</span>x[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)])) 
 <span class="kw">names</span>(score) &lt;-<span class="st"> </span><span class="kw">rownames</span>(expr_matrix)
 score &lt;-<span class="st"> </span>score[<span class="kw">order</span>(<span class="op">-</span>score)]
-PCA_genes =<span class="st"> </span><span class="kw">names</span>(score[<span class="dv">1</span><span class="op">:</span><span class="dv">1500</span>])</code></pre></div>
+PCA_genes &lt;-<span class="st"> </span><span class="kw">names</span>(score[<span class="dv">1</span><span class="op">:</span><span class="dv">1500</span>])</code></pre></div>
 <p><strong>Exercise 4</strong> Consider the top 5 principal components. Which appear to be most biologically relevant? How does the top 1,500 features change if you consider the loadings for those components?</p>
 </div>
 <div id="comparing-methods" class="section level3">
@@ -875,10 +906,11 @@ PCA_genes =<span class="st"> </span><span class="kw">names</span>(score[<span cl
     expr_matrix,
     <span class="dt">cell_labels =</span> celltype_labs
 )</code></pre></div>
-<p><img src="19-dropouts_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="19-dropouts_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>We can also consider how consistent each feature selection method is with the others using the Jaccard Index:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">J &lt;-<span class="st"> </span><span class="kw">sum</span>(M3Drop_genes <span class="op">%in%</span><span class="st"> </span>HVG_genes)<span class="op">/</span><span class="kw">length</span>(<span class="kw">unique</span>(<span class="kw">c</span>(M3Drop_genes, HVG_genes)))</code></pre></div>
-<p><strong>Exercise 5</strong> Plot the expression of the features for each of the other methods. Which appear to be differentially expressed? How consistent are the different methods for this dataset?</p>
+<p><strong>Exercise 5</strong></p>
+<p>Plot the expression of the features for each of the other methods. Which appear to be differentially expressed? How consistent are the different methods for this dataset?</p>
 </div>
 <div id="sessioninfo-6" class="section level3">
 <h3><span class="header-section-number">4.3.4</span> sessionInfo()</h3>
@@ -902,24 +934,24 @@ PCA_genes =<span class="st"> </span><span class="kw">names</span>(score[<span cl
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [3] DelayedArray_0.2.7         Biobase_2.36.2            
-##  [5] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
-##  [7] IRanges_2.10.5             S4Vectors_0.14.7          
-##  [9] BiocGenerics_0.22.1        RColorBrewer_1.1-2        
+##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [3] DelayedArray_0.4.1         Biobase_2.38.0            
+##  [5] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [7] IRanges_2.12.0             S4Vectors_0.16.0          
+##  [9] BiocGenerics_0.24.0        RColorBrewer_1.1-2        
 ## [11] M3Drop_2.02.00             numDeriv_2016.8-1         
 ## [13] matrixStats_0.52.2         scRNA.seq.funcs_0.1.0     
 ## [15] knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.13            XVector_0.16.0         
-##  [3] compiler_3.4.2          zlibbioc_1.22.0        
+##  [1] Rcpp_0.12.13            XVector_0.18.0         
+##  [3] compiler_3.4.2          zlibbioc_1.24.0        
 ##  [5] moments_0.14            bitops_1.0-6           
 ##  [7] tools_3.4.2             digest_0.6.12          
 ##  [9] statmod_1.4.30          evaluate_0.10.1        
 ## [11] Rtsne_0.13              lattice_0.20-34        
 ## [13] Matrix_1.2-7.1          yaml_2.1.14            
-## [15] GenomeInfoDbData_0.99.0 stringr_1.2.0          
+## [15] GenomeInfoDbData_0.99.1 stringr_1.2.0          
 ## [17] contfrac_1.1-11         gtools_3.5.0           
 ## [19] elliptic_1.3-7          caTools_1.17.1         
 ## [21] rprojroot_1.2           grid_3.4.2             
@@ -1237,16 +1269,16 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ##  [1] lle_1.1                    snowfall_1.84-6.1         
 ##  [3] snow_0.4-2                 MASS_7.3-45               
 ##  [5] scatterplot3d_0.3-40       SLICER_0.2.0              
-##  [7] destiny_2.4.5              monocle_2.4.0             
+##  [7] destiny_2.6.1              monocle_2.6.0             
 ##  [9] DDRTree_0.1.5              irlba_2.3.1               
 ## [11] VGAM_1.0-4                 ggplot2_2.2.1             
 ## [13] Matrix_1.2-7.1             M3Drop_2.02.00            
-## [15] numDeriv_2016.8-1          TSCAN_1.14.0              
-## [17] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-## [19] DelayedArray_0.2.7         matrixStats_0.52.2        
-## [21] Biobase_2.36.2             GenomicRanges_1.28.6      
-## [23] GenomeInfoDb_1.12.3        IRanges_2.10.5            
-## [25] S4Vectors_0.14.7           BiocGenerics_0.22.1       
+## [15] numDeriv_2016.8-1          TSCAN_1.16.0              
+## [17] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+## [19] DelayedArray_0.4.1         matrixStats_0.52.2        
+## [21] Biobase_2.38.0             GenomicRanges_1.30.0      
+## [23] GenomeInfoDb_1.14.0        IRanges_2.12.0            
+## [25] S4Vectors_0.16.0           BiocGenerics_0.24.0       
 ## [27] knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
@@ -1255,62 +1287,63 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ##   [5] igraph_1.1.2            lazyeval_0.2.1         
 ##   [7] sp_1.2-5                densityClust_0.3       
 ##   [9] fastICA_1.2-1           digest_0.6.12          
-##  [11] htmltools_0.3.6         gdata_2.18.0           
-##  [13] magrittr_1.5            checkmate_1.8.5        
-##  [15] tensor_1.5              cluster_2.0.6          
-##  [17] limma_3.32.10           tripack_1.3-8          
-##  [19] R.utils_2.5.0           xts_0.10-0             
-##  [21] colorspace_1.3-2        ggrepel_0.7.0          
-##  [23] dplyr_0.7.4             RCurl_1.95-4.8         
-##  [25] lme4_1.1-14             spatstat_1.53-2        
-##  [27] spatstat.data_1.1-1     bindr_0.1              
-##  [29] survival_2.40-1         zoo_1.8-0              
-##  [31] glue_1.2.0              polyclip_1.6-1         
-##  [33] gtable_0.2.0            zlibbioc_1.22.0        
-##  [35] XVector_0.16.0          MatrixModels_0.4-1     
-##  [37] car_2.1-5               DEoptimR_1.0-8         
-##  [39] abind_1.4-5             SparseM_1.77           
-##  [41] VIM_4.7.0               scales_0.5.0           
-##  [43] sgeostat_1.0-27         pheatmap_1.0.8         
-##  [45] Rcpp_0.12.13            xtable_1.8-2           
-##  [47] laeken_0.4.6            htmlTable_1.9          
-##  [49] foreign_0.8-67          proxy_0.4-19           
-##  [51] mclust_5.3              Formula_1.2-2          
-##  [53] vcd_1.4-3               htmlwidgets_0.9        
-##  [55] FNN_1.1                 gplots_3.0.1           
-##  [57] RColorBrewer_1.1-2      acepack_1.4.1          
-##  [59] pkgconfig_2.0.1         R.methodsS3_1.7.1      
-##  [61] deldir_0.1-14           nnet_7.3-12            
-##  [63] alphahull_2.1           labeling_0.3           
-##  [65] rlang_0.1.2             reshape2_1.4.2         
-##  [67] munsell_0.4.3           tools_3.4.2            
-##  [69] splancs_2.01-40         evaluate_0.10.1        
-##  [71] stringr_1.2.0           yaml_2.1.14            
-##  [73] goftest_1.1-1           robustbase_0.92-7      
-##  [75] caTools_1.17.1          bindrcpp_0.2           
-##  [77] nlme_3.1-129            mime_0.5               
-##  [79] quantreg_5.34           slam_0.1-40            
-##  [81] R.oo_1.21.0             compiler_3.4.2         
-##  [83] pbkrtest_0.4-7          curl_3.0               
-##  [85] e1071_1.6-8             spatstat.utils_1.7-1   
-##  [87] smoother_1.1            tibble_1.3.4           
-##  [89] statmod_1.4.30          stringi_1.1.5          
-##  [91] highr_0.6               lattice_0.20-34        
-##  [93] nloptr_1.0.4            HSMMSingleCell_0.110.0 
-##  [95] combinat_0.0-8          lmtest_0.9-35          
-##  [97] data.table_1.10.4-3     bitops_1.0-6           
-##  [99] httpuv_1.3.5            R6_2.2.2               
-## [101] latticeExtra_0.6-28     bookdown_0.5           
-## [103] KernSmooth_2.23-15      gridExtra_2.3          
-## [105] boot_1.3-18             gtools_3.5.0           
-## [107] assertthat_0.2.0        rprojroot_1.2          
-## [109] qlcMatrix_0.9.5         GenomeInfoDbData_0.99.0
-## [111] mgcv_1.8-22             grid_3.4.2             
-## [113] rpart_4.1-10            class_7.3-14           
-## [115] minqa_1.2.4             rmarkdown_1.6          
-## [117] Rtsne_0.13              TTR_0.23-2             
-## [119] bbmle_1.0.20            shiny_1.0.5            
-## [121] base64enc_0.1-3</code></pre>
+##  [11] htmltools_0.3.6         viridis_0.4.0          
+##  [13] gdata_2.18.0            magrittr_1.5           
+##  [15] checkmate_1.8.5         tensor_1.5             
+##  [17] cluster_2.0.6           limma_3.34.0           
+##  [19] tripack_1.3-8           R.utils_2.6.0          
+##  [21] xts_0.10-0              colorspace_1.3-2       
+##  [23] ggrepel_0.7.0           dplyr_0.7.4            
+##  [25] RCurl_1.95-4.8          spatstat.data_1.1-1    
+##  [27] lme4_1.1-14             spatstat_1.53-2        
+##  [29] bindr_0.1               survival_2.40-1        
+##  [31] zoo_1.8-0               glue_1.2.0             
+##  [33] polyclip_1.6-1          gtable_0.2.0           
+##  [35] zlibbioc_1.24.0         XVector_0.18.0         
+##  [37] MatrixModels_0.4-1      car_2.1-5              
+##  [39] DEoptimR_1.0-8          abind_1.4-5            
+##  [41] SparseM_1.77            VIM_4.7.0              
+##  [43] scales_0.5.0            sgeostat_1.0-27        
+##  [45] pheatmap_1.0.8          Rcpp_0.12.13           
+##  [47] viridisLite_0.2.0       xtable_1.8-2           
+##  [49] laeken_0.4.6            htmlTable_1.9          
+##  [51] foreign_0.8-67          proxy_0.4-19           
+##  [53] mclust_5.3              Formula_1.2-2          
+##  [55] vcd_1.4-3               htmlwidgets_0.9        
+##  [57] FNN_1.1                 gplots_3.0.1           
+##  [59] RColorBrewer_1.1-2      acepack_1.4.1          
+##  [61] pkgconfig_2.0.1         R.methodsS3_1.7.1      
+##  [63] deldir_0.1-14           nnet_7.3-12            
+##  [65] alphahull_2.1           labeling_0.3           
+##  [67] rlang_0.1.4             reshape2_1.4.2         
+##  [69] munsell_0.4.3           tools_3.4.2            
+##  [71] splancs_2.01-40         evaluate_0.10.1        
+##  [73] stringr_1.2.0           goftest_1.1-1          
+##  [75] yaml_2.1.14             robustbase_0.92-8      
+##  [77] caTools_1.17.1          bindrcpp_0.2           
+##  [79] nlme_3.1-129            mime_0.5               
+##  [81] quantreg_5.34           slam_0.1-40            
+##  [83] R.oo_1.21.0             compiler_3.4.2         
+##  [85] pbkrtest_0.4-7          curl_3.0               
+##  [87] e1071_1.6-8             spatstat.utils_1.7-1   
+##  [89] smoother_1.1            tibble_1.3.4           
+##  [91] statmod_1.4.30          stringi_1.1.5          
+##  [93] highr_0.6               lattice_0.20-34        
+##  [95] nloptr_1.0.4            HSMMSingleCell_0.112.0 
+##  [97] combinat_0.0-8          lmtest_0.9-35          
+##  [99] data.table_1.10.4-3     bitops_1.0-6           
+## [101] httpuv_1.3.5            R6_2.2.2               
+## [103] latticeExtra_0.6-28     bookdown_0.5           
+## [105] KernSmooth_2.23-15      gridExtra_2.3          
+## [107] boot_1.3-18             gtools_3.5.0           
+## [109] assertthat_0.2.0        rprojroot_1.2          
+## [111] qlcMatrix_0.9.5         GenomeInfoDbData_0.99.1
+## [113] mgcv_1.8-22             grid_3.4.2             
+## [115] rpart_4.1-10            class_7.3-14           
+## [117] minqa_1.2.4             rmarkdown_1.6          
+## [119] Rtsne_0.13              TTR_0.23-2             
+## [121] bbmle_1.0.20            shiny_1.0.5            
+## [123] base64enc_0.1-3</code></pre>
 
 </div>
 </div>
@@ -1450,64 +1483,65 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] mclust_5.3                 scater_1.5.21             
-##  [3] ggplot2_2.2.1              SC3_1.5.6                 
-##  [5] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [7] DelayedArray_0.2.7         matrixStats_0.52.2        
-##  [9] Biobase_2.36.2             GenomicRanges_1.28.6      
-## [11] GenomeInfoDb_1.12.3        IRanges_2.10.5            
-## [13] S4Vectors_0.14.7           BiocGenerics_0.22.1       
+##  [1] mclust_5.3                 scater_1.6.0              
+##  [3] ggplot2_2.2.1              SC3_1.6.0                 
+##  [5] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [7] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [9] Biobase_2.38.0             GenomicRanges_1.30.0      
+## [11] GenomeInfoDb_1.14.0        IRanges_2.12.0            
+## [13] S4Vectors_0.16.0           BiocGenerics_0.24.0       
 ## [15] scImpute_0.0.4             doParallel_1.0.11         
 ## [17] iterators_1.0.8            foreach_1.4.3             
 ## [19] penalized_0.9-50           survival_2.40-1           
 ## [21] kernlab_0.9-25             knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] bitops_1.0-6            bit64_0.9-7            
-##  [3] RColorBrewer_1.1-2      rprojroot_1.2          
-##  [5] tools_3.4.2             backports_1.1.1        
-##  [7] doRNG_1.6.6             R6_2.2.2               
-##  [9] vipor_0.4.5             KernSmooth_2.23-15     
-## [11] DBI_0.7                 lazyeval_0.2.1         
-## [13] colorspace_1.3-2        gridExtra_2.3          
-## [15] bit_1.1-12              compiler_3.4.2         
-## [17] pkgmaker_0.22           labeling_0.3           
-## [19] bookdown_0.5            caTools_1.17.1         
-## [21] scales_0.5.0            DEoptimR_1.0-8         
-## [23] mvtnorm_1.0-6           robustbase_0.92-7      
-## [25] stringr_1.2.0           digest_0.6.12          
-## [27] rmarkdown_1.6           XVector_0.16.0         
-## [29] pkgconfig_2.0.1         rrcov_1.4-3            
-## [31] htmltools_0.3.6         WriteXLS_4.0.0         
-## [33] limma_3.32.10           rlang_0.1.2            
-## [35] RSQLite_2.0             shiny_1.0.5            
-## [37] bindr_0.1               gtools_3.5.0           
-## [39] dplyr_0.7.4             RCurl_1.95-4.8         
-## [41] magrittr_1.5            GenomeInfoDbData_0.99.0
-## [43] Matrix_1.2-7.1          ggbeeswarm_0.6.0       
-## [45] Rcpp_0.12.13            munsell_0.4.3          
-## [47] viridis_0.4.0           edgeR_3.18.1           
-## [49] stringi_1.1.5           yaml_2.1.14            
-## [51] zlibbioc_1.22.0         rhdf5_2.20.0           
-## [53] gplots_3.0.1            plyr_1.8.4             
-## [55] grid_3.4.2              blob_1.1.0             
-## [57] gdata_2.18.0            shinydashboard_0.6.1   
-## [59] lattice_0.20-34         cowplot_0.8.0          
-## [61] splines_3.4.2           locfit_1.5-9.1         
-## [63] rjson_0.2.15            rngtools_1.2.4         
-## [65] reshape2_1.4.2          codetools_0.2-15       
-## [67] biomaRt_2.32.1          glue_1.2.0             
-## [69] XML_3.98-1.9            evaluate_0.10.1        
-## [71] data.table_1.10.4-3     httpuv_1.3.5           
-## [73] gtable_0.2.0            assertthat_0.2.0       
-## [75] mime_0.5                xtable_1.8-2           
-## [77] e1071_1.6-8             class_7.3-14           
-## [79] pcaPP_1.9-72            viridisLite_0.2.0      
-## [81] tibble_1.3.4            pheatmap_1.0.8         
-## [83] beeswarm_0.2.3          AnnotationDbi_1.38.2   
-## [85] registry_0.3            memoise_1.1.0          
-## [87] tximport_1.4.0          bindrcpp_0.2           
-## [89] cluster_2.0.6           ROCR_1.0-7</code></pre>
+##  [1] ggbeeswarm_0.6.0        colorspace_1.3-2       
+##  [3] rjson_0.2.15            class_7.3-14           
+##  [5] rprojroot_1.2           XVector_0.18.0         
+##  [7] bit64_0.9-7             AnnotationDbi_1.40.0   
+##  [9] mvtnorm_1.0-6           codetools_0.2-15       
+## [11] splines_3.4.2           tximport_1.6.0         
+## [13] robustbase_0.92-8       cluster_2.0.6          
+## [15] pheatmap_1.0.8          shinydashboard_0.6.1   
+## [17] shiny_1.0.5             rrcov_1.4-3            
+## [19] compiler_3.4.2          backports_1.1.1        
+## [21] assertthat_0.2.0        Matrix_1.2-7.1         
+## [23] lazyeval_0.2.1          limma_3.34.0           
+## [25] htmltools_0.3.6         prettyunits_1.0.2      
+## [27] tools_3.4.2             bindrcpp_0.2           
+## [29] gtable_0.2.0            glue_1.2.0             
+## [31] GenomeInfoDbData_0.99.1 reshape2_1.4.2         
+## [33] dplyr_0.7.4             doRNG_1.6.6            
+## [35] Rcpp_0.12.13            gdata_2.18.0           
+## [37] stringr_1.2.0           mime_0.5               
+## [39] rngtools_1.2.4          gtools_3.5.0           
+## [41] WriteXLS_4.0.0          XML_3.98-1.9           
+## [43] edgeR_3.20.1            DEoptimR_1.0-8         
+## [45] zlibbioc_1.24.0         scales_0.5.0           
+## [47] rhdf5_2.22.0            RColorBrewer_1.1-2     
+## [49] yaml_2.1.14             memoise_1.1.0          
+## [51] gridExtra_2.3           pkgmaker_0.22          
+## [53] biomaRt_2.34.0          stringi_1.1.5          
+## [55] RSQLite_2.0             pcaPP_1.9-72           
+## [57] e1071_1.6-8             caTools_1.17.1         
+## [59] rlang_0.1.4             pkgconfig_2.0.1        
+## [61] bitops_1.0-6            evaluate_0.10.1        
+## [63] lattice_0.20-34         ROCR_1.0-7             
+## [65] bindr_0.1               labeling_0.3           
+## [67] cowplot_0.8.0           bit_1.1-12             
+## [69] plyr_1.8.4              magrittr_1.5           
+## [71] bookdown_0.5            R6_2.2.2               
+## [73] gplots_3.0.1            DBI_0.7                
+## [75] RCurl_1.95-4.8          tibble_1.3.4           
+## [77] KernSmooth_2.23-15      rmarkdown_1.6          
+## [79] viridis_0.4.0           progress_1.1.2         
+## [81] locfit_1.5-9.1          grid_3.4.2             
+## [83] data.table_1.10.4-3     blob_1.1.0             
+## [85] digest_0.6.12           xtable_1.8-2           
+## [87] httpuv_1.3.5            munsell_0.4.3          
+## [89] registry_0.3            beeswarm_0.2.3         
+## [91] viridisLite_0.2.0       vipor_0.4.5</code></pre>
 
 </div>
 </div>
@@ -1748,7 +1782,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 Figure 4.17: ROC curve for edgeR.
 </p>
 </div>
-<pre><code>## [1] 0.8477189</code></pre>
+<pre><code>## [1] 0.8466764</code></pre>
 </div>
 <div id="monocle-1" class="section level3">
 <h3><span class="header-section-number">4.7.5</span> Monocle</h3>
@@ -1910,52 +1944,53 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 ## 
 ## other attached packages:
 ##  [1] ROCR_1.0-7                 gplots_3.0.1              
-##  [3] MAST_1.2.1                 SummarizedExperiment_1.6.5
-##  [5] DelayedArray_0.2.7         matrixStats_0.52.2        
-##  [7] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
-##  [9] IRanges_2.10.5             S4Vectors_0.14.7          
-## [11] monocle_2.4.0              DDRTree_0.1.5             
+##  [3] MAST_1.4.0                 SummarizedExperiment_1.8.0
+##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [7] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
+## [11] monocle_2.6.0              DDRTree_0.1.5             
 ## [13] irlba_2.3.1                VGAM_1.0-4                
-## [15] ggplot2_2.2.1              Biobase_2.36.2            
-## [17] BiocGenerics_0.22.1        Matrix_1.2-7.1            
-## [19] edgeR_3.18.1               limma_3.32.10             
+## [15] ggplot2_2.2.1              Biobase_2.38.0            
+## [17] BiocGenerics_0.24.0        Matrix_1.2-7.1            
+## [19] edgeR_3.20.1               limma_3.34.0              
 ## [21] scRNA.seq.funcs_0.1.0      knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] gtools_3.5.0            elliptic_1.3-7         
-##  [3] moments_0.14            assertthat_0.2.0       
-##  [5] statmod_1.4.30          highr_0.6              
-##  [7] GenomeInfoDbData_0.99.0 yaml_2.1.14            
-##  [9] slam_0.1-40             ggrepel_0.7.0          
-## [11] backports_1.1.1         lattice_0.20-34        
-## [13] glue_1.2.0              densityClust_0.3       
-## [15] digest_0.6.12           RColorBrewer_1.1-2     
-## [17] XVector_0.16.0          colorspace_1.3-2       
-## [19] fastICA_1.2-1           htmltools_0.3.6        
-## [21] plyr_1.8.4              pkgconfig_2.0.1        
-## [23] pheatmap_1.0.8          HSMMSingleCell_0.110.0 
-## [25] qlcMatrix_0.9.5         zlibbioc_1.22.0        
-## [27] bookdown_0.5            scales_0.5.0           
-## [29] gdata_2.18.0            Rtsne_0.13             
-## [31] tibble_1.3.4            combinat_0.0-8         
-## [33] lazyeval_0.2.1          magrittr_1.5           
-## [35] evaluate_0.10.1         MASS_7.3-45            
-## [37] FNN_1.1                 data.table_1.10.4-3    
-## [39] tools_3.4.2             stringr_1.2.0          
-## [41] munsell_0.4.3           locfit_1.5-9.1         
-## [43] cluster_2.0.6           bindrcpp_0.2           
-## [45] orthopolynom_1.0-5      compiler_3.4.2         
-## [47] caTools_1.17.1          contfrac_1.1-11        
-## [49] rlang_0.1.2             grid_3.4.2             
-## [51] RCurl_1.95-4.8          igraph_1.1.2           
-## [53] bitops_1.0-6            rmarkdown_1.6          
-## [55] hypergeo_1.2-13         gtable_0.2.0           
-## [57] abind_1.4-5             deSolve_1.20           
-## [59] reshape2_1.4.2          R6_2.2.2               
-## [61] gridExtra_2.3           dplyr_0.7.4            
-## [63] bindr_0.1               rprojroot_1.2          
-## [65] KernSmooth_2.23-15      stringi_1.1.5          
-## [67] Rcpp_0.12.13</code></pre>
+##  [1] viridis_0.4.0           viridisLite_0.2.0      
+##  [3] gtools_3.5.0            elliptic_1.3-7         
+##  [5] moments_0.14            assertthat_0.2.0       
+##  [7] statmod_1.4.30          highr_0.6              
+##  [9] GenomeInfoDbData_0.99.1 yaml_2.1.14            
+## [11] slam_0.1-40             ggrepel_0.7.0          
+## [13] backports_1.1.1         lattice_0.20-34        
+## [15] glue_1.2.0              densityClust_0.3       
+## [17] digest_0.6.12           XVector_0.18.0         
+## [19] RColorBrewer_1.1-2      colorspace_1.3-2       
+## [21] fastICA_1.2-1           htmltools_0.3.6        
+## [23] plyr_1.8.4              pkgconfig_2.0.1        
+## [25] pheatmap_1.0.8          HSMMSingleCell_0.112.0 
+## [27] qlcMatrix_0.9.5         zlibbioc_1.24.0        
+## [29] bookdown_0.5            scales_0.5.0           
+## [31] gdata_2.18.0            Rtsne_0.13             
+## [33] tibble_1.3.4            combinat_0.0-8         
+## [35] lazyeval_0.2.1          magrittr_1.5           
+## [37] evaluate_0.10.1         MASS_7.3-45            
+## [39] FNN_1.1                 data.table_1.10.4-3    
+## [41] tools_3.4.2             stringr_1.2.0          
+## [43] munsell_0.4.3           locfit_1.5-9.1         
+## [45] cluster_2.0.6           bindrcpp_0.2           
+## [47] orthopolynom_1.0-5      compiler_3.4.2         
+## [49] caTools_1.17.1          contfrac_1.1-11        
+## [51] rlang_0.1.4             grid_3.4.2             
+## [53] RCurl_1.95-4.8          igraph_1.1.2           
+## [55] bitops_1.0-6            rmarkdown_1.6          
+## [57] hypergeo_1.2-13         gtable_0.2.0           
+## [59] abind_1.4-5             deSolve_1.20           
+## [61] reshape2_1.4.2          R6_2.2.2               
+## [63] gridExtra_2.3           dplyr_0.7.4            
+## [65] bindr_0.1               rprojroot_1.2          
+## [67] KernSmooth_2.23-15      stringi_1.1.5          
+## [69] Rcpp_0.12.13</code></pre>
 
 </div>
 </div>
@@ -2029,12 +2064,12 @@ Figure 2.6:  scmap can also be used to project cells from a new experiment onto 
 <p>Clearly the projection is almost perfect. With <code>scmap</code> one can also plot a <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey">Sankey diagram</a> (however, <code>cell_type1</code> columns have to be provided in the <code>colData</code> slots of both the reference and the projection datasets):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">getSankey</span>(<span class="kw">colData</span>(segerstolpe)<span class="op">$</span>cell_type1, <span class="kw">colData</span>(segerstolpe)<span class="op">$</span>scmap_labs))</code></pre></div>
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Wed Nov  1 15:40:59 2017 -->
+<!-- Tue Nov  7 12:55:23 2017 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID65d389a47ca () {
+function gvisDataSankeyID699616b5948 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2237,8 +2272,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID65d389a47ca() {
-var data = gvisDataSankeyID65d389a47ca();
+function drawChartSankeyID699616b5948() {
+var data = gvisDataSankeyID699616b5948();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -2257,7 +2292,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID65d389a47ca')
+    document.getElementById('SankeyID699616b5948')
     );
     chart.draw(data,options);
     
@@ -2281,9 +2316,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID65d389a47ca);
+callbacks.push(drawChartSankeyID699616b5948);
 })();
-function displayChartSankeyID65d389a47ca() {
+function displayChartSankeyID699616b5948() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2306,9 +2341,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID65d389a47ca"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID699616b5948"></script>
 <!-- divChart -->
-<div id="SankeyID65d389a47ca" style="width: 400; height: 600;">
+<div id="SankeyID699616b5948" style="width: 400; height: 600;">
 
 </div>
 </div>
@@ -2362,52 +2397,53 @@ callbacks.shift()();
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] bindrcpp_0.2               scater_1.5.21             
-##  [3] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [5] DelayedArray_0.2.7         matrixStats_0.52.2        
-##  [7] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
-##  [9] IRanges_2.10.5             S4Vectors_0.14.7          
-## [11] ggplot2_2.2.1              Biobase_2.36.2            
-## [13] BiocGenerics_0.22.1        scmap_0.99.8              
+##  [1] bindrcpp_0.2               scater_1.6.0              
+##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [7] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
+## [11] ggplot2_2.2.1              Biobase_2.38.0            
+## [13] BiocGenerics_0.24.0        scmap_1.0.0               
 ## [15] googleVis_0.6.2            knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.0           edgeR_3.18.1           
+##  [1] viridis_0.4.0           edgeR_3.20.1           
 ##  [3] bit64_0.9-7             jsonlite_1.5           
 ##  [5] viridisLite_0.2.0       shiny_1.0.5            
 ##  [7] assertthat_0.2.0        highr_0.6              
 ##  [9] blob_1.1.0              vipor_0.4.5            
-## [11] GenomeInfoDbData_0.99.0 yaml_2.1.14            
-## [13] RSQLite_2.0             backports_1.1.1        
-## [15] lattice_0.20-34         glue_1.2.0             
-## [17] limma_3.32.10           digest_0.6.12          
-## [19] XVector_0.16.0          randomForest_4.6-12    
-## [21] colorspace_1.3-2        htmltools_0.3.6        
-## [23] httpuv_1.3.5            Matrix_1.2-7.1         
-## [25] plyr_1.8.4              XML_3.98-1.9           
-## [27] pkgconfig_2.0.1         biomaRt_2.32.1         
-## [29] bookdown_0.5            zlibbioc_1.22.0        
-## [31] xtable_1.8-2            scales_0.5.0           
-## [33] tibble_1.3.4            proxy_0.4-19           
-## [35] lazyeval_0.2.1          magrittr_1.5           
-## [37] mime_0.5                memoise_1.1.0          
-## [39] evaluate_0.10.1         class_7.3-14           
-## [41] beeswarm_0.2.3          shinydashboard_0.6.1   
-## [43] tools_3.4.2             data.table_1.10.4-3    
-## [45] stringr_1.2.0           munsell_0.4.3          
-## [47] locfit_1.5-9.1          AnnotationDbi_1.38.2   
-## [49] compiler_3.4.2          e1071_1.6-8            
-## [51] rlang_0.1.2             rhdf5_2.20.0           
-## [53] grid_3.4.2              RCurl_1.95-4.8         
-## [55] tximport_1.4.0          rjson_0.2.15           
-## [57] labeling_0.3            bitops_1.0-6           
-## [59] rmarkdown_1.6           gtable_0.2.0           
-## [61] codetools_0.2-15        DBI_0.7                
-## [63] reshape2_1.4.2          R6_2.2.2               
-## [65] gridExtra_2.3           dplyr_0.7.4            
-## [67] bit_1.1-12              bindr_0.1              
-## [69] rprojroot_1.2           ggbeeswarm_0.6.0       
-## [71] stringi_1.1.5           Rcpp_0.12.13</code></pre>
+## [11] GenomeInfoDbData_0.99.1 yaml_2.1.14            
+## [13] progress_1.1.2          RSQLite_2.0            
+## [15] backports_1.1.1         lattice_0.20-34        
+## [17] limma_3.34.0            glue_1.2.0             
+## [19] digest_0.6.12           XVector_0.18.0         
+## [21] randomForest_4.6-12     colorspace_1.3-2       
+## [23] htmltools_0.3.6         httpuv_1.3.5           
+## [25] Matrix_1.2-7.1          plyr_1.8.4             
+## [27] XML_3.98-1.9            pkgconfig_2.0.1        
+## [29] biomaRt_2.34.0          bookdown_0.5           
+## [31] zlibbioc_1.24.0         xtable_1.8-2           
+## [33] scales_0.5.0            tibble_1.3.4           
+## [35] proxy_0.4-19            lazyeval_0.2.1         
+## [37] magrittr_1.5            mime_0.5               
+## [39] memoise_1.1.0           evaluate_0.10.1        
+## [41] class_7.3-14            beeswarm_0.2.3         
+## [43] shinydashboard_0.6.1    tools_3.4.2            
+## [45] data.table_1.10.4-3     prettyunits_1.0.2      
+## [47] stringr_1.2.0           locfit_1.5-9.1         
+## [49] munsell_0.4.3           AnnotationDbi_1.40.0   
+## [51] compiler_3.4.2          e1071_1.6-8            
+## [53] rlang_0.1.4             rhdf5_2.22.0           
+## [55] grid_3.4.2              RCurl_1.95-4.8         
+## [57] tximport_1.6.0          rjson_0.2.15           
+## [59] labeling_0.3            bitops_1.0-6           
+## [61] rmarkdown_1.6           gtable_0.2.0           
+## [63] codetools_0.2-15        DBI_0.7                
+## [65] reshape2_1.4.2          R6_2.2.2               
+## [67] gridExtra_2.3           dplyr_0.7.4            
+## [69] bit_1.1-12              bindr_0.1              
+## [71] rprojroot_1.2           ggbeeswarm_0.6.0       
+## [73] stringi_1.1.5           Rcpp_0.12.13</code></pre>
 
 </div>
 </div>
@@ -2549,24 +2585,24 @@ muraro_delta &lt;-<span class="st"> </span><span class="kw">c</span>(<span class
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [3] DelayedArray_0.2.7         matrixStats_0.52.2        
-##  [5] Biobase_2.36.2             GenomicRanges_1.28.6      
-##  [7] GenomeInfoDb_1.12.3        IRanges_2.10.5            
-##  [9] S4Vectors_0.14.7           BiocGenerics_0.22.1       
-## [11] scfind_0.99.6              knitr_1.17                
+##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [3] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [5] Biobase_2.38.0             GenomicRanges_1.30.0      
+##  [7] GenomeInfoDb_1.14.0        IRanges_2.12.0            
+##  [9] S4Vectors_0.16.0           BiocGenerics_0.24.0       
+## [11] scfind_1.0.0               knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_0.12.13            highr_0.6              
 ##  [3] plyr_1.8.4              compiler_3.4.2         
-##  [5] XVector_0.16.0          bindr_0.1              
+##  [5] XVector_0.18.0          bindr_0.1              
 ##  [7] bitops_1.0-6            tools_3.4.2            
-##  [9] zlibbioc_1.22.0         digest_0.6.12          
+##  [9] zlibbioc_1.24.0         digest_0.6.12          
 ## [11] bit_1.1-12              tibble_1.3.4           
 ## [13] evaluate_0.10.1         lattice_0.20-34        
-## [15] pkgconfig_2.0.1         rlang_0.1.2            
+## [15] pkgconfig_2.0.1         rlang_0.1.4            
 ## [17] Matrix_1.2-7.1          yaml_2.1.14            
-## [19] bindrcpp_0.2            GenomeInfoDbData_0.99.0
+## [19] bindrcpp_0.2            GenomeInfoDbData_0.99.1
 ## [21] stringr_1.2.0           dplyr_0.7.4            
 ## [23] rprojroot_1.2           grid_3.4.2             
 ## [25] glue_1.2.0              R6_2.2.2               

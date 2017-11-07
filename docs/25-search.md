@@ -203,24 +203,24 @@ sessionInfo()
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [3] DelayedArray_0.2.7         matrixStats_0.52.2        
-##  [5] Biobase_2.36.2             GenomicRanges_1.28.6      
-##  [7] GenomeInfoDb_1.12.3        IRanges_2.10.5            
-##  [9] S4Vectors_0.14.7           BiocGenerics_0.22.1       
-## [11] scfind_0.99.6              knitr_1.17                
+##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [3] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [5] Biobase_2.38.0             GenomicRanges_1.30.0      
+##  [7] GenomeInfoDb_1.14.0        IRanges_2.12.0            
+##  [9] S4Vectors_0.16.0           BiocGenerics_0.24.0       
+## [11] scfind_1.0.0               knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_0.12.13            highr_0.6              
 ##  [3] plyr_1.8.4              compiler_3.4.2         
-##  [5] XVector_0.16.0          bindr_0.1              
+##  [5] XVector_0.18.0          bindr_0.1              
 ##  [7] bitops_1.0-6            tools_3.4.2            
-##  [9] zlibbioc_1.22.0         digest_0.6.12          
+##  [9] zlibbioc_1.24.0         digest_0.6.12          
 ## [11] bit_1.1-12              tibble_1.3.4           
 ## [13] evaluate_0.10.1         lattice_0.20-34        
-## [15] pkgconfig_2.0.1         rlang_0.1.2            
+## [15] pkgconfig_2.0.1         rlang_0.1.4            
 ## [17] Matrix_1.2-7.1          yaml_2.1.14            
-## [19] bindrcpp_0.2            GenomeInfoDbData_0.99.0
+## [19] bindrcpp_0.2            GenomeInfoDbData_0.99.1
 ## [21] stringr_1.2.0           dplyr_0.7.4            
 ## [23] rprojroot_1.2           grid_3.4.2             
 ## [25] glue_1.2.0              R6_2.2.2               

@@ -299,7 +299,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2017-11-01 15:43:20
+## Parameters used in latest FindClusters calculation run on: 2017-11-07 12:57:50
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
@@ -428,12 +428,12 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ##  [1] bindrcpp_0.2               dplyr_0.7.4               
 ##  [3] mclust_5.3                 Seurat_2.1.0              
 ##  [5] Matrix_1.2-7.1             cowplot_0.8.0             
-##  [7] ggplot2_2.2.1              SingleCellExperiment_1.1.0
-##  [9] SummarizedExperiment_1.6.5 DelayedArray_0.2.7        
-## [11] matrixStats_0.52.2         Biobase_2.36.2            
-## [13] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
-## [15] IRanges_2.10.5             S4Vectors_0.14.7          
-## [17] BiocGenerics_0.22.1        knitr_1.17                
+##  [7] ggplot2_2.2.1              SingleCellExperiment_1.0.0
+##  [9] SummarizedExperiment_1.8.0 DelayedArray_0.4.1        
+## [11] matrixStats_0.52.2         Biobase_2.38.0            
+## [13] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+## [15] IRanges_2.12.0             S4Vectors_0.16.0          
+## [17] BiocGenerics_0.24.0        knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
 ##   [1] backports_1.1.1         Hmisc_4.0-3            
@@ -448,14 +448,14 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ##  [19] doParallel_1.0.11       mixtools_1.1.0         
 ##  [21] ROCR_1.0-7              sfsmisc_1.1-1          
 ##  [23] recipes_0.1.0           gower_0.1.2            
-##  [25] dimRed_0.1.0            R.utils_2.5.0          
+##  [25] dimRed_0.1.0            R.utils_2.6.0          
 ##  [27] colorspace_1.3-2        RCurl_1.95-4.8         
 ##  [29] bindr_0.1               survival_2.40-1        
 ##  [31] iterators_1.0.8         ape_5.0                
 ##  [33] glue_1.2.0              DRR_0.0.2              
 ##  [35] registry_0.3            gtable_0.2.0           
-##  [37] ipred_0.9-6             zlibbioc_1.22.0        
-##  [39] XVector_0.16.0          kernlab_0.9-25         
+##  [37] ipred_0.9-6             zlibbioc_1.24.0        
+##  [39] XVector_0.18.0          kernlab_0.9-25         
 ##  [41] ddalpha_1.3.1           prabclus_2.2-6         
 ##  [43] DEoptimR_1.0-8          scales_0.5.0           
 ##  [45] mvtnorm_1.0-6           rngtools_1.2.4         
@@ -472,12 +472,12 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ##  [67] pkgconfig_2.0.1         R.methodsS3_1.7.1      
 ##  [69] flexmix_2.3-14          nnet_7.3-12            
 ##  [71] caret_6.0-77            labeling_0.3           
-##  [73] rlang_0.1.2             reshape2_1.4.2         
+##  [73] rlang_0.1.4             reshape2_1.4.2         
 ##  [75] munsell_0.4.3           tools_3.4.2            
 ##  [77] ranger_0.8.0            ggridges_0.4.1         
 ##  [79] evaluate_0.10.1         stringr_1.2.0          
 ##  [81] yaml_2.1.14             ModelMetrics_1.1.0     
-##  [83] robustbase_0.92-7       caTools_1.17.1         
+##  [83] robustbase_0.92-8       caTools_1.17.1         
 ##  [85] purrr_0.2.4             pbapply_1.3-3          
 ##  [87] nlme_3.1-129            R.oo_1.21.0            
 ##  [89] RcppRoll_0.2.2          compiler_3.4.2         
@@ -491,13 +491,13 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ## [105] codetools_0.2-15        MASS_7.3-45            
 ## [107] gtools_3.5.0            assertthat_0.2.0       
 ## [109] CVST_0.2-1              pkgmaker_0.22          
-## [111] rprojroot_1.2           withr_2.0.0            
-## [113] mnormt_1.5-5            GenomeInfoDbData_0.99.0
+## [111] rprojroot_1.2           withr_2.1.0            
+## [113] mnormt_1.5-5            GenomeInfoDbData_0.99.1
 ## [115] diptest_0.75-7          grid_3.4.2             
 ## [117] rpart_4.1-10            timeDate_3012.100      
 ## [119] tidyr_0.7.2             class_7.3-14           
 ## [121] rmarkdown_1.6           segmented_0.5-2.2      
 ## [123] Rtsne_0.13              numDeriv_2016.8-1      
-## [125] scatterplot3d_0.3-40    lubridate_1.7.0        
+## [125] scatterplot3d_0.3-40    lubridate_1.7.1        
 ## [127] base64enc_0.1-3
 ```
