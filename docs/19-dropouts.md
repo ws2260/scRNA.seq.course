@@ -66,7 +66,8 @@ cell_colors <- brewer.pal(max(3,length(unique(celltype_labs))), "Set3")
 
 __Exercise 1__: How many cells & genes have been removed by this filtering? 
 
-### Identifying Genes vs a Null Model ##
+
+### Identifying Genes vs a Null Model
 
 There are two main approaches to unsupervised feature selection. The
 first is to identify genes which behave differently from a null model
@@ -78,7 +79,7 @@ the same technical noise as endogenous transcripts [(Svensson et al., 2017)](htt
 In addition, scRNASeq experiments often contain only a small number of
 spike-ins which reduces our confidence in fitted model parameters.
 
-#### Highly Variable Genes ###
+#### Highly Variable Genes
 
 The first method proposed to identify features in scRNASeq datasets
 was to identify highly variable genes (HVG). HVG assumes that if genes
@@ -92,7 +93,7 @@ __Exercise 2__
 Using the functions rowMeans and rowVars to plot the relationship between mean expression
 and variance for all genes in this dataset. (Hint: use log="xy" to plot on a log-scale).
 
-<img src="19-dropouts_files/figure-html/unnamed-chunk-5-1.png" width="816" style="display: block; margin: auto;" />
+<img src="19-dropouts_files/figure-html/unnamed-chunk-6-1.png" width="816" style="display: block; margin: auto;" />
 A popular method to correct for the relationship between variance and mean expression
 was proposed by [Brennecke et al.](http://www.nature.com/nmeth/journal/v10/n11/full/nmeth.2645.html).
 To use the Brennecke method, we first normalize for library size then calculate
@@ -117,7 +118,7 @@ Brennecke_HVG <- BrenneckeGetVariableGenes(
 )
 ```
 
-<img src="19-dropouts_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" />
+<img src="19-dropouts_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 HVG_genes <- Brennecke_HVG$Gene
@@ -142,21 +143,44 @@ be shifted up/right of the Michaelis-Menten model (see Figure below).
 
 
 ```r
-K = 49
-S_sim = 10^seq(from=-3, to=4, by=0.05) # range of expression values
-MM = 1-S_sim/(K+S_sim)
-plot(S_sim, MM, type="l", lwd=3, xlab="Expression", ylab="Dropout Rate", xlim=c(1,1000))
-S1 = 10; P1 = 1-S1/(K+S1) # Expression & dropouts for cells in condition 1
-S2 = 750; P2 = 1-S2/(K+S2) # Expression & dropouts for cells in condition 2
-points(c(S1,S2),c(P1,P2), pch=16, col="grey85", cex=3)
-mix = 0.5; # proportion of cells in condition 1
-points(S1*mix+S2*(1-mix), P1*mix+P2*(1-mix), pch=16, col="grey35", cex=3)
+K <- 49
+S_sim <- 10^seq(from = -3, to = 4, by = 0.05) # range of expression values
+MM <- 1 - S_sim / (K + S_sim)
+plot(
+    S_sim, 
+    MM, 
+    type = "l", 
+    lwd = 3, 
+    xlab = "Expression", 
+    ylab = "Dropout Rate", 
+    xlim = c(1,1000)
+)
+S1 <- 10
+P1 <- 1 - S1 / (K + S1) # Expression & dropouts for cells in condition 1
+S2 <- 750
+P2 <- 1 - S2 / (K + S2) # Expression & dropouts for cells in condition 2
+points(
+    c(S1, S2),
+    c(P1, P2), 
+    pch = 16, 
+    col = "grey85", 
+    cex = 3
+)
+mix <- 0.5 # proportion of cells in condition 1
+points(
+    S1 * mix + S2 * (1 - mix), 
+    P1 * mix + P2 * (1 - mix), 
+    pch = 16, 
+    col = "grey35", 
+    cex = 3
+)
 ```
 
-<img src="19-dropouts_files/figure-html/unnamed-chunk-7-1.png" width="816" style="display: block; margin: auto;" />
+<img src="19-dropouts_files/figure-html/unnamed-chunk-8-1.png" width="816" style="display: block; margin: auto;" />
 __Note__: add `log="x"` to the `plot` call above to see how this looks on the log scale, which is used in M3Drop figures.
 
 __Exercise 3__: Produce the same plot as above with different expression levels (S1 & S2) and/or mixtures (mix).
+
 
 We use M3Drop to identify significant outliers to the right of the MM
 curve. We also apply 1% FDR multiple testing correction:
@@ -170,7 +194,7 @@ M3Drop_genes <- M3DropFeatureSelection(
 )
 ```
 
-<img src="19-dropouts_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" />
+<img src="19-dropouts_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
 M3Drop_genes <- M3Drop_genes$Gene
@@ -214,12 +238,12 @@ consider the significance of the correlations.
 
 
 ```r
-cor_mat <- cor(t(expr_matrix), method="spearman") #Gene-gene correlations
-diag(cor_mat) <- rep(0, times=nrow(expr_matrix))
+cor_mat <- cor(t(expr_matrix), method = "spearman") # Gene-gene correlations
+diag(cor_mat) <- rep(0, times = nrow(expr_matrix))
 score <- apply(cor_mat, 1, function(x) {max(abs(x))}) #Correlation of highest magnitude
 names(score) <- rownames(expr_matrix);
 score <- score[order(-score)]
-Cor_genes = names(score[1:1500])
+Cor_genes <- names(score[1:1500])
 ```
 Lastly, another common method for feature selection in scRNASeq data is to use PCA loadings. Genes with
 high PCA loadings are likely to be highly variable and correlated with many other variable genes, thus
@@ -229,18 +253,26 @@ results to determine those components corresponding to the biological variation 
 
 
 ```r
-pca <- prcomp(log(expr_matrix+1)/log(2)); # PCA is typically performed on log-transformed expression data
+# PCA is typically performed on log-transformed expression data
+pca <- prcomp(log(expr_matrix + 1) / log(2))
 
-plot(pca$rotation[,1], pca$rotation[,2], pch=16, col=cell_colors[as.factor(celltype_labs)]) # plot projection
+# plot projection
+plot(
+    pca$rotation[,1], 
+    pca$rotation[,2], 
+    pch = 16, 
+    col = cell_colors[as.factor(celltype_labs)]
+) 
 ```
 
-<img src="19-dropouts_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" />
+<img src="19-dropouts_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" />
 
 ```r
-score <- rowSums(abs(pca$x[,c(1,2)])) # calculate loadings for components 1 and 2
+# calculate loadings for components 1 and 2
+score <- rowSums(abs(pca$x[,c(1,2)])) 
 names(score) <- rownames(expr_matrix)
 score <- score[order(-score)]
-PCA_genes = names(score[1:1500])
+PCA_genes <- names(score[1:1500])
 ```
 __Exercise 4__
 Consider the top 5 principal components. Which appear to be most biologically relevant? How does the top 1,500
@@ -260,7 +292,7 @@ M3DropExpressionHeatmap(
 )
 ```
 
-<img src="19-dropouts_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" />
+<img src="19-dropouts_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" />
 
 We can also consider how consistent each feature selection method is with the others using the Jaccard Index:
 
@@ -269,7 +301,19 @@ J <- sum(M3Drop_genes %in% HVG_genes)/length(unique(c(M3Drop_genes, HVG_genes)))
 ```
 
 __Exercise 5__
+
 Plot the expression of the features for each of the other methods. Which appear to be differentially expressed? How consistent are the different methods for this dataset?
+
+
+
+
+
+
+
+
+
+
+
 
 ### sessionInfo()
 
@@ -295,24 +339,24 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [3] DelayedArray_0.2.7         Biobase_2.36.2            
-##  [5] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
-##  [7] IRanges_2.10.5             S4Vectors_0.14.7          
-##  [9] BiocGenerics_0.22.1        RColorBrewer_1.1-2        
+##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [3] DelayedArray_0.4.1         Biobase_2.38.0            
+##  [5] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [7] IRanges_2.12.0             S4Vectors_0.16.0          
+##  [9] BiocGenerics_0.24.0        RColorBrewer_1.1-2        
 ## [11] M3Drop_2.02.00             numDeriv_2016.8-1         
 ## [13] matrixStats_0.52.2         scRNA.seq.funcs_0.1.0     
 ## [15] knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.13            XVector_0.16.0         
-##  [3] compiler_3.4.2          zlibbioc_1.22.0        
+##  [1] Rcpp_0.12.13            XVector_0.18.0         
+##  [3] compiler_3.4.2          zlibbioc_1.24.0        
 ##  [5] moments_0.14            bitops_1.0-6           
 ##  [7] tools_3.4.2             digest_0.6.12          
 ##  [9] statmod_1.4.30          evaluate_0.10.1        
 ## [11] Rtsne_0.13              lattice_0.20-34        
 ## [13] Matrix_1.2-7.1          yaml_2.1.14            
-## [15] GenomeInfoDbData_0.99.0 stringr_1.2.0          
+## [15] GenomeInfoDbData_0.99.1 stringr_1.2.0          
 ## [17] contfrac_1.1-11         gtools_3.5.0           
 ## [19] elliptic_1.3-7          caTools_1.17.1         
 ## [21] rprojroot_1.2           grid_3.4.2             

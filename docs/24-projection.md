@@ -105,14 +105,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Wed Nov  1 15:40:59 2017 -->
+<!-- Tue Nov  7 12:55:23 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID65d389a47ca () {
+function gvisDataSankeyID699616b5948 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,8 +315,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID65d389a47ca() {
-var data = gvisDataSankeyID65d389a47ca();
+function drawChartSankeyID699616b5948() {
+var data = gvisDataSankeyID699616b5948();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -335,7 +335,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID65d389a47ca')
+    document.getElementById('SankeyID699616b5948')
     );
     chart.draw(data,options);
     
@@ -359,9 +359,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID65d389a47ca);
+callbacks.push(drawChartSankeyID699616b5948);
 })();
-function displayChartSankeyID65d389a47ca() {
+function displayChartSankeyID699616b5948() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,11 +385,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID65d389a47ca"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID699616b5948"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID65d389a47ca" 
+<div id="SankeyID699616b5948" 
   style="width: 400; height: 600;">
 </div>
 
@@ -466,52 +466,53 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] bindrcpp_0.2               scater_1.5.21             
-##  [3] SingleCellExperiment_1.1.0 SummarizedExperiment_1.6.5
-##  [5] DelayedArray_0.2.7         matrixStats_0.52.2        
-##  [7] GenomicRanges_1.28.6       GenomeInfoDb_1.12.3       
-##  [9] IRanges_2.10.5             S4Vectors_0.14.7          
-## [11] ggplot2_2.2.1              Biobase_2.36.2            
-## [13] BiocGenerics_0.22.1        scmap_0.99.8              
+##  [1] bindrcpp_0.2               scater_1.6.0              
+##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [7] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
+## [11] ggplot2_2.2.1              Biobase_2.38.0            
+## [13] BiocGenerics_0.24.0        scmap_1.0.0               
 ## [15] googleVis_0.6.2            knitr_1.17                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.0           edgeR_3.18.1           
+##  [1] viridis_0.4.0           edgeR_3.20.1           
 ##  [3] bit64_0.9-7             jsonlite_1.5           
 ##  [5] viridisLite_0.2.0       shiny_1.0.5            
 ##  [7] assertthat_0.2.0        highr_0.6              
 ##  [9] blob_1.1.0              vipor_0.4.5            
-## [11] GenomeInfoDbData_0.99.0 yaml_2.1.14            
-## [13] RSQLite_2.0             backports_1.1.1        
-## [15] lattice_0.20-34         glue_1.2.0             
-## [17] limma_3.32.10           digest_0.6.12          
-## [19] XVector_0.16.0          randomForest_4.6-12    
-## [21] colorspace_1.3-2        htmltools_0.3.6        
-## [23] httpuv_1.3.5            Matrix_1.2-7.1         
-## [25] plyr_1.8.4              XML_3.98-1.9           
-## [27] pkgconfig_2.0.1         biomaRt_2.32.1         
-## [29] bookdown_0.5            zlibbioc_1.22.0        
-## [31] xtable_1.8-2            scales_0.5.0           
-## [33] tibble_1.3.4            proxy_0.4-19           
-## [35] lazyeval_0.2.1          magrittr_1.5           
-## [37] mime_0.5                memoise_1.1.0          
-## [39] evaluate_0.10.1         class_7.3-14           
-## [41] beeswarm_0.2.3          shinydashboard_0.6.1   
-## [43] tools_3.4.2             data.table_1.10.4-3    
-## [45] stringr_1.2.0           munsell_0.4.3          
-## [47] locfit_1.5-9.1          AnnotationDbi_1.38.2   
-## [49] compiler_3.4.2          e1071_1.6-8            
-## [51] rlang_0.1.2             rhdf5_2.20.0           
-## [53] grid_3.4.2              RCurl_1.95-4.8         
-## [55] tximport_1.4.0          rjson_0.2.15           
-## [57] labeling_0.3            bitops_1.0-6           
-## [59] rmarkdown_1.6           gtable_0.2.0           
-## [61] codetools_0.2-15        DBI_0.7                
-## [63] reshape2_1.4.2          R6_2.2.2               
-## [65] gridExtra_2.3           dplyr_0.7.4            
-## [67] bit_1.1-12              bindr_0.1              
-## [69] rprojroot_1.2           ggbeeswarm_0.6.0       
-## [71] stringi_1.1.5           Rcpp_0.12.13
+## [11] GenomeInfoDbData_0.99.1 yaml_2.1.14            
+## [13] progress_1.1.2          RSQLite_2.0            
+## [15] backports_1.1.1         lattice_0.20-34        
+## [17] limma_3.34.0            glue_1.2.0             
+## [19] digest_0.6.12           XVector_0.18.0         
+## [21] randomForest_4.6-12     colorspace_1.3-2       
+## [23] htmltools_0.3.6         httpuv_1.3.5           
+## [25] Matrix_1.2-7.1          plyr_1.8.4             
+## [27] XML_3.98-1.9            pkgconfig_2.0.1        
+## [29] biomaRt_2.34.0          bookdown_0.5           
+## [31] zlibbioc_1.24.0         xtable_1.8-2           
+## [33] scales_0.5.0            tibble_1.3.4           
+## [35] proxy_0.4-19            lazyeval_0.2.1         
+## [37] magrittr_1.5            mime_0.5               
+## [39] memoise_1.1.0           evaluate_0.10.1        
+## [41] class_7.3-14            beeswarm_0.2.3         
+## [43] shinydashboard_0.6.1    tools_3.4.2            
+## [45] data.table_1.10.4-3     prettyunits_1.0.2      
+## [47] stringr_1.2.0           locfit_1.5-9.1         
+## [49] munsell_0.4.3           AnnotationDbi_1.40.0   
+## [51] compiler_3.4.2          e1071_1.6-8            
+## [53] rlang_0.1.4             rhdf5_2.22.0           
+## [55] grid_3.4.2              RCurl_1.95-4.8         
+## [57] tximport_1.6.0          rjson_0.2.15           
+## [59] labeling_0.3            bitops_1.0-6           
+## [61] rmarkdown_1.6           gtable_0.2.0           
+## [63] codetools_0.2-15        DBI_0.7                
+## [65] reshape2_1.4.2          R6_2.2.2               
+## [67] gridExtra_2.3           dplyr_0.7.4            
+## [69] bit_1.1-12              bindr_0.1              
+## [71] rprojroot_1.2           ggbeeswarm_0.6.0       
+## [73] stringi_1.1.5           Rcpp_0.12.13
 ```
 
 
