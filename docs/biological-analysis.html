@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2017-11-08">
+<meta name="date" content="2017-11-09">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -2064,12 +2064,12 @@ Figure 2.6:  scmap can also be used to project cells from a new experiment onto 
 <p>Clearly the projection is almost perfect. With <code>scmap</code> one can also plot a <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey">Sankey diagram</a> (however, <code>cell_type1</code> columns have to be provided in the <code>colData</code> slots of both the reference and the projection datasets):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">getSankey</span>(<span class="kw">colData</span>(segerstolpe)<span class="op">$</span>cell_type1, <span class="kw">colData</span>(segerstolpe)<span class="op">$</span>scmap_labs))</code></pre></div>
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Wed Nov  8 15:39:08 2017 -->
+<!-- Thu Nov  9 15:40:14 2017 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID69948bbab56 () {
+function gvisDataSankeyID6997ca85fb7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2272,8 +2272,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID69948bbab56() {
-var data = gvisDataSankeyID69948bbab56();
+function drawChartSankeyID6997ca85fb7() {
+var data = gvisDataSankeyID6997ca85fb7();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -2292,7 +2292,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID69948bbab56')
+    document.getElementById('SankeyID6997ca85fb7')
     );
     chart.draw(data,options);
     
@@ -2316,9 +2316,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID69948bbab56);
+callbacks.push(drawChartSankeyID6997ca85fb7);
 })();
-function displayChartSankeyID69948bbab56() {
+function displayChartSankeyID6997ca85fb7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2341,9 +2341,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID69948bbab56"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6997ca85fb7"></script>
 <!-- divChart -->
-<div id="SankeyID69948bbab56" style="width: 400; height: 600;">
+<div id="SankeyID6997ca85fb7" style="width: 400; height: 600;">
 
 </div>
 </div>
