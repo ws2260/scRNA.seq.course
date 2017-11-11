@@ -80,7 +80,7 @@ knit: bookdown::preview_chapter
 ## [51] rhdf5_2.22.0            grid_3.4.2             
 ## [53] RCurl_1.95-4.8          tximport_1.6.0         
 ## [55] rjson_0.2.15            labeling_0.3           
-## [57] bitops_1.0-6            rmarkdown_1.6          
+## [57] bitops_1.0-6            rmarkdown_1.7          
 ## [59] gtable_0.2.0            DBI_0.7                
 ## [61] reshape2_1.4.2          R6_2.2.2               
 ## [63] gridExtra_2.3           dplyr_0.7.4            

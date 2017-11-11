@@ -470,7 +470,7 @@ DE_Quality_AUC(pVals)
 ## [49] caTools_1.17.1          contfrac_1.1-11        
 ## [51] rlang_0.1.4             grid_3.4.2             
 ## [53] RCurl_1.95-4.8          igraph_1.1.2           
-## [55] bitops_1.0-6            rmarkdown_1.6          
+## [55] bitops_1.0-6            rmarkdown_1.7          
 ## [57] hypergeo_1.2-13         gtable_0.2.0           
 ## [59] abind_1.4-5             deSolve_1.20           
 ## [61] reshape2_1.4.2          R6_2.2.2               

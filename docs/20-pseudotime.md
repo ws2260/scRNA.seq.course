@@ -571,7 +571,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ## [111] qlcMatrix_0.9.5         GenomeInfoDbData_0.99.1
 ## [113] mgcv_1.8-22             grid_3.4.2             
 ## [115] rpart_4.1-10            class_7.3-14           
-## [117] minqa_1.2.4             rmarkdown_1.6          
+## [117] minqa_1.2.4             rmarkdown_1.7          
 ## [119] Rtsne_0.13              TTR_0.23-2             
 ## [121] bbmle_1.0.20            shiny_1.0.5            
 ## [123] base64enc_0.1-3
