@@ -105,14 +105,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Fri Nov 10 15:41:09 2017 -->
+<!-- Sat Nov 11 15:41:59 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID699a0bc75c () {
+function gvisDataSankeyID7504cba1bc7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,8 +315,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID699a0bc75c() {
-var data = gvisDataSankeyID699a0bc75c();
+function drawChartSankeyID7504cba1bc7() {
+var data = gvisDataSankeyID7504cba1bc7();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -335,7 +335,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID699a0bc75c')
+    document.getElementById('SankeyID7504cba1bc7')
     );
     chart.draw(data,options);
     
@@ -359,9 +359,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID699a0bc75c);
+callbacks.push(drawChartSankeyID7504cba1bc7);
 })();
-function displayChartSankeyID699a0bc75c() {
+function displayChartSankeyID7504cba1bc7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,11 +385,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID699a0bc75c"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7504cba1bc7"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID699a0bc75c" 
+<div id="SankeyID7504cba1bc7" 
   style="width: 400; height: 600;">
 </div>
 
@@ -506,7 +506,7 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## [55] grid_3.4.2              RCurl_1.95-4.8         
 ## [57] tximport_1.6.0          rjson_0.2.15           
 ## [59] labeling_0.3            bitops_1.0-6           
-## [61] rmarkdown_1.6           gtable_0.2.0           
+## [61] rmarkdown_1.7           gtable_0.2.0           
 ## [63] codetools_0.2-15        DBI_0.7                
 ## [65] reshape2_1.4.2          R6_2.2.2               
 ## [67] gridExtra_2.3           dplyr_0.7.4            

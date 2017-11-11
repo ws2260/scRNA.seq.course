@@ -248,7 +248,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [53] grid_3.4.2              RCurl_1.95-4.8         
 ## [55] tximport_1.6.0          rjson_0.2.15           
 ## [57] labeling_0.3            bitops_1.0-6           
-## [59] rmarkdown_1.6           gtable_0.2.0           
+## [59] rmarkdown_1.7           gtable_0.2.0           
 ## [61] DBI_0.7                 reshape2_1.4.2         
 ## [63] R6_2.2.2                gridExtra_2.3          
 ## [65] dplyr_0.7.4             bit_1.1-12             

@@ -158,7 +158,7 @@ output: html_document
 ## [19] compiler_3.4.2          orthopolynom_1.0-5     
 ## [21] labeling_0.3            bookdown_0.5           
 ## [23] scales_0.5.0            stringr_1.2.0          
-## [25] digest_0.6.12           rmarkdown_1.6          
+## [25] digest_0.6.12           rmarkdown_1.7          
 ## [27] XVector_0.18.0          pkgconfig_2.0.1        
 ## [29] htmltools_0.3.6         highr_0.6              
 ## [31] limma_3.34.0            htmlwidgets_0.9        

@@ -346,7 +346,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [73] bookdown_0.5            R6_2.2.2               
 ## [75] DBI_0.7                 survival_2.40-1        
 ## [77] RCurl_1.95-4.8          tibble_1.3.4           
-## [79] rmarkdown_1.6           viridis_0.4.0          
+## [79] rmarkdown_1.7           viridis_0.4.0          
 ## [81] progress_1.1.2          locfit_1.5-9.1         
 ## [83] grid_3.4.2              data.table_1.10.4-3    
 ## [85] FNN_1.1                 blob_1.1.0             

@@ -268,7 +268,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [71] bookdown_0.5            R6_2.2.2               
 ## [73] gplots_3.0.1            DBI_0.7                
 ## [75] RCurl_1.95-4.8          tibble_1.3.4           
-## [77] KernSmooth_2.23-15      rmarkdown_1.6          
+## [77] KernSmooth_2.23-15      rmarkdown_1.7          
 ## [79] viridis_0.4.0           progress_1.1.2         
 ## [81] locfit_1.5-9.1          grid_3.4.2             
 ## [83] data.table_1.10.4-3     blob_1.1.0             
