@@ -299,7 +299,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2017-11-11 15:44:32
+## Parameters used in latest FindClusters calculation run on: 2017-11-12 15:45:00
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
@@ -410,7 +410,8 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
