@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2017-11-11">
+<meta name="date" content="2017-11-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -688,7 +688,8 @@ Figure 4.9: Clustering solutions of SINCERA method using found <span class="math
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -919,7 +920,8 @@ PCA_genes &lt;-<span class="st"> </span><span class="kw">names</span>(score[<spa
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -1251,7 +1253,8 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -1468,7 +1471,8 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -1928,7 +1932,8 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -2064,12 +2069,12 @@ Figure 2.6:  scmap can also be used to project cells from a new experiment onto 
 <p>Clearly the projection is almost perfect. With <code>scmap</code> one can also plot a <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey">Sankey diagram</a> (however, <code>cell_type1</code> columns have to be provided in the <code>colData</code> slots of both the reference and the projection datasets):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">getSankey</span>(<span class="kw">colData</span>(segerstolpe)<span class="op">$</span>cell_type1, <span class="kw">colData</span>(segerstolpe)<span class="op">$</span>scmap_labs))</code></pre></div>
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Sat Nov 11 15:41:59 2017 -->
+<!-- Sun Nov 12 15:42:32 2017 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7504cba1bc7 () {
+function gvisDataSankeyID750456bd049 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2272,8 +2277,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7504cba1bc7() {
-var data = gvisDataSankeyID7504cba1bc7();
+function drawChartSankeyID750456bd049() {
+var data = gvisDataSankeyID750456bd049();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -2292,7 +2297,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7504cba1bc7')
+    document.getElementById('SankeyID750456bd049')
     );
     chart.draw(data,options);
     
@@ -2316,9 +2321,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7504cba1bc7);
+callbacks.push(drawChartSankeyID750456bd049);
 })();
-function displayChartSankeyID7504cba1bc7() {
+function displayChartSankeyID750456bd049() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2341,9 +2346,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7504cba1bc7"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID750456bd049"></script>
 <!-- divChart -->
-<div id="SankeyID7504cba1bc7" style="width: 400; height: 600;">
+<div id="SankeyID750456bd049" style="width: 400; height: 600;">
 
 </div>
 </div>
@@ -2382,7 +2387,8 @@ callbacks.shift()();
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -2570,7 +2576,8 @@ muraro_delta &lt;-<span class="st"> </span><span class="kw">c</span>(<span class
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              

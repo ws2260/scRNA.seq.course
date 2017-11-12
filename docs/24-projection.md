@@ -105,14 +105,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Sat Nov 11 15:41:59 2017 -->
+<!-- Sun Nov 12 15:42:32 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7504cba1bc7 () {
+function gvisDataSankeyID750456bd049 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,8 +315,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7504cba1bc7() {
-var data = gvisDataSankeyID7504cba1bc7();
+function drawChartSankeyID750456bd049() {
+var data = gvisDataSankeyID750456bd049();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -335,7 +335,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7504cba1bc7')
+    document.getElementById('SankeyID750456bd049')
     );
     chart.draw(data,options);
     
@@ -359,9 +359,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7504cba1bc7);
+callbacks.push(drawChartSankeyID750456bd049);
 })();
-function displayChartSankeyID7504cba1bc7() {
+function displayChartSankeyID750456bd049() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,11 +385,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7504cba1bc7"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID750456bd049"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID7504cba1bc7" 
+<div id="SankeyID750456bd049" 
   style="width: 400; height: 600;">
 </div>
 
@@ -451,7 +451,8 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.19.so
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
