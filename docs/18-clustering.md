@@ -461,7 +461,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [19] rrcov_1.4-3             compiler_3.4.2         
 ##  [21] backports_1.1.1         assertthat_0.2.0       
 ##  [23] Matrix_1.2-7.1          lazyeval_0.2.1         
-##  [25] limma_3.34.0            htmltools_0.3.6        
+##  [25] limma_3.34.1            htmltools_0.3.6        
 ##  [27] prettyunits_1.0.2       tools_3.4.2            
 ##  [29] bindrcpp_0.2            gtable_0.2.0           
 ##  [31] glue_1.2.0              GenomeInfoDbData_0.99.1

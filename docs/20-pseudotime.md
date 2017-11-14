@@ -522,7 +522,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [11] htmltools_0.3.6         viridis_0.4.0          
 ##  [13] gdata_2.18.0            magrittr_1.5           
 ##  [15] checkmate_1.8.5         tensor_1.5             
-##  [17] cluster_2.0.6           limma_3.34.0           
+##  [17] cluster_2.0.6           limma_3.34.1           
 ##  [19] tripack_1.3-8           R.utils_2.6.0          
 ##  [21] xts_0.10-0              colorspace_1.3-2       
 ##  [23] ggrepel_0.7.0           dplyr_0.7.4            

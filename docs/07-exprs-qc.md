@@ -469,7 +469,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] limma_3.34.0               scater_1.6.0              
+##  [1] limma_3.34.1               scater_1.6.0              
 ##  [3] ggplot2_2.2.1              SingleCellExperiment_1.0.0
 ##  [5] SummarizedExperiment_1.8.0 DelayedArray_0.4.1        
 ##  [7] matrixStats_0.52.2         Biobase_2.38.0            

@@ -426,7 +426,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ##  [7] kBET_0.99.0                scran_1.6.2               
 ##  [9] scater_1.6.0               SingleCellExperiment_1.0.0
 ## [11] ggplot2_2.2.1              RUVSeq_1.12.0             
-## [13] edgeR_3.20.1               limma_3.34.0              
+## [13] edgeR_3.20.1               limma_3.34.1              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
 ## [17] GenomicAlignments_1.14.0   SummarizedExperiment_1.8.0
 ## [19] DelayedArray_0.4.1         matrixStats_0.52.2        
