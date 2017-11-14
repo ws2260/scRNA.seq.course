@@ -61,7 +61,7 @@ knit: bookdown::preview_chapter
 ## [11] yaml_2.1.14             progress_1.1.2         
 ## [13] RSQLite_2.0             backports_1.1.1        
 ## [15] lattice_0.20-34         glue_1.2.0             
-## [17] limma_3.34.0            digest_0.6.12          
+## [17] limma_3.34.1            digest_0.6.12          
 ## [19] XVector_0.18.0          colorspace_1.3-2       
 ## [21] cowplot_0.8.0           htmltools_0.3.6        
 ## [23] httpuv_1.3.5            Matrix_1.2-7.1         

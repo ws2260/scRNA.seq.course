@@ -242,7 +242,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [17] shiny_1.0.5             rrcov_1.4-3            
 ## [19] compiler_3.4.2          backports_1.1.1        
 ## [21] assertthat_0.2.0        Matrix_1.2-7.1         
-## [23] lazyeval_0.2.1          limma_3.34.0           
+## [23] lazyeval_0.2.1          limma_3.34.1           
 ## [25] htmltools_0.3.6         prettyunits_1.0.2      
 ## [27] tools_3.4.2             bindrcpp_0.2           
 ## [29] gtable_0.2.0            glue_1.2.0             

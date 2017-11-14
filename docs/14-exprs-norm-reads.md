@@ -162,7 +162,7 @@ output: html_document
 ## [25] digest_0.6.12           rmarkdown_1.7          
 ## [27] XVector_0.18.0          pkgconfig_2.0.1        
 ## [29] htmltools_0.3.6         highr_0.6              
-## [31] limma_3.34.0            htmlwidgets_0.9        
+## [31] limma_3.34.1            htmlwidgets_0.9        
 ## [33] rlang_0.1.4             RSQLite_2.0            
 ## [35] FNN_1.1                 shiny_1.0.5            
 ## [37] bindr_0.1               zoo_1.8-0              

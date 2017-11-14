@@ -105,14 +105,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Mon Nov 13 15:42:41 2017 -->
+<!-- Tue Nov 14 15:42:20 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID750241b36fc () {
+function gvisDataSankeyID7505e006b9b () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,8 +315,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID750241b36fc() {
-var data = gvisDataSankeyID750241b36fc();
+function drawChartSankeyID7505e006b9b() {
+var data = gvisDataSankeyID7505e006b9b();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -335,7 +335,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID750241b36fc')
+    document.getElementById('SankeyID7505e006b9b')
     );
     chart.draw(data,options);
     
@@ -359,9 +359,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID750241b36fc);
+callbacks.push(drawChartSankeyID7505e006b9b);
 })();
-function displayChartSankeyID750241b36fc() {
+function displayChartSankeyID7505e006b9b() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,11 +385,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID750241b36fc"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7505e006b9b"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID750241b36fc" 
+<div id="SankeyID7505e006b9b" 
   style="width: 400; height: 600;">
 </div>
 
@@ -485,7 +485,7 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## [11] GenomeInfoDbData_0.99.1 yaml_2.1.14            
 ## [13] progress_1.1.2          RSQLite_2.0            
 ## [15] backports_1.1.1         lattice_0.20-34        
-## [17] limma_3.34.0            glue_1.2.0             
+## [17] limma_3.34.1            glue_1.2.0             
 ## [19] digest_0.6.12           XVector_0.18.0         
 ## [21] randomForest_4.6-12     colorspace_1.3-2       
 ## [23] htmltools_0.3.6         httpuv_1.3.5           
