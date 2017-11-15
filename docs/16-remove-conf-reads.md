@@ -315,7 +315,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ##  [9] bit64_0.9-7             AnnotationDbi_1.40.0   
 ## [11] splines_3.4.2           R.methodsS3_1.7.1      
 ## [13] tximport_1.6.0          DESeq_1.30.0           
-## [15] geneplotter_1.56.0      annotate_1.56.0        
+## [15] geneplotter_1.56.0      annotate_1.56.1        
 ## [17] cluster_2.0.6           R.oo_1.21.0            
 ## [19] shinydashboard_0.6.1    shiny_1.0.5            
 ## [21] compiler_3.4.2          backports_1.1.1        
