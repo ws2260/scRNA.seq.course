@@ -105,14 +105,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Tue Nov 14 15:42:20 2017 -->
+<!-- Wed Nov 15 15:41:35 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7505e006b9b () {
+function gvisDataSankeyID75060f7cc9b () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,8 +315,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7505e006b9b() {
-var data = gvisDataSankeyID7505e006b9b();
+function drawChartSankeyID75060f7cc9b() {
+var data = gvisDataSankeyID75060f7cc9b();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -335,7 +335,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7505e006b9b')
+    document.getElementById('SankeyID75060f7cc9b')
     );
     chart.draw(data,options);
     
@@ -359,9 +359,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7505e006b9b);
+callbacks.push(drawChartSankeyID75060f7cc9b);
 })();
-function displayChartSankeyID7505e006b9b() {
+function displayChartSankeyID75060f7cc9b() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,11 +385,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7505e006b9b"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID75060f7cc9b"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID7505e006b9b" 
+<div id="SankeyID75060f7cc9b" 
   style="width: 400; height: 600;">
 </div>
 
