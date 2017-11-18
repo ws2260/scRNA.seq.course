@@ -626,7 +626,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [55] plyr_1.8.4              grid_3.4.2             
 ## [57] blob_1.1.0              shinydashboard_0.6.1   
 ## [59] contfrac_1.1-11         lattice_0.20-34        
-## [61] cowplot_0.8.0           splines_3.4.2          
+## [61] cowplot_0.9.0           splines_3.4.2          
 ## [63] locfit_1.5-9.1          igraph_1.1.2           
 ## [65] rjson_0.2.15            reshape2_1.4.2         
 ## [67] biomaRt_2.34.0          XML_3.98-1.9           

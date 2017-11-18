@@ -520,7 +520,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ##  [79] pkgconfig_2.0.1         bitops_1.0-6           
 ##  [81] evaluate_0.10.1         lattice_0.20-34        
 ##  [83] bindr_0.1               labeling_0.3           
-##  [85] cowplot_0.8.0           bit_1.1-12             
+##  [85] cowplot_0.9.0           bit_1.1-12             
 ##  [87] GGally_1.3.2            plyr_1.8.4             
 ##  [89] magrittr_1.5            bookdown_0.5           
 ##  [91] R6_2.2.2                DBI_0.7                

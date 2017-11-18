@@ -264,7 +264,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [61] bitops_1.0-6            evaluate_0.10.1        
 ## [63] lattice_0.20-34         ROCR_1.0-7             
 ## [65] bindr_0.1               labeling_0.3           
-## [67] cowplot_0.8.0           bit_1.1-12             
+## [67] cowplot_0.9.0           bit_1.1-12             
 ## [69] plyr_1.8.4              magrittr_1.5           
 ## [71] bookdown_0.5            R6_2.2.2               
 ## [73] gplots_3.0.1            DBI_0.7                

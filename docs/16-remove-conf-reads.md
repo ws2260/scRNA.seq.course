@@ -341,7 +341,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [61] moments_0.14            bitops_1.0-6           
 ## [63] evaluate_0.10.1         lattice_0.20-34        
 ## [65] bindr_0.1               labeling_0.3           
-## [67] htmlwidgets_0.9         cowplot_0.8.0          
+## [67] htmlwidgets_0.9         cowplot_0.9.0          
 ## [69] bit_1.1-12              deSolve_1.20           
 ## [71] plyr_1.8.4              magrittr_1.5           
 ## [73] bookdown_0.5            R6_2.2.2               
