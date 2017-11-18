@@ -155,7 +155,7 @@ sessionInfo()
 ## [15] lattice_0.20-34         glue_1.2.0             
 ## [17] limma_3.34.1            digest_0.6.12          
 ## [19] XVector_0.18.0          colorspace_1.3-2       
-## [21] cowplot_0.8.0           htmltools_0.3.6        
+## [21] cowplot_0.9.0           htmltools_0.3.6        
 ## [23] httpuv_1.3.5            Matrix_1.2-7.1         
 ## [25] plyr_1.8.4              XML_3.98-1.9           
 ## [27] pkgconfig_2.0.1         biomaRt_2.34.0         
