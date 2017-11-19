@@ -341,13 +341,13 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [61] moments_0.14            bitops_1.0-6           
 ## [63] evaluate_0.10.1         lattice_0.20-34        
 ## [65] bindr_0.1               labeling_0.3           
-## [67] htmlwidgets_0.9         cowplot_0.9.0          
+## [67] htmlwidgets_0.9         cowplot_0.9.1          
 ## [69] bit_1.1-12              deSolve_1.20           
 ## [71] plyr_1.8.4              magrittr_1.5           
 ## [73] bookdown_0.5            R6_2.2.2               
 ## [75] DBI_0.7                 survival_2.40-1        
 ## [77] RCurl_1.95-4.8          tibble_1.3.4           
-## [79] rmarkdown_1.7           viridis_0.4.0          
+## [79] rmarkdown_1.8           viridis_0.4.0          
 ## [81] progress_1.1.2          locfit_1.5-9.1         
 ## [83] grid_3.4.2              data.table_1.10.4-3    
 ## [85] FNN_1.1                 blob_1.1.0             

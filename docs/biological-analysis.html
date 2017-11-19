@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2017-11-18">
+<meta name="date" content="2017-11-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -754,13 +754,13 @@ Figure 4.9: Clustering solutions of SINCERA method using found <span class="math
 ##  [71] bitops_1.0-6            evaluate_0.10.1        
 ##  [73] lattice_0.20-34         ROCR_1.0-7             
 ##  [75] bindr_0.1               labeling_0.3           
-##  [77] cowplot_0.9.0           bit_1.1-12             
+##  [77] cowplot_0.9.1           bit_1.1-12             
 ##  [79] deSolve_1.20            plyr_1.8.4             
 ##  [81] magrittr_1.5            bookdown_0.5           
 ##  [83] R6_2.2.2                gplots_3.0.1           
 ##  [85] DBI_0.7                 RCurl_1.95-4.8         
 ##  [87] tibble_1.3.4            KernSmooth_2.23-15     
-##  [89] rmarkdown_1.7           viridis_0.4.0          
+##  [89] rmarkdown_1.8           viridis_0.4.0          
 ##  [91] progress_1.1.2          locfit_1.5-9.1         
 ##  [93] grid_3.4.2              data.table_1.10.4-3    
 ##  [95] blob_1.1.0              digest_0.6.12          
@@ -958,7 +958,7 @@ PCA_genes &lt;-<span class="st"> </span><span class="kw">names</span>(score[<spa
 ## [19] elliptic_1.3-7          caTools_1.17.1         
 ## [21] rprojroot_1.2           grid_3.4.2             
 ## [23] deSolve_1.20            orthopolynom_1.0-5     
-## [25] rmarkdown_1.7           bookdown_0.5           
+## [25] rmarkdown_1.8           bookdown_0.5           
 ## [27] gdata_2.18.0            magrittr_1.5           
 ## [29] backports_1.1.1         gplots_3.0.1           
 ## [31] htmltools_0.3.6         MASS_7.3-45            
@@ -1343,7 +1343,7 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ## [111] qlcMatrix_0.9.5         GenomeInfoDbData_0.99.1
 ## [113] mgcv_1.8-22             grid_3.4.2             
 ## [115] rpart_4.1-10            class_7.3-14           
-## [117] minqa_1.2.4             rmarkdown_1.7          
+## [117] minqa_1.2.4             rmarkdown_1.8          
 ## [119] Rtsne_0.13              TTR_0.23-2             
 ## [121] bbmle_1.0.20            shiny_1.0.5            
 ## [123] base64enc_0.1-3</code></pre>
@@ -1533,12 +1533,12 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ## [61] bitops_1.0-6            evaluate_0.10.1        
 ## [63] lattice_0.20-34         ROCR_1.0-7             
 ## [65] bindr_0.1               labeling_0.3           
-## [67] cowplot_0.9.0           bit_1.1-12             
+## [67] cowplot_0.9.1           bit_1.1-12             
 ## [69] plyr_1.8.4              magrittr_1.5           
 ## [71] bookdown_0.5            R6_2.2.2               
 ## [73] gplots_3.0.1            DBI_0.7                
 ## [75] RCurl_1.95-4.8          tibble_1.3.4           
-## [77] KernSmooth_2.23-15      rmarkdown_1.7          
+## [77] KernSmooth_2.23-15      rmarkdown_1.8          
 ## [79] viridis_0.4.0           progress_1.1.2         
 ## [81] locfit_1.5-9.1          grid_3.4.2             
 ## [83] data.table_1.10.4-3     blob_1.1.0             
@@ -1988,7 +1988,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 ## [49] caTools_1.17.1          contfrac_1.1-11        
 ## [51] rlang_0.1.4             grid_3.4.2             
 ## [53] RCurl_1.95-4.8          igraph_1.1.2           
-## [55] bitops_1.0-6            rmarkdown_1.7          
+## [55] bitops_1.0-6            rmarkdown_1.8          
 ## [57] hypergeo_1.2-13         gtable_0.2.0           
 ## [59] abind_1.4-5             deSolve_1.20           
 ## [61] reshape2_1.4.2          R6_2.2.2               
@@ -2069,12 +2069,12 @@ Figure 2.6:  scmap can also be used to project cells from a new experiment onto 
 <p>Clearly the projection is almost perfect. With <code>scmap</code> one can also plot a <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey">Sankey diagram</a> (however, <code>cell_type1</code> columns have to be provided in the <code>colData</code> slots of both the reference and the projection datasets):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">getSankey</span>(<span class="kw">colData</span>(segerstolpe)<span class="op">$</span>cell_type1, <span class="kw">colData</span>(segerstolpe)<span class="op">$</span>scmap_labs))</code></pre></div>
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Sat Nov 18 15:39:06 2017 -->
+<!-- Sun Nov 19 15:41:31 2017 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID750347a858 () {
+function gvisDataSankeyID7507a375e2c () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2277,8 +2277,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID750347a858() {
-var data = gvisDataSankeyID750347a858();
+function drawChartSankeyID7507a375e2c() {
+var data = gvisDataSankeyID7507a375e2c();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -2297,7 +2297,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID750347a858')
+    document.getElementById('SankeyID7507a375e2c')
     );
     chart.draw(data,options);
     
@@ -2321,9 +2321,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID750347a858);
+callbacks.push(drawChartSankeyID7507a375e2c);
 })();
-function displayChartSankeyID750347a858() {
+function displayChartSankeyID7507a375e2c() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2346,9 +2346,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID750347a858"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7507a375e2c"></script>
 <!-- divChart -->
-<div id="SankeyID750347a858" style="width: 400; height: 600;">
+<div id="SankeyID7507a375e2c" style="width: 400; height: 600;">
 
 </div>
 </div>
@@ -2443,7 +2443,7 @@ callbacks.shift()();
 ## [55] grid_3.4.2              RCurl_1.95-4.8         
 ## [57] tximport_1.6.0          rjson_0.2.15           
 ## [59] labeling_0.3            bitops_1.0-6           
-## [61] rmarkdown_1.7           gtable_0.2.0           
+## [61] rmarkdown_1.8           gtable_0.2.0           
 ## [63] codetools_0.2-15        DBI_0.7                
 ## [65] reshape2_1.4.2          R6_2.2.2               
 ## [67] gridExtra_2.3           dplyr_0.7.4            
@@ -2613,7 +2613,7 @@ muraro_delta &lt;-<span class="st"> </span><span class="kw">c</span>(<span class
 ## [21] stringr_1.2.0           dplyr_0.7.4            
 ## [23] rprojroot_1.2           grid_3.4.2             
 ## [25] glue_1.2.0              R6_2.2.2               
-## [27] hash_2.2.6              rmarkdown_1.7          
+## [27] hash_2.2.6              rmarkdown_1.8          
 ## [29] bookdown_0.5            reshape2_1.4.2         
 ## [31] magrittr_1.5            backports_1.1.1        
 ## [33] htmltools_0.3.6         assertthat_0.2.0       
