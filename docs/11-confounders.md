@@ -151,7 +151,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [15] lattice_0.20-34         glue_1.2.0             
 ## [17] limma_3.34.1            digest_0.6.12          
 ## [19] XVector_0.18.0          colorspace_1.3-2       
-## [21] cowplot_0.9.0           htmltools_0.3.6        
+## [21] cowplot_0.9.1           htmltools_0.3.6        
 ## [23] httpuv_1.3.5            Matrix_1.2-7.1         
 ## [25] plyr_1.8.4              XML_3.98-1.9           
 ## [27] pkgconfig_2.0.1         biomaRt_2.34.0         
@@ -169,7 +169,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [51] rhdf5_2.22.0            grid_3.4.2             
 ## [53] RCurl_1.95-4.8          tximport_1.6.0         
 ## [55] rjson_0.2.15            labeling_0.3           
-## [57] bitops_1.0-6            rmarkdown_1.7          
+## [57] bitops_1.0-6            rmarkdown_1.8          
 ## [59] gtable_0.2.0            DBI_0.7                
 ## [61] reshape2_1.4.2          R6_2.2.2               
 ## [63] gridExtra_2.3           dplyr_0.7.4            

@@ -472,12 +472,12 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [63] bitops_1.0-6            evaluate_0.10.1        
 ## [65] lattice_0.20-34         bindr_0.1              
 ## [67] labeling_0.3            htmlwidgets_0.9        
-## [69] cowplot_0.9.0           bit_1.1-12             
+## [69] cowplot_0.9.1           bit_1.1-12             
 ## [71] deSolve_1.20            plyr_1.8.4             
 ## [73] magrittr_1.5            bookdown_0.5           
 ## [75] R6_2.2.2                DBI_0.7                
 ## [77] survival_2.40-1         RCurl_1.95-4.8         
-## [79] tibble_1.3.4            rmarkdown_1.7          
+## [79] tibble_1.3.4            rmarkdown_1.8          
 ## [81] viridis_0.4.0           progress_1.1.2         
 ## [83] locfit_1.5-9.1          grid_3.4.2             
 ## [85] data.table_1.10.4-3     FNN_1.1                

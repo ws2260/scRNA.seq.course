@@ -225,7 +225,7 @@ sessionInfo()
 ## [21] stringr_1.2.0           dplyr_0.7.4            
 ## [23] rprojroot_1.2           grid_3.4.2             
 ## [25] glue_1.2.0              R6_2.2.2               
-## [27] hash_2.2.6              rmarkdown_1.7          
+## [27] hash_2.2.6              rmarkdown_1.8          
 ## [29] bookdown_0.5            reshape2_1.4.2         
 ## [31] magrittr_1.5            backports_1.1.1        
 ## [33] htmltools_0.3.6         assertthat_0.2.0       

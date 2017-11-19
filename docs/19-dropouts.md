@@ -362,7 +362,7 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [19] elliptic_1.3-7          caTools_1.17.1         
 ## [21] rprojroot_1.2           grid_3.4.2             
 ## [23] deSolve_1.20            orthopolynom_1.0-5     
-## [25] rmarkdown_1.7           bookdown_0.5           
+## [25] rmarkdown_1.8           bookdown_0.5           
 ## [27] gdata_2.18.0            magrittr_1.5           
 ## [29] backports_1.1.1         gplots_3.0.1           
 ## [31] htmltools_0.3.6         MASS_7.3-45            

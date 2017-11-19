@@ -487,13 +487,13 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [71] bitops_1.0-6            evaluate_0.10.1        
 ##  [73] lattice_0.20-34         ROCR_1.0-7             
 ##  [75] bindr_0.1               labeling_0.3           
-##  [77] cowplot_0.9.0           bit_1.1-12             
+##  [77] cowplot_0.9.1           bit_1.1-12             
 ##  [79] deSolve_1.20            plyr_1.8.4             
 ##  [81] magrittr_1.5            bookdown_0.5           
 ##  [83] R6_2.2.2                gplots_3.0.1           
 ##  [85] DBI_0.7                 RCurl_1.95-4.8         
 ##  [87] tibble_1.3.4            KernSmooth_2.23-15     
-##  [89] rmarkdown_1.7           viridis_0.4.0          
+##  [89] rmarkdown_1.8           viridis_0.4.0          
 ##  [91] progress_1.1.2          locfit_1.5-9.1         
 ##  [93] grid_3.4.2              data.table_1.10.4-3    
 ##  [95] blob_1.1.0              digest_0.6.12          
