@@ -559,7 +559,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [85] pbkrtest_0.4-7          curl_3.0               
 ##  [87] e1071_1.6-8             spatstat.utils_1.7-1   
 ##  [89] smoother_1.1            tibble_1.3.4           
-##  [91] statmod_1.4.30          stringi_1.1.5          
+##  [91] statmod_1.4.30          stringi_1.1.6          
 ##  [93] highr_0.6               lattice_0.20-34        
 ##  [95] nloptr_1.0.4            HSMMSingleCell_0.112.0 
 ##  [97] combinat_0.0-8          lmtest_0.9-35          

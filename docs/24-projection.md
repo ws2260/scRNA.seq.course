@@ -105,14 +105,14 @@ plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs)
 ```
 
 <!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Sun Nov 19 15:41:31 2017 -->
+<!-- Mon Nov 20 15:51:44 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7507a375e2c () {
+function gvisDataSankeyID75019f2a199 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,8 +315,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7507a375e2c() {
-var data = gvisDataSankeyID7507a375e2c();
+function drawChartSankeyID75019f2a199() {
+var data = gvisDataSankeyID75019f2a199();
 var options = {};
 options["width"] = 400;
 options["height"] = 600;
@@ -335,7 +335,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7507a375e2c')
+    document.getElementById('SankeyID75019f2a199')
     );
     chart.draw(data,options);
     
@@ -359,9 +359,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7507a375e2c);
+callbacks.push(drawChartSankeyID75019f2a199);
 })();
-function displayChartSankeyID7507a375e2c() {
+function displayChartSankeyID75019f2a199() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,11 +385,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7507a375e2c"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID75019f2a199"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID7507a375e2c" 
+<div id="SankeyID75019f2a199" 
   style="width: 400; height: 600;">
 </div>
 
@@ -513,7 +513,7 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## [67] gridExtra_2.3           dplyr_0.7.4            
 ## [69] bit_1.1-12              bindr_0.1              
 ## [71] rprojroot_1.2           ggbeeswarm_0.6.0       
-## [73] stringi_1.1.5           Rcpp_0.12.13
+## [73] stringi_1.1.6           Rcpp_0.12.13
 ```
 
 

@@ -298,7 +298,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [11] ggplot2_2.2.1              RUVSeq_1.12.0             
 ## [13] edgeR_3.20.1               limma_3.34.1              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
-## [17] GenomicAlignments_1.14.0   SummarizedExperiment_1.8.0
+## [17] GenomicAlignments_1.14.1   SummarizedExperiment_1.8.0
 ## [19] DelayedArray_0.4.1         matrixStats_0.52.2        
 ## [21] Rsamtools_1.30.0           GenomicRanges_1.30.0      
 ## [23] GenomeInfoDb_1.14.0        Biostrings_2.46.0         
@@ -334,7 +334,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [47] rhdf5_2.22.0            yaml_2.1.14            
 ## [49] memoise_1.1.0           gridExtra_2.3          
 ## [51] biomaRt_2.34.0          latticeExtra_0.6-28    
-## [53] stringi_1.1.5           RSQLite_2.0            
+## [53] stringi_1.1.6           RSQLite_2.0            
 ## [55] RMySQL_0.10.13          orthopolynom_1.0-5     
 ## [57] GenomicFeatures_1.30.0  contfrac_1.1-11        
 ## [59] rlang_0.1.4             pkgconfig_2.0.1        

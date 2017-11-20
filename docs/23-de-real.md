@@ -477,6 +477,6 @@ DE_Quality_AUC(pVals)
 ## [61] reshape2_1.4.2          R6_2.2.2               
 ## [63] gridExtra_2.3           dplyr_0.7.4            
 ## [65] bindr_0.1               rprojroot_1.2          
-## [67] KernSmooth_2.23-15      stringi_1.1.5          
+## [67] KernSmooth_2.23-15      stringi_1.1.6          
 ## [69] Rcpp_0.12.13
 ```
