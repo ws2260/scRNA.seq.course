@@ -229,6 +229,6 @@ sessionInfo()
 ## [29] bookdown_0.5            reshape2_1.4.2         
 ## [31] magrittr_1.5            backports_1.1.1        
 ## [33] htmltools_0.3.6         assertthat_0.2.0       
-## [35] stringi_1.1.5           RCurl_1.95-4.8
+## [35] stringi_1.1.6           RCurl_1.95-4.8
 ```
 

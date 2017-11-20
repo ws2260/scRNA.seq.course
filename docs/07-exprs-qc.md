@@ -513,7 +513,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ##  [65] RColorBrewer_1.1-2      yaml_2.1.14            
 ##  [67] memoise_1.1.0           gridExtra_2.3          
 ##  [69] biomaRt_2.34.0          reshape_0.8.7          
-##  [71] stringi_1.1.5           RSQLite_2.0            
+##  [71] stringi_1.1.6           RSQLite_2.0            
 ##  [73] highr_0.6               pcaPP_1.9-72           
 ##  [75] e1071_1.6-8             boot_1.3-18            
 ##  [77] prabclus_2.2-6          rlang_0.1.4            

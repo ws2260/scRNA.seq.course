@@ -254,6 +254,6 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [63] R6_2.2.2                gridExtra_2.3          
 ## [65] dplyr_0.7.4             bit_1.1-12             
 ## [67] bindr_0.1               rprojroot_1.2          
-## [69] stringi_1.1.5           ggbeeswarm_0.6.0       
+## [69] stringi_1.1.6           ggbeeswarm_0.6.0       
 ## [71] Rcpp_0.12.13
 ```

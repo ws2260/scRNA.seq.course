@@ -257,7 +257,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [47] rhdf5_2.22.0            RColorBrewer_1.1-2     
 ## [49] yaml_2.1.14             memoise_1.1.0          
 ## [51] gridExtra_2.3           pkgmaker_0.22          
-## [53] biomaRt_2.34.0          stringi_1.1.5          
+## [53] biomaRt_2.34.0          stringi_1.1.6          
 ## [55] RSQLite_2.0             pcaPP_1.9-72           
 ## [57] e1071_1.6-8             caTools_1.17.1         
 ## [59] rlang_0.1.4             pkgconfig_2.0.1        

@@ -478,7 +478,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [53] RColorBrewer_1.1-2      yaml_2.1.14            
 ##  [55] memoise_1.1.0           gridExtra_2.3          
 ##  [57] pkgmaker_0.22           biomaRt_2.34.0         
-##  [59] stringi_1.1.5           RSQLite_2.0            
+##  [59] stringi_1.1.6           RSQLite_2.0            
 ##  [61] highr_0.6               pcaPP_1.9-72           
 ##  [63] foreach_1.4.3           orthopolynom_1.0-5     
 ##  [65] e1071_1.6-8             contfrac_1.1-11        
