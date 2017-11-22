@@ -501,7 +501,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [1] lle_1.1                    snowfall_1.84-6.1         
 ##  [3] snow_0.4-2                 MASS_7.3-45               
 ##  [5] scatterplot3d_0.3-40       SLICER_0.2.0              
-##  [7] destiny_2.6.1              monocle_2.6.0             
+##  [7] destiny_2.6.1              monocle_2.6.1             
 ##  [9] DDRTree_0.1.5              irlba_2.3.1               
 ## [11] VGAM_1.0-4                 ggplot2_2.2.1             
 ## [13] Matrix_1.2-7.1             M3Drop_2.02.00            
@@ -515,7 +515,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ## 
 ## loaded via a namespace (and not attached):
 ##   [1] backports_1.1.1         Hmisc_4.0-3            
-##   [3] RcppEigen_0.3.3.3.0     plyr_1.8.4             
+##   [3] RcppEigen_0.3.3.3.1     plyr_1.8.4             
 ##   [5] igraph_1.1.2            lazyeval_0.2.1         
 ##   [7] sp_1.2-5                densityClust_0.3       
 ##   [9] fastICA_1.2-1           digest_0.6.12          
@@ -526,13 +526,13 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [19] tripack_1.3-8           R.utils_2.6.0          
 ##  [21] xts_0.10-0              colorspace_1.3-2       
 ##  [23] ggrepel_0.7.0           dplyr_0.7.4            
-##  [25] RCurl_1.95-4.8          spatstat.data_1.1-1    
+##  [25] RCurl_1.95-4.8          spatstat.data_1.2-0    
 ##  [27] lme4_1.1-14             spatstat_1.53-2        
 ##  [29] bindr_0.1               survival_2.40-1        
 ##  [31] zoo_1.8-0               glue_1.2.0             
 ##  [33] polyclip_1.6-1          gtable_0.2.0           
 ##  [35] zlibbioc_1.24.0         XVector_0.18.0         
-##  [37] MatrixModels_0.4-1      car_2.1-5              
+##  [37] MatrixModels_0.4-1      car_2.1-6              
 ##  [39] DEoptimR_1.0-8          abind_1.4-5            
 ##  [41] SparseM_1.77            VIM_4.7.0              
 ##  [43] scales_0.5.0            sgeostat_1.0-27        
@@ -552,28 +552,28 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [71] splancs_2.01-40         evaluate_0.10.1        
 ##  [73] stringr_1.2.0           goftest_1.1-1          
 ##  [75] yaml_2.1.14             robustbase_0.92-8      
-##  [77] caTools_1.17.1          bindrcpp_0.2           
-##  [79] nlme_3.1-129            mime_0.5               
-##  [81] quantreg_5.34           slam_0.1-40            
-##  [83] R.oo_1.21.0             compiler_3.4.2         
-##  [85] pbkrtest_0.4-7          curl_3.0               
-##  [87] e1071_1.6-8             spatstat.utils_1.7-1   
-##  [89] smoother_1.1            tibble_1.3.4           
-##  [91] statmod_1.4.30          stringi_1.1.6          
-##  [93] highr_0.6               lattice_0.20-34        
-##  [95] nloptr_1.0.4            HSMMSingleCell_0.112.0 
-##  [97] combinat_0.0-8          lmtest_0.9-35          
-##  [99] data.table_1.10.4-3     bitops_1.0-6           
-## [101] httpuv_1.3.5            R6_2.2.2               
-## [103] latticeExtra_0.6-28     bookdown_0.5           
-## [105] KernSmooth_2.23-15      gridExtra_2.3          
-## [107] boot_1.3-18             gtools_3.5.0           
-## [109] assertthat_0.2.0        rprojroot_1.2          
-## [111] qlcMatrix_0.9.5         GenomeInfoDbData_0.99.1
-## [113] mgcv_1.8-22             grid_3.4.2             
-## [115] rpart_4.1-10            class_7.3-14           
-## [117] minqa_1.2.4             rmarkdown_1.8          
-## [119] Rtsne_0.13              TTR_0.23-2             
-## [121] bbmle_1.0.20            shiny_1.0.5            
-## [123] base64enc_0.1-3
+##  [77] caTools_1.17.1          RANN_2.5.1             
+##  [79] bindrcpp_0.2            nlme_3.1-129           
+##  [81] mime_0.5                quantreg_5.34          
+##  [83] slam_0.1-40             R.oo_1.21.0            
+##  [85] compiler_3.4.2          pbkrtest_0.4-7         
+##  [87] curl_3.0                e1071_1.6-8            
+##  [89] spatstat.utils_1.8-0    smoother_1.1           
+##  [91] tibble_1.3.4            statmod_1.4.30         
+##  [93] stringi_1.1.6           highr_0.6              
+##  [95] lattice_0.20-34         nloptr_1.0.4           
+##  [97] HSMMSingleCell_0.112.0  combinat_0.0-8         
+##  [99] lmtest_0.9-35           data.table_1.10.4-3    
+## [101] bitops_1.0-6            httpuv_1.3.5           
+## [103] R6_2.2.2                latticeExtra_0.6-28    
+## [105] bookdown_0.5            KernSmooth_2.23-15     
+## [107] gridExtra_2.3           boot_1.3-18            
+## [109] gtools_3.5.0            assertthat_0.2.0       
+## [111] rprojroot_1.2           qlcMatrix_0.9.5        
+## [113] GenomeInfoDbData_0.99.1 mgcv_1.8-22            
+## [115] grid_3.4.2              rpart_4.1-10           
+## [117] class_7.3-14            minqa_1.2.4            
+## [119] rmarkdown_1.8           Rtsne_0.13             
+## [121] TTR_0.23-2              bbmle_1.0.20           
+## [123] shiny_1.0.5             base64enc_0.1-3
 ```

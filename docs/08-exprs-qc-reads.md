@@ -433,7 +433,7 @@ sessionInfo()
 ##  [91] R6_2.2.2                DBI_0.7                
 ##  [93] mgcv_1.8-22             RCurl_1.95-4.8         
 ##  [95] sp_1.2-5                nnet_7.3-12            
-##  [97] tibble_1.3.4            car_2.1-5              
+##  [97] tibble_1.3.4            car_2.1-6              
 ##  [99] rmarkdown_1.8           viridis_0.4.0          
 ## [101] progress_1.1.2          locfit_1.5-9.1         
 ## [103] grid_3.4.2              data.table_1.10.4-3    
