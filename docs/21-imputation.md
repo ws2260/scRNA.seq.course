@@ -218,7 +218,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] mclust_5.3                 scater_1.6.0              
+##  [1] mclust_5.4                 scater_1.6.0              
 ##  [3] ggplot2_2.2.1              SC3_1.6.0                 
 ##  [5] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
 ##  [7] DelayedArray_0.4.1         matrixStats_0.52.2        

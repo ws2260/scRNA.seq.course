@@ -443,7 +443,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [7] DelayedArray_0.4.1         matrixStats_0.52.2        
 ##  [9] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
 ## [11] IRanges_2.12.0             S4Vectors_0.16.0          
-## [13] pcaReduce_1.0              mclust_5.3                
+## [13] pcaReduce_1.0              mclust_5.4                
 ## [15] mnormt_1.5-5               pcaMethods_1.70.0         
 ## [17] Biobase_2.38.0             BiocGenerics_0.24.0       
 ## [19] knitr_1.17                

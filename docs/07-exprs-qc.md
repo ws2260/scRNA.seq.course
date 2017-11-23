@@ -481,7 +481,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ##   [1] ggbeeswarm_0.6.0        minqa_1.2.4            
 ##   [3] colorspace_1.3-2        mvoutlier_2.0.8        
 ##   [5] rjson_0.2.15            modeltools_0.2-21      
-##   [7] class_7.3-14            mclust_5.3             
+##   [7] class_7.3-14            mclust_5.4             
 ##   [9] rprojroot_1.2           XVector_0.18.0         
 ##  [11] pls_2.6-0               cvTools_0.3.2          
 ##  [13] MatrixModels_0.4-1      flexmix_2.3-14         
