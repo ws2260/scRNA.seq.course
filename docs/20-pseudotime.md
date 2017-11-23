@@ -109,8 +109,10 @@ cellLabels[dengclust$clusterid == 10]
 ```
 
 ```
-##  [1] late2cell mid2cell  mid2cell  mid2cell  mid2cell  mid2cell  mid2cell 
-##  [8] mid2cell  mid2cell  mid2cell  mid2cell  mid2cell  mid2cell 
+##  [1] earlyblast earlyblast earlyblast earlyblast earlyblast lateblast 
+##  [7] lateblast  lateblast  lateblast  lateblast  lateblast  midblast  
+## [13] midblast   midblast   midblast   midblast   midblast   midblast  
+## [19] midblast  
 ## 10 Levels: 16cell 4cell 8cell early2cell earlyblast ... zy
 ```
 
@@ -155,7 +157,7 @@ m3dGenes <- as.character(
 ```
 
 ```
-## Warning in bg__calc_variables(expr_mat): Warning: Removing 1134 invariant
+## Warning in bg__calc_variables(expr_mat): Warning: Removing 1134 undetected
 ## genes.
 ```
 
@@ -504,7 +506,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [7] destiny_2.6.1              monocle_2.6.1             
 ##  [9] DDRTree_0.1.5              irlba_2.3.1               
 ## [11] VGAM_1.0-4                 ggplot2_2.2.1             
-## [13] Matrix_1.2-7.1             M3Drop_2.02.00            
+## [13] Matrix_1.2-7.1             M3Drop_3.05.00            
 ## [15] numDeriv_2016.8-1          TSCAN_1.16.0              
 ## [17] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
 ## [19] DelayedArray_0.4.1         matrixStats_0.52.2        
@@ -527,53 +529,54 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [21] xts_0.10-0              colorspace_1.3-2       
 ##  [23] ggrepel_0.7.0           dplyr_0.7.4            
 ##  [25] RCurl_1.95-4.8          spatstat.data_1.2-0    
-##  [27] lme4_1.1-14             spatstat_1.53-2        
+##  [27] spatstat_1.54-0         lme4_1.1-14            
 ##  [29] bindr_0.1               survival_2.40-1        
 ##  [31] zoo_1.8-0               glue_1.2.0             
 ##  [33] polyclip_1.6-1          gtable_0.2.0           
 ##  [35] zlibbioc_1.24.0         XVector_0.18.0         
 ##  [37] MatrixModels_0.4-1      car_2.1-6              
 ##  [39] DEoptimR_1.0-8          abind_1.4-5            
-##  [41] SparseM_1.77            VIM_4.7.0              
-##  [43] scales_0.5.0            sgeostat_1.0-27        
-##  [45] pheatmap_1.0.8          Rcpp_0.12.13           
-##  [47] viridisLite_0.2.0       xtable_1.8-2           
-##  [49] laeken_0.4.6            htmlTable_1.9          
-##  [51] foreign_0.8-67          proxy_0.4-19           
-##  [53] mclust_5.3              Formula_1.2-2          
-##  [55] vcd_1.4-3               htmlwidgets_0.9        
-##  [57] FNN_1.1                 gplots_3.0.1           
-##  [59] RColorBrewer_1.1-2      acepack_1.4.1          
-##  [61] pkgconfig_2.0.1         R.methodsS3_1.7.1      
-##  [63] deldir_0.1-14           nnet_7.3-12            
-##  [65] alphahull_2.1           labeling_0.3           
-##  [67] rlang_0.1.4             reshape2_1.4.2         
-##  [69] munsell_0.4.3           tools_3.4.2            
-##  [71] splancs_2.01-40         evaluate_0.10.1        
-##  [73] stringr_1.2.0           goftest_1.1-1          
-##  [75] yaml_2.1.14             robustbase_0.92-8      
-##  [77] caTools_1.17.1          RANN_2.5.1             
-##  [79] bindrcpp_0.2            nlme_3.1-129           
-##  [81] mime_0.5                quantreg_5.34          
-##  [83] slam_0.1-40             R.oo_1.21.0            
-##  [85] compiler_3.4.2          pbkrtest_0.4-7         
-##  [87] curl_3.0                e1071_1.6-8            
-##  [89] spatstat.utils_1.8-0    smoother_1.1           
-##  [91] tibble_1.3.4            statmod_1.4.30         
-##  [93] stringi_1.1.6           highr_0.6              
-##  [95] lattice_0.20-34         nloptr_1.0.4           
-##  [97] HSMMSingleCell_0.112.0  combinat_0.0-8         
-##  [99] lmtest_0.9-35           data.table_1.10.4-3    
-## [101] bitops_1.0-6            httpuv_1.3.5           
-## [103] R6_2.2.2                latticeExtra_0.6-28    
-## [105] bookdown_0.5            KernSmooth_2.23-15     
-## [107] gridExtra_2.3           boot_1.3-18            
-## [109] gtools_3.5.0            assertthat_0.2.0       
-## [111] rprojroot_1.2           qlcMatrix_0.9.5        
-## [113] GenomeInfoDbData_0.99.1 mgcv_1.8-22            
-## [115] grid_3.4.2              rpart_4.1-10           
-## [117] class_7.3-14            minqa_1.2.4            
-## [119] rmarkdown_1.8           Rtsne_0.13             
-## [121] TTR_0.23-2              bbmle_1.0.20           
-## [123] shiny_1.0.5             base64enc_0.1-3
+##  [41] sgeostat_1.0-27         reldist_1.6-6          
+##  [43] SparseM_1.77            VIM_4.7.0              
+##  [45] scales_0.5.0            pheatmap_1.0.8         
+##  [47] Rcpp_0.12.13            viridisLite_0.2.0      
+##  [49] xtable_1.8-2            laeken_0.4.6           
+##  [51] htmlTable_1.9           foreign_0.8-67         
+##  [53] proxy_0.4-19            mclust_5.4             
+##  [55] Formula_1.2-2           vcd_1.4-3              
+##  [57] htmlwidgets_0.9         FNN_1.1                
+##  [59] gplots_3.0.1            RColorBrewer_1.1-2     
+##  [61] acepack_1.4.1           pkgconfig_2.0.1        
+##  [63] R.methodsS3_1.7.1       deldir_0.1-14          
+##  [65] nnet_7.3-12             alphahull_2.1          
+##  [67] labeling_0.3            rlang_0.1.4            
+##  [69] reshape2_1.4.2          munsell_0.4.3          
+##  [71] tools_3.4.2             splancs_2.01-40        
+##  [73] evaluate_0.10.1         stringr_1.2.0          
+##  [75] goftest_1.1-1           yaml_2.1.14            
+##  [77] robustbase_0.92-8       caTools_1.17.1         
+##  [79] RANN_2.5.1              bindrcpp_0.2           
+##  [81] nlme_3.1-129            mime_0.5               
+##  [83] quantreg_5.34           slam_0.1-40            
+##  [85] R.oo_1.21.0             compiler_3.4.2         
+##  [87] pbkrtest_0.4-7          curl_3.0               
+##  [89] e1071_1.6-8             spatstat.utils_1.8-0   
+##  [91] smoother_1.1            tibble_1.3.4           
+##  [93] statmod_1.4.30          stringi_1.1.6          
+##  [95] highr_0.6               lattice_0.20-34        
+##  [97] nloptr_1.0.4            HSMMSingleCell_0.112.0 
+##  [99] combinat_0.0-8          lmtest_0.9-35          
+## [101] data.table_1.10.4-3     bitops_1.0-6           
+## [103] httpuv_1.3.5            R6_2.2.2               
+## [105] latticeExtra_0.6-28     bookdown_0.5           
+## [107] KernSmooth_2.23-15      gridExtra_2.3          
+## [109] boot_1.3-18             gtools_3.5.0           
+## [111] assertthat_0.2.0        rprojroot_1.2          
+## [113] qlcMatrix_0.9.5         GenomeInfoDbData_0.99.1
+## [115] mgcv_1.8-22             grid_3.4.2             
+## [117] rpart_4.1-10            class_7.3-14           
+## [119] minqa_1.2.4             rmarkdown_1.8          
+## [121] Rtsne_0.13              TTR_0.23-2             
+## [123] bbmle_1.0.20            shiny_1.0.5            
+## [125] base64enc_0.1-3
 ```
