@@ -93,28 +93,38 @@ __Exercise 1__
 
 ```r
 do_mnn <- function(data.qc) {
-    batch1 <- data.qc[, data.qc$replicate == "r1"]
-    batch2 <- data.qc[, data.qc$replicate == "r2"]
-    batch3 <- data.qc[, data.qc$replicate == "r3"]
+    batch1 <- logcounts(data.qc[, data.qc$replicate == "r1"])
+    batch2 <- logcounts(data.qc[, data.qc$replicate == "r2"])
+    batch3 <- logcounts(data.qc[, data.qc$replicate == "r3"])
     
     if (ncol(batch2) > 0) {
         x = mnnCorrect(
-          logcounts(batch1), logcounts(batch2), logcounts(batch3),  
+          batch1, batch2, batch3,  
           k = 20,
           sigma = 0.1,
-          cos.norm = TRUE,
+          cos.norm.in = TRUE,
           svd.dim = 2
         )
-        return(cbind(x$corrected[[1]], x$corrected[[2]], x$corrected[[3]]))
+        res1 <- x$corrected[[1]]
+        res2 <- x$corrected[[2]]
+        res3 <- x$corrected[[3]]
+        dimnames(res1) <- dimnames(batch1)
+        dimnames(res2) <- dimnames(batch2)
+        dimnames(res3) <- dimnames(batch3)
+        return(cbind(res1, res2, res3))
     } else {
         x = mnnCorrect(
-          logcounts(batch1), logcounts(batch3),  
+          batch1, batch3,  
           k = 20,
           sigma = 0.1,
-          cos.norm = TRUE,
+          cos.norm.in = TRUE,
           svd.dim = 2
         )
-        return(cbind(x$corrected[[1]], x$corrected[[2]]))
+        res1 <- x$corrected[[1]]
+        res3 <- x$corrected[[2]]
+        dimnames(res1) <- dimnames(batch1)
+        dimnames(res3) <- dimnames(batch3)
+        return(cbind(res1, res3))
     }
 }
 
@@ -122,7 +132,7 @@ indi1 <- do_mnn(reads.qc[, reads.qc$individual == "NA19098"])
 indi2 <- do_mnn(reads.qc[, reads.qc$individual == "NA19101"])
 indi3 <- do_mnn(reads.qc[, reads.qc$individual == "NA19239"])
 
-assay(reads.qc, "mnn") <- cbind(indi1, indi2, indi3);
+assay(reads.qc, "mnn") <- cbind(indi1, indi2, indi3)
 
 # For a balanced design: 
 #assay(reads.qc, "mnn") <- mnnCorrect(
@@ -269,7 +279,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 
 
 ```
-## R version 3.4.2 (2017-09-28)
+## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
@@ -290,70 +300,55 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] RColorBrewer_1.1-2         reshape2_1.4.2            
+##  [1] RColorBrewer_1.1-2         reshape2_1.4.3            
 ##  [3] sva_3.26.0                 genefilter_1.60.0         
-##  [5] mgcv_1.8-22                nlme_3.1-129              
-##  [7] kBET_0.99.0                scran_1.6.2               
-##  [9] scater_1.6.0               SingleCellExperiment_1.0.0
+##  [5] mgcv_1.8-23                nlme_3.1-129              
+##  [7] kBET_0.99.0                scran_1.6.6               
+##  [9] scater_1.6.1               SingleCellExperiment_1.0.0
 ## [11] ggplot2_2.2.1              RUVSeq_1.12.0             
-## [13] edgeR_3.20.1               limma_3.34.1              
+## [13] edgeR_3.20.6               limma_3.34.5              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
-## [17] GenomicAlignments_1.14.1   SummarizedExperiment_1.8.0
+## [17] GenomicAlignments_1.14.1   SummarizedExperiment_1.8.1
 ## [19] DelayedArray_0.4.1         matrixStats_0.52.2        
-## [21] Rsamtools_1.30.0           GenomicRanges_1.30.0      
+## [21] Rsamtools_1.30.0           GenomicRanges_1.30.1      
 ## [23] GenomeInfoDb_1.14.0        Biostrings_2.46.0         
 ## [25] XVector_0.18.0             IRanges_2.12.0            
 ## [27] S4Vectors_0.16.0           BiocParallel_1.12.0       
 ## [29] Biobase_2.38.0             BiocGenerics_0.24.0       
-## [31] scRNA.seq.funcs_0.1.0      knitr_1.17                
+## [31] scRNA.seq.funcs_0.1.0      knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rtsne_0.13              ggbeeswarm_0.6.0       
-##  [3] colorspace_1.3-2        rjson_0.2.15           
-##  [5] hwriter_1.3.2           dynamicTreeCut_1.63-1  
-##  [7] rprojroot_1.2           DT_0.2                 
-##  [9] bit64_0.9-7             AnnotationDbi_1.40.0   
-## [11] splines_3.4.2           R.methodsS3_1.7.1      
-## [13] tximport_1.6.0          DESeq_1.30.0           
-## [15] geneplotter_1.56.0      annotate_1.56.1        
-## [17] cluster_2.0.6           R.oo_1.21.0            
-## [19] shinydashboard_0.6.1    shiny_1.0.5            
-## [21] compiler_3.4.2          backports_1.1.1        
-## [23] assertthat_0.2.0        Matrix_1.2-7.1         
-## [25] lazyeval_0.2.1          htmltools_0.3.6        
-## [27] prettyunits_1.0.2       tools_3.4.2            
-## [29] igraph_1.1.2            bindrcpp_0.2           
-## [31] gtable_0.2.0            glue_1.2.0             
-## [33] GenomeInfoDbData_0.99.1 dplyr_0.7.4            
-## [35] Rcpp_0.12.13            rtracklayer_1.38.0     
-## [37] stringr_1.2.0           mime_0.5               
-## [39] hypergeo_1.2-13         statmod_1.4.30         
-## [41] XML_3.98-1.9            zoo_1.8-0              
-## [43] zlibbioc_1.24.0         MASS_7.3-45            
-## [45] scales_0.5.0            aroma.light_3.8.0      
-## [47] rhdf5_2.22.0            yaml_2.1.14            
-## [49] memoise_1.1.0           gridExtra_2.3          
-## [51] biomaRt_2.34.0          latticeExtra_0.6-28    
-## [53] stringi_1.1.6           RSQLite_2.0            
-## [55] RMySQL_0.10.13          orthopolynom_1.0-5     
-## [57] GenomicFeatures_1.30.0  contfrac_1.1-11        
-## [59] rlang_0.1.4             pkgconfig_2.0.1        
-## [61] moments_0.14            bitops_1.0-6           
-## [63] evaluate_0.10.1         lattice_0.20-34        
-## [65] bindr_0.1               labeling_0.3           
-## [67] htmlwidgets_0.9         cowplot_0.9.1          
-## [69] bit_1.1-12              deSolve_1.20           
-## [71] plyr_1.8.4              magrittr_1.5           
-## [73] bookdown_0.5            R6_2.2.2               
-## [75] DBI_0.7                 survival_2.40-1        
-## [77] RCurl_1.95-4.8          tibble_1.3.4           
-## [79] rmarkdown_1.8           viridis_0.4.0          
-## [81] progress_1.1.2          locfit_1.5-9.1         
-## [83] grid_3.4.2              data.table_1.10.4-3    
-## [85] FNN_1.1                 blob_1.1.0             
-## [87] digest_0.6.12           xtable_1.8-2           
-## [89] httpuv_1.3.5            elliptic_1.3-7         
-## [91] R.utils_2.6.0           munsell_0.4.3          
-## [93] beeswarm_0.2.3          viridisLite_0.2.0      
-## [95] vipor_0.4.5
+##  [1] Rtsne_0.13             ggbeeswarm_0.6.0       colorspace_1.3-2      
+##  [4] rjson_0.2.15           hwriter_1.3.2          dynamicTreeCut_1.63-1 
+##  [7] rprojroot_1.3-2        DT_0.2                 bit64_0.9-7           
+## [10] AnnotationDbi_1.40.0   splines_3.4.3          R.methodsS3_1.7.1     
+## [13] tximport_1.6.0         DESeq_1.30.0           geneplotter_1.56.0    
+## [16] annotate_1.56.1        cluster_2.0.6          R.oo_1.21.0           
+## [19] shinydashboard_0.6.1   shiny_1.0.5            compiler_3.4.3        
+## [22] httr_1.3.1             backports_1.1.2        assertthat_0.2.0      
+## [25] Matrix_1.2-7.1         lazyeval_0.2.1         htmltools_0.3.6       
+## [28] prettyunits_1.0.2      tools_3.4.3            igraph_1.1.2          
+## [31] bindrcpp_0.2           gtable_0.2.0           glue_1.2.0            
+## [34] GenomeInfoDbData_1.0.0 dplyr_0.7.4            Rcpp_0.12.14          
+## [37] rtracklayer_1.38.2     stringr_1.2.0          mime_0.5              
+## [40] hypergeo_1.2-13        statmod_1.4.30         XML_3.98-1.9          
+## [43] zoo_1.8-1              zlibbioc_1.24.0        MASS_7.3-45           
+## [46] scales_0.5.0           aroma.light_3.8.0      rhdf5_2.22.0          
+## [49] yaml_2.1.16            memoise_1.1.0          gridExtra_2.3         
+## [52] biomaRt_2.34.1         latticeExtra_0.6-28    stringi_1.1.6         
+## [55] RSQLite_2.0            RMySQL_0.10.13         orthopolynom_1.0-5    
+## [58] GenomicFeatures_1.30.0 contfrac_1.1-11        rlang_0.1.6           
+## [61] pkgconfig_2.0.1        moments_0.14           bitops_1.0-6          
+## [64] evaluate_0.10.1        lattice_0.20-34        bindr_0.1             
+## [67] labeling_0.3           htmlwidgets_0.9        cowplot_0.9.2         
+## [70] bit_1.1-12             deSolve_1.20           plyr_1.8.4            
+## [73] magrittr_1.5           bookdown_0.5           R6_2.2.2              
+## [76] DBI_0.7                pillar_1.1.0           survival_2.40-1       
+## [79] RCurl_1.95-4.10        tibble_1.4.1           rmarkdown_1.8         
+## [82] viridis_0.4.1          progress_1.1.2         locfit_1.5-9.1        
+## [85] grid_3.4.3             data.table_1.10.4-3    FNN_1.1               
+## [88] blob_1.1.0             digest_0.6.14          xtable_1.8-2          
+## [91] httpuv_1.3.5           elliptic_1.3-7         R.utils_2.6.0         
+## [94] munsell_0.4.3          beeswarm_0.2.3         viridisLite_0.2.0     
+## [97] vipor_0.4.5
 ```

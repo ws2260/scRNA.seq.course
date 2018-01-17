@@ -319,7 +319,7 @@ Plot the expression of the features for each of the other methods. Which appear 
 
 
 ```
-## R version 3.4.2 (2017-09-28)
+## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
@@ -340,47 +340,37 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
 ##  [3] DelayedArray_0.4.1         Biobase_2.38.0            
-##  [5] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [5] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ##  [7] IRanges_2.12.0             S4Vectors_0.16.0          
 ##  [9] BiocGenerics_0.24.0        RColorBrewer_1.1-2        
 ## [11] M3Drop_3.05.00             numDeriv_2016.8-1         
 ## [13] matrixStats_0.52.2         scRNA.seq.funcs_0.1.0     
-## [15] knitr_1.17                
+## [15] knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] splines_3.4.2           elliptic_1.3-7         
-##  [3] gtools_3.5.0            Formula_1.2-2          
-##  [5] moments_0.14            statmod_1.4.30         
-##  [7] latticeExtra_0.6-28     GenomeInfoDbData_0.99.1
-##  [9] yaml_2.1.14             backports_1.1.1        
-## [11] lattice_0.20-34         bbmle_1.0.20           
-## [13] digest_0.6.12           XVector_0.18.0         
-## [15] checkmate_1.8.5         colorspace_1.3-2       
-## [17] htmltools_0.3.6         Matrix_1.2-7.1         
-## [19] plyr_1.8.4              bookdown_0.5           
-## [21] zlibbioc_1.24.0         scales_0.5.0           
-## [23] gdata_2.18.0            Rtsne_0.13             
-## [25] htmlTable_1.9           tibble_1.3.4           
-## [27] mgcv_1.8-22             ggplot2_2.2.1          
-## [29] nnet_7.3-12             lazyeval_0.2.1         
-## [31] survival_2.40-1         magrittr_1.5           
-## [33] evaluate_0.10.1         nlme_3.1-129           
-## [35] MASS_7.3-45             gplots_3.0.1           
-## [37] foreign_0.8-67          reldist_1.6-6          
-## [39] tools_3.4.2             data.table_1.10.4-3    
-## [41] stringr_1.2.0           munsell_0.4.3          
-## [43] cluster_2.0.6           irlba_2.3.1            
-## [45] orthopolynom_1.0-5      compiler_3.4.2         
-## [47] caTools_1.17.1          contfrac_1.1-11        
-## [49] rlang_0.1.4             grid_3.4.2             
-## [51] RCurl_1.95-4.8          htmlwidgets_0.9        
-## [53] bitops_1.0-6            base64enc_0.1-3        
-## [55] rmarkdown_1.8           hypergeo_1.2-13        
-## [57] gtable_0.2.0            deSolve_1.20           
-## [59] gridExtra_2.3           Hmisc_4.0-3            
-## [61] rprojroot_1.2           KernSmooth_2.23-15     
-## [63] stringi_1.1.6           Rcpp_0.12.13           
-## [65] rpart_4.1-10            acepack_1.4.1
+##  [1] splines_3.4.3          elliptic_1.3-7         gtools_3.5.0          
+##  [4] Formula_1.2-2          moments_0.14           statmod_1.4.30        
+##  [7] latticeExtra_0.6-28    GenomeInfoDbData_1.0.0 yaml_2.1.16           
+## [10] pillar_1.1.0           backports_1.1.2        lattice_0.20-34       
+## [13] bbmle_1.0.20           digest_0.6.14          XVector_0.18.0        
+## [16] checkmate_1.8.5        colorspace_1.3-2       htmltools_0.3.6       
+## [19] Matrix_1.2-7.1         plyr_1.8.4             bookdown_0.5          
+## [22] zlibbioc_1.24.0        scales_0.5.0           gdata_2.18.0          
+## [25] Rtsne_0.13             htmlTable_1.11.1       tibble_1.4.1          
+## [28] mgcv_1.8-23            ggplot2_2.2.1          nnet_7.3-12           
+## [31] lazyeval_0.2.1         survival_2.40-1        magrittr_1.5          
+## [34] evaluate_0.10.1        nlme_3.1-129           MASS_7.3-45           
+## [37] gplots_3.0.1           foreign_0.8-67         reldist_1.6-6         
+## [40] tools_3.4.3            data.table_1.10.4-3    stringr_1.2.0         
+## [43] munsell_0.4.3          cluster_2.0.6          irlba_2.3.2           
+## [46] orthopolynom_1.0-5     compiler_3.4.3         caTools_1.17.1        
+## [49] contfrac_1.1-11        rlang_0.1.6            grid_3.4.3            
+## [52] RCurl_1.95-4.10        rstudioapi_0.7         htmlwidgets_0.9       
+## [55] bitops_1.0-6           base64enc_0.1-3        rmarkdown_1.8         
+## [58] hypergeo_1.2-13        gtable_0.2.0           deSolve_1.20          
+## [61] gridExtra_2.3          Hmisc_4.1-1            rprojroot_1.3-2       
+## [64] KernSmooth_2.23-15     stringi_1.1.6          Rcpp_0.12.14          
+## [67] rpart_4.1-10           acepack_1.4.1
 ```

@@ -144,22 +144,22 @@ seuset <- RunPCA(
 
 ```
 ## [1] "PC1"
-## [1] "Fbp2"   "Fam96a" "Cstb"   "Lrpap1" "Ctsd"  
-## [1] ""
 ## [1] "Gm10436" "Zbed3"   "Gm13023" "Oog1"    "C86187" 
+## [1] ""
+## [1] "Fbp2"   "Fam96a" "Cstb"   "Lrpap1" "Ctsd"  
 ## [1] ""
 ## [1] ""
 ## [1] "PC2"
-## [1] "Gm11517"  "Obox6"    "Pdxk"     "Map1lc3a" "Cited1"  
-## [1] ""
 ## [1] "Gsta4"    "Id2"      "Ptgr1"    "AA467197" "Myh9"    
+## [1] ""
+## [1] "Gm11517"  "Obox6"    "Pdxk"     "Map1lc3a" "Cited1"  
 ## [1] ""
 ## [1] ""
 ## [1] "PC3"
-## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
-## [1] ""
 ## [1] "Efnb2"         "Gm9125"        "Pabpn1"        "Mad2l1bp"     
 ## [5] "1600025M17Rik"
+## [1] ""
+## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
 ## [1] ""
 ## [1] ""
 ## [1] "PC4"
@@ -184,22 +184,22 @@ PrintPCA(object = seuset, pcs.print = 1:5, genes.print = 5, use.full = FALSE)
 
 ```
 ## [1] "PC1"
-## [1] "Fbp2"   "Fam96a" "Cstb"   "Lrpap1" "Ctsd"  
-## [1] ""
 ## [1] "Gm10436" "Zbed3"   "Gm13023" "Oog1"    "C86187" 
+## [1] ""
+## [1] "Fbp2"   "Fam96a" "Cstb"   "Lrpap1" "Ctsd"  
 ## [1] ""
 ## [1] ""
 ## [1] "PC2"
-## [1] "Gm11517"  "Obox6"    "Pdxk"     "Map1lc3a" "Cited1"  
-## [1] ""
 ## [1] "Gsta4"    "Id2"      "Ptgr1"    "AA467197" "Myh9"    
+## [1] ""
+## [1] "Gm11517"  "Obox6"    "Pdxk"     "Map1lc3a" "Cited1"  
 ## [1] ""
 ## [1] ""
 ## [1] "PC3"
-## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
-## [1] ""
 ## [1] "Efnb2"         "Gm9125"        "Pabpn1"        "Mad2l1bp"     
 ## [5] "1600025M17Rik"
+## [1] ""
+## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
 ## [1] ""
 ## [1] ""
 ## [1] "PC4"
@@ -299,7 +299,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2017-11-23 15:43:30
+## Parameters used in latest FindClusters calculation run on: 2018-01-17 13:57:35
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
@@ -405,7 +405,7 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 
 
 ```
-## R version 3.4.2 (2017-09-28)
+## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
@@ -427,79 +427,58 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ## 
 ## other attached packages:
 ##  [1] bindrcpp_0.2               dplyr_0.7.4               
-##  [3] mclust_5.4                 Seurat_2.1.0              
-##  [5] Matrix_1.2-7.1             cowplot_0.9.1             
+##  [3] mclust_5.4                 Seurat_2.2.0              
+##  [5] Matrix_1.2-7.1             cowplot_0.9.2             
 ##  [7] ggplot2_2.2.1              SingleCellExperiment_1.0.0
-##  [9] SummarizedExperiment_1.8.0 DelayedArray_0.4.1        
+##  [9] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
 ## [11] matrixStats_0.52.2         Biobase_2.38.0            
-## [13] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+## [13] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ## [15] IRanges_2.12.0             S4Vectors_0.16.0          
-## [17] BiocGenerics_0.24.0        knitr_1.17                
+## [17] BiocGenerics_0.24.0        knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##   [1] backports_1.1.1         Hmisc_4.0-3            
-##   [3] VGAM_1.0-4              NMF_0.20.6             
-##   [5] sn_1.5-0                plyr_1.8.4             
-##   [7] igraph_1.1.2            lazyeval_0.2.1         
-##   [9] splines_3.4.2           gridBase_0.4-7         
-##  [11] digest_0.6.12           foreach_1.4.3          
-##  [13] htmltools_0.3.6         lars_1.2               
-##  [15] gdata_2.18.0            magrittr_1.5           
-##  [17] checkmate_1.8.5         cluster_2.0.6          
-##  [19] doParallel_1.0.11       mixtools_1.1.0         
-##  [21] ROCR_1.0-7              sfsmisc_1.1-1          
-##  [23] recipes_0.1.1           gower_0.1.2            
-##  [25] dimRed_0.1.0            R.utils_2.6.0          
-##  [27] colorspace_1.3-2        RCurl_1.95-4.8         
-##  [29] bindr_0.1               survival_2.40-1        
-##  [31] iterators_1.0.8         ape_5.0                
-##  [33] glue_1.2.0              DRR_0.0.2              
-##  [35] registry_0.3            gtable_0.2.0           
-##  [37] ipred_0.9-6             zlibbioc_1.24.0        
-##  [39] XVector_0.18.0          kernlab_0.9-25         
-##  [41] ddalpha_1.3.1           prabclus_2.2-6         
-##  [43] DEoptimR_1.0-8          scales_0.5.0           
-##  [45] mvtnorm_1.0-6           rngtools_1.2.4         
-##  [47] Rcpp_0.12.13            dtw_1.18-1             
-##  [49] xtable_1.8-2            htmlTable_1.9          
-##  [51] tclust_1.3-1            foreign_0.8-67         
-##  [53] proxy_0.4-19            SDMTools_1.1-221       
-##  [55] Formula_1.2-2           tsne_0.1-3             
-##  [57] lava_1.5.1              prodlim_1.6.1          
-##  [59] htmlwidgets_0.9         FNN_1.1                
-##  [61] gplots_3.0.1            RColorBrewer_1.1-2     
-##  [63] fpc_2.1-10              acepack_1.4.1          
-##  [65] modeltools_0.2-21       ica_1.0-1              
-##  [67] pkgconfig_2.0.1         R.methodsS3_1.7.1      
-##  [69] flexmix_2.3-14          nnet_7.3-12            
-##  [71] caret_6.0-77            labeling_0.3           
-##  [73] tidyselect_0.2.3        rlang_0.1.4            
-##  [75] reshape2_1.4.2          munsell_0.4.3          
-##  [77] tools_3.4.2             ranger_0.8.0           
-##  [79] broom_0.4.3             ggridges_0.4.1         
-##  [81] evaluate_0.10.1         stringr_1.2.0          
-##  [83] yaml_2.1.14             ModelMetrics_1.1.0     
-##  [85] robustbase_0.92-8       caTools_1.17.1         
-##  [87] purrr_0.2.4             pbapply_1.3-3          
-##  [89] nlme_3.1-129            R.oo_1.21.0            
-##  [91] RcppRoll_0.2.2          compiler_3.4.2         
-##  [93] ggjoy_0.4.0             tibble_1.3.4           
-##  [95] stringi_1.1.6           lattice_0.20-34        
-##  [97] trimcluster_0.1-2       psych_1.7.8            
-##  [99] diffusionMap_1.1-0      data.table_1.10.4-3    
-## [101] bitops_1.0-6            irlba_2.3.1            
-## [103] R6_2.2.2                latticeExtra_0.6-28    
-## [105] bookdown_0.5            KernSmooth_2.23-15     
-## [107] gridExtra_2.3           codetools_0.2-15       
-## [109] MASS_7.3-45             gtools_3.5.0           
-## [111] assertthat_0.2.0        CVST_0.2-1             
-## [113] pkgmaker_0.22           rprojroot_1.2          
-## [115] withr_2.1.0             mnormt_1.5-5           
-## [117] GenomeInfoDbData_0.99.1 diptest_0.75-7         
-## [119] grid_3.4.2              rpart_4.1-10           
-## [121] timeDate_3042.101       tidyr_0.7.2            
-## [123] class_7.3-14            rmarkdown_1.8          
-## [125] segmented_0.5-2.2       Rtsne_0.13             
-## [127] numDeriv_2016.8-1       scatterplot3d_0.3-40   
-## [129] lubridate_1.7.1         base64enc_0.1-3
+##   [1] backports_1.1.2        Hmisc_4.1-1            VGAM_1.0-4            
+##   [4] NMF_0.20.6             sn_1.5-1               plyr_1.8.4            
+##   [7] igraph_1.1.2           lazyeval_0.2.1         splines_3.4.3         
+##  [10] gridBase_0.4-7         digest_0.6.14          foreach_1.4.4         
+##  [13] htmltools_0.3.6        lars_1.2               gdata_2.18.0          
+##  [16] magrittr_1.5           checkmate_1.8.5        cluster_2.0.6         
+##  [19] doParallel_1.0.11      mixtools_1.1.0         ROCR_1.0-7            
+##  [22] sfsmisc_1.1-1          recipes_0.1.2          gower_0.1.2           
+##  [25] dimRed_0.1.0           R.utils_2.6.0          colorspace_1.3-2      
+##  [28] RCurl_1.95-4.10        bindr_0.1              survival_2.40-1       
+##  [31] iterators_1.0.9        ape_5.0                glue_1.2.0            
+##  [34] DRR_0.0.3              registry_0.5           gtable_0.2.0          
+##  [37] ipred_0.9-6            zlibbioc_1.24.0        XVector_0.18.0        
+##  [40] kernlab_0.9-25         ddalpha_1.3.1          prabclus_2.2-6        
+##  [43] DEoptimR_1.0-8         scales_0.5.0           mvtnorm_1.0-6         
+##  [46] rngtools_1.2.4         Rcpp_0.12.14           dtw_1.18-1            
+##  [49] xtable_1.8-2           htmlTable_1.11.1       tclust_1.3-1          
+##  [52] foreign_0.8-67         proxy_0.4-21           SDMTools_1.1-221      
+##  [55] Formula_1.2-2          tsne_0.1-3             lava_1.6              
+##  [58] prodlim_1.6.1          htmlwidgets_0.9        FNN_1.1               
+##  [61] gplots_3.0.1           RColorBrewer_1.1-2     fpc_2.1-11            
+##  [64] acepack_1.4.1          modeltools_0.2-21      ica_1.0-1             
+##  [67] pkgconfig_2.0.1        R.methodsS3_1.7.1      flexmix_2.3-14        
+##  [70] nnet_7.3-12            caret_6.0-78           labeling_0.3          
+##  [73] tidyselect_0.2.3       rlang_0.1.6            reshape2_1.4.3        
+##  [76] munsell_0.4.3          tools_3.4.3            ranger_0.9.0          
+##  [79] broom_0.4.3            ggridges_0.4.1         evaluate_0.10.1       
+##  [82] stringr_1.2.0          yaml_2.1.16            ModelMetrics_1.1.0    
+##  [85] robustbase_0.92-8      caTools_1.17.1         purrr_0.2.4           
+##  [88] pbapply_1.3-4          nlme_3.1-129           R.oo_1.21.0           
+##  [91] RcppRoll_0.2.2         compiler_3.4.3         rstudioapi_0.7        
+##  [94] tibble_1.4.1           stringi_1.1.6          lattice_0.20-34       
+##  [97] trimcluster_0.1-2      psych_1.7.8            diffusionMap_1.1-0    
+## [100] pillar_1.1.0           irlba_2.3.2            data.table_1.10.4-3   
+## [103] bitops_1.0-6           R6_2.2.2               latticeExtra_0.6-28   
+## [106] bookdown_0.5           KernSmooth_2.23-15     gridExtra_2.3         
+## [109] codetools_0.2-15       MASS_7.3-45            gtools_3.5.0          
+## [112] assertthat_0.2.0       CVST_0.2-1             pkgmaker_0.22         
+## [115] rprojroot_1.3-2        withr_2.1.1            mnormt_1.5-5          
+## [118] GenomeInfoDbData_1.0.0 diptest_0.75-7         grid_3.4.3            
+## [121] rpart_4.1-10           timeDate_3042.101      tidyr_0.7.2           
+## [124] class_7.3-14           rmarkdown_1.8          segmented_0.5-3.0     
+## [127] Rtsne_0.13             numDeriv_2016.8-1      scatterplot3d_0.3-40  
+## [130] lubridate_1.7.1        base64enc_0.1-3
 ```
