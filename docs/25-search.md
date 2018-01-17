@@ -183,7 +183,7 @@ sessionInfo()
 ```
 
 ```
-## R version 3.4.2 (2017-09-28)
+## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
@@ -204,31 +204,26 @@ sessionInfo()
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
 ##  [3] DelayedArray_0.4.1         matrixStats_0.52.2        
-##  [5] Biobase_2.38.0             GenomicRanges_1.30.0      
+##  [5] Biobase_2.38.0             GenomicRanges_1.30.1      
 ##  [7] GenomeInfoDb_1.14.0        IRanges_2.12.0            
 ##  [9] S4Vectors_0.16.0           BiocGenerics_0.24.0       
-## [11] scfind_1.0.0               knitr_1.17                
+## [11] scfind_1.0.0               knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.13            highr_0.6              
-##  [3] plyr_1.8.4              compiler_3.4.2         
-##  [5] XVector_0.18.0          bindr_0.1              
-##  [7] bitops_1.0-6            tools_3.4.2            
-##  [9] zlibbioc_1.24.0         digest_0.6.12          
-## [11] bit_1.1-12              tibble_1.3.4           
-## [13] evaluate_0.10.1         lattice_0.20-34        
-## [15] pkgconfig_2.0.1         rlang_0.1.4            
-## [17] Matrix_1.2-7.1          yaml_2.1.14            
-## [19] bindrcpp_0.2            GenomeInfoDbData_0.99.1
-## [21] stringr_1.2.0           dplyr_0.7.4            
-## [23] rprojroot_1.2           grid_3.4.2             
-## [25] glue_1.2.0              R6_2.2.2               
-## [27] hash_2.2.6              rmarkdown_1.8          
-## [29] bookdown_0.5            reshape2_1.4.2         
-## [31] magrittr_1.5            backports_1.1.1        
-## [33] htmltools_0.3.6         assertthat_0.2.0       
-## [35] stringi_1.1.6           RCurl_1.95-4.8
+##  [1] Rcpp_0.12.14           highr_0.6              plyr_1.8.4            
+##  [4] pillar_1.1.0           compiler_3.4.3         XVector_0.18.0        
+##  [7] bindr_0.1              bitops_1.0-6           tools_3.4.3           
+## [10] zlibbioc_1.24.0        digest_0.6.14          bit_1.1-12            
+## [13] tibble_1.4.1           evaluate_0.10.1        lattice_0.20-34       
+## [16] pkgconfig_2.0.1        rlang_0.1.6            Matrix_1.2-7.1        
+## [19] yaml_2.1.16            bindrcpp_0.2           GenomeInfoDbData_1.0.0
+## [22] stringr_1.2.0          dplyr_0.7.4            rprojroot_1.3-2       
+## [25] grid_3.4.3             glue_1.2.0             R6_2.2.2              
+## [28] hash_2.2.6             rmarkdown_1.8          bookdown_0.5          
+## [31] reshape2_1.4.3         magrittr_1.5           backports_1.1.2       
+## [34] htmltools_0.3.6        assertthat_0.2.0       stringi_1.1.6         
+## [37] RCurl_1.95-4.10
 ```
 

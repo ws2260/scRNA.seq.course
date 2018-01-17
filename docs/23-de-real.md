@@ -410,7 +410,7 @@ DE_Quality_AUC(pVals)
 
 
 ```
-## R version 3.4.2 (2017-09-28)
+## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
@@ -432,51 +432,40 @@ DE_Quality_AUC(pVals)
 ## 
 ## other attached packages:
 ##  [1] ROCR_1.0-7                 gplots_3.0.1              
-##  [3] MAST_1.4.0                 SummarizedExperiment_1.8.0
+##  [3] MAST_1.4.1                 SummarizedExperiment_1.8.1
 ##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
-##  [7] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [11] monocle_2.6.1              DDRTree_0.1.5             
-## [13] irlba_2.3.1                VGAM_1.0-4                
+## [13] irlba_2.3.2                VGAM_1.0-4                
 ## [15] ggplot2_2.2.1              Biobase_2.38.0            
 ## [17] BiocGenerics_0.24.0        Matrix_1.2-7.1            
-## [19] edgeR_3.20.1               limma_3.34.1              
-## [21] scRNA.seq.funcs_0.1.0      knitr_1.17                
+## [19] edgeR_3.20.6               limma_3.34.5              
+## [21] scRNA.seq.funcs_0.1.0      knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.0           viridisLite_0.2.0      
-##  [3] gtools_3.5.0            elliptic_1.3-7         
-##  [5] moments_0.14            assertthat_0.2.0       
-##  [7] statmod_1.4.30          highr_0.6              
-##  [9] GenomeInfoDbData_0.99.1 yaml_2.1.14            
-## [11] slam_0.1-40             ggrepel_0.7.0          
-## [13] backports_1.1.1         lattice_0.20-34        
-## [15] glue_1.2.0              densityClust_0.3       
-## [17] digest_0.6.12           XVector_0.18.0         
-## [19] RColorBrewer_1.1-2      colorspace_1.3-2       
-## [21] fastICA_1.2-1           htmltools_0.3.6        
-## [23] plyr_1.8.4              pkgconfig_2.0.1        
-## [25] pheatmap_1.0.8          HSMMSingleCell_0.112.0 
-## [27] qlcMatrix_0.9.5         zlibbioc_1.24.0        
-## [29] bookdown_0.5            scales_0.5.0           
-## [31] gdata_2.18.0            RANN_2.5.1             
-## [33] Rtsne_0.13              tibble_1.3.4           
-## [35] combinat_0.0-8          lazyeval_0.2.1         
-## [37] magrittr_1.5            evaluate_0.10.1        
-## [39] MASS_7.3-45             FNN_1.1                
-## [41] data.table_1.10.4-3     tools_3.4.2            
-## [43] stringr_1.2.0           munsell_0.4.3          
-## [45] locfit_1.5-9.1          cluster_2.0.6          
-## [47] bindrcpp_0.2            orthopolynom_1.0-5     
-## [49] compiler_3.4.2          caTools_1.17.1         
-## [51] contfrac_1.1-11         rlang_0.1.4            
-## [53] grid_3.4.2              RCurl_1.95-4.8         
-## [55] igraph_1.1.2            bitops_1.0-6           
-## [57] rmarkdown_1.8           hypergeo_1.2-13        
-## [59] gtable_0.2.0            abind_1.4-5            
-## [61] deSolve_1.20            reshape2_1.4.2         
-## [63] R6_2.2.2                gridExtra_2.3          
-## [65] dplyr_0.7.4             bindr_0.1              
-## [67] rprojroot_1.2           KernSmooth_2.23-15     
-## [69] stringi_1.1.6           Rcpp_0.12.13
+##  [1] viridis_0.4.1          viridisLite_0.2.0      gtools_3.5.0          
+##  [4] elliptic_1.3-7         moments_0.14           assertthat_0.2.0      
+##  [7] statmod_1.4.30         highr_0.6              GenomeInfoDbData_1.0.0
+## [10] yaml_2.1.16            slam_0.1-42            ggrepel_0.7.0         
+## [13] pillar_1.1.0           backports_1.1.2        lattice_0.20-34       
+## [16] glue_1.2.0             densityClust_0.3       digest_0.6.14         
+## [19] XVector_0.18.0         RColorBrewer_1.1-2     colorspace_1.3-2      
+## [22] fastICA_1.2-1          htmltools_0.3.6        plyr_1.8.4            
+## [25] pkgconfig_2.0.1        pheatmap_1.0.8         HSMMSingleCell_0.112.0
+## [28] qlcMatrix_0.9.5        zlibbioc_1.24.0        bookdown_0.5          
+## [31] scales_0.5.0           gdata_2.18.0           RANN_2.5.1            
+## [34] Rtsne_0.13             tibble_1.4.1           combinat_0.0-8        
+## [37] lazyeval_0.2.1         magrittr_1.5           evaluate_0.10.1       
+## [40] MASS_7.3-45            FNN_1.1                data.table_1.10.4-3   
+## [43] tools_3.4.3            stringr_1.2.0          munsell_0.4.3         
+## [46] locfit_1.5-9.1         cluster_2.0.6          bindrcpp_0.2          
+## [49] orthopolynom_1.0-5     compiler_3.4.3         caTools_1.17.1        
+## [52] contfrac_1.1-11        rlang_0.1.6            grid_3.4.3            
+## [55] RCurl_1.95-4.10        igraph_1.1.2           bitops_1.0-6          
+## [58] rmarkdown_1.8          hypergeo_1.2-13        gtable_0.2.0          
+## [61] abind_1.4-5            deSolve_1.20           reshape2_1.4.3        
+## [64] R6_2.2.2               gridExtra_2.3          dplyr_0.7.4           
+## [67] bindr_0.1              rprojroot_1.3-2        KernSmooth_2.23-15    
+## [70] stringi_1.1.6          Rcpp_0.12.14
 ```

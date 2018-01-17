@@ -88,6 +88,7 @@ res <- SingleCellExperiment(
     assays = list(logcounts = log2(as.matrix(res) + 1)), 
     colData = colData(deng)
 )
+rowData(res)$feature_symbol <- rowData(deng)$feature_symbol
 plotPCA(
     res, 
     colour_by = "cell_type2"
@@ -149,6 +150,7 @@ res <- SingleCellExperiment(
     assays = list(logcounts = res), 
     colData = colData(deng)
 )
+rowData(res)$feature_symbol <- rownames(res)
 plotPCA(
     res, 
     colour_by = "cell_type2"
@@ -197,7 +199,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 
 
 ```
-## R version 3.4.2 (2017-09-28)
+## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
@@ -218,63 +220,49 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] mclust_5.4                 scater_1.6.0              
-##  [3] ggplot2_2.2.1              SC3_1.6.0                 
-##  [5] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
-##  [7] DelayedArray_0.4.1         matrixStats_0.52.2        
-##  [9] Biobase_2.38.0             GenomicRanges_1.30.0      
-## [11] GenomeInfoDb_1.14.0        IRanges_2.12.0            
-## [13] S4Vectors_0.16.0           BiocGenerics_0.24.0       
-## [15] scImpute_0.0.4             doParallel_1.0.11         
-## [17] iterators_1.0.8            foreach_1.4.3             
+##  [1] mclust_5.4                 scater_1.6.1              
+##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
+##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
+##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
+## [11] ggplot2_2.2.1              Biobase_2.38.0            
+## [13] BiocGenerics_0.24.0        SC3_1.7.6                 
+## [15] scImpute_0.0.5             doParallel_1.0.11         
+## [17] iterators_1.0.9            foreach_1.4.4             
 ## [19] penalized_0.9-50           survival_2.40-1           
-## [21] kernlab_0.9-25             knitr_1.17                
+## [21] kernlab_0.9-25             knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] ggbeeswarm_0.6.0        colorspace_1.3-2       
-##  [3] rjson_0.2.15            class_7.3-14           
-##  [5] rprojroot_1.2           XVector_0.18.0         
-##  [7] bit64_0.9-7             AnnotationDbi_1.40.0   
-##  [9] mvtnorm_1.0-6           codetools_0.2-15       
-## [11] splines_3.4.2           tximport_1.6.0         
-## [13] robustbase_0.92-8       cluster_2.0.6          
-## [15] pheatmap_1.0.8          shinydashboard_0.6.1   
-## [17] shiny_1.0.5             rrcov_1.4-3            
-## [19] compiler_3.4.2          backports_1.1.1        
-## [21] assertthat_0.2.0        Matrix_1.2-7.1         
-## [23] lazyeval_0.2.1          limma_3.34.1           
-## [25] htmltools_0.3.6         prettyunits_1.0.2      
-## [27] tools_3.4.2             bindrcpp_0.2           
-## [29] gtable_0.2.0            glue_1.2.0             
-## [31] GenomeInfoDbData_0.99.1 reshape2_1.4.2         
-## [33] dplyr_0.7.4             doRNG_1.6.6            
-## [35] Rcpp_0.12.13            gdata_2.18.0           
-## [37] stringr_1.2.0           mime_0.5               
-## [39] rngtools_1.2.4          gtools_3.5.0           
-## [41] WriteXLS_4.0.0          XML_3.98-1.9           
-## [43] edgeR_3.20.1            DEoptimR_1.0-8         
-## [45] zlibbioc_1.24.0         scales_0.5.0           
-## [47] rhdf5_2.22.0            RColorBrewer_1.1-2     
-## [49] yaml_2.1.14             memoise_1.1.0          
-## [51] gridExtra_2.3           pkgmaker_0.22          
-## [53] biomaRt_2.34.0          stringi_1.1.6          
-## [55] RSQLite_2.0             pcaPP_1.9-72           
-## [57] e1071_1.6-8             caTools_1.17.1         
-## [59] rlang_0.1.4             pkgconfig_2.0.1        
-## [61] bitops_1.0-6            evaluate_0.10.1        
-## [63] lattice_0.20-34         ROCR_1.0-7             
-## [65] bindr_0.1               labeling_0.3           
-## [67] cowplot_0.9.1           bit_1.1-12             
-## [69] plyr_1.8.4              magrittr_1.5           
-## [71] bookdown_0.5            R6_2.2.2               
-## [73] gplots_3.0.1            DBI_0.7                
-## [75] RCurl_1.95-4.8          tibble_1.3.4           
-## [77] KernSmooth_2.23-15      rmarkdown_1.8          
-## [79] viridis_0.4.0           progress_1.1.2         
-## [81] locfit_1.5-9.1          grid_3.4.2             
-## [83] data.table_1.10.4-3     blob_1.1.0             
-## [85] digest_0.6.12           xtable_1.8-2           
-## [87] httpuv_1.3.5            munsell_0.4.3          
-## [89] registry_0.3            beeswarm_0.2.3         
-## [91] viridisLite_0.2.0       vipor_0.4.5
+##  [1] ggbeeswarm_0.6.0       colorspace_1.3-2       rjson_0.2.15          
+##  [4] class_7.3-14           rprojroot_1.3-2        XVector_0.18.0        
+##  [7] bit64_0.9-7            AnnotationDbi_1.40.0   mvtnorm_1.0-6         
+## [10] codetools_0.2-15       splines_3.4.3          tximport_1.6.0        
+## [13] robustbase_0.92-8      cluster_2.0.6          pheatmap_1.0.8        
+## [16] shinydashboard_0.6.1   shiny_1.0.5            rrcov_1.4-3           
+## [19] compiler_3.4.3         httr_1.3.1             backports_1.1.2       
+## [22] assertthat_0.2.0       Matrix_1.2-7.1         lazyeval_0.2.1        
+## [25] limma_3.34.5           htmltools_0.3.6        prettyunits_1.0.2     
+## [28] tools_3.4.3            bindrcpp_0.2           gtable_0.2.0          
+## [31] glue_1.2.0             GenomeInfoDbData_1.0.0 reshape2_1.4.3        
+## [34] dplyr_0.7.4            doRNG_1.6.6            Rcpp_0.12.14          
+## [37] gdata_2.18.0           stringr_1.2.0          mime_0.5              
+## [40] rngtools_1.2.4         gtools_3.5.0           WriteXLS_4.0.0        
+## [43] XML_3.98-1.9           edgeR_3.20.6           DEoptimR_1.0-8        
+## [46] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
+## [49] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
+## [52] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.1        
+## [55] stringi_1.1.6          RSQLite_2.0            pcaPP_1.9-73          
+## [58] e1071_1.6-8            caTools_1.17.1         rlang_0.1.6           
+## [61] pkgconfig_2.0.1        bitops_1.0-6           evaluate_0.10.1       
+## [64] lattice_0.20-34        ROCR_1.0-7             bindr_0.1             
+## [67] labeling_0.3           cowplot_0.9.2          bit_1.1-12            
+## [70] plyr_1.8.4             magrittr_1.5           bookdown_0.5          
+## [73] R6_2.2.2               gplots_3.0.1           DBI_0.7               
+## [76] pillar_1.1.0           RCurl_1.95-4.10        tibble_1.4.1          
+## [79] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.4.1         
+## [82] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
+## [85] data.table_1.10.4-3    blob_1.1.0             digest_0.6.14         
+## [88] xtable_1.8-2           httpuv_1.3.5           munsell_0.4.3         
+## [91] registry_0.5           beeswarm_0.2.3         viridisLite_0.2.0     
+## [94] vipor_0.4.5
 ```

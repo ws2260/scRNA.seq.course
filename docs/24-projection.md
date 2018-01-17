@@ -38,13 +38,11 @@ segerstolpe <- readRDS("pancreas/segerstolpe.rds")
 <p class="caption">(\#fig:unnamed-chunk-5) scmap can also be used to project cells from a new experiment onto an annotated reference.</p>
 </div>
 
-### Run `scmap`
-
-#### Feature Selection
+### Feature Selection
 Once we have a `SingleCellExperiment` object we can run `scmap`. Firstly, we need to select the most informative features from our input dataset:
 
 ```r
-muraro <- getFeatures(muraro, suppress_plot = FALSE)
+muraro <- selectFeatures(muraro, suppress_plot = FALSE)
 ```
 
 ```
@@ -54,65 +52,145 @@ muraro <- getFeatures(muraro, suppress_plot = FALSE)
 
 <img src="24-projection_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" />
 
-Genes highlighted with the red colour will be used in the futher analysis (projection).
+Features highlighted with the red colour will be used in the futher analysis (projection).
+
+Features are stored in the `scmap_features` column of the `rowData` slot of the input object. By default scmap selects 500 features (it can also be controlled by setting `n_features` parameter):
+
+```r
+table(rowData(muraro)$scmap_features)
+```
+
+```
+## 
+## FALSE  TRUE 
+## 18627   500
+```
+
+### `scmap-cluster`
+
+The `scmap-cluster` index of a reference dataset is created by finding the median gene expression for each cluster. By default scmap uses the `cell_type1` column of the `colData` slot in the reference to identify clusters. Other columns can be manually selected by adjusting `cluster_col` parameter:
+
+```r
+muraro <- indexCluster(muraro)
+```
+
+The function indexCluster automatically writes the scmap_cluster_index item of the metadata slot of the reference dataset.
+
+```r
+head(metadata(muraro)$scmap_cluster_index)
+```
+
+```
+##           alpha   ductal endothelial    delta   acinar     beta   unclear
+## A1CF   2.006376 0.000000    0.000000 1.001412 1.001412 1.001412 0.0000000
+## ABCC3  0.000000 2.596810    0.000000 0.000000 2.331011 0.000000 3.2707107
+## ABCC8  2.596810 0.000000    0.000000 3.017474 0.000000 4.649591 0.0000000
+## ABLIM1 2.331011 2.006376    0.000000 1.588734 1.001412 2.006376 3.3451141
+## ACTN1  1.588734 2.331011    2.006376 1.588734 3.017474 1.588734 0.7943671
+## ADAM9  1.001412 3.190246    1.001412 0.000000 3.345114 1.001412 1.9117070
+##           gamma mesenchymal  epsilon
+## A1CF   1.001412    0.000000 2.331011
+## ABCC3  0.000000    0.000000 0.000000
+## ABCC8  3.485498    0.000000 2.006376
+## ABLIM1 0.000000    0.000000 1.588734
+## ACTN1  1.588734    4.711531 1.588734
+## ADAM9  0.000000    2.331011 0.000000
+```
+
+One can also visualise the index:
+
+```r
+heatmap(as.matrix(metadata(muraro)$scmap_cluster_index))
+```
+
+<img src="24-projection_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
 
 #### Projecting
 
-We will project the `segerstolpe` dataset to `muraro` dataset:
+Once the `scmap-cluster` index has been generated we can use it to project `segerstolpe` dataset to `muraro` dataset. This can be done with one index at a time, but `scmap` also allows for simultaneous projection to multiple indexes if they are provided as a list:
+
 
 ```r
-segerstolpe <- projectData(projection = segerstolpe, reference = muraro)
+scmapCluster_results <- scmapCluster(
+  projection = segerstolpe, 
+  index_list = list(
+    muraro = metadata(muraro)$scmap_cluster_index
+  )
+)
 ```
 
 ```
-## Warning in setFeatures(projection_local, as.data.frame(rowData(reference))
-## $feature_symbol[as.data.frame(rowData(reference))$scmap_features]):
-## Features C19orf77, CSDA, LOC100216479 are not present in the 'SCESet'
-## object and therefore were not set.
+## Warning in setFeatures(projection, rownames(index)): Features C19orf77,
+## CSDA, LOC100216479 are not present in the 'SCESet' object and therefore
+## were not set.
 ```
-
-In your own analysis you can choose any two scRNASeq datasets and project them to each other. Note that the `getFeatures` functions has to be run on the reference dataset before running the `projectData` function.
 
 ### Results
 
-Let's look at the results. The labels produced by `scmap` are located in the `scmap_labs` column of the `colData` slot of the projection dataset. We will compare them to the original labels provided by the authors of the publication:
+`scmap-cluster` projects the query dataset to all projections defined in the index_list. The results of cell label assignements are merged into one matrix:
 
 ```r
-colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
+head(scmapCluster_results$scmap_cluster_labs)
 ```
 
 ```
-## DataFrame with 3514 rows and 2 columns
-##                  scmap_labs scmap_siml
-##                 <character>  <numeric>
-## AZ_A1            unassigned  0.4452916
-## AZ_A10           unassigned  0.6571171
-## AZ_A11                alpha  0.8016826
-## AZ_A12                delta  0.7209766
-## AZ_A2                 gamma  0.7448156
-## ...                     ...        ...
-## HP1526901T2D_P5  unassigned  0.3884353
-## HP1526901T2D_P6  unassigned  0.3858811
-## HP1526901T2D_P7        beta  0.8698103
-## HP1526901T2D_P8  unassigned  0.3668804
-## HP1526901T2D_P9        beta  0.8691188
+##      muraro      
+## [1,] "unassigned"
+## [2,] "unassigned"
+## [3,] "alpha"     
+## [4,] "delta"     
+## [5,] "gamma"     
+## [6,] "unassigned"
+```
+
+Corresponding similarities are stored in the scmap_cluster_siml item:
+
+```r
+head(scmapCluster_results$scmap_cluster_siml)
+```
+
+```
+##         muraro
+## [1,] 0.4452916
+## [2,] 0.6571171
+## [3,] 0.8016826
+## [4,] 0.7209766
+## [5,] 0.7448156
+## [6,] 0.4971898
+```
+
+`scmap` also provides combined results of all reference dataset (choose labels corresponding to the largest similarity across reference datasets):
+
+```r
+head(scmapCluster_results$combined_labs)
+```
+
+```
+## [1] "unassigned" "unassigned" "alpha"      "delta"      "gamma"     
+## [6] "unassigned"
 ```
 
 Clearly the projection is almost perfect. With `scmap` one can also plot a [Sankey diagram](https://developers.google.com/chart/interactive/docs/gallery/sankey) (however, `cell_type1` columns have to be provided in the `colData` slots of both the reference and the projection datasets):
 
 ```r
-plot(getSankey(colData(segerstolpe)$cell_type1, colData(segerstolpe)$scmap_labs))
+plot(
+  getSankey(
+    colData(segerstolpe)$cell_type1, 
+    scmapCluster_results$scmap_cluster_labs[,'muraro'],
+    plot_height = 400
+  )
+)
 ```
 
-<!-- Sankey generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Thu Nov 23 15:40:58 2017 -->
+<!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
+<!-- Wed Jan 17 13:55:18 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID75018736ef3 () {
+function gvisDataSankeyID6fd5a38d841 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -315,11 +393,11 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID75018736ef3() {
-var data = gvisDataSankeyID75018736ef3();
+function drawChartSankeyID6fd5a38d841() {
+var data = gvisDataSankeyID6fd5a38d841();
 var options = {};
 options["width"] = 400;
-options["height"] = 600;
+options["height"] = 400;
 options["sankey"] = {
                 node:{
                     label:{
@@ -335,7 +413,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID75018736ef3')
+    document.getElementById('SankeyID6fd5a38d841')
     );
     chart.draw(data,options);
     
@@ -359,9 +437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID75018736ef3);
+callbacks.push(drawChartSankeyID6fd5a38d841);
 })();
-function displayChartSankeyID75018736ef3() {
+function displayChartSankeyID6fd5a38d841() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -385,68 +463,19 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID75018736ef3"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd5a38d841"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID75018736ef3" 
-  style="width: 400; height: 600;">
+<div id="SankeyID6fd5a38d841" 
+  style="width: 400; height: 400;">
 </div>
-
-### Creating a precomputed Reference
-
-The cell type centroids can be precomputed by using the `createReference` method:
-
-```r
-reference <- createReference(muraro[rowData(muraro)$scmap_features, ])
-```
-
-One can also visualise the cell type centroids, e.g.:
-
-```r
-heatmap(as.matrix(reference))
-```
-
-<img src="24-projection_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" />
-
-Exactly the same projection as above can be performed by providing the precomputed reference instead of the `SingleCellExperiment` object:
-
-```r
-segerstolpe <- projectData(projection = segerstolpe, reference = reference)
-```
-
-```
-## Warning in setFeatures(projection_local, rownames(reference)): Features
-## C19orf77, CSDA, LOC100216479 are not present in the 'SCESet' object and
-## therefore were not set.
-```
-
-```r
-colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
-```
-
-```
-## DataFrame with 3514 rows and 2 columns
-##                  scmap_labs scmap_siml
-##                 <character>  <numeric>
-## AZ_A1            unassigned  0.4452916
-## AZ_A10           unassigned  0.6571171
-## AZ_A11                alpha  0.8016826
-## AZ_A12                delta  0.7209766
-## AZ_A2                 gamma  0.7448156
-## ...                     ...        ...
-## HP1526901T2D_P5  unassigned  0.3884353
-## HP1526901T2D_P6  unassigned  0.3858811
-## HP1526901T2D_P7        beta  0.8698103
-## HP1526901T2D_P8  unassigned  0.3668804
-## HP1526901T2D_P9        beta  0.8691188
-```
 
 ### sessionInfo()
 
 
 ```
-## R version 3.4.2 (2017-09-28)
+## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
 ## 
@@ -467,53 +496,42 @@ colData(segerstolpe)[,c("scmap_labs", "scmap_siml")]
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] bindrcpp_0.2               scater_1.6.0              
-##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.0
+##  [1] bindrcpp_0.2               scater_1.6.1              
+##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
 ##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
-##  [7] GenomicRanges_1.30.0       GenomeInfoDb_1.14.0       
+##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [11] ggplot2_2.2.1              Biobase_2.38.0            
-## [13] BiocGenerics_0.24.0        scmap_1.0.0               
-## [15] googleVis_0.6.2            knitr_1.17                
+## [13] BiocGenerics_0.24.0        scmap_1.1.5               
+## [15] googleVis_0.6.2            knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.0           edgeR_3.20.1           
-##  [3] bit64_0.9-7             jsonlite_1.5           
-##  [5] viridisLite_0.2.0       shiny_1.0.5            
-##  [7] assertthat_0.2.0        highr_0.6              
-##  [9] blob_1.1.0              vipor_0.4.5            
-## [11] GenomeInfoDbData_0.99.1 yaml_2.1.14            
-## [13] progress_1.1.2          RSQLite_2.0            
-## [15] backports_1.1.1         lattice_0.20-34        
-## [17] limma_3.34.1            glue_1.2.0             
-## [19] digest_0.6.12           XVector_0.18.0         
-## [21] randomForest_4.6-12     colorspace_1.3-2       
-## [23] htmltools_0.3.6         httpuv_1.3.5           
-## [25] Matrix_1.2-7.1          plyr_1.8.4             
-## [27] XML_3.98-1.9            pkgconfig_2.0.1        
-## [29] biomaRt_2.34.0          bookdown_0.5           
-## [31] zlibbioc_1.24.0         xtable_1.8-2           
-## [33] scales_0.5.0            tibble_1.3.4           
-## [35] proxy_0.4-19            lazyeval_0.2.1         
-## [37] magrittr_1.5            mime_0.5               
-## [39] memoise_1.1.0           evaluate_0.10.1        
-## [41] class_7.3-14            beeswarm_0.2.3         
-## [43] shinydashboard_0.6.1    tools_3.4.2            
-## [45] data.table_1.10.4-3     prettyunits_1.0.2      
-## [47] stringr_1.2.0           locfit_1.5-9.1         
-## [49] munsell_0.4.3           AnnotationDbi_1.40.0   
-## [51] compiler_3.4.2          e1071_1.6-8            
-## [53] rlang_0.1.4             rhdf5_2.22.0           
-## [55] grid_3.4.2              RCurl_1.95-4.8         
-## [57] tximport_1.6.0          rjson_0.2.15           
-## [59] labeling_0.3            bitops_1.0-6           
-## [61] rmarkdown_1.8           gtable_0.2.0           
-## [63] codetools_0.2-15        DBI_0.7                
-## [65] reshape2_1.4.2          R6_2.2.2               
-## [67] gridExtra_2.3           dplyr_0.7.4            
-## [69] bit_1.1-12              bindr_0.1              
-## [71] rprojroot_1.2           ggbeeswarm_0.6.0       
-## [73] stringi_1.1.6           Rcpp_0.12.13
+##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.6          
+##  [4] bit64_0.9-7            jsonlite_1.5           viridisLite_0.2.0     
+##  [7] shiny_1.0.5            assertthat_0.2.0       highr_0.6             
+## [10] blob_1.1.0             vipor_0.4.5            GenomeInfoDbData_1.0.0
+## [13] yaml_2.1.16            progress_1.1.2         pillar_1.1.0          
+## [16] RSQLite_2.0            backports_1.1.2        lattice_0.20-34       
+## [19] limma_3.34.5           glue_1.2.0             digest_0.6.14         
+## [22] XVector_0.18.0         randomForest_4.6-12    colorspace_1.3-2      
+## [25] htmltools_0.3.6        httpuv_1.3.5           Matrix_1.2-7.1        
+## [28] plyr_1.8.4             XML_3.98-1.9           pkgconfig_2.0.1       
+## [31] biomaRt_2.34.1         bookdown_0.5           zlibbioc_1.24.0       
+## [34] xtable_1.8-2           scales_0.5.0           tibble_1.4.1          
+## [37] proxy_0.4-21           lazyeval_0.2.1         magrittr_1.5          
+## [40] mime_0.5               memoise_1.1.0          evaluate_0.10.1       
+## [43] class_7.3-14           beeswarm_0.2.3         shinydashboard_0.6.1  
+## [46] data.table_1.10.4-3    tools_3.4.3            prettyunits_1.0.2     
+## [49] stringr_1.2.0          locfit_1.5-9.1         munsell_0.4.3         
+## [52] AnnotationDbi_1.40.0   compiler_3.4.3         e1071_1.6-8           
+## [55] rlang_0.1.6            rhdf5_2.22.0           grid_3.4.3            
+## [58] RCurl_1.95-4.10        tximport_1.6.0         rjson_0.2.15          
+## [61] labeling_0.3           bitops_1.0-6           rmarkdown_1.8         
+## [64] gtable_0.2.0           codetools_0.2-15       DBI_0.7               
+## [67] reshape2_1.4.3         R6_2.2.2               gridExtra_2.3         
+## [70] dplyr_0.7.4            bit_1.1-12             bindr_0.1             
+## [73] rprojroot_1.3-2        ggbeeswarm_0.6.0       stringi_1.1.6         
+## [76] Rcpp_0.12.14
 ```
 
 
