@@ -460,7 +460,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [37] Rcpp_0.12.14           gdata_2.18.0           iterators_1.0.9       
 ##  [40] stringr_1.2.0          mime_0.5               hypergeo_1.2-13       
 ##  [43] rngtools_1.2.4         gtools_3.5.0           WriteXLS_4.0.0        
-##  [46] statmod_1.4.30         XML_3.98-1.9           edgeR_3.20.6          
+##  [46] statmod_1.4.30         XML_3.98-1.9           edgeR_3.20.7          
 ##  [49] DEoptimR_1.0-8         MASS_7.3-45            zlibbioc_1.24.0       
 ##  [52] scales_0.5.0           rhdf5_2.22.0           RColorBrewer_1.1-2    
 ##  [55] yaml_2.1.16            memoise_1.1.0          gridExtra_2.3         

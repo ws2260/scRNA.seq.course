@@ -440,7 +440,7 @@ DE_Quality_AUC(pVals)
 ## [13] irlba_2.3.2                VGAM_1.0-4                
 ## [15] ggplot2_2.2.1              Biobase_2.38.0            
 ## [17] BiocGenerics_0.24.0        Matrix_1.2-7.1            
-## [19] edgeR_3.20.6               limma_3.34.5              
+## [19] edgeR_3.20.7               limma_3.34.5              
 ## [21] scRNA.seq.funcs_0.1.0      knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):

@@ -518,7 +518,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ## loaded via a namespace (and not attached):
 ##   [1] backports_1.1.2        Hmisc_4.1-1            RcppEigen_0.3.3.3.1   
 ##   [4] plyr_1.8.4             igraph_1.1.2           lazyeval_0.2.1        
-##   [7] sp_1.2-6               densityClust_0.3       fastICA_1.2-1         
+##   [7] sp_1.2-7               densityClust_0.3       fastICA_1.2-1         
 ##  [10] digest_0.6.14          htmltools_0.3.6        viridis_0.4.1         
 ##  [13] gdata_2.18.0           magrittr_1.5           checkmate_1.8.5       
 ##  [16] tensor_1.5             cluster_2.0.6          limma_3.34.5          

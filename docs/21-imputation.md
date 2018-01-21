@@ -247,7 +247,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [34] dplyr_0.7.4            doRNG_1.6.6            Rcpp_0.12.14          
 ## [37] gdata_2.18.0           stringr_1.2.0          mime_0.5              
 ## [40] rngtools_1.2.4         gtools_3.5.0           WriteXLS_4.0.0        
-## [43] XML_3.98-1.9           edgeR_3.20.6           DEoptimR_1.0-8        
+## [43] XML_3.98-1.9           edgeR_3.20.7           DEoptimR_1.0-8        
 ## [46] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
 ## [49] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
 ## [52] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.1        
