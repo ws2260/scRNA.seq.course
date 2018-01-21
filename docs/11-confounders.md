@@ -141,7 +141,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [13] knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.6          
+##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.7          
 ##  [4] bit64_0.9-7            viridisLite_0.2.0      shiny_1.0.5           
 ##  [7] assertthat_0.2.0       highr_0.6              blob_1.1.0            
 ## [10] vipor_0.4.5            GenomeInfoDbData_1.0.0 yaml_2.1.16           

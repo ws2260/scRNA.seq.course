@@ -183,14 +183,14 @@ plot(
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Sat Jan 20 15:41:23 2018 -->
+<!-- Sun Jan 21 15:39:43 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID6fd1d12c2de () {
+function gvisDataSankeyID6fd750054c0 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -393,8 +393,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID6fd1d12c2de() {
-var data = gvisDataSankeyID6fd1d12c2de();
+function drawChartSankeyID6fd750054c0() {
+var data = gvisDataSankeyID6fd750054c0();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -413,7 +413,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID6fd1d12c2de')
+    document.getElementById('SankeyID6fd750054c0')
     );
     chart.draw(data,options);
     
@@ -437,9 +437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID6fd1d12c2de);
+callbacks.push(drawChartSankeyID6fd750054c0);
 })();
-function displayChartSankeyID6fd1d12c2de() {
+function displayChartSankeyID6fd750054c0() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -463,11 +463,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd1d12c2de"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd750054c0"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID6fd1d12c2de" 
+<div id="SankeyID6fd750054c0" 
   style="width: 400; height: 400;">
 </div>
 
@@ -506,7 +506,7 @@ callbacks.shift()();
 ## [15] googleVis_0.6.2            knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.6          
+##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.7          
 ##  [4] bit64_0.9-7            jsonlite_1.5           viridisLite_0.2.0     
 ##  [7] shiny_1.0.5            assertthat_0.2.0       highr_0.6             
 ## [10] blob_1.1.0             vipor_0.4.5            GenomeInfoDbData_1.0.0

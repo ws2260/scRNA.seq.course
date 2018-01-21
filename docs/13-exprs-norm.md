@@ -597,7 +597,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [40] dplyr_0.7.4            RCurl_1.95-4.10        magrittr_1.5          
 ## [43] GenomeInfoDbData_1.0.0 Matrix_1.2-7.1         Rcpp_0.12.14          
 ## [46] ggbeeswarm_0.6.0       munsell_0.4.3          viridis_0.4.1         
-## [49] stringi_1.1.6          yaml_2.1.16            edgeR_3.20.6          
+## [49] stringi_1.1.6          yaml_2.1.16            edgeR_3.20.7          
 ## [52] MASS_7.3-45            zlibbioc_1.24.0        rhdf5_2.22.0          
 ## [55] Rtsne_0.13             plyr_1.8.4             grid_3.4.3            
 ## [58] blob_1.1.0             shinydashboard_0.6.1   contfrac_1.1-11       
