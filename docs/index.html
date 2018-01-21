@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2017-11-23">
+<meta name="date" content="2018-01-21">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -281,9 +281,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.8" data-path="biological-analysis.html"><a href="biological-analysis.html#projecting-scrna-seq-data"><i class="fa fa-check"></i><b>4.8</b> Projecting scRNA-seq data</a><ul>
 <li class="chapter" data-level="4.8.1" data-path="biological-analysis.html"><a href="biological-analysis.html#datasets"><i class="fa fa-check"></i><b>4.8.1</b> Datasets</a></li>
-<li class="chapter" data-level="4.8.2" data-path="biological-analysis.html"><a href="biological-analysis.html#run-scmap"><i class="fa fa-check"></i><b>4.8.2</b> Run <code>scmap</code></a></li>
-<li class="chapter" data-level="4.8.3" data-path="biological-analysis.html"><a href="biological-analysis.html#results"><i class="fa fa-check"></i><b>4.8.3</b> Results</a></li>
-<li class="chapter" data-level="4.8.4" data-path="biological-analysis.html"><a href="biological-analysis.html#creating-a-precomputed-reference"><i class="fa fa-check"></i><b>4.8.4</b> Creating a precomputed Reference</a></li>
+<li class="chapter" data-level="4.8.2" data-path="biological-analysis.html"><a href="biological-analysis.html#feature-selection-1"><i class="fa fa-check"></i><b>4.8.2</b> Feature Selection</a></li>
+<li class="chapter" data-level="4.8.3" data-path="biological-analysis.html"><a href="biological-analysis.html#scmap-cluster"><i class="fa fa-check"></i><b>4.8.3</b> <code>scmap-cluster</code></a></li>
+<li class="chapter" data-level="4.8.4" data-path="biological-analysis.html"><a href="biological-analysis.html#results"><i class="fa fa-check"></i><b>4.8.4</b> Results</a></li>
 <li class="chapter" data-level="4.8.5" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-10"><i class="fa fa-check"></i><b>4.8.5</b> sessionInfo()</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="biological-analysis.html"><a href="biological-analysis.html#search-scrna-seq-data"><i class="fa fa-check"></i><b>4.9</b> Search scRNA-Seq data</a><ul>
@@ -344,7 +344,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">Analysis of single cell RNA-seq data</h1>
 <h4 class="author"><em>Vladimir Kiselev (<a href = 'https://twitter.com/wikiselev'>wikiselev</a>), Tallulah Andrews, Davis McCarthy (<a href = 'https://twitter.com/davisjmcc'>davisjmcc</a>), Maren Büttner (<a href = 'https://twitter.com/marenbuettner'>marenbuettner</a>) and Martin Hemberg (<a href = 'https://twitter.com/m_hemberg'>m_hemberg</a>)</em></h4>
-<h4 class="date"><em>2017-11-23</em></h4>
+<h4 class="date"><em>2018-01-21</em></h4>
 </div>
 <div id="about-the-course" class="section level1">
 <h1><span class="header-section-number">1</span> About the course</h1>
@@ -354,7 +354,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>The number of computational tools is increasing rapidly and we are doing our best to keep up to date with what is available. One of the main constraints for this course is that we would like to use tools that are implemented in R and that run reasonably fast. Moreover, we will also confess to being somewhat biased towards methods that have been developed either by us or by our friends and colleagues.</p>
 <div id="video" class="section level2">
 <h2><span class="header-section-number">1.1</span> Video</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/i58Fk6R03PA?list=PLEyKDyF1qdOaoWBu8jNwN4o5z6wlm3aES" frameborder="0" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/56n77bpjiKo?list=PLEyKDyF1qdOYAhwU71qlrOXYsYHtyIu8n" frameborder="0" allowfullscreen>
 </iframe>
 </div>
 <div id="registration" class="section level2">

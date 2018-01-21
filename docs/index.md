@@ -1,7 +1,7 @@
 --- 
 title: "Analysis of single cell RNA-seq data"
 author: "Vladimir Kiselev (<a href = 'https://twitter.com/wikiselev'>wikiselev</a>), Tallulah Andrews, Davis McCarthy (<a href = 'https://twitter.com/davisjmcc'>davisjmcc</a>), Maren Büttner (<a href = 'https://twitter.com/marenbuettner'>marenbuettner</a>) and Martin Hemberg (<a href = 'https://twitter.com/m_hemberg'>m_hemberg</a>)"
-date: "2017-11-23"
+date: "2018-01-21"
 knit: "bookdown::render_book"
 documentclass: book
 bibliography: [book.bib]
@@ -22,7 +22,7 @@ The number of computational tools is increasing rapidly and we are doing our bes
 
 ## Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/i58Fk6R03PA?list=PLEyKDyF1qdOaoWBu8jNwN4o5z6wlm3aES" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/56n77bpjiKo?list=PLEyKDyF1qdOYAhwU71qlrOXYsYHtyIu8n" frameborder="0" allowfullscreen></iframe>
 
 ## Registration  
 
