@@ -132,7 +132,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] scater_1.6.1               SingleCellExperiment_1.0.0
+##  [1] scater_1.6.2               SingleCellExperiment_1.0.0
 ##  [3] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
 ##  [5] matrixStats_0.52.2         GenomicRanges_1.30.1      
 ##  [7] GenomeInfoDb_1.14.0        IRanges_2.12.0            
@@ -150,7 +150,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [19] limma_3.34.5           digest_0.6.14          XVector_0.18.0        
 ## [22] colorspace_1.3-2       cowplot_0.9.2          htmltools_0.3.6       
 ## [25] httpuv_1.3.5           Matrix_1.2-7.1         plyr_1.8.4            
-## [28] XML_3.98-1.9           pkgconfig_2.0.1        biomaRt_2.34.1        
+## [28] XML_3.98-1.9           pkgconfig_2.0.1        biomaRt_2.34.2        
 ## [31] bookdown_0.5           zlibbioc_1.24.0        xtable_1.8-2          
 ## [34] scales_0.5.0           tibble_1.4.1           lazyeval_0.2.1        
 ## [37] magrittr_1.5           mime_0.5               memoise_1.1.0         
@@ -164,5 +164,5 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [61] gtable_0.2.0           DBI_0.7                reshape2_1.4.3        
 ## [64] R6_2.2.2               gridExtra_2.3          dplyr_0.7.4           
 ## [67] bit_1.1-12             bindr_0.1              rprojroot_1.3-2       
-## [70] stringi_1.1.6          ggbeeswarm_0.6.0       Rcpp_0.12.14
+## [70] stringi_1.1.6          ggbeeswarm_0.6.0       Rcpp_0.12.15
 ```

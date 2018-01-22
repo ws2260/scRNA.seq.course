@@ -376,7 +376,7 @@ sessionInfo()
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] limma_3.34.5               scater_1.6.1              
+##  [1] limma_3.34.5               scater_1.6.2              
 ##  [3] ggplot2_2.2.1              SingleCellExperiment_1.0.0
 ##  [5] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
 ##  [7] matrixStats_0.52.2         Biobase_2.38.0            
@@ -400,7 +400,7 @@ sessionInfo()
 ##  [37] quantreg_5.34          prettyunits_1.0.2      tools_3.4.3           
 ##  [40] bindrcpp_0.2           gtable_0.2.0           glue_1.2.0            
 ##  [43] GenomeInfoDbData_1.0.0 reshape2_1.4.3         dplyr_0.7.4           
-##  [46] Rcpp_0.12.14           trimcluster_0.1-2      sgeostat_1.0-27       
+##  [46] Rcpp_0.12.15           trimcluster_0.1-2      sgeostat_1.0-27       
 ##  [49] nlme_3.1-129           fpc_2.1-11             lmtest_0.9-35         
 ##  [52] laeken_0.4.6           stringr_1.2.0          lme4_1.1-15           
 ##  [55] mime_0.5               XML_3.98-1.9           edgeR_3.20.7          
@@ -408,7 +408,7 @@ sessionInfo()
 ##  [61] MASS_7.3-45            scales_0.5.0           VIM_4.7.0             
 ##  [64] rhdf5_2.22.0           SparseM_1.77           RColorBrewer_1.1-2    
 ##  [67] yaml_2.1.16            memoise_1.1.0          gridExtra_2.3         
-##  [70] biomaRt_2.34.1         reshape_0.8.7          stringi_1.1.6         
+##  [70] biomaRt_2.34.2         reshape_0.8.7          stringi_1.1.6         
 ##  [73] RSQLite_2.0            highr_0.6              pcaPP_1.9-73          
 ##  [76] e1071_1.6-8            boot_1.3-18            prabclus_2.2-6        
 ##  [79] rlang_0.1.6            pkgconfig_2.0.1        bitops_1.0-6          
