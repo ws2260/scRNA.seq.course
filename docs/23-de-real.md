@@ -467,5 +467,5 @@ DE_Quality_AUC(pVals)
 ## [61] abind_1.4-5            deSolve_1.20           reshape2_1.4.3        
 ## [64] R6_2.2.2               gridExtra_2.3          dplyr_0.7.4           
 ## [67] bindr_0.1              rprojroot_1.3-2        KernSmooth_2.23-15    
-## [70] stringi_1.1.6          Rcpp_0.12.14
+## [70] stringi_1.1.6          Rcpp_0.12.15
 ```

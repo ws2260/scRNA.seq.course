@@ -132,7 +132,7 @@ output: html_document
 ## 
 ## other attached packages:
 ##  [1] knitr_1.18                 scran_1.6.6               
-##  [3] BiocParallel_1.12.0        scater_1.6.1              
+##  [3] BiocParallel_1.12.0        scater_1.6.2              
 ##  [5] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
 ##  [7] DelayedArray_0.4.1         matrixStats_0.52.2        
 ##  [9] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
@@ -151,11 +151,11 @@ output: html_document
 ## [22] labeling_0.3           bookdown_0.5           scales_0.5.0          
 ## [25] stringr_1.2.0          digest_0.6.14          rmarkdown_1.8         
 ## [28] XVector_0.18.0         pkgconfig_2.0.1        htmltools_0.3.6       
-## [31] highr_0.6              limma_3.34.5           htmlwidgets_0.9       
+## [31] highr_0.6              limma_3.34.5           htmlwidgets_1.0       
 ## [34] rlang_0.1.6            RSQLite_2.0            FNN_1.1               
 ## [37] shiny_1.0.5            bindr_0.1              zoo_1.8-1             
 ## [40] dplyr_0.7.4            RCurl_1.95-4.10        magrittr_1.5          
-## [43] GenomeInfoDbData_1.0.0 Matrix_1.2-7.1         Rcpp_0.12.14          
+## [43] GenomeInfoDbData_1.0.0 Matrix_1.2-7.1         Rcpp_0.12.15          
 ## [46] ggbeeswarm_0.6.0       munsell_0.4.3          viridis_0.4.1         
 ## [49] stringi_1.1.6          yaml_2.1.16            edgeR_3.20.7          
 ## [52] MASS_7.3-45            zlibbioc_1.24.0        rhdf5_2.22.0          
@@ -163,7 +163,7 @@ output: html_document
 ## [58] blob_1.1.0             shinydashboard_0.6.1   contfrac_1.1-11       
 ## [61] lattice_0.20-34        cowplot_0.9.2          locfit_1.5-9.1        
 ## [64] pillar_1.1.0           igraph_1.1.2           rjson_0.2.15          
-## [67] reshape2_1.4.3         biomaRt_2.34.1         XML_3.98-1.9          
+## [67] reshape2_1.4.3         biomaRt_2.34.2         XML_3.98-1.9          
 ## [70] glue_1.2.0             evaluate_0.10.1        data.table_1.10.4-3   
 ## [73] deSolve_1.20           httpuv_1.3.5           gtable_0.2.0          
 ## [76] assertthat_0.2.0       mime_0.5               xtable_1.8-2          

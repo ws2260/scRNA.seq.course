@@ -358,7 +358,7 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [16] checkmate_1.8.5        colorspace_1.3-2       htmltools_0.3.6       
 ## [19] Matrix_1.2-7.1         plyr_1.8.4             bookdown_0.5          
 ## [22] zlibbioc_1.24.0        scales_0.5.0           gdata_2.18.0          
-## [25] Rtsne_0.13             htmlTable_1.11.1       tibble_1.4.1          
+## [25] Rtsne_0.13             htmlTable_1.11.2       tibble_1.4.1          
 ## [28] mgcv_1.8-23            ggplot2_2.2.1          nnet_7.3-12           
 ## [31] lazyeval_0.2.1         survival_2.40-1        magrittr_1.5          
 ## [34] evaluate_0.10.1        nlme_3.1-129           MASS_7.3-45           
@@ -367,10 +367,10 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [43] munsell_0.4.3          cluster_2.0.6          irlba_2.3.2           
 ## [46] orthopolynom_1.0-5     compiler_3.4.3         caTools_1.17.1        
 ## [49] contfrac_1.1-11        rlang_0.1.6            grid_3.4.3            
-## [52] RCurl_1.95-4.10        rstudioapi_0.7         htmlwidgets_0.9       
+## [52] RCurl_1.95-4.10        rstudioapi_0.7         htmlwidgets_1.0       
 ## [55] bitops_1.0-6           base64enc_0.1-3        rmarkdown_1.8         
 ## [58] hypergeo_1.2-13        gtable_0.2.0           deSolve_1.20          
 ## [61] gridExtra_2.3          Hmisc_4.1-1            rprojroot_1.3-2       
-## [64] KernSmooth_2.23-15     stringi_1.1.6          Rcpp_0.12.14          
+## [64] KernSmooth_2.23-15     stringi_1.1.6          Rcpp_0.12.15          
 ## [67] rpart_4.1-10           acepack_1.4.1
 ```

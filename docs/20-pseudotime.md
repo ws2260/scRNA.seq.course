@@ -531,10 +531,10 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [37] MatrixModels_0.4-1     car_2.1-6              DEoptimR_1.0-8        
 ##  [40] abind_1.4-5            sgeostat_1.0-27        reldist_1.6-6         
 ##  [43] SparseM_1.77           VIM_4.7.0              scales_0.5.0          
-##  [46] pheatmap_1.0.8         Rcpp_0.12.14           viridisLite_0.2.0     
-##  [49] xtable_1.8-2           laeken_0.4.6           htmlTable_1.11.1      
+##  [46] pheatmap_1.0.8         Rcpp_0.12.15           viridisLite_0.2.0     
+##  [49] xtable_1.8-2           laeken_0.4.6           htmlTable_1.11.2      
 ##  [52] foreign_0.8-67         proxy_0.4-21           mclust_5.4            
-##  [55] Formula_1.2-2          vcd_1.4-4              htmlwidgets_0.9       
+##  [55] Formula_1.2-2          vcd_1.4-4              htmlwidgets_1.0       
 ##  [58] FNN_1.1                gplots_3.0.1           RColorBrewer_1.1-2    
 ##  [61] acepack_1.4.1          R.methodsS3_1.7.1      pkgconfig_2.0.1       
 ##  [64] deldir_0.1-14          nnet_7.3-12            alphahull_2.1         
