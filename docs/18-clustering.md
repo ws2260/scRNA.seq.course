@@ -433,7 +433,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] pheatmap_1.0.8             scater_1.6.1              
+##  [1] pheatmap_1.0.8             scater_1.6.2              
 ##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
 ##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
 ##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
@@ -457,14 +457,14 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [28] prettyunits_1.0.2      tools_3.4.3            bindrcpp_0.2          
 ##  [31] gtable_0.2.0           glue_1.2.0             GenomeInfoDbData_1.0.0
 ##  [34] reshape2_1.4.3         dplyr_0.7.4            doRNG_1.6.6           
-##  [37] Rcpp_0.12.14           gdata_2.18.0           iterators_1.0.9       
+##  [37] Rcpp_0.12.15           gdata_2.18.0           iterators_1.0.9       
 ##  [40] stringr_1.2.0          mime_0.5               hypergeo_1.2-13       
 ##  [43] rngtools_1.2.4         gtools_3.5.0           WriteXLS_4.0.0        
 ##  [46] statmod_1.4.30         XML_3.98-1.9           edgeR_3.20.7          
 ##  [49] DEoptimR_1.0-8         MASS_7.3-45            zlibbioc_1.24.0       
 ##  [52] scales_0.5.0           rhdf5_2.22.0           RColorBrewer_1.1-2    
 ##  [55] yaml_2.1.16            memoise_1.1.0          gridExtra_2.3         
-##  [58] pkgmaker_0.22          biomaRt_2.34.1         stringi_1.1.6         
+##  [58] pkgmaker_0.22          biomaRt_2.34.2         stringi_1.1.6         
 ##  [61] RSQLite_2.0            highr_0.6              pcaPP_1.9-73          
 ##  [64] foreach_1.4.4          orthopolynom_1.0-5     e1071_1.6-8           
 ##  [67] contfrac_1.1-11        caTools_1.17.1         moments_0.14          

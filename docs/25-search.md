@@ -212,7 +212,7 @@ sessionInfo()
 ## [11] scfind_1.0.0               knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.14           highr_0.6              plyr_1.8.4            
+##  [1] Rcpp_0.12.15           highr_0.6              plyr_1.8.4            
 ##  [4] pillar_1.1.0           compiler_3.4.3         XVector_0.18.0        
 ##  [7] bindr_0.1              bitops_1.0-6           tools_3.4.3           
 ## [10] zlibbioc_1.24.0        digest_0.6.14          bit_1.1-12            
