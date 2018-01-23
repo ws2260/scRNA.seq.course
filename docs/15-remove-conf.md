@@ -434,7 +434,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ##  [3] sva_3.26.0                 genefilter_1.60.0         
 ##  [5] mgcv_1.8-23                nlme_3.1-129              
 ##  [7] kBET_0.99.0                scran_1.6.6               
-##  [9] scater_1.6.1               SingleCellExperiment_1.0.0
+##  [9] scater_1.6.2               SingleCellExperiment_1.0.0
 ## [11] ggplot2_2.2.1              RUVSeq_1.12.0             
 ## [13] edgeR_3.20.7               limma_3.34.5              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
@@ -459,18 +459,18 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [25] Matrix_1.2-7.1         lazyeval_0.2.1         htmltools_0.3.6       
 ## [28] prettyunits_1.0.2      tools_3.4.3            igraph_1.1.2          
 ## [31] bindrcpp_0.2           gtable_0.2.0           glue_1.2.0            
-## [34] GenomeInfoDbData_1.0.0 dplyr_0.7.4            Rcpp_0.12.14          
+## [34] GenomeInfoDbData_1.0.0 dplyr_0.7.4            Rcpp_0.12.15          
 ## [37] rtracklayer_1.38.2     stringr_1.2.0          mime_0.5              
 ## [40] hypergeo_1.2-13        statmod_1.4.30         XML_3.98-1.9          
 ## [43] zoo_1.8-1              zlibbioc_1.24.0        MASS_7.3-45           
 ## [46] scales_0.5.0           aroma.light_3.8.0      rhdf5_2.22.0          
 ## [49] yaml_2.1.16            memoise_1.1.0          gridExtra_2.3         
-## [52] biomaRt_2.34.1         latticeExtra_0.6-28    stringi_1.1.6         
+## [52] biomaRt_2.34.2         latticeExtra_0.6-28    stringi_1.1.6         
 ## [55] RSQLite_2.0            highr_0.6              RMySQL_0.10.13        
 ## [58] orthopolynom_1.0-5     GenomicFeatures_1.30.0 contfrac_1.1-11       
 ## [61] rlang_0.1.6            pkgconfig_2.0.1        moments_0.14          
 ## [64] bitops_1.0-6           evaluate_0.10.1        lattice_0.20-34       
-## [67] bindr_0.1              labeling_0.3           htmlwidgets_0.9       
+## [67] bindr_0.1              labeling_0.3           htmlwidgets_1.0       
 ## [70] cowplot_0.9.2          bit_1.1-12             deSolve_1.20          
 ## [73] plyr_1.8.4             magrittr_1.5           bookdown_0.5          
 ## [76] R6_2.2.2               DBI_0.7                pillar_1.1.0          

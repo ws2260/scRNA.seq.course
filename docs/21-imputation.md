@@ -220,7 +220,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] mclust_5.4                 scater_1.6.1              
+##  [1] mclust_5.4                 scater_1.6.2              
 ##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
 ##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
 ##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
@@ -244,13 +244,13 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [25] limma_3.34.5           htmltools_0.3.6        prettyunits_1.0.2     
 ## [28] tools_3.4.3            bindrcpp_0.2           gtable_0.2.0          
 ## [31] glue_1.2.0             GenomeInfoDbData_1.0.0 reshape2_1.4.3        
-## [34] dplyr_0.7.4            doRNG_1.6.6            Rcpp_0.12.14          
+## [34] dplyr_0.7.4            doRNG_1.6.6            Rcpp_0.12.15          
 ## [37] gdata_2.18.0           stringr_1.2.0          mime_0.5              
 ## [40] rngtools_1.2.4         gtools_3.5.0           WriteXLS_4.0.0        
 ## [43] XML_3.98-1.9           edgeR_3.20.7           DEoptimR_1.0-8        
 ## [46] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
 ## [49] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
-## [52] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.1        
+## [52] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.2        
 ## [55] stringi_1.1.6          RSQLite_2.0            pcaPP_1.9-73          
 ## [58] e1071_1.6-8            caTools_1.17.1         rlang_0.1.6           
 ## [61] pkgconfig_2.0.1        bitops_1.0-6           evaluate_0.10.1       

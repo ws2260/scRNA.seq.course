@@ -183,14 +183,14 @@ plot(
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Sun Jan 21 15:39:43 2018 -->
+<!-- Mon Jan 22 17:58:54 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID6fd750054c0 () {
+function gvisDataSankeyID6fd5f2603ae () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -393,8 +393,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID6fd750054c0() {
-var data = gvisDataSankeyID6fd750054c0();
+function drawChartSankeyID6fd5f2603ae() {
+var data = gvisDataSankeyID6fd5f2603ae();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -413,7 +413,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID6fd750054c0')
+    document.getElementById('SankeyID6fd5f2603ae')
     );
     chart.draw(data,options);
     
@@ -437,9 +437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID6fd750054c0);
+callbacks.push(drawChartSankeyID6fd5f2603ae);
 })();
-function displayChartSankeyID6fd750054c0() {
+function displayChartSankeyID6fd5f2603ae() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -463,11 +463,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd750054c0"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd5f2603ae"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID6fd750054c0" 
+<div id="SankeyID6fd5f2603ae" 
   style="width: 400; height: 400;">
 </div>
 
@@ -496,7 +496,7 @@ callbacks.shift()();
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] bindrcpp_0.2               scater_1.6.1              
+##  [1] bindrcpp_0.2               scater_1.6.2              
 ##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
 ##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
 ##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
@@ -516,7 +516,7 @@ callbacks.shift()();
 ## [22] XVector_0.18.0         randomForest_4.6-12    colorspace_1.3-2      
 ## [25] htmltools_0.3.6        httpuv_1.3.5           Matrix_1.2-7.1        
 ## [28] plyr_1.8.4             XML_3.98-1.9           pkgconfig_2.0.1       
-## [31] biomaRt_2.34.1         bookdown_0.5           zlibbioc_1.24.0       
+## [31] biomaRt_2.34.2         bookdown_0.5           zlibbioc_1.24.0       
 ## [34] xtable_1.8-2           scales_0.5.0           tibble_1.4.1          
 ## [37] proxy_0.4-21           lazyeval_0.2.1         magrittr_1.5          
 ## [40] mime_0.5               memoise_1.1.0          evaluate_0.10.1       
@@ -531,7 +531,7 @@ callbacks.shift()();
 ## [67] reshape2_1.4.3         R6_2.2.2               gridExtra_2.3         
 ## [70] dplyr_0.7.4            bit_1.1-12             bindr_0.1             
 ## [73] rprojroot_1.3-2        ggbeeswarm_0.6.0       stringi_1.1.6         
-## [76] Rcpp_0.12.14
+## [76] Rcpp_0.12.15
 ```
 
 
