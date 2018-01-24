@@ -510,7 +510,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ##  [88] GGally_1.3.2           plyr_1.8.4             magrittr_1.5          
 ##  [91] bookdown_0.5           R6_2.2.2               DBI_0.7               
 ##  [94] pillar_1.1.0           mgcv_1.8-23            RCurl_1.95-4.10       
-##  [97] sp_1.2-7               nnet_7.3-12            tibble_1.4.1          
+##  [97] sp_1.2-7               nnet_7.3-12            tibble_1.4.2          
 ## [100] car_2.1-6              rmarkdown_1.8          viridis_0.4.1         
 ## [103] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
 ## [106] data.table_1.10.4-3    blob_1.1.0             diptest_0.75-7        

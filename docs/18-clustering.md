@@ -474,7 +474,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [79] bit_1.1-12             deSolve_1.20           plyr_1.8.4            
 ##  [82] magrittr_1.5           bookdown_0.5           R6_2.2.2              
 ##  [85] gplots_3.0.1           DBI_0.7                pillar_1.1.0          
-##  [88] RCurl_1.95-4.10        tibble_1.4.1           KernSmooth_2.23-15    
+##  [88] RCurl_1.95-4.10        tibble_1.4.2           KernSmooth_2.23-15    
 ##  [91] rmarkdown_1.8          viridis_0.4.1          progress_1.1.2        
 ##  [94] locfit_1.5-9.1         grid_3.4.3             data.table_1.10.4-3   
 ##  [97] blob_1.1.0             digest_0.6.14          xtable_1.8-2          
