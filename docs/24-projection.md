@@ -183,14 +183,14 @@ plot(
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Wed Jan 24 15:37:41 2018 -->
+<!-- Thu Jan 25 15:39:38 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID6fd17c56a7b () {
+function gvisDataSankeyID6fc4f30794 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -393,8 +393,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID6fd17c56a7b() {
-var data = gvisDataSankeyID6fd17c56a7b();
+function drawChartSankeyID6fc4f30794() {
+var data = gvisDataSankeyID6fc4f30794();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -413,7 +413,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID6fd17c56a7b')
+    document.getElementById('SankeyID6fc4f30794')
     );
     chart.draw(data,options);
     
@@ -437,9 +437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID6fd17c56a7b);
+callbacks.push(drawChartSankeyID6fc4f30794);
 })();
-function displayChartSankeyID6fd17c56a7b() {
+function displayChartSankeyID6fc4f30794() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -463,11 +463,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd17c56a7b"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fc4f30794"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID6fd17c56a7b" 
+<div id="SankeyID6fc4f30794" 
   style="width: 400; height: 400;">
 </div>
 
@@ -498,7 +498,7 @@ callbacks.shift()();
 ## other attached packages:
 ##  [1] bindrcpp_0.2               scater_1.6.2              
 ##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
-##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [5] DelayedArray_0.4.1         matrixStats_0.53.0        
 ##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [11] ggplot2_2.2.1              Biobase_2.38.0            

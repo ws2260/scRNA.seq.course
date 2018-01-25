@@ -346,7 +346,7 @@ Plot the expression of the features for each of the other methods. Which appear 
 ##  [7] IRanges_2.12.0             S4Vectors_0.16.0          
 ##  [9] BiocGenerics_0.24.0        RColorBrewer_1.1-2        
 ## [11] M3Drop_3.05.00             numDeriv_2016.8-1         
-## [13] matrixStats_0.52.2         scRNA.seq.funcs_0.1.0     
+## [13] matrixStats_0.53.0         scRNA.seq.funcs_0.1.0     
 ## [15] knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):

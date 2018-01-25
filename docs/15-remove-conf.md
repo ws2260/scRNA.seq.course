@@ -439,7 +439,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [13] edgeR_3.20.7               limma_3.34.5              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
 ## [17] GenomicAlignments_1.14.1   SummarizedExperiment_1.8.1
-## [19] DelayedArray_0.4.1         matrixStats_0.52.2        
+## [19] DelayedArray_0.4.1         matrixStats_0.53.0        
 ## [21] Rsamtools_1.30.0           GenomicRanges_1.30.1      
 ## [23] GenomeInfoDb_1.14.0        Biostrings_2.46.0         
 ## [25] XVector_0.18.0             IRanges_2.12.0            

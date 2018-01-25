@@ -379,7 +379,7 @@ sessionInfo()
 ##  [1] limma_3.34.5               scater_1.6.2              
 ##  [3] ggplot2_2.2.1              SingleCellExperiment_1.0.0
 ##  [5] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
-##  [7] matrixStats_0.52.2         Biobase_2.38.0            
+##  [7] matrixStats_0.53.0         Biobase_2.38.0            
 ##  [9] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ## [11] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [13] BiocGenerics_0.24.0        knitr_1.18                

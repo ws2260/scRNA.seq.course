@@ -435,7 +435,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ## other attached packages:
 ##  [1] pheatmap_1.0.8             scater_1.6.2              
 ##  [3] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
-##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [5] DelayedArray_0.4.1         matrixStats_0.53.0        
 ##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [11] ggplot2_2.2.1              SC3_1.7.6                 

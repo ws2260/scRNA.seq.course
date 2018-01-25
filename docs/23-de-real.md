@@ -433,7 +433,7 @@ DE_Quality_AUC(pVals)
 ## other attached packages:
 ##  [1] ROCR_1.0-7                 gplots_3.0.1              
 ##  [3] MAST_1.4.1                 SummarizedExperiment_1.8.1
-##  [5] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [5] DelayedArray_0.4.1         matrixStats_0.53.0        
 ##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [11] monocle_2.6.1              DDRTree_0.1.5             
