@@ -183,14 +183,14 @@ plot(
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Tue Jan 23 15:37:59 2018 -->
+<!-- Wed Jan 24 15:37:41 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID6fd19d3db68 () {
+function gvisDataSankeyID6fd17c56a7b () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -393,8 +393,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID6fd19d3db68() {
-var data = gvisDataSankeyID6fd19d3db68();
+function drawChartSankeyID6fd17c56a7b() {
+var data = gvisDataSankeyID6fd17c56a7b();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -413,7 +413,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID6fd19d3db68')
+    document.getElementById('SankeyID6fd17c56a7b')
     );
     chart.draw(data,options);
     
@@ -437,9 +437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID6fd19d3db68);
+callbacks.push(drawChartSankeyID6fd17c56a7b);
 })();
-function displayChartSankeyID6fd19d3db68() {
+function displayChartSankeyID6fd17c56a7b() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -463,11 +463,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd19d3db68"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd17c56a7b"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID6fd19d3db68" 
+<div id="SankeyID6fd17c56a7b" 
   style="width: 400; height: 400;">
 </div>
 
@@ -517,7 +517,7 @@ callbacks.shift()();
 ## [25] htmltools_0.3.6        httpuv_1.3.5           Matrix_1.2-7.1        
 ## [28] plyr_1.8.4             XML_3.98-1.9           pkgconfig_2.0.1       
 ## [31] biomaRt_2.34.2         bookdown_0.5           zlibbioc_1.24.0       
-## [34] xtable_1.8-2           scales_0.5.0           tibble_1.4.1          
+## [34] xtable_1.8-2           scales_0.5.0           tibble_1.4.2          
 ## [37] proxy_0.4-21           lazyeval_0.2.1         magrittr_1.5          
 ## [40] mime_0.5               memoise_1.1.0          evaluate_0.10.1       
 ## [43] class_7.3-14           beeswarm_0.2.3         shinydashboard_0.6.1  

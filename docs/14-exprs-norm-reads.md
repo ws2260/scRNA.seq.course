@@ -143,7 +143,7 @@ output: html_document
 ## loaded via a namespace (and not attached):
 ##  [1] bitops_1.0-6           bit64_0.9-7            progress_1.1.2        
 ##  [4] httr_1.3.1             rprojroot_1.3-2        dynamicTreeCut_1.63-1 
-##  [7] tools_3.4.3            backports_1.1.2        DT_0.2                
+##  [7] tools_3.4.3            backports_1.1.2        DT_0.3                
 ## [10] R6_2.2.2               hypergeo_1.2-13        vipor_0.4.5           
 ## [13] DBI_0.7                lazyeval_0.2.1         colorspace_1.3-2      
 ## [16] gridExtra_2.3          prettyunits_1.0.2      moments_0.14          
@@ -167,7 +167,7 @@ output: html_document
 ## [70] glue_1.2.0             evaluate_0.10.1        data.table_1.10.4-3   
 ## [73] deSolve_1.20           httpuv_1.3.5           gtable_0.2.0          
 ## [76] assertthat_0.2.0       mime_0.5               xtable_1.8-2          
-## [79] viridisLite_0.2.0      tibble_1.4.1           elliptic_1.3-7        
+## [79] viridisLite_0.2.0      tibble_1.4.2           elliptic_1.3-7        
 ## [82] AnnotationDbi_1.40.0   beeswarm_0.2.3         memoise_1.1.0         
 ## [85] tximport_1.6.0         bindrcpp_0.2           statmod_1.4.30
 ```

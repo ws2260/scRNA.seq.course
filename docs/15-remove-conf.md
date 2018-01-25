@@ -450,7 +450,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## loaded via a namespace (and not attached):
 ##  [1] Rtsne_0.13             ggbeeswarm_0.6.0       colorspace_1.3-2      
 ##  [4] rjson_0.2.15           hwriter_1.3.2          dynamicTreeCut_1.63-1 
-##  [7] rprojroot_1.3-2        DT_0.2                 bit64_0.9-7           
+##  [7] rprojroot_1.3-2        DT_0.3                 bit64_0.9-7           
 ## [10] AnnotationDbi_1.40.0   splines_3.4.3          R.methodsS3_1.7.1     
 ## [13] tximport_1.6.0         DESeq_1.30.0           geneplotter_1.56.0    
 ## [16] annotate_1.56.1        cluster_2.0.6          R.oo_1.21.0           
@@ -460,7 +460,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [28] prettyunits_1.0.2      tools_3.4.3            igraph_1.1.2          
 ## [31] bindrcpp_0.2           gtable_0.2.0           glue_1.2.0            
 ## [34] GenomeInfoDbData_1.0.0 dplyr_0.7.4            Rcpp_0.12.15          
-## [37] rtracklayer_1.38.2     stringr_1.2.0          mime_0.5              
+## [37] rtracklayer_1.38.3     stringr_1.2.0          mime_0.5              
 ## [40] hypergeo_1.2-13        statmod_1.4.30         XML_3.98-1.9          
 ## [43] zoo_1.8-1              zlibbioc_1.24.0        MASS_7.3-45           
 ## [46] scales_0.5.0           aroma.light_3.8.0      rhdf5_2.22.0          
@@ -474,7 +474,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [70] cowplot_0.9.2          bit_1.1-12             deSolve_1.20          
 ## [73] plyr_1.8.4             magrittr_1.5           bookdown_0.5          
 ## [76] R6_2.2.2               DBI_0.7                pillar_1.1.0          
-## [79] survival_2.40-1        RCurl_1.95-4.10        tibble_1.4.1          
+## [79] survival_2.40-1        RCurl_1.95-4.10        tibble_1.4.2          
 ## [82] rmarkdown_1.8          viridis_0.4.1          progress_1.1.2        
 ## [85] locfit_1.5-9.1         grid_3.4.3             data.table_1.10.4-3   
 ## [88] FNN_1.1                blob_1.1.0             digest_0.6.14         

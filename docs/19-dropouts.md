@@ -358,7 +358,7 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [16] checkmate_1.8.5        colorspace_1.3-2       htmltools_0.3.6       
 ## [19] Matrix_1.2-7.1         plyr_1.8.4             bookdown_0.5          
 ## [22] zlibbioc_1.24.0        scales_0.5.0           gdata_2.18.0          
-## [25] Rtsne_0.13             htmlTable_1.11.2       tibble_1.4.1          
+## [25] Rtsne_0.13             htmlTable_1.11.2       tibble_1.4.2          
 ## [28] mgcv_1.8-23            ggplot2_2.2.1          nnet_7.3-12           
 ## [31] lazyeval_0.2.1         survival_2.40-1        magrittr_1.5          
 ## [34] evaluate_0.10.1        nlme_3.1-129           MASS_7.3-45           
