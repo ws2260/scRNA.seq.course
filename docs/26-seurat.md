@@ -299,7 +299,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2018-01-24 15:39:56
+## Parameters used in latest FindClusters calculation run on: 2018-01-25 15:41:55
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
@@ -431,7 +431,7 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ##  [5] Matrix_1.2-7.1             cowplot_0.9.2             
 ##  [7] ggplot2_2.2.1              SingleCellExperiment_1.0.0
 ##  [9] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
-## [11] matrixStats_0.52.2         Biobase_2.38.0            
+## [11] matrixStats_0.53.0         Biobase_2.38.0            
 ## [13] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ## [15] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [17] BiocGenerics_0.24.0        knitr_1.18                

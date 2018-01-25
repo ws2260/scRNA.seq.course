@@ -205,7 +205,7 @@ sessionInfo()
 ## 
 ## other attached packages:
 ##  [1] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
-##  [3] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [3] DelayedArray_0.4.1         matrixStats_0.53.0        
 ##  [5] Biobase_2.38.0             GenomicRanges_1.30.1      
 ##  [7] GenomeInfoDb_1.14.0        IRanges_2.12.0            
 ##  [9] S4Vectors_0.16.0           BiocGenerics_0.24.0       

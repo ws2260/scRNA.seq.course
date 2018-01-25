@@ -574,7 +574,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ##  [1] scran_1.6.6                BiocParallel_1.12.0       
 ##  [3] scater_1.6.2               SingleCellExperiment_1.0.0
 ##  [5] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
-##  [7] matrixStats_0.52.2         GenomicRanges_1.30.1      
+##  [7] matrixStats_0.53.0         GenomicRanges_1.30.1      
 ##  [9] GenomeInfoDb_1.14.0        IRanges_2.12.0            
 ## [11] S4Vectors_0.16.0           ggplot2_2.2.1             
 ## [13] Biobase_2.38.0             BiocGenerics_0.24.0       

@@ -509,7 +509,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ## [13] Matrix_1.2-7.1             M3Drop_3.05.00            
 ## [15] numDeriv_2016.8-1          TSCAN_1.16.0              
 ## [17] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
-## [19] DelayedArray_0.4.1         matrixStats_0.52.2        
+## [19] DelayedArray_0.4.1         matrixStats_0.53.0        
 ## [21] Biobase_2.38.0             GenomicRanges_1.30.1      
 ## [23] GenomeInfoDb_1.14.0        IRanges_2.12.0            
 ## [25] S4Vectors_0.16.0           BiocGenerics_0.24.0       
@@ -557,6 +557,6 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ## [115] qlcMatrix_0.9.5        GenomeInfoDbData_1.0.0 mgcv_1.8-23           
 ## [118] grid_3.4.3             rpart_4.1-10           class_7.3-14          
 ## [121] minqa_1.2.4            rmarkdown_1.8          Rtsne_0.13            
-## [124] TTR_0.23-2             bbmle_1.0.20           shiny_1.0.5           
+## [124] TTR_0.23-3             bbmle_1.0.20           shiny_1.0.5           
 ## [127] base64enc_0.1-3
 ```

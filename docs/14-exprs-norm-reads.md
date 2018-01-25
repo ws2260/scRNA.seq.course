@@ -134,7 +134,7 @@ output: html_document
 ##  [1] knitr_1.18                 scran_1.6.6               
 ##  [3] BiocParallel_1.12.0        scater_1.6.2              
 ##  [5] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
-##  [7] DelayedArray_0.4.1         matrixStats_0.52.2        
+##  [7] DelayedArray_0.4.1         matrixStats_0.53.0        
 ##  [9] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ## [11] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [13] ggplot2_2.2.1              Biobase_2.38.0            
