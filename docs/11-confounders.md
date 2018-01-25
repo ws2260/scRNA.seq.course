@@ -152,7 +152,7 @@ Perform the same analysis with read counts of the Blischak data. Use `tung/reads
 ## [25] httpuv_1.3.5           Matrix_1.2-7.1         plyr_1.8.4            
 ## [28] XML_3.98-1.9           pkgconfig_2.0.1        biomaRt_2.34.2        
 ## [31] bookdown_0.5           zlibbioc_1.24.0        xtable_1.8-2          
-## [34] scales_0.5.0           tibble_1.4.1           lazyeval_0.2.1        
+## [34] scales_0.5.0           tibble_1.4.2           lazyeval_0.2.1        
 ## [37] magrittr_1.5           mime_0.5               memoise_1.1.0         
 ## [40] evaluate_0.10.1        beeswarm_0.2.3         shinydashboard_0.6.1  
 ## [43] tools_3.4.3            data.table_1.10.4-3    prettyunits_1.0.2     

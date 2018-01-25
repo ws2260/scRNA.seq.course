@@ -546,7 +546,7 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##  [82] mime_0.5               quantreg_5.34          slam_0.1-42           
 ##  [85] R.oo_1.21.0            compiler_3.4.3         pbkrtest_0.4-7        
 ##  [88] rstudioapi_0.7         curl_3.1               e1071_1.6-8           
-##  [91] spatstat.utils_1.8-0   smoother_1.1           tibble_1.4.1          
+##  [91] spatstat.utils_1.8-0   smoother_1.1           tibble_1.4.2          
 ##  [94] statmod_1.4.30         stringi_1.1.6          highr_0.6             
 ##  [97] lattice_0.20-34        nloptr_1.0.4           HSMMSingleCell_0.112.0
 ## [100] pillar_1.1.0           combinat_0.0-8         lmtest_0.9-35         
