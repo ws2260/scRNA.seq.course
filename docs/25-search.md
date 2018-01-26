@@ -218,12 +218,12 @@ sessionInfo()
 ## [10] zlibbioc_1.24.0        digest_0.6.14          bit_1.1-12            
 ## [13] tibble_1.4.2           evaluate_0.10.1        lattice_0.20-34       
 ## [16] pkgconfig_2.0.1        rlang_0.1.6            Matrix_1.2-7.1        
-## [19] yaml_2.1.16            bindrcpp_0.2           GenomeInfoDbData_1.0.0
-## [22] stringr_1.2.0          dplyr_0.7.4            rprojroot_1.3-2       
-## [25] grid_3.4.3             glue_1.2.0             R6_2.2.2              
-## [28] hash_2.2.6             rmarkdown_1.8          bookdown_0.5          
-## [31] reshape2_1.4.3         magrittr_1.5           backports_1.1.2       
-## [34] htmltools_0.3.6        assertthat_0.2.0       stringi_1.1.6         
-## [37] RCurl_1.95-4.10
+## [19] yaml_2.1.16            xfun_0.1               bindrcpp_0.2          
+## [22] GenomeInfoDbData_1.0.0 stringr_1.2.0          dplyr_0.7.4           
+## [25] rprojroot_1.3-2        grid_3.4.3             glue_1.2.0            
+## [28] R6_2.2.2               hash_2.2.6             rmarkdown_1.8         
+## [31] bookdown_0.6           reshape2_1.4.3         magrittr_1.5          
+## [34] backports_1.1.2        htmltools_0.3.6        assertthat_0.2.0      
+## [37] stringi_1.1.6          RCurl_1.95-4.10
 ```
 

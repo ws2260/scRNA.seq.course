@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Analysis of single cell RNA-seq data</title>
   <meta name="description" content="Analysis of single cell RNA-seq data">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
 
   <meta property="og:title" content="Analysis of single cell RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2018-01-25">
+<meta name="date" content="2018-01-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -723,34 +723,34 @@ Figure 4.9: Clustering solutions of SINCERA method using found <span class="math
 ##  [16] cluster_2.0.6          shinydashboard_0.6.1   shiny_1.0.5           
 ##  [19] rrcov_1.4-3            compiler_3.4.3         httr_1.3.1            
 ##  [22] backports_1.1.2        assertthat_0.2.0       Matrix_1.2-7.1        
-##  [25] lazyeval_0.2.1         limma_3.34.5           htmltools_0.3.6       
+##  [25] lazyeval_0.2.1         limma_3.34.6           htmltools_0.3.6       
 ##  [28] prettyunits_1.0.2      tools_3.4.3            bindrcpp_0.2          
 ##  [31] gtable_0.2.0           glue_1.2.0             GenomeInfoDbData_1.0.0
 ##  [34] reshape2_1.4.3         dplyr_0.7.4            doRNG_1.6.6           
 ##  [37] Rcpp_0.12.15           gdata_2.18.0           iterators_1.0.9       
-##  [40] stringr_1.2.0          mime_0.5               hypergeo_1.2-13       
-##  [43] rngtools_1.2.4         gtools_3.5.0           WriteXLS_4.0.0        
-##  [46] statmod_1.4.30         XML_3.98-1.9           edgeR_3.20.7          
-##  [49] DEoptimR_1.0-8         MASS_7.3-45            zlibbioc_1.24.0       
-##  [52] scales_0.5.0           rhdf5_2.22.0           RColorBrewer_1.1-2    
-##  [55] yaml_2.1.16            memoise_1.1.0          gridExtra_2.3         
-##  [58] pkgmaker_0.22          biomaRt_2.34.2         stringi_1.1.6         
-##  [61] RSQLite_2.0            highr_0.6              pcaPP_1.9-73          
-##  [64] foreach_1.4.4          orthopolynom_1.0-5     e1071_1.6-8           
-##  [67] contfrac_1.1-11        caTools_1.17.1         moments_0.14          
-##  [70] rlang_0.1.6            pkgconfig_2.0.1        bitops_1.0-6          
-##  [73] evaluate_0.10.1        lattice_0.20-34        ROCR_1.0-7            
-##  [76] bindr_0.1              labeling_0.3           cowplot_0.9.2         
-##  [79] bit_1.1-12             deSolve_1.20           plyr_1.8.4            
-##  [82] magrittr_1.5           bookdown_0.5           R6_2.2.2              
-##  [85] gplots_3.0.1           DBI_0.7                pillar_1.1.0          
-##  [88] RCurl_1.95-4.10        tibble_1.4.2           KernSmooth_2.23-15    
-##  [91] rmarkdown_1.8          viridis_0.4.1          progress_1.1.2        
-##  [94] locfit_1.5-9.1         grid_3.4.3             data.table_1.10.4-3   
-##  [97] blob_1.1.0             digest_0.6.14          xtable_1.8-2          
-## [100] httpuv_1.3.5           elliptic_1.3-7         munsell_0.4.3         
-## [103] registry_0.5           beeswarm_0.2.3         viridisLite_0.2.0     
-## [106] vipor_0.4.5</code></pre>
+##  [40] xfun_0.1               stringr_1.2.0          mime_0.5              
+##  [43] hypergeo_1.2-13        rngtools_1.2.4         gtools_3.5.0          
+##  [46] WriteXLS_4.0.0         statmod_1.4.30         XML_3.98-1.9          
+##  [49] edgeR_3.20.7           DEoptimR_1.0-8         MASS_7.3-45           
+##  [52] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
+##  [55] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
+##  [58] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.2        
+##  [61] stringi_1.1.6          RSQLite_2.0            highr_0.6             
+##  [64] pcaPP_1.9-73           foreach_1.4.4          orthopolynom_1.0-5    
+##  [67] e1071_1.6-8            contfrac_1.1-11        caTools_1.17.1        
+##  [70] moments_0.14           rlang_0.1.6            pkgconfig_2.0.1       
+##  [73] bitops_1.0-6           evaluate_0.10.1        lattice_0.20-34       
+##  [76] ROCR_1.0-7             bindr_0.1              labeling_0.3          
+##  [79] cowplot_0.9.2          bit_1.1-12             deSolve_1.20          
+##  [82] plyr_1.8.4             magrittr_1.5           bookdown_0.6          
+##  [85] R6_2.2.2               gplots_3.0.1           DBI_0.7               
+##  [88] pillar_1.1.0           RCurl_1.95-4.10        tibble_1.4.2          
+##  [91] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.4.1         
+##  [94] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
+##  [97] data.table_1.10.4-3    blob_1.1.0             digest_0.6.14         
+## [100] xtable_1.8-2           httpuv_1.3.5           elliptic_1.3-7        
+## [103] munsell_0.4.3          registry_0.5           beeswarm_0.2.3        
+## [106] viridisLite_0.2.0      vipor_0.4.5</code></pre>
 
 </div>
 </div>
@@ -935,7 +935,7 @@ PCA_genes &lt;-<span class="st"> </span><span class="kw">names</span>(score[<spa
 ## [10] pillar_1.1.0           backports_1.1.2        lattice_0.20-34       
 ## [13] bbmle_1.0.20           digest_0.6.14          XVector_0.18.0        
 ## [16] checkmate_1.8.5        colorspace_1.3-2       htmltools_0.3.6       
-## [19] Matrix_1.2-7.1         plyr_1.8.4             bookdown_0.5          
+## [19] Matrix_1.2-7.1         plyr_1.8.4             bookdown_0.6          
 ## [22] zlibbioc_1.24.0        scales_0.5.0           gdata_2.18.0          
 ## [25] Rtsne_0.13             htmlTable_1.11.2       tibble_1.4.2          
 ## [28] mgcv_1.8-23            ggplot2_2.2.1          nnet_7.3-12           
@@ -951,7 +951,7 @@ PCA_genes &lt;-<span class="st"> </span><span class="kw">names</span>(score[<spa
 ## [58] hypergeo_1.2-13        gtable_0.2.0           deSolve_1.20          
 ## [61] gridExtra_2.3          Hmisc_4.1-1            rprojroot_1.3-2       
 ## [64] KernSmooth_2.23-15     stringi_1.1.6          Rcpp_0.12.15          
-## [67] rpart_4.1-10           acepack_1.4.1</code></pre>
+## [67] rpart_4.1-10           acepack_1.4.1          xfun_0.1</code></pre>
 
 </div>
 </div>
@@ -1279,44 +1279,44 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ##   [7] sp_1.2-7               densityClust_0.3       fastICA_1.2-1         
 ##  [10] digest_0.6.14          htmltools_0.3.6        viridis_0.4.1         
 ##  [13] gdata_2.18.0           magrittr_1.5           checkmate_1.8.5       
-##  [16] tensor_1.5             cluster_2.0.6          limma_3.34.5          
+##  [16] tensor_1.5             cluster_2.0.6          limma_3.34.6          
 ##  [19] tripack_1.3-8          R.utils_2.6.0          xts_0.10-1            
-##  [22] colorspace_1.3-2       ggrepel_0.7.0          dplyr_0.7.4           
-##  [25] RCurl_1.95-4.10        spatstat.data_1.2-0    spatstat_1.54-0       
-##  [28] lme4_1.1-15            bindr_0.1              survival_2.40-1       
-##  [31] zoo_1.8-1              glue_1.2.0             polyclip_1.6-1        
-##  [34] gtable_0.2.0           zlibbioc_1.24.0        XVector_0.18.0        
-##  [37] MatrixModels_0.4-1     car_2.1-6              DEoptimR_1.0-8        
-##  [40] abind_1.4-5            sgeostat_1.0-27        reldist_1.6-6         
-##  [43] SparseM_1.77           VIM_4.7.0              scales_0.5.0          
-##  [46] pheatmap_1.0.8         Rcpp_0.12.15           viridisLite_0.2.0     
-##  [49] xtable_1.8-2           laeken_0.4.6           htmlTable_1.11.2      
-##  [52] foreign_0.8-67         proxy_0.4-21           mclust_5.4            
-##  [55] Formula_1.2-2          vcd_1.4-4              htmlwidgets_1.0       
-##  [58] FNN_1.1                gplots_3.0.1           RColorBrewer_1.1-2    
-##  [61] acepack_1.4.1          R.methodsS3_1.7.1      pkgconfig_2.0.1       
-##  [64] deldir_0.1-14          nnet_7.3-12            alphahull_2.1         
-##  [67] labeling_0.3           rlang_0.1.6            reshape2_1.4.3        
-##  [70] munsell_0.4.3          tools_3.4.3            splancs_2.01-40       
-##  [73] evaluate_0.10.1        stringr_1.2.0          goftest_1.1-1         
-##  [76] yaml_2.1.16            robustbase_0.92-8      caTools_1.17.1        
-##  [79] RANN_2.5.1             bindrcpp_0.2           nlme_3.1-129          
-##  [82] mime_0.5               quantreg_5.34          slam_0.1-42           
-##  [85] R.oo_1.21.0            compiler_3.4.3         pbkrtest_0.4-7        
-##  [88] rstudioapi_0.7         curl_3.1               e1071_1.6-8           
-##  [91] spatstat.utils_1.8-0   smoother_1.1           tibble_1.4.2          
-##  [94] statmod_1.4.30         stringi_1.1.6          highr_0.6             
-##  [97] lattice_0.20-34        nloptr_1.0.4           HSMMSingleCell_0.112.0
-## [100] pillar_1.1.0           combinat_0.0-8         lmtest_0.9-35         
-## [103] data.table_1.10.4-3    bitops_1.0-6           httpuv_1.3.5          
-## [106] R6_2.2.2               latticeExtra_0.6-28    bookdown_0.5          
-## [109] KernSmooth_2.23-15     gridExtra_2.3          boot_1.3-18           
-## [112] gtools_3.5.0           assertthat_0.2.0       rprojroot_1.3-2       
-## [115] qlcMatrix_0.9.5        GenomeInfoDbData_1.0.0 mgcv_1.8-23           
-## [118] grid_3.4.3             rpart_4.1-10           class_7.3-14          
-## [121] minqa_1.2.4            rmarkdown_1.8          Rtsne_0.13            
-## [124] TTR_0.23-3             bbmle_1.0.20           shiny_1.0.5           
-## [127] base64enc_0.1-3</code></pre>
+##  [22] colorspace_1.3-2       ggrepel_0.7.0          xfun_0.1              
+##  [25] dplyr_0.7.4            RCurl_1.95-4.10        spatstat.data_1.2-0   
+##  [28] spatstat_1.54-0        lme4_1.1-15            bindr_0.1             
+##  [31] survival_2.40-1        zoo_1.8-1              glue_1.2.0            
+##  [34] polyclip_1.6-1         gtable_0.2.0           zlibbioc_1.24.0       
+##  [37] XVector_0.18.0         MatrixModels_0.4-1     car_2.1-6             
+##  [40] DEoptimR_1.0-8         abind_1.4-5            sgeostat_1.0-27       
+##  [43] reldist_1.6-6          SparseM_1.77           VIM_4.7.0             
+##  [46] scales_0.5.0           pheatmap_1.0.8         Rcpp_0.12.15          
+##  [49] viridisLite_0.2.0      xtable_1.8-2           laeken_0.4.6          
+##  [52] htmlTable_1.11.2       foreign_0.8-67         proxy_0.4-21          
+##  [55] mclust_5.4             Formula_1.2-2          vcd_1.4-4             
+##  [58] htmlwidgets_1.0        FNN_1.1                gplots_3.0.1          
+##  [61] RColorBrewer_1.1-2     acepack_1.4.1          R.methodsS3_1.7.1     
+##  [64] pkgconfig_2.0.1        deldir_0.1-14          nnet_7.3-12           
+##  [67] alphahull_2.1          labeling_0.3           rlang_0.1.6           
+##  [70] reshape2_1.4.3         munsell_0.4.3          tools_3.4.3           
+##  [73] splancs_2.01-40        evaluate_0.10.1        stringr_1.2.0         
+##  [76] goftest_1.1-1          yaml_2.1.16            robustbase_0.92-8     
+##  [79] caTools_1.17.1         RANN_2.5.1             bindrcpp_0.2          
+##  [82] nlme_3.1-129           mime_0.5               quantreg_5.34         
+##  [85] slam_0.1-42            R.oo_1.21.0            compiler_3.4.3        
+##  [88] pbkrtest_0.4-7         rstudioapi_0.7         curl_3.1              
+##  [91] e1071_1.6-8            spatstat.utils_1.8-0   smoother_1.1          
+##  [94] tibble_1.4.2           statmod_1.4.30         stringi_1.1.6         
+##  [97] highr_0.6              lattice_0.20-34        nloptr_1.0.4          
+## [100] HSMMSingleCell_0.112.0 pillar_1.1.0           combinat_0.0-8        
+## [103] lmtest_0.9-35          data.table_1.10.4-3    bitops_1.0-6          
+## [106] httpuv_1.3.5           R6_2.2.2               latticeExtra_0.6-28   
+## [109] bookdown_0.6           KernSmooth_2.23-15     gridExtra_2.3         
+## [112] boot_1.3-18            gtools_3.5.0           assertthat_0.2.0      
+## [115] rprojroot_1.3-2        qlcMatrix_0.9.5        GenomeInfoDbData_1.0.0
+## [118] mgcv_1.8-23            grid_3.4.3             rpart_4.1-10          
+## [121] class_7.3-14           minqa_1.2.4            rmarkdown_1.8         
+## [124] Rtsne_0.13             TTR_0.23-3             bbmle_1.0.20          
+## [127] shiny_1.0.5            base64enc_0.1-3</code></pre>
 
 </div>
 </div>
@@ -1480,30 +1480,30 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ## [16] shinydashboard_0.6.1   shiny_1.0.5            rrcov_1.4-3           
 ## [19] compiler_3.4.3         httr_1.3.1             backports_1.1.2       
 ## [22] assertthat_0.2.0       Matrix_1.2-7.1         lazyeval_0.2.1        
-## [25] limma_3.34.5           htmltools_0.3.6        prettyunits_1.0.2     
+## [25] limma_3.34.6           htmltools_0.3.6        prettyunits_1.0.2     
 ## [28] tools_3.4.3            bindrcpp_0.2           gtable_0.2.0          
 ## [31] glue_1.2.0             GenomeInfoDbData_1.0.0 reshape2_1.4.3        
 ## [34] dplyr_0.7.4            doRNG_1.6.6            Rcpp_0.12.15          
-## [37] gdata_2.18.0           stringr_1.2.0          mime_0.5              
-## [40] rngtools_1.2.4         gtools_3.5.0           WriteXLS_4.0.0        
-## [43] XML_3.98-1.9           edgeR_3.20.7           DEoptimR_1.0-8        
-## [46] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
-## [49] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
-## [52] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.2        
-## [55] stringi_1.1.6          RSQLite_2.0            pcaPP_1.9-73          
-## [58] e1071_1.6-8            caTools_1.17.1         rlang_0.1.6           
-## [61] pkgconfig_2.0.1        bitops_1.0-6           evaluate_0.10.1       
-## [64] lattice_0.20-34        ROCR_1.0-7             bindr_0.1             
-## [67] labeling_0.3           cowplot_0.9.2          bit_1.1-12            
-## [70] plyr_1.8.4             magrittr_1.5           bookdown_0.5          
-## [73] R6_2.2.2               gplots_3.0.1           DBI_0.7               
-## [76] pillar_1.1.0           RCurl_1.95-4.10        tibble_1.4.2          
-## [79] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.4.1         
-## [82] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
-## [85] data.table_1.10.4-3    blob_1.1.0             digest_0.6.14         
-## [88] xtable_1.8-2           httpuv_1.3.5           munsell_0.4.3         
-## [91] registry_0.5           beeswarm_0.2.3         viridisLite_0.2.0     
-## [94] vipor_0.4.5</code></pre>
+## [37] gdata_2.18.0           xfun_0.1               stringr_1.2.0         
+## [40] mime_0.5               rngtools_1.2.4         gtools_3.5.0          
+## [43] WriteXLS_4.0.0         XML_3.98-1.9           edgeR_3.20.7          
+## [46] DEoptimR_1.0-8         zlibbioc_1.24.0        scales_0.5.0          
+## [49] rhdf5_2.22.0           RColorBrewer_1.1-2     yaml_2.1.16           
+## [52] memoise_1.1.0          gridExtra_2.3          pkgmaker_0.22         
+## [55] biomaRt_2.34.2         stringi_1.1.6          RSQLite_2.0           
+## [58] pcaPP_1.9-73           e1071_1.6-8            caTools_1.17.1        
+## [61] rlang_0.1.6            pkgconfig_2.0.1        bitops_1.0-6          
+## [64] evaluate_0.10.1        lattice_0.20-34        ROCR_1.0-7            
+## [67] bindr_0.1              labeling_0.3           cowplot_0.9.2         
+## [70] bit_1.1-12             plyr_1.8.4             magrittr_1.5          
+## [73] bookdown_0.6           R6_2.2.2               gplots_3.0.1          
+## [76] DBI_0.7                pillar_1.1.0           RCurl_1.95-4.10       
+## [79] tibble_1.4.2           KernSmooth_2.23-15     rmarkdown_1.8         
+## [82] viridis_0.4.1          progress_1.1.2         locfit_1.5-9.1        
+## [85] grid_3.4.3             data.table_1.10.4-3    blob_1.1.0            
+## [88] digest_0.6.14          xtable_1.8-2           httpuv_1.3.5          
+## [91] munsell_0.4.3          registry_0.5           beeswarm_0.2.3        
+## [94] viridisLite_0.2.0      vipor_0.4.5</code></pre>
 
 </div>
 </div>
@@ -1915,34 +1915,34 @@ pVals &lt;-<span class="st"> </span><span class="kw">p.adjust</span>(pVals, <spa
 ## [13] irlba_2.3.2                VGAM_1.0-4                
 ## [15] ggplot2_2.2.1              Biobase_2.38.0            
 ## [17] BiocGenerics_0.24.0        Matrix_1.2-7.1            
-## [19] edgeR_3.20.7               limma_3.34.5              
+## [19] edgeR_3.20.7               limma_3.34.6              
 ## [21] scRNA.seq.funcs_0.1.0      knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.1          viridisLite_0.2.0      gtools_3.5.0          
-##  [4] elliptic_1.3-7         moments_0.14           assertthat_0.2.0      
-##  [7] statmod_1.4.30         highr_0.6              GenomeInfoDbData_1.0.0
-## [10] yaml_2.1.16            slam_0.1-42            ggrepel_0.7.0         
-## [13] pillar_1.1.0           backports_1.1.2        lattice_0.20-34       
-## [16] glue_1.2.0             densityClust_0.3       digest_0.6.14         
-## [19] XVector_0.18.0         RColorBrewer_1.1-2     colorspace_1.3-2      
-## [22] fastICA_1.2-1          htmltools_0.3.6        plyr_1.8.4            
-## [25] pkgconfig_2.0.1        pheatmap_1.0.8         HSMMSingleCell_0.112.0
-## [28] qlcMatrix_0.9.5        zlibbioc_1.24.0        bookdown_0.5          
-## [31] scales_0.5.0           gdata_2.18.0           RANN_2.5.1            
-## [34] Rtsne_0.13             tibble_1.4.2           combinat_0.0-8        
-## [37] lazyeval_0.2.1         magrittr_1.5           evaluate_0.10.1       
-## [40] MASS_7.3-45            FNN_1.1                data.table_1.10.4-3   
-## [43] tools_3.4.3            stringr_1.2.0          munsell_0.4.3         
-## [46] locfit_1.5-9.1         cluster_2.0.6          bindrcpp_0.2          
-## [49] orthopolynom_1.0-5     compiler_3.4.3         caTools_1.17.1        
-## [52] contfrac_1.1-11        rlang_0.1.6            grid_3.4.3            
-## [55] RCurl_1.95-4.10        igraph_1.1.2           bitops_1.0-6          
-## [58] rmarkdown_1.8          hypergeo_1.2-13        gtable_0.2.0          
-## [61] abind_1.4-5            deSolve_1.20           reshape2_1.4.3        
-## [64] R6_2.2.2               gridExtra_2.3          dplyr_0.7.4           
-## [67] bindr_0.1              rprojroot_1.3-2        KernSmooth_2.23-15    
-## [70] stringi_1.1.6          Rcpp_0.12.15</code></pre>
+##  [1] bitops_1.0-6           RColorBrewer_1.1-2     rprojroot_1.3-2       
+##  [4] tools_3.4.3            backports_1.1.2        R6_2.2.2              
+##  [7] KernSmooth_2.23-15     hypergeo_1.2-13        lazyeval_0.2.1        
+## [10] colorspace_1.3-2       gridExtra_2.3          moments_0.14          
+## [13] compiler_3.4.3         orthopolynom_1.0-5     bookdown_0.6          
+## [16] slam_0.1-42            caTools_1.17.1         scales_0.5.0          
+## [19] stringr_1.2.0          digest_0.6.14          rmarkdown_1.8         
+## [22] XVector_0.18.0         pkgconfig_2.0.1        htmltools_0.3.6       
+## [25] highr_0.6              rlang_0.1.6            FNN_1.1               
+## [28] bindr_0.1              combinat_0.0-8         gtools_3.5.0          
+## [31] dplyr_0.7.4            RCurl_1.95-4.10        magrittr_1.5          
+## [34] GenomeInfoDbData_1.0.0 Rcpp_0.12.15           munsell_0.4.3         
+## [37] abind_1.4-5            viridis_0.4.1          stringi_1.1.6         
+## [40] yaml_2.1.16            MASS_7.3-45            zlibbioc_1.24.0       
+## [43] Rtsne_0.13             plyr_1.8.4             grid_3.4.3            
+## [46] gdata_2.18.0           ggrepel_0.7.0          contfrac_1.1-11       
+## [49] lattice_0.20-34        locfit_1.5-9.1         pillar_1.1.0          
+## [52] igraph_1.1.2           reshape2_1.4.3         glue_1.2.0            
+## [55] evaluate_0.10.1        data.table_1.10.4-3    deSolve_1.20          
+## [58] gtable_0.2.0           RANN_2.5.1             assertthat_0.2.0      
+## [61] xfun_0.1               qlcMatrix_0.9.5        HSMMSingleCell_0.112.0
+## [64] viridisLite_0.2.0      tibble_1.4.2           pheatmap_1.0.8        
+## [67] elliptic_1.3-7         bindrcpp_0.2           cluster_2.0.6         
+## [70] fastICA_1.2-1          densityClust_0.3       statmod_1.4.30</code></pre>
 
 </div>
 </div>
@@ -2057,12 +2057,12 @@ Figure 2.6:  scmap can also be used to project cells from a new experiment onto 
   )
 )</code></pre></div>
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Thu Jan 25 15:39:38 2018 -->
+<!-- Fri Jan 26 15:37:51 2018 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID6fc4f30794 () {
+function gvisDataSankeyID6fd324943a5 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2265,8 +2265,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID6fc4f30794() {
-var data = gvisDataSankeyID6fc4f30794();
+function drawChartSankeyID6fd324943a5() {
+var data = gvisDataSankeyID6fd324943a5();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -2285,7 +2285,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID6fc4f30794')
+    document.getElementById('SankeyID6fd324943a5')
     );
     chart.draw(data,options);
     
@@ -2309,9 +2309,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID6fc4f30794);
+callbacks.push(drawChartSankeyID6fd324943a5);
 })();
-function displayChartSankeyID6fc4f30794() {
+function displayChartSankeyID6fd324943a5() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2334,9 +2334,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fc4f30794"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd324943a5"></script>
 <!-- divChart -->
-<div id="SankeyID6fc4f30794" style="width: 400; height: 400;">
+<div id="SankeyID6fd324943a5" style="width: 400; height: 400;">
 
 </div>
 </div>
@@ -2373,22 +2373,22 @@ callbacks.shift()();
 ## [15] googleVis_0.6.2            knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.7          
+##  [1] httr_1.3.1             viridis_0.4.1          edgeR_3.20.7          
 ##  [4] bit64_0.9-7            jsonlite_1.5           viridisLite_0.2.0     
 ##  [7] shiny_1.0.5            assertthat_0.2.0       highr_0.6             
 ## [10] blob_1.1.0             vipor_0.4.5            GenomeInfoDbData_1.0.0
 ## [13] yaml_2.1.16            progress_1.1.2         pillar_1.1.0          
 ## [16] RSQLite_2.0            backports_1.1.2        lattice_0.20-34       
-## [19] limma_3.34.5           glue_1.2.0             digest_0.6.14         
+## [19] limma_3.34.6           glue_1.2.0             digest_0.6.14         
 ## [22] XVector_0.18.0         randomForest_4.6-12    colorspace_1.3-2      
 ## [25] htmltools_0.3.6        httpuv_1.3.5           Matrix_1.2-7.1        
 ## [28] plyr_1.8.4             XML_3.98-1.9           pkgconfig_2.0.1       
-## [31] biomaRt_2.34.2         bookdown_0.5           zlibbioc_1.24.0       
+## [31] biomaRt_2.34.2         bookdown_0.6           zlibbioc_1.24.0       
 ## [34] xtable_1.8-2           scales_0.5.0           tibble_1.4.2          
 ## [37] proxy_0.4-21           lazyeval_0.2.1         magrittr_1.5          
 ## [40] mime_0.5               memoise_1.1.0          evaluate_0.10.1       
 ## [43] class_7.3-14           beeswarm_0.2.3         shinydashboard_0.6.1  
-## [46] data.table_1.10.4-3    tools_3.4.3            prettyunits_1.0.2     
+## [46] data.table_1.10.4-3    prettyunits_1.0.2      tools_3.4.3           
 ## [49] stringr_1.2.0          locfit_1.5-9.1         munsell_0.4.3         
 ## [52] AnnotationDbi_1.40.0   compiler_3.4.3         e1071_1.6-8           
 ## [55] rlang_0.1.6            rhdf5_2.22.0           grid_3.4.3            
@@ -2398,7 +2398,7 @@ callbacks.shift()();
 ## [67] reshape2_1.4.3         R6_2.2.2               gridExtra_2.3         
 ## [70] dplyr_0.7.4            bit_1.1-12             bindr_0.1             
 ## [73] rprojroot_1.3-2        ggbeeswarm_0.6.0       stringi_1.1.6         
-## [76] Rcpp_0.12.15</code></pre>
+## [76] Rcpp_0.12.15           xfun_0.1</code></pre>
 
 </div>
 </div>
@@ -2555,13 +2555,13 @@ muraro_delta &lt;-<span class="st"> </span><span class="kw">c</span>(<span class
 ## [10] zlibbioc_1.24.0        digest_0.6.14          bit_1.1-12            
 ## [13] tibble_1.4.2           evaluate_0.10.1        lattice_0.20-34       
 ## [16] pkgconfig_2.0.1        rlang_0.1.6            Matrix_1.2-7.1        
-## [19] yaml_2.1.16            bindrcpp_0.2           GenomeInfoDbData_1.0.0
-## [22] stringr_1.2.0          dplyr_0.7.4            rprojroot_1.3-2       
-## [25] grid_3.4.3             glue_1.2.0             R6_2.2.2              
-## [28] hash_2.2.6             rmarkdown_1.8          bookdown_0.5          
-## [31] reshape2_1.4.3         magrittr_1.5           backports_1.1.2       
-## [34] htmltools_0.3.6        assertthat_0.2.0       stringi_1.1.6         
-## [37] RCurl_1.95-4.10</code></pre>
+## [19] yaml_2.1.16            xfun_0.1               bindrcpp_0.2          
+## [22] GenomeInfoDbData_1.0.0 stringr_1.2.0          dplyr_0.7.4           
+## [25] rprojroot_1.3-2        grid_3.4.3             glue_1.2.0            
+## [28] R6_2.2.2               hash_2.2.6             rmarkdown_1.8         
+## [31] bookdown_0.6           reshape2_1.4.3         magrittr_1.5          
+## [34] backports_1.1.2        htmltools_0.3.6        assertthat_0.2.0      
+## [37] stringi_1.1.6          RCurl_1.95-4.10</code></pre>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1234567</span>)</code></pre></div>
 </div>
@@ -2667,9 +2667,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

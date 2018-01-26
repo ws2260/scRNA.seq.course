@@ -440,32 +440,32 @@ DE_Quality_AUC(pVals)
 ## [13] irlba_2.3.2                VGAM_1.0-4                
 ## [15] ggplot2_2.2.1              Biobase_2.38.0            
 ## [17] BiocGenerics_0.24.0        Matrix_1.2-7.1            
-## [19] edgeR_3.20.7               limma_3.34.5              
+## [19] edgeR_3.20.7               limma_3.34.6              
 ## [21] scRNA.seq.funcs_0.1.0      knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.1          viridisLite_0.2.0      gtools_3.5.0          
-##  [4] elliptic_1.3-7         moments_0.14           assertthat_0.2.0      
-##  [7] statmod_1.4.30         highr_0.6              GenomeInfoDbData_1.0.0
-## [10] yaml_2.1.16            slam_0.1-42            ggrepel_0.7.0         
-## [13] pillar_1.1.0           backports_1.1.2        lattice_0.20-34       
-## [16] glue_1.2.0             densityClust_0.3       digest_0.6.14         
-## [19] XVector_0.18.0         RColorBrewer_1.1-2     colorspace_1.3-2      
-## [22] fastICA_1.2-1          htmltools_0.3.6        plyr_1.8.4            
-## [25] pkgconfig_2.0.1        pheatmap_1.0.8         HSMMSingleCell_0.112.0
-## [28] qlcMatrix_0.9.5        zlibbioc_1.24.0        bookdown_0.5          
-## [31] scales_0.5.0           gdata_2.18.0           RANN_2.5.1            
-## [34] Rtsne_0.13             tibble_1.4.2           combinat_0.0-8        
-## [37] lazyeval_0.2.1         magrittr_1.5           evaluate_0.10.1       
-## [40] MASS_7.3-45            FNN_1.1                data.table_1.10.4-3   
-## [43] tools_3.4.3            stringr_1.2.0          munsell_0.4.3         
-## [46] locfit_1.5-9.1         cluster_2.0.6          bindrcpp_0.2          
-## [49] orthopolynom_1.0-5     compiler_3.4.3         caTools_1.17.1        
-## [52] contfrac_1.1-11        rlang_0.1.6            grid_3.4.3            
-## [55] RCurl_1.95-4.10        igraph_1.1.2           bitops_1.0-6          
-## [58] rmarkdown_1.8          hypergeo_1.2-13        gtable_0.2.0          
-## [61] abind_1.4-5            deSolve_1.20           reshape2_1.4.3        
-## [64] R6_2.2.2               gridExtra_2.3          dplyr_0.7.4           
-## [67] bindr_0.1              rprojroot_1.3-2        KernSmooth_2.23-15    
-## [70] stringi_1.1.6          Rcpp_0.12.15
+##  [1] bitops_1.0-6           RColorBrewer_1.1-2     rprojroot_1.3-2       
+##  [4] tools_3.4.3            backports_1.1.2        R6_2.2.2              
+##  [7] KernSmooth_2.23-15     hypergeo_1.2-13        lazyeval_0.2.1        
+## [10] colorspace_1.3-2       gridExtra_2.3          moments_0.14          
+## [13] compiler_3.4.3         orthopolynom_1.0-5     bookdown_0.6          
+## [16] slam_0.1-42            caTools_1.17.1         scales_0.5.0          
+## [19] stringr_1.2.0          digest_0.6.14          rmarkdown_1.8         
+## [22] XVector_0.18.0         pkgconfig_2.0.1        htmltools_0.3.6       
+## [25] highr_0.6              rlang_0.1.6            FNN_1.1               
+## [28] bindr_0.1              combinat_0.0-8         gtools_3.5.0          
+## [31] dplyr_0.7.4            RCurl_1.95-4.10        magrittr_1.5          
+## [34] GenomeInfoDbData_1.0.0 Rcpp_0.12.15           munsell_0.4.3         
+## [37] abind_1.4-5            viridis_0.4.1          stringi_1.1.6         
+## [40] yaml_2.1.16            MASS_7.3-45            zlibbioc_1.24.0       
+## [43] Rtsne_0.13             plyr_1.8.4             grid_3.4.3            
+## [46] gdata_2.18.0           ggrepel_0.7.0          contfrac_1.1-11       
+## [49] lattice_0.20-34        locfit_1.5-9.1         pillar_1.1.0          
+## [52] igraph_1.1.2           reshape2_1.4.3         glue_1.2.0            
+## [55] evaluate_0.10.1        data.table_1.10.4-3    deSolve_1.20          
+## [58] gtable_0.2.0           RANN_2.5.1             assertthat_0.2.0      
+## [61] xfun_0.1               qlcMatrix_0.9.5        HSMMSingleCell_0.112.0
+## [64] viridisLite_0.2.0      tibble_1.4.2           pheatmap_1.0.8        
+## [67] elliptic_1.3-7         bindrcpp_0.2           cluster_2.0.6         
+## [70] fastICA_1.2-1          densityClust_0.3       statmod_1.4.30
 ```

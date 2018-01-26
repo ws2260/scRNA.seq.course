@@ -183,14 +183,14 @@ plot(
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Thu Jan 25 15:39:38 2018 -->
+<!-- Fri Jan 26 15:37:51 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID6fc4f30794 () {
+function gvisDataSankeyID6fd324943a5 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -393,8 +393,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID6fc4f30794() {
-var data = gvisDataSankeyID6fc4f30794();
+function drawChartSankeyID6fd324943a5() {
+var data = gvisDataSankeyID6fd324943a5();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -413,7 +413,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID6fc4f30794')
+    document.getElementById('SankeyID6fd324943a5')
     );
     chart.draw(data,options);
     
@@ -437,9 +437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID6fc4f30794);
+callbacks.push(drawChartSankeyID6fd324943a5);
 })();
-function displayChartSankeyID6fc4f30794() {
+function displayChartSankeyID6fd324943a5() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -463,11 +463,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fc4f30794"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID6fd324943a5"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID6fc4f30794" 
+<div id="SankeyID6fd324943a5" 
   style="width: 400; height: 400;">
 </div>
 
@@ -506,22 +506,22 @@ callbacks.shift()();
 ## [15] googleVis_0.6.2            knitr_1.18                
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.7          
+##  [1] httr_1.3.1             viridis_0.4.1          edgeR_3.20.7          
 ##  [4] bit64_0.9-7            jsonlite_1.5           viridisLite_0.2.0     
 ##  [7] shiny_1.0.5            assertthat_0.2.0       highr_0.6             
 ## [10] blob_1.1.0             vipor_0.4.5            GenomeInfoDbData_1.0.0
 ## [13] yaml_2.1.16            progress_1.1.2         pillar_1.1.0          
 ## [16] RSQLite_2.0            backports_1.1.2        lattice_0.20-34       
-## [19] limma_3.34.5           glue_1.2.0             digest_0.6.14         
+## [19] limma_3.34.6           glue_1.2.0             digest_0.6.14         
 ## [22] XVector_0.18.0         randomForest_4.6-12    colorspace_1.3-2      
 ## [25] htmltools_0.3.6        httpuv_1.3.5           Matrix_1.2-7.1        
 ## [28] plyr_1.8.4             XML_3.98-1.9           pkgconfig_2.0.1       
-## [31] biomaRt_2.34.2         bookdown_0.5           zlibbioc_1.24.0       
+## [31] biomaRt_2.34.2         bookdown_0.6           zlibbioc_1.24.0       
 ## [34] xtable_1.8-2           scales_0.5.0           tibble_1.4.2          
 ## [37] proxy_0.4-21           lazyeval_0.2.1         magrittr_1.5          
 ## [40] mime_0.5               memoise_1.1.0          evaluate_0.10.1       
 ## [43] class_7.3-14           beeswarm_0.2.3         shinydashboard_0.6.1  
-## [46] data.table_1.10.4-3    tools_3.4.3            prettyunits_1.0.2     
+## [46] data.table_1.10.4-3    prettyunits_1.0.2      tools_3.4.3           
 ## [49] stringr_1.2.0          locfit_1.5-9.1         munsell_0.4.3         
 ## [52] AnnotationDbi_1.40.0   compiler_3.4.3         e1071_1.6-8           
 ## [55] rlang_0.1.6            rhdf5_2.22.0           grid_3.4.3            
@@ -531,7 +531,7 @@ callbacks.shift()();
 ## [67] reshape2_1.4.3         R6_2.2.2               gridExtra_2.3         
 ## [70] dplyr_0.7.4            bit_1.1-12             bindr_0.1             
 ## [73] rprojroot_1.3-2        ggbeeswarm_0.6.0       stringi_1.1.6         
-## [76] Rcpp_0.12.15
+## [76] Rcpp_0.12.15           xfun_0.1
 ```
 
 
