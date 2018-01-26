@@ -356,7 +356,7 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [10] pillar_1.1.0           backports_1.1.2        lattice_0.20-34       
 ## [13] bbmle_1.0.20           digest_0.6.14          XVector_0.18.0        
 ## [16] checkmate_1.8.5        colorspace_1.3-2       htmltools_0.3.6       
-## [19] Matrix_1.2-7.1         plyr_1.8.4             bookdown_0.5          
+## [19] Matrix_1.2-7.1         plyr_1.8.4             bookdown_0.6          
 ## [22] zlibbioc_1.24.0        scales_0.5.0           gdata_2.18.0          
 ## [25] Rtsne_0.13             htmlTable_1.11.2       tibble_1.4.2          
 ## [28] mgcv_1.8-23            ggplot2_2.2.1          nnet_7.3-12           
@@ -372,5 +372,5 @@ Plot the expression of the features for each of the other methods. Which appear 
 ## [58] hypergeo_1.2-13        gtable_0.2.0           deSolve_1.20          
 ## [61] gridExtra_2.3          Hmisc_4.1-1            rprojroot_1.3-2       
 ## [64] KernSmooth_2.23-15     stringi_1.1.6          Rcpp_0.12.15          
-## [67] rpart_4.1-10           acepack_1.4.1
+## [67] rpart_4.1-10           acepack_1.4.1          xfun_0.1
 ```

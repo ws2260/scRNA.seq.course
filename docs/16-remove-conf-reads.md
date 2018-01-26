@@ -306,7 +306,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ##  [7] kBET_0.99.0                scran_1.6.6               
 ##  [9] scater_1.6.2               SingleCellExperiment_1.0.0
 ## [11] ggplot2_2.2.1              RUVSeq_1.12.0             
-## [13] edgeR_3.20.7               limma_3.34.5              
+## [13] edgeR_3.20.7               limma_3.34.6              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
 ## [17] GenomicAlignments_1.14.1   SummarizedExperiment_1.8.1
 ## [19] DelayedArray_0.4.1         matrixStats_0.53.0        
@@ -330,25 +330,25 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [28] prettyunits_1.0.2      tools_3.4.3            igraph_1.1.2          
 ## [31] bindrcpp_0.2           gtable_0.2.0           glue_1.2.0            
 ## [34] GenomeInfoDbData_1.0.0 dplyr_0.7.4            Rcpp_0.12.15          
-## [37] rtracklayer_1.38.3     stringr_1.2.0          mime_0.5              
-## [40] hypergeo_1.2-13        statmod_1.4.30         XML_3.98-1.9          
-## [43] zoo_1.8-1              zlibbioc_1.24.0        MASS_7.3-45           
-## [46] scales_0.5.0           aroma.light_3.8.0      rhdf5_2.22.0          
-## [49] yaml_2.1.16            memoise_1.1.0          gridExtra_2.3         
-## [52] biomaRt_2.34.2         latticeExtra_0.6-28    stringi_1.1.6         
-## [55] RSQLite_2.0            RMySQL_0.10.13         orthopolynom_1.0-5    
-## [58] GenomicFeatures_1.30.0 contfrac_1.1-11        rlang_0.1.6           
-## [61] pkgconfig_2.0.1        moments_0.14           bitops_1.0-6          
-## [64] evaluate_0.10.1        lattice_0.20-34        bindr_0.1             
-## [67] labeling_0.3           htmlwidgets_1.0        cowplot_0.9.2         
-## [70] bit_1.1-12             deSolve_1.20           plyr_1.8.4            
-## [73] magrittr_1.5           bookdown_0.5           R6_2.2.2              
-## [76] DBI_0.7                pillar_1.1.0           survival_2.40-1       
-## [79] RCurl_1.95-4.10        tibble_1.4.2           rmarkdown_1.8         
-## [82] viridis_0.4.1          progress_1.1.2         locfit_1.5-9.1        
-## [85] grid_3.4.3             data.table_1.10.4-3    FNN_1.1               
-## [88] blob_1.1.0             digest_0.6.14          xtable_1.8-2          
-## [91] httpuv_1.3.5           elliptic_1.3-7         R.utils_2.6.0         
-## [94] munsell_0.4.3          beeswarm_0.2.3         viridisLite_0.2.0     
-## [97] vipor_0.4.5
+## [37] rtracklayer_1.38.3     xfun_0.1               stringr_1.2.0         
+## [40] mime_0.5               hypergeo_1.2-13        statmod_1.4.30        
+## [43] XML_3.98-1.9           zoo_1.8-1              zlibbioc_1.24.0       
+## [46] MASS_7.3-45            scales_0.5.0           aroma.light_3.8.0     
+## [49] rhdf5_2.22.0           yaml_2.1.16            memoise_1.1.0         
+## [52] gridExtra_2.3          biomaRt_2.34.2         latticeExtra_0.6-28   
+## [55] stringi_1.1.6          RSQLite_2.0            RMySQL_0.10.13        
+## [58] orthopolynom_1.0-5     GenomicFeatures_1.30.0 contfrac_1.1-11       
+## [61] rlang_0.1.6            pkgconfig_2.0.1        moments_0.14          
+## [64] bitops_1.0-6           evaluate_0.10.1        lattice_0.20-34       
+## [67] bindr_0.1              labeling_0.3           htmlwidgets_1.0       
+## [70] cowplot_0.9.2          bit_1.1-12             deSolve_1.20          
+## [73] plyr_1.8.4             magrittr_1.5           bookdown_0.6          
+## [76] R6_2.2.2               DBI_0.7                pillar_1.1.0          
+## [79] survival_2.40-1        RCurl_1.95-4.10        tibble_1.4.2          
+## [82] rmarkdown_1.8          viridis_0.4.1          progress_1.1.2        
+## [85] locfit_1.5-9.1         grid_3.4.3             data.table_1.10.4-3   
+## [88] FNN_1.1                blob_1.1.0             digest_0.6.14         
+## [91] xtable_1.8-2           httpuv_1.3.5           elliptic_1.3-7        
+## [94] R.utils_2.6.0          munsell_0.4.3          beeswarm_0.2.3        
+## [97] viridisLite_0.2.0      vipor_0.4.5
 ```

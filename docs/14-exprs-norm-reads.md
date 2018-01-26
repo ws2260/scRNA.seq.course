@@ -148,10 +148,10 @@ output: html_document
 ## [13] DBI_0.7                lazyeval_0.2.1         colorspace_1.3-2      
 ## [16] gridExtra_2.3          prettyunits_1.0.2      moments_0.14          
 ## [19] bit_1.1-12             compiler_3.4.3         orthopolynom_1.0-5    
-## [22] labeling_0.3           bookdown_0.5           scales_0.5.0          
+## [22] labeling_0.3           bookdown_0.6           scales_0.5.0          
 ## [25] stringr_1.2.0          digest_0.6.14          rmarkdown_1.8         
 ## [28] XVector_0.18.0         pkgconfig_2.0.1        htmltools_0.3.6       
-## [31] highr_0.6              limma_3.34.5           htmlwidgets_1.0       
+## [31] highr_0.6              limma_3.34.6           htmlwidgets_1.0       
 ## [34] rlang_0.1.6            RSQLite_2.0            FNN_1.1               
 ## [37] shiny_1.0.5            bindr_0.1              zoo_1.8-1             
 ## [40] dplyr_0.7.4            RCurl_1.95-4.10        magrittr_1.5          
@@ -166,9 +166,10 @@ output: html_document
 ## [67] reshape2_1.4.3         biomaRt_2.34.2         XML_3.98-1.9          
 ## [70] glue_1.2.0             evaluate_0.10.1        data.table_1.10.4-3   
 ## [73] deSolve_1.20           httpuv_1.3.5           gtable_0.2.0          
-## [76] assertthat_0.2.0       mime_0.5               xtable_1.8-2          
-## [79] viridisLite_0.2.0      tibble_1.4.2           elliptic_1.3-7        
-## [82] AnnotationDbi_1.40.0   beeswarm_0.2.3         memoise_1.1.0         
-## [85] tximport_1.6.0         bindrcpp_0.2           statmod_1.4.30
+## [76] assertthat_0.2.0       xfun_0.1               mime_0.5              
+## [79] xtable_1.8-2           viridisLite_0.2.0      tibble_1.4.2          
+## [82] elliptic_1.3-7         AnnotationDbi_1.40.0   beeswarm_0.2.3        
+## [85] memoise_1.1.0          tximport_1.6.0         bindrcpp_0.2          
+## [88] statmod_1.4.30
 ```
 
