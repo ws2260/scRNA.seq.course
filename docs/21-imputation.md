@@ -235,7 +235,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## loaded via a namespace (and not attached):
 ##  [1] ggbeeswarm_0.6.0       colorspace_1.3-2       rjson_0.2.15          
 ##  [4] class_7.3-14           rprojroot_1.3-2        XVector_0.18.0        
-##  [7] bit64_0.9-7            AnnotationDbi_1.40.0   mvtnorm_1.0-6         
+##  [7] bit64_0.9-7            AnnotationDbi_1.40.0   mvtnorm_1.0-7         
 ## [10] codetools_0.2-15       splines_3.4.3          tximport_1.6.0        
 ## [13] robustbase_0.92-8      cluster_2.0.6          pheatmap_1.0.8        
 ## [16] shinydashboard_0.6.1   shiny_1.0.5            rrcov_1.4-3           
