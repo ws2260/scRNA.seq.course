@@ -448,7 +448,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##   [1] Rtsne_0.13             ggbeeswarm_0.6.0       colorspace_1.3-2      
 ##   [4] rjson_0.2.15           class_7.3-14           rprojroot_1.3-2       
 ##   [7] XVector_0.18.0         bit64_0.9-7            AnnotationDbi_1.40.0  
-##  [10] mvtnorm_1.0-6          scRNA.seq.funcs_0.1.0  codetools_0.2-15      
+##  [10] mvtnorm_1.0-7          scRNA.seq.funcs_0.1.0  codetools_0.2-15      
 ##  [13] tximport_1.6.0         doParallel_1.0.11      robustbase_0.92-8     
 ##  [16] cluster_2.0.6          shinydashboard_0.6.1   shiny_1.0.5           
 ##  [19] rrcov_1.4-3            compiler_3.4.3         httr_1.3.1            
