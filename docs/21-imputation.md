@@ -226,7 +226,7 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ##  [7] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
 ##  [9] IRanges_2.12.0             S4Vectors_0.16.0          
 ## [11] ggplot2_2.2.1              Biobase_2.38.0            
-## [13] BiocGenerics_0.24.0        SC3_1.7.6                 
+## [13] BiocGenerics_0.24.0        SC3_1.7.7                 
 ## [15] scImpute_0.0.5             doParallel_1.0.11         
 ## [17] iterators_1.0.9            foreach_1.4.4             
 ## [19] penalized_0.9-50           survival_2.40-1           
