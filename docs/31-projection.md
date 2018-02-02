@@ -312,14 +312,14 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 
 ```
 ## <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-## <!-- Fri Feb  2 11:55:13 2018 -->
+## <!-- Fri Feb  2 17:30:32 2018 -->
 ## 
 ## 
 ## <!-- jsHeader -->
 ## <script type="text/javascript">
 ##  
 ## // jsData 
-## function gvisDataSankeyID7ae7f65eeef () {
+## function gvisDataSankeyID7ae1f7ae310 () {
 ## var data = new google.visualization.DataTable();
 ## var datajson =
 ## [
@@ -517,8 +517,8 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 ## }
 ##  
 ## // jsDrawChart
-## function drawChartSankeyID7ae7f65eeef() {
-## var data = gvisDataSankeyID7ae7f65eeef();
+## function drawChartSankeyID7ae1f7ae310() {
+## var data = gvisDataSankeyID7ae1f7ae310();
 ## var options = {};
 ## options["width"] = 400;
 ## options["height"] = 400;
@@ -538,7 +538,7 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 ## 
 ## 
 ##     var chart = new google.visualization.Sankey(
-##     document.getElementById('SankeyID7ae7f65eeef')
+##     document.getElementById('SankeyID7ae1f7ae310')
 ##     );
 ##     chart.draw(data,options);
 ##     
@@ -562,9 +562,9 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 ##   pkgs.push(chartid);
 ##   
 ## // Add the drawChart function to the global list of callbacks
-## callbacks.push(drawChartSankeyID7ae7f65eeef);
+## callbacks.push(drawChartSankeyID7ae1f7ae310);
 ## })();
-## function displayChartSankeyID7ae7f65eeef() {
+## function displayChartSankeyID7ae1f7ae310() {
 ##   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
 ##   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
 ##   window.clearTimeout(window.__gvisLoad);
@@ -588,11 +588,11 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 ## </script>
 ##  
 ## <!-- jsChart -->  
-## <script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae7f65eeef"></script>
+## <script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae1f7ae310"></script>
 ##  
 ## <!-- divChart -->
 ##   
-## <div id="SankeyID7ae7f65eeef" 
+## <div id="SankeyID7ae1f7ae310" 
 ##   style="width: 400; height: 400;">
 ## </div>
 ```
