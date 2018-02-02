@@ -310,292 +310,289 @@ We can also visualize these tables using a [Sankey diagram](https://developers.g
 plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,1], plot_height=400))
 ```
 
-```
-## <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-## <!-- Fri Feb  2 19:49:24 2018 -->
-## 
-## 
-## <!-- jsHeader -->
-## <script type="text/javascript">
-##  
-## // jsData 
-## function gvisDataSankeyID7ae797ebd56 () {
-## var data = new google.visualization.DataTable();
-## var datajson =
-## [
-##  [
-## "alpha ",
-## " alpha",
-## 763
-## ],
-## [
-## "beta ",
-## " beta",
-## 397
-## ],
-## [
-## "acinar ",
-## " acinar",
-## 211
-## ],
-## [
-## "ductal ",
-## " ductal",
-## 208
-## ],
-## [
-## "delta ",
-## " delta",
-## 173
-## ],
-## [
-## "gamma ",
-## " gamma",
-## 95
-## ],
-## [
-## "mesenchymal ",
-## " PSC",
-## 77
-## ],
-## [
-## "endothelial ",
-## " endothelial",
-## 15
-## ],
-## [
-## "epsilon ",
-## " epsilon",
-## 3
-## ],
-## [
-## "acinar ",
-## " unassigned",
-## 8
-## ],
-## [
-## "alpha ",
-## " ductal",
-## 2
-## ],
-## [
-## "alpha ",
-## " unassigned",
-## 26
-## ],
-## [
-## "alpha ",
-## " acinar",
-## 1
-## ],
-## [
-## "alpha ",
-## " co-expression",
-## 18
-## ],
-## [
-## "alpha ",
-## " gamma",
-## 2
-## ],
-## [
-## "beta ",
-## " unassigned",
-## 29
-## ],
-## [
-## "beta ",
-## " gamma",
-## 5
-## ],
-## [
-## "beta ",
-## " MHC class II",
-## 1
-## ],
-## [
-## "beta ",
-## " alpha",
-## 1
-## ],
-## [
-## "beta ",
-## " co-expression",
-## 7
-## ],
-## [
-## "beta ",
-## " acinar",
-## 2
-## ],
-## [
-## "beta ",
-## " PSC",
-## 2
-## ],
-## [
-## "beta ",
-## " ductal",
-## 2
-## ],
-## [
-## "beta ",
-## " delta",
-## 2
-## ],
-## [
-## "delta ",
-## " beta",
-## 2
-## ],
-## [
-## "delta ",
-## " unassigned",
-## 17
-## ],
-## [
-## "delta ",
-## " co-expression",
-## 1
-## ],
-## [
-## "ductal ",
-## " acinar",
-## 7
-## ],
-## [
-## "ductal ",
-## " PSC",
-## 3
-## ],
-## [
-## "ductal ",
-## " MHC class II",
-## 5
-## ],
-## [
-## "ductal ",
-## " unassigned",
-## 22
-## ],
-## [
-## "endothelial ",
-## " PSC",
-## 1
-## ],
-## [
-## "endothelial ",
-## " unassigned",
-## 5
-## ],
-## [
-## "gamma ",
-## " acinar",
-## 2
-## ],
-## [
-## "gamma ",
-## " unassigned",
-## 4
-## ],
-## [
-## "mesenchymal ",
-## " ductal",
-## 1
-## ],
-## [
-## "mesenchymal ",
-## " unassigned",
-## 2
-## ] 
-## ];
-## data.addColumn('string','From');
-## data.addColumn('string','To');
-## data.addColumn('number','# of cells');
-## data.addRows(datajson);
-## return(data);
-## }
-##  
-## // jsDrawChart
-## function drawChartSankeyID7ae797ebd56() {
-## var data = gvisDataSankeyID7ae797ebd56();
-## var options = {};
-## options["width"] = 400;
-## options["height"] = 400;
-## options["sankey"] = {
-##                 node:{
-##                     label:{
-##                         fontName:'Arial',
-##                         fontSize:11,color:
-##                         '#000000',
-##                         bold:true,
-##                         italic:false
-##                     },
-##                     colors:'#FFFFFF',
-##                     nodePadding:12
-##                 },iterations:0
-##             };
-## 
-## 
-##     var chart = new google.visualization.Sankey(
-##     document.getElementById('SankeyID7ae797ebd56')
-##     );
-##     chart.draw(data,options);
-##     
-## 
-## }
-##   
-##  
-## // jsDisplayChart
-## (function() {
-## var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-## var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-## var chartid = "sankey";
-##   
-## // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-## var i, newPackage = true;
-## for (i = 0; newPackage && i < pkgs.length; i++) {
-## if (pkgs[i] === chartid)
-## newPackage = false;
-## }
-## if (newPackage)
-##   pkgs.push(chartid);
-##   
-## // Add the drawChart function to the global list of callbacks
-## callbacks.push(drawChartSankeyID7ae797ebd56);
-## })();
-## function displayChartSankeyID7ae797ebd56() {
-##   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-##   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-##   window.clearTimeout(window.__gvisLoad);
-##   // The timeout is set to 100 because otherwise the container div we are
-##   // targeting might not be part of the document yet
-##   window.__gvisLoad = setTimeout(function() {
-##   var pkgCount = pkgs.length;
-##   google.load("visualization", "1", { packages:pkgs, callback: function() {
-##   if (pkgCount != pkgs.length) {
-##   // Race condition where another setTimeout call snuck in after us; if
-##   // that call added a package, we must not shift its callback
-##   return;
-## }
-## while (callbacks.length > 0)
-## callbacks.shift()();
-## } });
-## }, 100);
-## }
-##  
-## // jsFooter
-## </script>
-##  
-## <!-- jsChart -->  
-## <script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae797ebd56"></script>
-##  
-## <!-- divChart -->
-##   
-## <div id="SankeyID7ae797ebd56" 
-##   style="width: 400; height: 400;">
-## </div>
-```
+<!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
+<!-- Fri Feb  2 21:31:23 2018 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataSankeyID7ae65bb7b29 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"alpha ",
+" alpha",
+763
+],
+[
+"beta ",
+" beta",
+397
+],
+[
+"acinar ",
+" acinar",
+211
+],
+[
+"ductal ",
+" ductal",
+208
+],
+[
+"delta ",
+" delta",
+173
+],
+[
+"gamma ",
+" gamma",
+95
+],
+[
+"mesenchymal ",
+" PSC",
+77
+],
+[
+"endothelial ",
+" endothelial",
+15
+],
+[
+"epsilon ",
+" epsilon",
+3
+],
+[
+"acinar ",
+" unassigned",
+8
+],
+[
+"alpha ",
+" ductal",
+2
+],
+[
+"alpha ",
+" unassigned",
+26
+],
+[
+"alpha ",
+" acinar",
+1
+],
+[
+"alpha ",
+" co-expression",
+18
+],
+[
+"alpha ",
+" gamma",
+2
+],
+[
+"beta ",
+" unassigned",
+29
+],
+[
+"beta ",
+" gamma",
+5
+],
+[
+"beta ",
+" MHC class II",
+1
+],
+[
+"beta ",
+" alpha",
+1
+],
+[
+"beta ",
+" co-expression",
+7
+],
+[
+"beta ",
+" acinar",
+2
+],
+[
+"beta ",
+" PSC",
+2
+],
+[
+"beta ",
+" ductal",
+2
+],
+[
+"beta ",
+" delta",
+2
+],
+[
+"delta ",
+" beta",
+2
+],
+[
+"delta ",
+" unassigned",
+17
+],
+[
+"delta ",
+" co-expression",
+1
+],
+[
+"ductal ",
+" acinar",
+7
+],
+[
+"ductal ",
+" PSC",
+3
+],
+[
+"ductal ",
+" MHC class II",
+5
+],
+[
+"ductal ",
+" unassigned",
+22
+],
+[
+"endothelial ",
+" PSC",
+1
+],
+[
+"endothelial ",
+" unassigned",
+5
+],
+[
+"gamma ",
+" acinar",
+2
+],
+[
+"gamma ",
+" unassigned",
+4
+],
+[
+"mesenchymal ",
+" ductal",
+1
+],
+[
+"mesenchymal ",
+" unassigned",
+2
+] 
+];
+data.addColumn('string','From');
+data.addColumn('string','To');
+data.addColumn('number','# of cells');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartSankeyID7ae65bb7b29() {
+var data = gvisDataSankeyID7ae65bb7b29();
+var options = {};
+options["width"] = 400;
+options["height"] = 400;
+options["sankey"] = {
+                node:{
+                    label:{
+                        fontName:'Arial',
+                        fontSize:11,color:
+                        '#000000',
+                        bold:true,
+                        italic:false
+                    },
+                    colors:'#FFFFFF',
+                    nodePadding:12
+                },iterations:0
+            };
+
+    var chart = new google.visualization.Sankey(
+    document.getElementById('SankeyID7ae65bb7b29')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "sankey";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartSankeyID7ae65bb7b29);
+})();
+function displayChartSankeyID7ae65bb7b29() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae65bb7b29"></script>
+ 
+<!-- divChart -->
+  
+<div id="SankeyID7ae65bb7b29" 
+  style="width: 400; height: 400;">
+</div>
 
 __Exercise__
 How many of the previously unclassified cells would be be able to assign to cell-types using scmap?
