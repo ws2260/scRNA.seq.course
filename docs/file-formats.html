@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Analysis of single cell RNA-seq data</title>
+  <meta name="description" content="Analysis of single cell RNA-seq data">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Analysis of single cell RNA-seq data" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Analysis of single cell RNA-seq data" />
+  
+  
+  
+
+<meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
+
+
+<meta name="date" content="2018-02-02">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="solution.html">
+<link rel="next" href="demultiplexing.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<!-- for Facebook -->  
+<meta property="og:url" content="http://hemberg-lab.github.io/scRNA.seq.course/" />
+<meta property="og:description" content="In this course we will be surveying the existing problems as well as the available computational and statistical frameworks available for the analysis of scRNA-seq. The course is taught through the University of Cambridge Bioinformatics training unit, but the material found on these pages is meant to be used for anyone interested in learning about computational analysis of scRNA-seq data." />
+<meta property="og:image" content="http://hemberg-lab.github.io/scRNA.seq.course/figures/RNA-Seq_workflow-5.pdf.jpg" />
+
+<!-- for Twitter -->          
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Analysis of single-cell RNA-seq data" />
+<meta name="twitter:description" content="In this course we will be surveying the existing problems as well as the available computational and statistical frameworks available for the analysis of scRNA-seq. The course is taught through the University of Cambridge Bioinformatics training unit, but the material found on these pages is meant to be used for anyone interested in learning about computational analysis of scRNA-seq data." />
+<meta name="twitter:image" content="http://hemberg-lab.github.io/scRNA.seq.course/figures/RNA-Seq_workflow-5.pdf.jpg" />
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71525309-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html">Table of Contents</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About the course</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#video"><i class="fa fa-check"></i><b>1.1</b> Video</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#registration"><i class="fa fa-check"></i><b>1.2</b> Registration</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#github"><i class="fa fa-check"></i><b>1.3</b> GitHub</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#r-based"><i class="fa fa-check"></i><b>1.4</b> R-based</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#docker-image-rstudio"><i class="fa fa-check"></i><b>1.5</b> Docker image (RStudio)</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#manual-installation"><i class="fa fa-check"></i><b>1.6</b> Manual installation</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.7</b> License</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.8</b> Prerequisites</a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#contact"><i class="fa fa-check"></i><b>1.9</b> Contact</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html"><i class="fa fa-check"></i><b>2</b> Introduction to single-cell RNA-seq</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html#bulk-rna-seq"><i class="fa fa-check"></i><b>2.1</b> Bulk RNA-seq</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html#scrna-seq"><i class="fa fa-check"></i><b>2.2</b> scRNA-seq</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html#workflow"><i class="fa fa-check"></i><b>2.3</b> Workflow</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html#computational-analysis"><i class="fa fa-check"></i><b>2.4</b> Computational Analysis</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html#challenges"><i class="fa fa-check"></i><b>2.5</b> Challenges</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html#experimental-methods"><i class="fa fa-check"></i><b>2.6</b> Experimental methods</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-single-cell-rna-seq.html"><a href="introduction-to-single-cell-rna-seq.html#what-platform-to-use-for-my-experiment"><i class="fa fa-check"></i><b>2.7</b> What platform to use for my experiment?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="processing-raw-scrna-seq-data.html"><a href="processing-raw-scrna-seq-data.html"><i class="fa fa-check"></i><b>3</b> Processing Raw scRNA-seq Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="processing-raw-scrna-seq-data.html"><a href="processing-raw-scrna-seq-data.html#references"><i class="fa fa-check"></i><b>3.1</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="solution-and-downloading-the-report.html"><a href="solution-and-downloading-the-report.html"><i class="fa fa-check"></i><b>4</b> Solution and Downloading the Report</a></li>
+<li class="chapter" data-level="5" data-path="trimming-reads.html"><a href="trimming-reads.html"><i class="fa fa-check"></i><b>5</b> Trimming Reads</a></li>
+<li class="chapter" data-level="6" data-path="solution.html"><a href="solution.html"><i class="fa fa-check"></i><b>6</b> Solution</a></li>
+<li class="chapter" data-level="7" data-path="file-formats.html"><a href="file-formats.html"><i class="fa fa-check"></i><b>7</b> File formats</a><ul>
+<li class="chapter" data-level="7.1" data-path="file-formats.html"><a href="file-formats.html#fastq"><i class="fa fa-check"></i><b>7.1</b> FastQ</a></li>
+<li class="chapter" data-level="7.2" data-path="file-formats.html"><a href="file-formats.html#bam"><i class="fa fa-check"></i><b>7.2</b> BAM</a></li>
+<li class="chapter" data-level="7.3" data-path="file-formats.html"><a href="file-formats.html#cram"><i class="fa fa-check"></i><b>7.3</b> CRAM</a></li>
+<li class="chapter" data-level="7.4" data-path="file-formats.html"><a href="file-formats.html#mannually-inspecting-file"><i class="fa fa-check"></i><b>7.4</b> Mannually Inspecting file</a></li>
+<li class="chapter" data-level="7.5" data-path="file-formats.html"><a href="file-formats.html#genome-fasta-gtf"><i class="fa fa-check"></i><b>7.5</b> Genome (FASTA, GTF)</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="demultiplexing.html"><a href="demultiplexing.html"><i class="fa fa-check"></i><b>8</b> Demultiplexing</a><ul>
+<li class="chapter" data-level="8.1" data-path="demultiplexing.html"><a href="demultiplexing.html#identifying-cell-containing-dropletsmicrowells"><i class="fa fa-check"></i><b>8.1</b> Identifying cell-containing droplets/microwells</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="using-star-to-align-reads.html"><a href="using-star-to-align-reads.html"><i class="fa fa-check"></i><b>9</b> Using STAR to Align Reads</a><ul>
+<li class="chapter" data-level="9.1" data-path="using-star-to-align-reads.html"><a href="using-star-to-align-reads.html#references-1"><i class="fa fa-check"></i><b>9.1</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="solution-for-star-alignment.html"><a href="solution-for-star-alignment.html"><i class="fa fa-check"></i><b>10</b> Solution for STAR Alignment</a></li>
+<li class="chapter" data-level="11" data-path="kallisto-and-pseudo-alignment.html"><a href="kallisto-and-pseudo-alignment.html"><i class="fa fa-check"></i><b>11</b> Kallisto and Pseudo-Alignment</a><ul>
+<li class="chapter" data-level="11.1" data-path="kallisto-and-pseudo-alignment.html"><a href="kallisto-and-pseudo-alignment.html#what-is-a-k-mer"><i class="fa fa-check"></i><b>11.1</b> What is a k-mer?</a></li>
+<li class="chapter" data-level="11.2" data-path="kallisto-and-pseudo-alignment.html"><a href="kallisto-and-pseudo-alignment.html#why-map-k-mers-rather-than-reads"><i class="fa fa-check"></i><b>11.2</b> Why map k-mers rather than reads?</a></li>
+<li class="chapter" data-level="11.3" data-path="kallisto-and-pseudo-alignment.html"><a href="kallisto-and-pseudo-alignment.html#kallistos-pseudo-mode"><i class="fa fa-check"></i><b>11.3</b> Kallisto’s pseudo mode</a></li>
+<li class="chapter" data-level="11.4" data-path="kallisto-and-pseudo-alignment.html"><a href="kallisto-and-pseudo-alignment.html#references-2"><i class="fa fa-check"></i><b>11.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="solution-to-kallisto-pseudo-alignment.html"><a href="solution-to-kallisto-pseudo-alignment.html"><i class="fa fa-check"></i><b>12</b> Solution to Kallisto Pseudo-Alignment</a><ul>
+<li class="chapter" data-level="12.1" data-path="solution-to-kallisto-pseudo-alignment.html"><a href="solution-to-kallisto-pseudo-alignment.html#understanding-the-output-of-kallisto-pseudo-alignment"><i class="fa fa-check"></i><b>12.1</b> Understanding the Output of Kallisto Pseudo-Alignment</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html"><i class="fa fa-check"></i><b>13</b> Construction of expression matrix</a><ul>
+<li class="chapter" data-level="13.1" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#reads-qc"><i class="fa fa-check"></i><b>13.1</b> Reads QC</a></li>
+<li class="chapter" data-level="13.2" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#reads-alignment"><i class="fa fa-check"></i><b>13.2</b> Reads alignment</a></li>
+<li class="chapter" data-level="13.3" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#alignment-example"><i class="fa fa-check"></i><b>13.3</b> Alignment example</a></li>
+<li class="chapter" data-level="13.4" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#mapping-qc"><i class="fa fa-check"></i><b>13.4</b> Mapping QC</a></li>
+<li class="chapter" data-level="13.5" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#reads-quantification"><i class="fa fa-check"></i><b>13.5</b> Reads quantification</a></li>
+<li class="chapter" data-level="13.6" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#umichapter"><i class="fa fa-check"></i><b>13.6</b> Unique Molecular Identifiers (UMIs)</a><ul>
+<li class="chapter" data-level="13.6.1" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#introduction"><i class="fa fa-check"></i><b>13.6.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.6.2" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#mapping-barcodes"><i class="fa fa-check"></i><b>13.6.2</b> Mapping Barcodes</a></li>
+<li class="chapter" data-level="13.6.3" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#counting-barcodes"><i class="fa fa-check"></i><b>13.6.3</b> Counting Barcodes</a></li>
+<li class="chapter" data-level="13.6.4" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#correcting-for-errors"><i class="fa fa-check"></i><b>13.6.4</b> Correcting for Errors</a></li>
+<li class="chapter" data-level="13.6.5" data-path="construction-of-expression-matrix.html"><a href="construction-of-expression-matrix.html#downstream-analysis"><i class="fa fa-check"></i><b>13.6.5</b> Downstream Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html"><i class="fa fa-check"></i><b>14</b> Introduction to R/Bioconductor</a><ul>
+<li class="chapter" data-level="14.1" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#installing-packages"><i class="fa fa-check"></i><b>14.1</b> Installing packages</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#cran"><i class="fa fa-check"></i><b>14.1.1</b> CRAN</a></li>
+<li class="chapter" data-level="14.1.2" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#github-1"><i class="fa fa-check"></i><b>14.1.2</b> Github</a></li>
+<li class="chapter" data-level="14.1.3" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#bioconductor"><i class="fa fa-check"></i><b>14.1.3</b> Bioconductor</a></li>
+<li class="chapter" data-level="14.1.4" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#source"><i class="fa fa-check"></i><b>14.1.4</b> Source</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#installation-instructions"><i class="fa fa-check"></i><b>14.2</b> Installation instructions:</a></li>
+<li class="chapter" data-level="14.3" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#data-typesclasses"><i class="fa fa-check"></i><b>14.3</b> Data-types/classes</a><ul>
+<li class="chapter" data-level="14.3.1" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#numeric"><i class="fa fa-check"></i><b>14.3.1</b> Numeric</a></li>
+<li class="chapter" data-level="14.3.2" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#characterstring"><i class="fa fa-check"></i><b>14.3.2</b> Character/String</a></li>
+<li class="chapter" data-level="14.3.3" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#logical"><i class="fa fa-check"></i><b>14.3.3</b> Logical</a></li>
+<li class="chapter" data-level="14.3.4" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#factors"><i class="fa fa-check"></i><b>14.3.4</b> Factors</a></li>
+<li class="chapter" data-level="14.3.5" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#checking-classtype"><i class="fa fa-check"></i><b>14.3.5</b> Checking class/type</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#basic-data-structures"><i class="fa fa-check"></i><b>14.4</b> Basic data structures</a></li>
+<li class="chapter" data-level="14.5" data-path="introduction-to-rbioconductor.html"><a href="introduction-to-rbioconductor.html#more-information"><i class="fa fa-check"></i><b>14.5</b> More information</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>15</b> Data Types</a><ul>
+<li class="chapter" data-level="15.1" data-path="data-types.html"><a href="data-types.html#what-is-tidy-data"><i class="fa fa-check"></i><b>15.1</b> What is Tidy Data?</a></li>
+<li class="chapter" data-level="15.2" data-path="data-types.html"><a href="data-types.html#what-is-rich-data"><i class="fa fa-check"></i><b>15.2</b> What is Rich Data?</a></li>
+<li class="chapter" data-level="15.3" data-path="data-types.html"><a href="data-types.html#what-is-bioconductor"><i class="fa fa-check"></i><b>15.3</b> What is Bioconductor?</a></li>
+<li class="chapter" data-level="15.4" data-path="data-types.html"><a href="data-types.html#singlecellexperiment-class"><i class="fa fa-check"></i><b>15.4</b> <code>SingleCellExperiment</code> class</a></li>
+<li class="chapter" data-level="15.5" data-path="data-types.html"><a href="data-types.html#scater-package"><i class="fa fa-check"></i><b>15.5</b> <code>scater</code> package</a></li>
+<li class="chapter" data-level="15.6" data-path="data-types.html"><a href="data-types.html#references-3"><i class="fa fa-check"></i><b>15.6</b> References</a></li>
+<li class="chapter" data-level="15.7" data-path="data-types.html"><a href="data-types.html#bioconductor-singlecellexperiment-and-scater"><i class="fa fa-check"></i><b>15.7</b> Bioconductor, <code>SingleCellExperiment</code> and <code>scater</code></a><ul>
+<li class="chapter" data-level="15.7.1" data-path="data-types.html"><a href="data-types.html#bioconductor-1"><i class="fa fa-check"></i><b>15.7.1</b> Bioconductor</a></li>
+<li class="chapter" data-level="15.7.2" data-path="data-types.html"><a href="data-types.html#singlecellexperiment-class-1"><i class="fa fa-check"></i><b>15.7.2</b> <code>SingleCellExperiment</code> class</a></li>
+<li class="chapter" data-level="15.7.3" data-path="data-types.html"><a href="data-types.html#scater-package-1"><i class="fa fa-check"></i><b>15.7.3</b> <code>scater</code> package</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html"><i class="fa fa-check"></i><b>16</b> An Introduction to ggplot2</a><ul>
+<li class="chapter" data-level="16.1" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html#what-is-ggplot2"><i class="fa fa-check"></i><b>16.1</b> What is ggplot2?</a></li>
+<li class="chapter" data-level="16.2" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html#principles-of-ggplot2"><i class="fa fa-check"></i><b>16.2</b> Principles of ggplot2</a></li>
+<li class="chapter" data-level="16.3" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html#using-the-aes-mapping-function"><i class="fa fa-check"></i><b>16.3</b> Using the <code>aes</code> mapping function</a></li>
+<li class="chapter" data-level="16.4" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html#geoms"><i class="fa fa-check"></i><b>16.4</b> Geoms</a></li>
+<li class="chapter" data-level="16.5" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html#plotting-data-from-more-than-2-cells"><i class="fa fa-check"></i><b>16.5</b> Plotting data from more than 2 cells</a></li>
+<li class="chapter" data-level="16.6" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html#plotting-heatmaps"><i class="fa fa-check"></i><b>16.6</b> Plotting heatmaps</a></li>
+<li class="chapter" data-level="16.7" data-path="an-introduction-to-ggplot2.html"><a href="an-introduction-to-ggplot2.html#principle-component-analysis"><i class="fa fa-check"></i><b>16.7</b> Principle Component Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="tabula-muris.html"><a href="tabula-muris.html"><i class="fa fa-check"></i><b>17</b> Tabula Muris</a><ul>
+<li class="chapter" data-level="17.1" data-path="tabula-muris.html"><a href="tabula-muris.html#introduction-1"><i class="fa fa-check"></i><b>17.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.2" data-path="tabula-muris.html"><a href="tabula-muris.html#downloading-the-data"><i class="fa fa-check"></i><b>17.2</b> Downloading the data</a></li>
+<li class="chapter" data-level="17.3" data-path="tabula-muris.html"><a href="tabula-muris.html#reading-the-data-smartseq2"><i class="fa fa-check"></i><b>17.3</b> Reading the data (Smartseq2)</a></li>
+<li class="chapter" data-level="17.4" data-path="tabula-muris.html"><a href="tabula-muris.html#building-a-scater-object"><i class="fa fa-check"></i><b>17.4</b> Building a scater object</a></li>
+<li class="chapter" data-level="17.5" data-path="tabula-muris.html"><a href="tabula-muris.html#reading-the-data-10x"><i class="fa fa-check"></i><b>17.5</b> Reading the data (10X)</a></li>
+<li class="chapter" data-level="17.6" data-path="tabula-muris.html"><a href="tabula-muris.html#building-a-scater-object-1"><i class="fa fa-check"></i><b>17.6</b> Building a scater object</a></li>
+<li class="chapter" data-level="17.7" data-path="tabula-muris.html"><a href="tabula-muris.html#advanced-exercise"><i class="fa fa-check"></i><b>17.7</b> Advanced Exercise</a></li>
+<li class="chapter" data-level="17.8" data-path="tabula-muris.html"><a href="tabula-muris.html#exprs-qc"><i class="fa fa-check"></i><b>17.8</b> Expression QC (UMI)</a><ul>
+<li class="chapter" data-level="17.8.1" data-path="tabula-muris.html"><a href="tabula-muris.html#introduction-2"><i class="fa fa-check"></i><b>17.8.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.8.2" data-path="tabula-muris.html"><a href="tabula-muris.html#tung-dataset"><i class="fa fa-check"></i><b>17.8.2</b> Tung dataset</a></li>
+<li class="chapter" data-level="17.8.3" data-path="tabula-muris.html"><a href="tabula-muris.html#cell-qc"><i class="fa fa-check"></i><b>17.8.3</b> Cell QC</a></li>
+<li class="chapter" data-level="17.8.4" data-path="tabula-muris.html"><a href="tabula-muris.html#cell-filtering"><i class="fa fa-check"></i><b>17.8.4</b> Cell filtering</a></li>
+<li class="chapter" data-level="17.8.5" data-path="tabula-muris.html"><a href="tabula-muris.html#compare-filterings"><i class="fa fa-check"></i><b>17.8.5</b> Compare filterings</a></li>
+<li class="chapter" data-level="17.8.6" data-path="tabula-muris.html"><a href="tabula-muris.html#gene-analysis"><i class="fa fa-check"></i><b>17.8.6</b> Gene analysis</a></li>
+<li class="chapter" data-level="17.8.7" data-path="tabula-muris.html"><a href="tabula-muris.html#save-the-data"><i class="fa fa-check"></i><b>17.8.7</b> Save the data</a></li>
+<li class="chapter" data-level="17.8.8" data-path="tabula-muris.html"><a href="tabula-muris.html#big-exercise"><i class="fa fa-check"></i><b>17.8.8</b> Big Exercise</a></li>
+<li class="chapter" data-level="17.8.9" data-path="tabula-muris.html"><a href="tabula-muris.html#sessioninfo"><i class="fa fa-check"></i><b>17.8.9</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="17.9" data-path="tabula-muris.html"><a href="tabula-muris.html#expression-qc-reads"><i class="fa fa-check"></i><b>17.9</b> Expression QC (Reads)</a></li>
+<li class="chapter" data-level="17.10" data-path="tabula-muris.html"><a href="tabula-muris.html#data-visualization"><i class="fa fa-check"></i><b>17.10</b> Data visualization</a><ul>
+<li class="chapter" data-level="17.10.1" data-path="tabula-muris.html"><a href="tabula-muris.html#introduction-3"><i class="fa fa-check"></i><b>17.10.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.10.2" data-path="tabula-muris.html"><a href="tabula-muris.html#visual-pca"><i class="fa fa-check"></i><b>17.10.2</b> PCA plot</a></li>
+<li class="chapter" data-level="17.10.3" data-path="tabula-muris.html"><a href="tabula-muris.html#visual-tsne"><i class="fa fa-check"></i><b>17.10.3</b> tSNE map</a></li>
+<li class="chapter" data-level="17.10.4" data-path="tabula-muris.html"><a href="tabula-muris.html#big-exercise-1"><i class="fa fa-check"></i><b>17.10.4</b> Big Exercise</a></li>
+<li class="chapter" data-level="17.10.5" data-path="tabula-muris.html"><a href="tabula-muris.html#sessioninfo-1"><i class="fa fa-check"></i><b>17.10.5</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="17.11" data-path="tabula-muris.html"><a href="tabula-muris.html#data-visualization-reads"><i class="fa fa-check"></i><b>17.11</b> Data visualization (Reads)</a></li>
+<li class="chapter" data-level="17.12" data-path="tabula-muris.html"><a href="tabula-muris.html#identifying-confounding-factors"><i class="fa fa-check"></i><b>17.12</b> Identifying confounding factors</a><ul>
+<li class="chapter" data-level="17.12.1" data-path="tabula-muris.html"><a href="tabula-muris.html#introduction-4"><i class="fa fa-check"></i><b>17.12.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.12.2" data-path="tabula-muris.html"><a href="tabula-muris.html#correlations-with-pcs"><i class="fa fa-check"></i><b>17.12.2</b> Correlations with PCs</a></li>
+<li class="chapter" data-level="17.12.3" data-path="tabula-muris.html"><a href="tabula-muris.html#explanatory-variables"><i class="fa fa-check"></i><b>17.12.3</b> Explanatory variables</a></li>
+<li class="chapter" data-level="17.12.4" data-path="tabula-muris.html"><a href="tabula-muris.html#other-confounders"><i class="fa fa-check"></i><b>17.12.4</b> Other confounders</a></li>
+<li class="chapter" data-level="17.12.5" data-path="tabula-muris.html"><a href="tabula-muris.html#exercise"><i class="fa fa-check"></i><b>17.12.5</b> Exercise</a></li>
+<li class="chapter" data-level="17.12.6" data-path="tabula-muris.html"><a href="tabula-muris.html#sessioninfo-2"><i class="fa fa-check"></i><b>17.12.6</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="17.13" data-path="tabula-muris.html"><a href="tabula-muris.html#identifying-confounding-factors-reads"><i class="fa fa-check"></i><b>17.13</b> Identifying confounding factors (Reads)</a></li>
+<li class="chapter" data-level="17.14" data-path="tabula-muris.html"><a href="tabula-muris.html#normalization-theory"><i class="fa fa-check"></i><b>17.14</b> Normalization theory</a><ul>
+<li class="chapter" data-level="17.14.1" data-path="tabula-muris.html"><a href="tabula-muris.html#introduction-5"><i class="fa fa-check"></i><b>17.14.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.14.2" data-path="tabula-muris.html"><a href="tabula-muris.html#library-size-1"><i class="fa fa-check"></i><b>17.14.2</b> Library size</a></li>
+<li class="chapter" data-level="17.14.3" data-path="tabula-muris.html"><a href="tabula-muris.html#normalisations"><i class="fa fa-check"></i><b>17.14.3</b> Normalisations</a></li>
+<li class="chapter" data-level="17.14.4" data-path="tabula-muris.html"><a href="tabula-muris.html#effectiveness"><i class="fa fa-check"></i><b>17.14.4</b> Effectiveness</a></li>
+</ul></li>
+<li class="chapter" data-level="17.15" data-path="tabula-muris.html"><a href="tabula-muris.html#normalization-practice-umi"><i class="fa fa-check"></i><b>17.15</b> Normalization practice (UMI)</a><ul>
+<li class="chapter" data-level="17.15.1" data-path="tabula-muris.html"><a href="tabula-muris.html#raw"><i class="fa fa-check"></i><b>17.15.1</b> Raw</a></li>
+<li class="chapter" data-level="17.15.2" data-path="tabula-muris.html"><a href="tabula-muris.html#cpm-1"><i class="fa fa-check"></i><b>17.15.2</b> CPM</a></li>
+<li class="chapter" data-level="17.15.3" data-path="tabula-muris.html"><a href="tabula-muris.html#size-factor-rle"><i class="fa fa-check"></i><b>17.15.3</b> Size-factor (RLE)</a></li>
+<li class="chapter" data-level="17.15.4" data-path="tabula-muris.html"><a href="tabula-muris.html#upperquantile"><i class="fa fa-check"></i><b>17.15.4</b> Upperquantile</a></li>
+<li class="chapter" data-level="17.15.5" data-path="tabula-muris.html"><a href="tabula-muris.html#tmm-1"><i class="fa fa-check"></i><b>17.15.5</b> TMM</a></li>
+<li class="chapter" data-level="17.15.6" data-path="tabula-muris.html"><a href="tabula-muris.html#scran-1"><i class="fa fa-check"></i><b>17.15.6</b> scran</a></li>
+<li class="chapter" data-level="17.15.7" data-path="tabula-muris.html"><a href="tabula-muris.html#downsampling-1"><i class="fa fa-check"></i><b>17.15.7</b> Downsampling</a></li>
+<li class="chapter" data-level="17.15.8" data-path="tabula-muris.html"><a href="tabula-muris.html#normalisation-for-genetranscript-length"><i class="fa fa-check"></i><b>17.15.8</b> Normalisation for gene/transcript length</a></li>
+<li class="chapter" data-level="17.15.9" data-path="tabula-muris.html"><a href="tabula-muris.html#exercise-1"><i class="fa fa-check"></i><b>17.15.9</b> Exercise</a></li>
+<li class="chapter" data-level="17.15.10" data-path="tabula-muris.html"><a href="tabula-muris.html#sessioninfo-3"><i class="fa fa-check"></i><b>17.15.10</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="17.16" data-path="tabula-muris.html"><a href="tabula-muris.html#normalization-practice-reads"><i class="fa fa-check"></i><b>17.16</b> Normalization practice (Reads)</a></li>
+<li class="chapter" data-level="17.17" data-path="tabula-muris.html"><a href="tabula-muris.html#dealing-with-confounders"><i class="fa fa-check"></i><b>17.17</b> Dealing with confounders</a><ul>
+<li class="chapter" data-level="17.17.1" data-path="tabula-muris.html"><a href="tabula-muris.html#introduction-6"><i class="fa fa-check"></i><b>17.17.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.17.2" data-path="tabula-muris.html"><a href="tabula-muris.html#remove-unwanted-variation"><i class="fa fa-check"></i><b>17.17.2</b> Remove Unwanted Variation</a></li>
+<li class="chapter" data-level="17.17.3" data-path="tabula-muris.html"><a href="tabula-muris.html#combat"><i class="fa fa-check"></i><b>17.17.3</b> Combat</a></li>
+<li class="chapter" data-level="17.17.4" data-path="tabula-muris.html"><a href="tabula-muris.html#mnncorrect"><i class="fa fa-check"></i><b>17.17.4</b> mnnCorrect</a></li>
+<li class="chapter" data-level="17.17.5" data-path="tabula-muris.html"><a href="tabula-muris.html#glm"><i class="fa fa-check"></i><b>17.17.5</b> GLM</a></li>
+<li class="chapter" data-level="17.17.6" data-path="tabula-muris.html"><a href="tabula-muris.html#how-to-evaluate-and-compare-confounder-removal-strategies"><i class="fa fa-check"></i><b>17.17.6</b> How to evaluate and compare confounder removal strategies</a></li>
+<li class="chapter" data-level="17.17.7" data-path="tabula-muris.html"><a href="tabula-muris.html#big-exercise-2"><i class="fa fa-check"></i><b>17.17.7</b> Big Exercise</a></li>
+<li class="chapter" data-level="17.17.8" data-path="tabula-muris.html"><a href="tabula-muris.html#sessioninfo-4"><i class="fa fa-check"></i><b>17.17.8</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="17.18" data-path="tabula-muris.html"><a href="tabula-muris.html#dealing-with-confounders-reads"><i class="fa fa-check"></i><b>17.18</b> Dealing with confounders (Reads)</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="biological-analysis.html"><a href="biological-analysis.html"><i class="fa fa-check"></i><b>18</b> Biological Analysis</a><ul>
+<li class="chapter" data-level="18.1" data-path="biological-analysis.html"><a href="biological-analysis.html#clustering-introduction"><i class="fa fa-check"></i><b>18.1</b> Clustering Introduction</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="biological-analysis.html"><a href="biological-analysis.html#introduction-7"><i class="fa fa-check"></i><b>18.1.1</b> Introduction</a></li>
+<li class="chapter" data-level="18.1.2" data-path="biological-analysis.html"><a href="biological-analysis.html#dimensionality-reductions"><i class="fa fa-check"></i><b>18.1.2</b> Dimensionality reductions</a></li>
+<li class="chapter" data-level="18.1.3" data-path="biological-analysis.html"><a href="biological-analysis.html#clustering-methods"><i class="fa fa-check"></i><b>18.1.3</b> Clustering methods</a></li>
+<li class="chapter" data-level="18.1.4" data-path="biological-analysis.html"><a href="biological-analysis.html#challenges-in-clustering"><i class="fa fa-check"></i><b>18.1.4</b> Challenges in clustering</a></li>
+<li class="chapter" data-level="18.1.5" data-path="biological-analysis.html"><a href="biological-analysis.html#tools-for-scrna-seq-data"><i class="fa fa-check"></i><b>18.1.5</b> Tools for scRNA-seq data</a></li>
+<li class="chapter" data-level="18.1.6" data-path="biological-analysis.html"><a href="biological-analysis.html#comparing-clustering"><i class="fa fa-check"></i><b>18.1.6</b> Comparing clustering</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="biological-analysis.html"><a href="biological-analysis.html#clust-methods"><i class="fa fa-check"></i><b>18.2</b> Clustering example</a><ul>
+<li class="chapter" data-level="18.2.1" data-path="biological-analysis.html"><a href="biological-analysis.html#deng-dataset"><i class="fa fa-check"></i><b>18.2.1</b> Deng dataset</a></li>
+<li class="chapter" data-level="18.2.2" data-path="biological-analysis.html"><a href="biological-analysis.html#sc3-1"><i class="fa fa-check"></i><b>18.2.2</b> SC3</a></li>
+<li class="chapter" data-level="18.2.3" data-path="biological-analysis.html"><a href="biological-analysis.html#pcareduce-1"><i class="fa fa-check"></i><b>18.2.3</b> pcaReduce</a></li>
+<li class="chapter" data-level="18.2.4" data-path="biological-analysis.html"><a href="biological-analysis.html#tsne-kmeans"><i class="fa fa-check"></i><b>18.2.4</b> tSNE + kmeans</a></li>
+<li class="chapter" data-level="18.2.5" data-path="biological-analysis.html"><a href="biological-analysis.html#snn-cliq-1"><i class="fa fa-check"></i><b>18.2.5</b> SNN-Cliq</a></li>
+<li class="chapter" data-level="18.2.6" data-path="biological-analysis.html"><a href="biological-analysis.html#sincera-1"><i class="fa fa-check"></i><b>18.2.6</b> SINCERA</a></li>
+<li class="chapter" data-level="18.2.7" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-5"><i class="fa fa-check"></i><b>18.2.7</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="biological-analysis.html"><a href="biological-analysis.html#feature-selection"><i class="fa fa-check"></i><b>18.3</b> Feature Selection</a><ul>
+<li class="chapter" data-level="18.3.1" data-path="biological-analysis.html"><a href="biological-analysis.html#identifying-genes-vs-a-null-model"><i class="fa fa-check"></i><b>18.3.1</b> Identifying Genes vs a Null Model</a></li>
+<li class="chapter" data-level="18.3.2" data-path="biological-analysis.html"><a href="biological-analysis.html#correlated-expression"><i class="fa fa-check"></i><b>18.3.2</b> Correlated Expression</a></li>
+<li class="chapter" data-level="18.3.3" data-path="biological-analysis.html"><a href="biological-analysis.html#comparing-methods"><i class="fa fa-check"></i><b>18.3.3</b> Comparing Methods</a></li>
+<li class="chapter" data-level="18.3.4" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-6"><i class="fa fa-check"></i><b>18.3.4</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="biological-analysis.html"><a href="biological-analysis.html#pseudotime-analysis"><i class="fa fa-check"></i><b>18.4</b> Pseudotime analysis</a><ul>
+<li class="chapter" data-level="18.4.1" data-path="biological-analysis.html"><a href="biological-analysis.html#tscan"><i class="fa fa-check"></i><b>18.4.1</b> TSCAN</a></li>
+<li class="chapter" data-level="18.4.2" data-path="biological-analysis.html"><a href="biological-analysis.html#monocle"><i class="fa fa-check"></i><b>18.4.2</b> monocle</a></li>
+<li class="chapter" data-level="18.4.3" data-path="biological-analysis.html"><a href="biological-analysis.html#diffusion-maps"><i class="fa fa-check"></i><b>18.4.3</b> Diffusion maps</a></li>
+<li class="chapter" data-level="18.4.4" data-path="biological-analysis.html"><a href="biological-analysis.html#slicer"><i class="fa fa-check"></i><b>18.4.4</b> SLICER</a></li>
+<li class="chapter" data-level="18.4.5" data-path="biological-analysis.html"><a href="biological-analysis.html#comparison-of-the-methods"><i class="fa fa-check"></i><b>18.4.5</b> Comparison of the methods</a></li>
+<li class="chapter" data-level="18.4.6" data-path="biological-analysis.html"><a href="biological-analysis.html#expression-of-genes-through-time"><i class="fa fa-check"></i><b>18.4.6</b> Expression of genes through time</a></li>
+<li class="chapter" data-level="18.4.7" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-7"><i class="fa fa-check"></i><b>18.4.7</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="18.5" data-path="biological-analysis.html"><a href="biological-analysis.html#imputation"><i class="fa fa-check"></i><b>18.5</b> Imputation</a><ul>
+<li class="chapter" data-level="18.5.1" data-path="biological-analysis.html"><a href="biological-analysis.html#scimpute"><i class="fa fa-check"></i><b>18.5.1</b> scImpute</a></li>
+<li class="chapter" data-level="18.5.2" data-path="biological-analysis.html"><a href="biological-analysis.html#magic"><i class="fa fa-check"></i><b>18.5.2</b> MAGIC</a></li>
+<li class="chapter" data-level="18.5.3" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-8"><i class="fa fa-check"></i><b>18.5.3</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="18.6" data-path="biological-analysis.html"><a href="biological-analysis.html#dechapter"><i class="fa fa-check"></i><b>18.6</b> Differential Expression (DE) analysis</a><ul>
+<li class="chapter" data-level="18.6.1" data-path="biological-analysis.html"><a href="biological-analysis.html#bulk-rna-seq-1"><i class="fa fa-check"></i><b>18.6.1</b> Bulk RNA-seq</a></li>
+<li class="chapter" data-level="18.6.2" data-path="biological-analysis.html"><a href="biological-analysis.html#single-cell-rna-seq"><i class="fa fa-check"></i><b>18.6.2</b> Single cell RNA-seq</a></li>
+<li class="chapter" data-level="18.6.3" data-path="biological-analysis.html"><a href="biological-analysis.html#differences-in-distribution"><i class="fa fa-check"></i><b>18.6.3</b> Differences in Distribution</a></li>
+<li class="chapter" data-level="18.6.4" data-path="biological-analysis.html"><a href="biological-analysis.html#models-of-single-cell-rnaseq-data"><i class="fa fa-check"></i><b>18.6.4</b> Models of single-cell RNASeq data</a></li>
+</ul></li>
+<li class="chapter" data-level="18.7" data-path="biological-analysis.html"><a href="biological-analysis.html#de-in-a-real-dataset"><i class="fa fa-check"></i><b>18.7</b> DE in a real dataset</a><ul>
+<li class="chapter" data-level="18.7.1" data-path="biological-analysis.html"><a href="biological-analysis.html#introduction-8"><i class="fa fa-check"></i><b>18.7.1</b> Introduction</a></li>
+<li class="chapter" data-level="18.7.2" data-path="biological-analysis.html"><a href="biological-analysis.html#kolmogorov-smirnov-test"><i class="fa fa-check"></i><b>18.7.2</b> Kolmogorov-Smirnov test</a></li>
+<li class="chapter" data-level="18.7.3" data-path="biological-analysis.html"><a href="biological-analysis.html#wilcoxmann-whitney-u-test"><i class="fa fa-check"></i><b>18.7.3</b> Wilcox/Mann-Whitney-U Test</a></li>
+<li class="chapter" data-level="18.7.4" data-path="biological-analysis.html"><a href="biological-analysis.html#edger"><i class="fa fa-check"></i><b>18.7.4</b> edgeR</a></li>
+<li class="chapter" data-level="18.7.5" data-path="biological-analysis.html"><a href="biological-analysis.html#monocle-1"><i class="fa fa-check"></i><b>18.7.5</b> Monocle</a></li>
+<li class="chapter" data-level="18.7.6" data-path="biological-analysis.html"><a href="biological-analysis.html#mast"><i class="fa fa-check"></i><b>18.7.6</b> MAST</a></li>
+<li class="chapter" data-level="18.7.7" data-path="biological-analysis.html"><a href="biological-analysis.html#slow-methods-1h-to-run"><i class="fa fa-check"></i><b>18.7.7</b> Slow Methods (&gt;1h to run)</a></li>
+<li class="chapter" data-level="18.7.8" data-path="biological-analysis.html"><a href="biological-analysis.html#bpsc"><i class="fa fa-check"></i><b>18.7.8</b> BPSC</a></li>
+<li class="chapter" data-level="18.7.9" data-path="biological-analysis.html"><a href="biological-analysis.html#scde"><i class="fa fa-check"></i><b>18.7.9</b> SCDE</a></li>
+<li class="chapter" data-level="18.7.10" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-9"><i class="fa fa-check"></i><b>18.7.10</b> sessionInfo()</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html"><i class="fa fa-check"></i><b>19</b> Comparing/Combining scRNASeq datasets</a><ul>
+<li class="chapter" data-level="19.1" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#introduction-9"><i class="fa fa-check"></i><b>19.1</b> Introduction</a></li>
+<li class="chapter" data-level="19.2" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#datasets"><i class="fa fa-check"></i><b>19.2</b> Datasets</a></li>
+<li class="chapter" data-level="19.3" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#projecting-cells-onto-annotated-cell-types-scmap"><i class="fa fa-check"></i><b>19.3</b> Projecting cells onto annotated cell-types (scmap)</a><ul>
+<li class="chapter" data-level="19.3.1" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#cell-to-cell-mapping"><i class="fa fa-check"></i><b>19.3.1</b> Cell-to-Cell mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="19.4" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#metaneighbour"><i class="fa fa-check"></i><b>19.4</b> Metaneighbour</a><ul>
+<li class="chapter" data-level="19.4.1" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#prepare-data"><i class="fa fa-check"></i><b>19.4.1</b> Prepare Data</a></li>
+</ul></li>
+<li class="chapter" data-level="19.5" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#mnncorrect-1"><i class="fa fa-check"></i><b>19.5</b> mnnCorrect</a></li>
+<li class="chapter" data-level="19.6" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#cannonical-correlation-analysis-seurat"><i class="fa fa-check"></i><b>19.6</b> Cannonical Correlation Analysis (Seurat)</a><ul>
+<li class="chapter" data-level="19.6.1" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#sessioninfo-10"><i class="fa fa-check"></i><b>19.6.1</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="19.7" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#search-scrna-seq-data"><i class="fa fa-check"></i><b>19.7</b> Search scRNA-Seq data</a><ul>
+<li class="chapter" data-level="19.7.1" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#about"><i class="fa fa-check"></i><b>19.7.1</b> About</a></li>
+<li class="chapter" data-level="19.7.2" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#dataset"><i class="fa fa-check"></i><b>19.7.2</b> Dataset</a></li>
+<li class="chapter" data-level="19.7.3" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#gene-index"><i class="fa fa-check"></i><b>19.7.3</b> Gene Index</a></li>
+<li class="chapter" data-level="19.7.4" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#marker-genes"><i class="fa fa-check"></i><b>19.7.4</b> Marker genes</a></li>
+<li class="chapter" data-level="19.7.5" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#search-cells-by-a-gene-list"><i class="fa fa-check"></i><b>19.7.5</b> Search cells by a gene list</a></li>
+<li class="chapter" data-level="19.7.6" data-path="comparingcombining-scrnaseq-datasets.html"><a href="comparingcombining-scrnaseq-datasets.html#sessioninfo-11"><i class="fa fa-check"></i><b>19.7.6</b> sessionInfo()</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="seurat-chapter.html"><a href="seurat-chapter.html"><i class="fa fa-check"></i><b>20</b> Seurat</a><ul>
+<li class="chapter" data-level="20.1" data-path="seurat-chapter.html"><a href="seurat-chapter.html#seurat-object-class"><i class="fa fa-check"></i><b>20.1</b> <code>Seurat</code> object class</a></li>
+<li class="chapter" data-level="20.2" data-path="seurat-chapter.html"><a href="seurat-chapter.html#expression-qc"><i class="fa fa-check"></i><b>20.2</b> Expression QC</a></li>
+<li class="chapter" data-level="20.3" data-path="seurat-chapter.html"><a href="seurat-chapter.html#normalization"><i class="fa fa-check"></i><b>20.3</b> Normalization</a></li>
+<li class="chapter" data-level="20.4" data-path="seurat-chapter.html"><a href="seurat-chapter.html#highly-variable-genes-1"><i class="fa fa-check"></i><b>20.4</b> Highly variable genes</a></li>
+<li class="chapter" data-level="20.5" data-path="seurat-chapter.html"><a href="seurat-chapter.html#dealing-with-confounders-1"><i class="fa fa-check"></i><b>20.5</b> Dealing with confounders</a></li>
+<li class="chapter" data-level="20.6" data-path="seurat-chapter.html"><a href="seurat-chapter.html#linear-dimensionality-reduction"><i class="fa fa-check"></i><b>20.6</b> Linear dimensionality reduction</a></li>
+<li class="chapter" data-level="20.7" data-path="seurat-chapter.html"><a href="seurat-chapter.html#significant-pcs"><i class="fa fa-check"></i><b>20.7</b> Significant PCs</a></li>
+<li class="chapter" data-level="20.8" data-path="seurat-chapter.html"><a href="seurat-chapter.html#clustering-cells"><i class="fa fa-check"></i><b>20.8</b> Clustering cells</a></li>
+<li class="chapter" data-level="20.9" data-path="seurat-chapter.html"><a href="seurat-chapter.html#marker-genes-1"><i class="fa fa-check"></i><b>20.9</b> Marker genes</a></li>
+<li class="chapter" data-level="20.10" data-path="seurat-chapter.html"><a href="seurat-chapter.html#sessioninfo-12"><i class="fa fa-check"></i><b>20.10</b> sessionInfo()</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><i class="fa fa-check"></i><b>21</b> “Ideal” scRNAseq pipeline (as of Oct 2017)</a><ul>
+<li class="chapter" data-level="21.1" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#experimental-design"><i class="fa fa-check"></i><b>21.1</b> Experimental Design</a></li>
+<li class="chapter" data-level="21.2" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#processing-reads"><i class="fa fa-check"></i><b>21.2</b> Processing Reads</a></li>
+<li class="chapter" data-level="21.3" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#preparing-expression-matrix"><i class="fa fa-check"></i><b>21.3</b> Preparing Expression Matrix</a></li>
+<li class="chapter" data-level="21.4" data-path="ideal-scrnaseq-pipeline-as-of-oct-2017.html"><a href="ideal-scrnaseq-pipeline-as-of-oct-2017.html#biological-interpretation"><i class="fa fa-check"></i><b>21.4</b> Biological Interpretation</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="advanced-exercises.html"><a href="advanced-exercises.html"><i class="fa fa-check"></i><b>22</b> Advanced exercises</a></li>
+<li class="chapter" data-level="23" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>23</b> Resources</a><ul>
+<li class="chapter" data-level="23.1" data-path="resources.html"><a href="resources.html#scrna-seq-protocols"><i class="fa fa-check"></i><b>23.1</b> scRNA-seq protocols</a></li>
+<li class="chapter" data-level="23.2" data-path="resources.html"><a href="resources.html#external-rna-control-consortium-ercc"><i class="fa fa-check"></i><b>23.2</b> External RNA Control Consortium (ERCC)</a></li>
+<li class="chapter" data-level="23.3" data-path="resources.html"><a href="resources.html#scrna-seq-analysis-tools"><i class="fa fa-check"></i><b>23.3</b> scRNA-seq analysis tools</a></li>
+<li class="chapter" data-level="23.4" data-path="resources.html"><a href="resources.html#scrna-seq-public-datasets"><i class="fa fa-check"></i><b>23.4</b> scRNA-seq public datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="references-4.html"><a href="references-4.html"><i class="fa fa-check"></i><b>24</b> References</a></li>
+<li class="divider"></li>
+<li><a href="http://www.sanger.ac.uk/science/groups/hemberg-group" target="blank">Hemberg Lab, 2017</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analysis of single cell RNA-seq data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="file-formats" class="section level1">
+<h1><span class="header-section-number">7</span> File formats</h1>
+<div id="fastq" class="section level2">
+<h2><span class="header-section-number">7.1</span> FastQ</h2>
+<p>FastQ is the most raw form of scRNASeq data you will encounter. All scRNASeq protocols are sequenced with paired-end sequencing. Barcode sequences may occur in one or both reads depending on the protocol employed. However, protocols using unique molecular identifiers (UMIs) will generally contain one read with the cell and UMI barcodes plus adapters but without any transcript sequence. Thus reads will be mapped as if they are single-end sequenced despite actually being paired end.</p>
+<p>FastQ files have the format:</p>
+<pre class="eval"><code>&gt;ReadID
+READ SEQUENCE
++
+SEQUENCING QUALITY SCORES</code></pre>
+</div>
+<div id="bam" class="section level2">
+<h2><span class="header-section-number">7.2</span> BAM</h2>
+<p>BAM file format stores mapped reads in a standard and efficient manner. The human-readable version is called a SAM file, while the BAM file is the highly compressed version. BAM/SAM files contain a header which typically includes<br />
+information on the sample preparation, sequencing and mapping; and a tab-separated row for each individual alignment of each read.</p>
+<p>Alignment rows employ a standard format with the following columns:</p>
+<ol style="list-style-type: decimal">
+<li><p>QNAME : read name (generally will include UMI barcode if applicable)</p></li>
+<li><p>FLAG : number tag indicating the “type” of alignment, <a href="https://broadinstitute.github.io/picard/explain-flags.html">link</a> to explanation of all possible “types”</p></li>
+<li><p>RNAME : reference sequence name (i.e. chromosome read is mapped to).</p></li>
+<li><p>POS : leftmost mapping position</p></li>
+<li><p>MAPQ : Mapping quality</p></li>
+<li><p>CIGAR : string indicating the matching/mismatching parts of the read (may include soft-clipping).</p></li>
+<li><p>RNEXT : reference name of the mate/next read</p></li>
+<li><p>PNEXT : POS for mate/next read</p></li>
+<li><p>TLEN : Template length (length of reference region the read is mapped to)</p></li>
+<li><p>SEQ : read sequence</p></li>
+<li><p>QUAL : read quality</p></li>
+</ol>
+<p>BAM/SAM files can be converted to the other format using ‘samtools’:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -S -b file.sam <span class="op">&gt;</span> file.bam
+<span class="ex">samtools</span> view -h file.bam <span class="op">&gt;</span> file.sam</code></pre></div>
+<p>Some sequencing facilities will automatically map your reads to the a standard genome and deliver either BAM or CRAM formatted files. Generally they will not have included ERCC sequences in the genome thus no ERCC reads will be mapped in the BAM/CRAM file. To quantify ERCCs (or any other genetic alterations) or if you just want to use a different alignment algorithm than whatever is in the generic pipeline (often outdated), then you will need to convert the BAM/CRAM files back to FastQs:</p>
+<p>BAM files can be converted to FastQ using bedtools. To ensure a single copy for multi-mapping reads first sort by read name and remove secondary alignments using samtools. <a href="https://broadinstitute.github.io/picard/index.html">Picard</a> also contains a method for converting BAM to FastQ files.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># sort reads by name</span>
+<span class="ex">samtools</span> sort -n original.bam -o sorted_by_name.bam
+<span class="co"># remove secondary alignments</span>
+<span class="ex">samtools</span> view -b -F 256 sorted_by_name.bam -o primary_alignment_only.bam
+<span class="co"># convert to fastq</span>
+<span class="ex">bedtools</span> bamtofastq -i primary_alignment_only.bam -fq read1.fq -fq2 read2.fq</code></pre></div>
+</div>
+<div id="cram" class="section level2">
+<h2><span class="header-section-number">7.3</span> CRAM</h2>
+<p><a href="https://www.ebi.ac.uk/ena/software/cram-usage">CRAM</a> files are similar to BAM files only they contain information in the header to the reference genome used in the mapping in the header. This allow the bases in each read that are identical to the reference to be further compressed. CRAM also supports some lossy data compression approaches to further optimize storage compared to BAMs. CRAMs are mainly used by the Sanger/EBI sequencing facility.</p>
+<p>CRAM and BAM files can be interchanged using the lastest version of samtools (&gt;=v1.0). However, this conversion may require downloading the reference genome into cache. Alternatively, you may pre-download the correct reference either from metadata in the header of the CRAM file, or from talking to whomever generated the CRAM and specify that file using ‘-T’ Thus we recommend setting a specific cache location prior to doing this:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">export</span> <span class="va">REF_CACHE=</span>/path_to/cache_directory_for_reference_genome
+<span class="ex">samtools</span> view -b -h -T reference_genome.fasta file.cram -o file.bam
+<span class="ex">samtools</span> view -C -h -T reference_genome.fasta file.bam -o file.cram</code></pre></div>
+</div>
+<div id="mannually-inspecting-file" class="section level2">
+<h2><span class="header-section-number">7.4</span> Mannually Inspecting file</h2>
+<p>At times it may be useful to mannual inspect files for example to check the metadata in headers that the files are from the correct sample. ‘less’ and ‘more’ can be used to inspect any text files from the command line. By “pipe-ing” the output of samtools view into these commands using ‘|’ we check each of these file types without having to save multiple copies of each file.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">less</span> file.txt
+<span class="fu">more</span> file.txt
+<span class="co"># counts the number of lines in file.txt</span>
+<span class="fu">wc</span> -l file.txt
+<span class="ex">samtools</span> view -h file.[cram/bam] <span class="kw">|</span> <span class="fu">more</span>
+<span class="co"># counts the number of lines in the samtools output</span>
+<span class="ex">samtools</span> view -h file.[cram/bam] <span class="kw">|</span> <span class="fu">wc</span> -l</code></pre></div>
+<p><strong>Exercises</strong></p>
+<p>You have been provided with a small cram file: EXAMPLE.cram</p>
+<p>Task 1: How was this file aligned? What software was used? What was used as the genome? (Hint: check the header)</p>
+<p>Task 2: How many reads are unmapped/mapped? How total reads are there? How many secondary alignments are present? (Hint: use the FLAG)</p>
+<p>Task 3: Convert the CRAM into two Fastq files. Did you get exactly one copy of each read? (name these files “10cells_read1.fastq” “10cells_read2.fastq”)</p>
+<p>If you get stuck help information for each piece of software can be displayed by entering running the command “naked” - e.g. ‘samtools view’, ‘bedtools’</p>
+<p><strong>Answer</strong></p>
+</div>
+<div id="genome-fasta-gtf" class="section level2">
+<h2><span class="header-section-number">7.5</span> Genome (FASTA, GTF)</h2>
+<p>To map your reads you will also need the reference genome and in many cases the genome annotation file (in either GTF or GFF format). These can be downloaded for model organisms from any of the main genomics databases: <a href="http://www.ensembl.org/info/data/ftp/index.html">Ensembl</a>, <a href="ftp://ftp.ncbi.nih.gov/genomes/">NCBI</a>, or <a href="http://hgdownload.soe.ucsc.edu/downloads.html">UCSC Genome Browser</a>.</p>
+<p>GTF files contain annotations of genes, transcripts, and exons. They must contain: (1) seqname : chromosome/scaffold (2) source : where this annotation came from (3) feature : what kind of feature is this? (e.g. gene, transcript, exon) (4) start : start position (bp) (5) end : end position (bp) (6) score : a number (7) strand : + (forward) or - (reverse) (8) frame : if CDS indicates which base is the first base of the first codon (0 = first base, 1 = second base, etc..) (9) attribute : semicolon-separated list of tag-value pairs of extra information (e.g. names/IDs, biotype)</p>
+<p>Empty fields are marked with “.”</p>
+<p>In our experience Ensembl is the easiest of these to use, and has the largest set of annotations. NCBI tends to be more strict in including only high confidence gene annotations. Whereas UCSC contains multiple geneset annotations that use different criteria.</p>
+<p>If you experimental system includes non-standard sequences these must be added to both the genome fasta and gtf to quantify their expression. Most commonly this is done for the ERCC spike-ins, although the same must be done for CRISPR- related sequences or other overexpression/reporter constructs.</p>
+<p>For maximum utility/flexibility we recommend creating complete and detailed entries for any non-standard sequences added.</p>
+<p>There is no standardized way to do this. So below is our custom perl script for creating a gtf and fasta file for ERCCs which can be appended to the genome. You may also need to alter a gtf file to deal with repetitive elements in introns when/if you want to quantify intronic reads. Any scripting language or even ‘awk’ and/or some text editors can be used to do this relatively efficiently, but they are beyond the scope of this course.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Converts the Annotation file from https://www.thermofisher.com/order/catalog/product/4456740 to gtf and fasta files that can be added to existing genome fasta &amp; gtf files.</span>
+
+<span class="ex">my</span> @FASTAlines = ();
+<span class="ex">my</span> @GTFlines = ();
+<span class="ex">open</span> (my <span class="va">$ifh</span>, <span class="st">&quot;ERCC_Controls_Annotation.txt&quot;</span>) <span class="ex">or</span> die <span class="va">$!</span><span class="kw">;</span>
+<span class="op">&lt;</span><span class="va">$ifh</span><span class="op">&gt;</span>; <span class="co">#header</span>
+<span class="kw">while</span> <span class="kw">(</span><span class="op">&lt;</span><span class="va">$ifh</span><span class="op">&gt;</span><span class="kw">)</span> <span class="kw">{</span>
+    <span class="co"># Do all the important stuff</span>
+    <span class="ex">chomp</span><span class="kw">;</span>
+    <span class="ex">my</span> @record = split(/\t/);
+    <span class="ex">my</span> <span class="va">$sequence</span> = <span class="va">$record[4]</span><span class="kw">;</span>
+    <span class="va">$sequence</span> =<span class="ex">~</span> <span class="ex">s</span>/\<span class="ex">s+//g</span>; <span class="co"># get rid of any preceeding/tailing white space</span>
+    <span class="va">$sequence</span> = <span class="va">$sequence</span><span class="ex">.</span><span class="st">&quot;NNNN&quot;</span><span class="kw">;</span>
+    <span class="ex">my</span> <span class="va">$name</span> = <span class="va">$record[0]</span><span class="kw">;</span>
+    <span class="ex">my</span> <span class="va">$genbank</span> = <span class="va">$record[1]</span><span class="kw">;</span>
+    <span class="ex">push</span>(@FASTAlines, <span class="st">&quot;&gt;</span><span class="va">$name</span><span class="st">\n</span><span class="va">$sequence</span><span class="st">\n&quot;</span>);
+<span class="co"># is GTF 1 indexed or 0 indexed? -&gt; it is 1 indexed</span>
+<span class="co"># + or - strand?</span>
+    <span class="ex">push</span>(@GTFlines, <span class="st">&quot;</span><span class="va">$name</span><span class="st">\tERCC\tgene\t1\t&quot;</span>.(length(<span class="va">$sequence</span>)<span class="ex">-2</span>)<span class="ex">.</span><span class="st">&quot;\t.\t+\t.\tgene_id </span><span class="dt">\&quot;</span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">; transcript_id </span><span class="dt">\&quot;</span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">; exon_number </span><span class="dt">\&quot;</span><span class="st">1</span><span class="dt">\&quot;</span><span class="st">; gene_name </span><span class="dt">\&quot;</span><span class="st">ERCC </span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">\n&quot;</span>);
+    <span class="ex">push</span>(@GTFlines, <span class="st">&quot;</span><span class="va">$name</span><span class="st">\tERCC\ttranscript\t1\t&quot;</span>.(length(<span class="va">$sequence</span>)<span class="ex">-2</span>)<span class="ex">.</span><span class="st">&quot;\t.\t+\t.\tgene_id </span><span class="dt">\&quot;</span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">; transcript_id </span><span class="dt">\&quot;</span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">; exon_number </span><span class="dt">\&quot;</span><span class="st">1</span><span class="dt">\&quot;</span><span class="st">; gene_name </span><span class="dt">\&quot;</span><span class="st">ERCC </span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">\n&quot;</span>);
+    <span class="ex">push</span>(@GTFlines, <span class="st">&quot;</span><span class="va">$name</span><span class="st">\tERCC\texon\t1\t&quot;</span>.(length(<span class="va">$sequence</span>)<span class="ex">-2</span>)<span class="ex">.</span><span class="st">&quot;\t.\t+\t.\tgene_id </span><span class="dt">\&quot;</span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">; transcript_id </span><span class="dt">\&quot;</span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">; exon_number </span><span class="dt">\&quot;</span><span class="st">1</span><span class="dt">\&quot;</span><span class="st">; gene_name </span><span class="dt">\&quot;</span><span class="st">ERCC </span><span class="va">$name</span><span class="st">-</span><span class="va">$genbank</span><span class="dt">\&quot;</span><span class="st">\n&quot;</span>);
+<span class="kw">}</span> <span class="ex">close</span>(<span class="va">$ifh</span>);
+
+<span class="co"># Write output</span>
+<span class="ex">open</span>(my <span class="va">$ofh</span>, <span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;ERCC_Controls.fa&quot;</span>) <span class="ex">or</span> die <span class="va">$!</span><span class="kw">;</span>
+<span class="ex">foreach</span> my <span class="va">$line</span> (@FASTAlines) <span class="kw">{</span>
+    <span class="ex">print</span> <span class="va">$ofh</span> <span class="va">$line</span><span class="kw">;</span>
+<span class="kw">}</span> <span class="ex">close</span> (<span class="va">$ofh</span>);
+
+<span class="ex">open</span>(<span class="va">$ofh</span>, <span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;ERCC_Controls.gtf&quot;</span>) <span class="ex">or</span> die <span class="va">$!</span><span class="kw">;</span>
+<span class="ex">foreach</span> my <span class="va">$line</span> (@GTFlines) <span class="kw">{</span>
+    <span class="ex">print</span> <span class="va">$ofh</span> <span class="va">$line</span><span class="kw">;</span>
+<span class="kw">}</span> <span class="ex">close</span> (<span class="va">$ofh</span>);</code></pre></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="solution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="demultiplexing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["scRNA-seq-course.pdf"],
+"toc": {
+"collapse": "section"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
