@@ -1,7 +1,7 @@
 ---
 output: html_document
 ---
-# Comparing/Combining scRNASeq datasets
+## Comparing/Combining scRNASeq datasets
 
 
 
@@ -10,7 +10,7 @@ library(scater)
 library(SingleCellExperiment)
 ```
 
-## Introduction
+### Introduction
 
 As more and more scRNA-seq datasets become available, carrying merged_seurat comparisons between them is key. There are two main
 approaches to comparing scRNASeq datasets. The first approach is "label-centric" which is focused on trying
@@ -43,7 +43,7 @@ The cross-dataset normalization approach can also be used to compare datasets of
 <img src="figures/CourseCrossNorm.png" alt="Cross-dataset normalization enables joint-analysis of 2+ scRNASeq datasets."  />
 <p class="caption">(\#fig:unnamed-chunk-5)Cross-dataset normalization enables joint-analysis of 2+ scRNASeq datasets.</p>
 </div>
-## Datasets
+### Datasets
 
 We will running these methods on two human pancreas datasets: [@Muraro2016-yk] and [@Segerstolpe2016-wc]. Since the pancreas has been widely studied, these datasets are well annotated.
 
@@ -143,7 +143,7 @@ segerstolpe <- segerstolpe[,colData(segerstolpe)$cell_type1 != "unclassified"]
 segerstolpe <- segerstolpe[,colData(segerstolpe)$cell_type1 != "not applicable",]
 muraro <- muraro[,colData(muraro)$cell_type1 != "unclear"]
 ```
-## Projecting cells onto annotated cell-types (scmap)
+### Projecting cells onto annotated cell-types (scmap)
 
 
 ```r
@@ -311,14 +311,14 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Sat Feb  3 15:39:10 2018 -->
+<!-- Sat Feb  3 18:39:24 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7ae6f87c0b2 () {
+function gvisDataSankeyID7ae517c190d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -516,8 +516,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7ae6f87c0b2() {
-var data = gvisDataSankeyID7ae6f87c0b2();
+function drawChartSankeyID7ae517c190d() {
+var data = gvisDataSankeyID7ae517c190d();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -536,7 +536,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7ae6f87c0b2')
+    document.getElementById('SankeyID7ae517c190d')
     );
     chart.draw(data,options);
     
@@ -560,9 +560,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7ae6f87c0b2);
+callbacks.push(drawChartSankeyID7ae517c190d);
 })();
-function displayChartSankeyID7ae6f87c0b2() {
+function displayChartSankeyID7ae517c190d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -586,11 +586,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae6f87c0b2"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae517c190d"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID7ae6f87c0b2" 
+<div id="SankeyID7ae517c190d" 
   style="width: 400; height: 400;">
 </div>
 
@@ -689,7 +689,7 @@ head(cell_type_NN)
 ## [6] "endothelial"
 ```
 
-## Metaneighbour
+### Metaneighbour
 
 [Metaneighbour](https://www.biorxiv.org/content/early/2017/06/16/150524) is specifically designed to ask whether cell-type labels are consistent across datasets. It comes in two
 versions. First is a fully supervised method which assumes cell-types are known in all datasets and calculates how "good" those cell-type labels are. (The precise meaning of "good" will be described below). Alternatively, metaneighbour can estimate how similar all cell-types are to each other both within and across datasets. We will only be using the unsupervised version as it has much more general applicability and is easier to interpret the results of.
@@ -701,7 +701,7 @@ Metanighbour is just a couple of R functions not a complete package so we have t
 ```r
 source("2017-08-28-runMN-US.R")
 ```
-### Prepare Data
+#### Prepare Data
 
 Metaneighbour requires all datasets to be combined into a single expression matrix prior to running:
 
@@ -760,7 +760,7 @@ heatmap(unsup)
 
 <img src="31-projection_files/figure-html/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto;" />
 
-## mnnCorrect
+### mnnCorrect
 [mnnCorrect](https://www.biorxiv.org/content/early/2017/07/18/165118) corrects datasets to facilitate joint analysis. It order to account for differences in composition between two replicates or two different experiments it first matches invidual cells across experiments to find the overlaping biologicial structure. Using that overlap it learns which dimensions of expression correspond to the biological state and which dimensions correspond to batch/experiment effect; mnnCorrect assumes these dimensions are orthologal to each other in high dimensional expression space. Finally it removes the batch/experiment effects from the entire expression matrix to return the corrected matrix.
 
 To match individual cells to each other across datasets, mnnCorrect uses the cosine distance to avoid library-size effect then identifies mututal nearest neighbours (`k` determines to neighbourhood size) across datasets. Only overlaping biological groups should have mutual nearest neighbours (see panel b below). However, this assumes that k is set to approximately the size of the smallest biological group in the datasets, but a k that is too low will identify too few mutual nearest-neighbour pairs to get a good estimate of the batch effect we want to remove.
@@ -864,7 +864,7 @@ plot(joint_tsne$Y[,1], joint_tsne$Y[,2], pch=c(16,1)[dataset_labels], col=rainbo
 
 <img src="31-projection_files/figure-html/unnamed-chunk-38-1.png" width="672" style="display: block; margin: auto;" />
 
-## Cannonical Correlation Analysis (Seurat)
+### Cannonical Correlation Analysis (Seurat)
 
 The Seurat package contains another correction method for combining multiple datasets, called [CCA](https://www.biorxiv.org/content/early/2017/07/18/164889). However, unlike mnnCorrect it doesn't correct the expression matrix itself directly. Instead Seurat finds a lower dimensional subspace for each dataset then corrects these subspaces. Also different from mnnCorrect, Seurat only combines a single pair of datasets at a time.
 
