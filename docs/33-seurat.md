@@ -299,7 +299,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2018-02-02 21:38:25
+## Parameters used in latest FindClusters calculation run on: 2018-02-03 15:46:14
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
