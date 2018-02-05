@@ -311,14 +311,14 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Sun Feb  4 15:42:21 2018 -->
+<!-- Mon Feb  5 15:40:40 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7ae6371e7c5 () {
+function gvisDataSankeyID7ae6ef9322b () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -516,8 +516,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7ae6371e7c5() {
-var data = gvisDataSankeyID7ae6371e7c5();
+function drawChartSankeyID7ae6ef9322b() {
+var data = gvisDataSankeyID7ae6ef9322b();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -536,7 +536,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7ae6371e7c5')
+    document.getElementById('SankeyID7ae6ef9322b')
     );
     chart.draw(data,options);
     
@@ -560,9 +560,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7ae6371e7c5);
+callbacks.push(drawChartSankeyID7ae6ef9322b);
 })();
-function displayChartSankeyID7ae6371e7c5() {
+function displayChartSankeyID7ae6ef9322b() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -586,11 +586,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae6371e7c5"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae6ef9322b"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID7ae6371e7c5" 
+<div id="SankeyID7ae6ef9322b" 
   style="width: 400; height: 400;">
 </div>
 
