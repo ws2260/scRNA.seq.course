@@ -241,13 +241,13 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [16] shinydashboard_0.6.1   shiny_1.0.5            rrcov_1.4-3           
 ## [19] compiler_3.4.3         httr_1.3.1             backports_1.1.2       
 ## [22] assertthat_0.2.0       Matrix_1.2-7.1         lazyeval_0.2.1        
-## [25] limma_3.34.6           htmltools_0.3.6        prettyunits_1.0.2     
+## [25] limma_3.34.8           htmltools_0.3.6        prettyunits_1.0.2     
 ## [28] tools_3.4.3            bindrcpp_0.2           gtable_0.2.0          
 ## [31] glue_1.2.0             GenomeInfoDbData_1.0.0 reshape2_1.4.3        
 ## [34] dplyr_0.7.4            doRNG_1.6.6            Rcpp_0.12.15          
 ## [37] gdata_2.18.0           xfun_0.1               stringr_1.2.0         
 ## [40] mime_0.5               rngtools_1.2.4         gtools_3.5.0          
-## [43] WriteXLS_4.0.0         XML_3.98-1.9           edgeR_3.20.7          
+## [43] WriteXLS_4.0.0         XML_3.98-1.9           edgeR_3.20.8          
 ## [46] DEoptimR_1.0-8         zlibbioc_1.24.0        scales_0.5.0          
 ## [49] rhdf5_2.22.0           RColorBrewer_1.1-2     yaml_2.1.16           
 ## [52] memoise_1.1.0          gridExtra_2.3          pkgmaker_0.22         
@@ -260,9 +260,9 @@ __Exercise:__ What is the difference between `scImpute` and `MAGIC` based on the
 ## [73] bookdown_0.6           R6_2.2.2               gplots_3.0.1          
 ## [76] DBI_0.7                pillar_1.1.0           RCurl_1.95-4.10       
 ## [79] tibble_1.4.2           KernSmooth_2.23-15     rmarkdown_1.8         
-## [82] viridis_0.4.1          progress_1.1.2         locfit_1.5-9.1        
+## [82] viridis_0.5.0          progress_1.1.2         locfit_1.5-9.1        
 ## [85] grid_3.4.3             data.table_1.10.4-3    blob_1.1.0            
 ## [88] digest_0.6.15          xtable_1.8-2           httpuv_1.3.5          
 ## [91] munsell_0.4.3          registry_0.5           beeswarm_0.2.3        
-## [94] viridisLite_0.2.0      vipor_0.4.5
+## [94] viridisLite_0.3.0      vipor_0.4.5
 ```

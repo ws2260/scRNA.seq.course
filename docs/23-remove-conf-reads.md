@@ -303,10 +303,10 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ##  [1] RColorBrewer_1.1-2         reshape2_1.4.3            
 ##  [3] sva_3.26.0                 genefilter_1.60.0         
 ##  [5] mgcv_1.8-23                nlme_3.1-129              
-##  [7] kBET_0.99.3                scran_1.6.7               
+##  [7] kBET_0.99.5                scran_1.6.7               
 ##  [9] scater_1.6.2               SingleCellExperiment_1.0.0
 ## [11] ggplot2_2.2.1              RUVSeq_1.12.0             
-## [13] edgeR_3.20.7               limma_3.34.6              
+## [13] edgeR_3.20.8               limma_3.34.8              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
 ## [17] GenomicAlignments_1.14.1   SummarizedExperiment_1.8.1
 ## [19] DelayedArray_0.4.1         matrixStats_0.53.0        
@@ -337,7 +337,7 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [49] rhdf5_2.22.0           yaml_2.1.16            memoise_1.1.0         
 ## [52] gridExtra_2.3          biomaRt_2.34.2         latticeExtra_0.6-28   
 ## [55] stringi_1.1.6          RSQLite_2.0            RMySQL_0.10.13        
-## [58] orthopolynom_1.0-5     GenomicFeatures_1.30.2 contfrac_1.1-11       
+## [58] orthopolynom_1.0-5     GenomicFeatures_1.30.3 contfrac_1.1-11       
 ## [61] rlang_0.1.6            pkgconfig_2.0.1        moments_0.14          
 ## [64] bitops_1.0-6           evaluate_0.10.1        lattice_0.20-34       
 ## [67] bindr_0.1              labeling_0.3           htmlwidgets_1.0       
@@ -345,10 +345,10 @@ ggplot(dod, aes(Normalisation, Individual, fill=kBET)) +
 ## [73] plyr_1.8.4             magrittr_1.5           bookdown_0.6          
 ## [76] R6_2.2.2               DBI_0.7                pillar_1.1.0          
 ## [79] survival_2.40-1        RCurl_1.95-4.10        tibble_1.4.2          
-## [82] rmarkdown_1.8          viridis_0.4.1          progress_1.1.2        
+## [82] rmarkdown_1.8          viridis_0.5.0          progress_1.1.2        
 ## [85] locfit_1.5-9.1         grid_3.4.3             data.table_1.10.4-3   
 ## [88] FNN_1.1                blob_1.1.0             digest_0.6.15         
 ## [91] xtable_1.8-2           httpuv_1.3.5           elliptic_1.3-7        
 ## [94] R.utils_2.6.0          munsell_0.4.3          beeswarm_0.2.3        
-## [97] viridisLite_0.2.0      vipor_0.4.5
+## [97] viridisLite_0.3.0      vipor_0.4.5
 ```

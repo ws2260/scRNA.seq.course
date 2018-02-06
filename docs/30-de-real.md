@@ -439,7 +439,7 @@ DE_Quality_AUC(pVals)
 ## [13] irlba_2.3.2                VGAM_1.0-4                
 ## [15] ggplot2_2.2.1              Biobase_2.38.0            
 ## [17] BiocGenerics_0.24.0        Matrix_1.2-7.1            
-## [19] edgeR_3.20.7               limma_3.34.6              
+## [19] edgeR_3.20.8               limma_3.34.8              
 ## [21] scRNA.seq.funcs_0.1.0      knitr_1.19                
 ## 
 ## loaded via a namespace (and not attached):
@@ -455,7 +455,7 @@ DE_Quality_AUC(pVals)
 ## [28] bindr_0.1              combinat_0.0-8         gtools_3.5.0          
 ## [31] dplyr_0.7.4            RCurl_1.95-4.10        magrittr_1.5          
 ## [34] GenomeInfoDbData_1.0.0 Rcpp_0.12.15           munsell_0.4.3         
-## [37] abind_1.4-5            viridis_0.4.1          stringi_1.1.6         
+## [37] abind_1.4-5            viridis_0.5.0          stringi_1.1.6         
 ## [40] yaml_2.1.16            MASS_7.3-45            zlibbioc_1.24.0       
 ## [43] Rtsne_0.13             plyr_1.8.4             grid_3.4.3            
 ## [46] gdata_2.18.0           ggrepel_0.7.0          contfrac_1.1-11       
@@ -464,7 +464,7 @@ DE_Quality_AUC(pVals)
 ## [55] evaluate_0.10.1        data.table_1.10.4-3    deSolve_1.20          
 ## [58] gtable_0.2.0           RANN_2.5.1             assertthat_0.2.0      
 ## [61] xfun_0.1               qlcMatrix_0.9.5        HSMMSingleCell_0.112.0
-## [64] viridisLite_0.2.0      tibble_1.4.2           pheatmap_1.0.8        
+## [64] viridisLite_0.3.0      tibble_1.4.2           pheatmap_1.0.8        
 ## [67] elliptic_1.3-7         bindrcpp_0.2           cluster_2.0.6         
 ## [70] fastICA_1.2-1          densityClust_0.3       statmod_1.4.30
 ```

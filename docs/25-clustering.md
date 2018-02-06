@@ -453,7 +453,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [16] cluster_2.0.6          shinydashboard_0.6.1   shiny_1.0.5           
 ##  [19] rrcov_1.4-3            compiler_3.4.3         httr_1.3.1            
 ##  [22] backports_1.1.2        assertthat_0.2.0       Matrix_1.2-7.1        
-##  [25] lazyeval_0.2.1         limma_3.34.6           htmltools_0.3.6       
+##  [25] lazyeval_0.2.1         limma_3.34.8           htmltools_0.3.6       
 ##  [28] prettyunits_1.0.2      tools_3.4.3            bindrcpp_0.2          
 ##  [31] gtable_0.2.0           glue_1.2.0             GenomeInfoDbData_1.0.0
 ##  [34] reshape2_1.4.3         dplyr_0.7.4            doRNG_1.6.6           
@@ -461,7 +461,7 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [40] xfun_0.1               stringr_1.2.0          mime_0.5              
 ##  [43] hypergeo_1.2-13        rngtools_1.2.4         gtools_3.5.0          
 ##  [46] WriteXLS_4.0.0         statmod_1.4.30         XML_3.98-1.9          
-##  [49] edgeR_3.20.7           DEoptimR_1.0-8         MASS_7.3-45           
+##  [49] edgeR_3.20.8           DEoptimR_1.0-8         MASS_7.3-45           
 ##  [52] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
 ##  [55] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
 ##  [58] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.2        
@@ -475,10 +475,10 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [82] plyr_1.8.4             magrittr_1.5           bookdown_0.6          
 ##  [85] R6_2.2.2               gplots_3.0.1           DBI_0.7               
 ##  [88] pillar_1.1.0           RCurl_1.95-4.10        tibble_1.4.2          
-##  [91] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.4.1         
+##  [91] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.5.0         
 ##  [94] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
 ##  [97] data.table_1.10.4-3    blob_1.1.0             digest_0.6.15         
 ## [100] xtable_1.8-2           httpuv_1.3.5           elliptic_1.3-7        
 ## [103] munsell_0.4.3          registry_0.5           beeswarm_0.2.3        
-## [106] viridisLite_0.2.0      vipor_0.4.5
+## [106] viridisLite_0.3.0      vipor_0.4.5
 ```
