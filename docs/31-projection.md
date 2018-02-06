@@ -311,14 +311,14 @@ plot(getSankey(colData(muraro)$cell_type1,  muraro_to_seger$scmap_cluster_labs[,
 ```
 
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Mon Feb  5 15:40:40 2018 -->
+<!-- Tue Feb  6 23:38:56 2018 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7ae6ef9322b () {
+function gvisDataSankeyID7e7249fc6df () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -516,8 +516,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7ae6ef9322b() {
-var data = gvisDataSankeyID7ae6ef9322b();
+function drawChartSankeyID7e7249fc6df() {
+var data = gvisDataSankeyID7e7249fc6df();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -536,7 +536,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7ae6ef9322b')
+    document.getElementById('SankeyID7e7249fc6df')
     );
     chart.draw(data,options);
     
@@ -560,9 +560,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7ae6ef9322b);
+callbacks.push(drawChartSankeyID7e7249fc6df);
 })();
-function displayChartSankeyID7ae6ef9322b() {
+function displayChartSankeyID7e7249fc6df() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -586,11 +586,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae6ef9322b"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7e7249fc6df"></script>
  
 <!-- divChart -->
   
-<div id="SankeyID7ae6ef9322b" 
+<div id="SankeyID7e7249fc6df" 
   style="width: 400; height: 400;">
 </div>
 
@@ -1045,14 +1045,14 @@ Use the clustering methods we previously covered on the combined datasets. Do yo
 ## [22] scales_0.5.0           randomForest_4.6-12    proxy_0.4-21          
 ## [25] stringr_1.2.0          digest_0.6.15          rmarkdown_1.8         
 ## [28] XVector_0.18.0         pkgconfig_2.0.1        htmltools_0.3.6       
-## [31] limma_3.34.6           highr_0.6              htmlwidgets_1.0       
+## [31] limma_3.34.8           highr_0.6              htmlwidgets_1.0       
 ## [34] rlang_0.1.6            RSQLite_2.0            FNN_1.1               
 ## [37] shiny_1.0.5            bindr_0.1              zoo_1.8-1             
 ## [40] jsonlite_1.5           dplyr_0.7.4            RCurl_1.95-4.10       
 ## [43] magrittr_1.5           GenomeInfoDbData_1.0.0 Matrix_1.2-7.1        
 ## [46] Rcpp_0.12.15           ggbeeswarm_0.6.0       munsell_0.4.3         
-## [49] viridis_0.4.1          stringi_1.1.6          yaml_2.1.16           
-## [52] edgeR_3.20.7           zlibbioc_1.24.0        rhdf5_2.22.0          
+## [49] viridis_0.5.0          stringi_1.1.6          yaml_2.1.16           
+## [52] edgeR_3.20.8           zlibbioc_1.24.0        rhdf5_2.22.0          
 ## [55] plyr_1.8.4             grid_3.4.3             blob_1.1.0            
 ## [58] shinydashboard_0.6.1   lattice_0.20-34        locfit_1.5-9.1        
 ## [61] pillar_1.1.0           igraph_1.1.2           rjson_0.2.15          
@@ -1061,7 +1061,7 @@ Use the clustering methods we previously covered on the combined datasets. Do yo
 ## [70] data.table_1.10.4-3    httpuv_1.3.5           gtable_0.2.0          
 ## [73] assertthat_0.2.0       xfun_0.1               mime_0.5              
 ## [76] xtable_1.8-2           e1071_1.6-8            class_7.3-14          
-## [79] viridisLite_0.2.0      tibble_1.4.2           AnnotationDbi_1.40.0  
+## [79] viridisLite_0.3.0      tibble_1.4.2           AnnotationDbi_1.40.0  
 ## [82] beeswarm_0.2.3         memoise_1.1.0          tximport_1.6.0        
 ## [85] statmod_1.4.30
 ```

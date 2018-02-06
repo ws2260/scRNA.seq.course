@@ -470,7 +470,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ## [8] datasets  base     
 ## 
 ## other attached packages:
-##  [1] limma_3.34.6               scater_1.6.2              
+##  [1] limma_3.34.8               scater_1.6.2              
 ##  [3] ggplot2_2.2.1              SingleCellExperiment_1.0.0
 ##  [5] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
 ##  [7] matrixStats_0.53.0         Biobase_2.38.0            
@@ -481,7 +481,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ## loaded via a namespace (and not attached):
 ##   [1] backports_1.1.2        plyr_1.8.4             lazyeval_0.2.1        
 ##   [4] sp_1.2-7               shinydashboard_0.6.1   splines_3.4.3         
-##   [7] digest_0.6.15          htmltools_0.3.6        viridis_0.4.1         
+##   [7] digest_0.6.15          htmltools_0.3.6        viridis_0.5.0         
 ##  [10] magrittr_1.5           memoise_1.1.0          cluster_2.0.6         
 ##  [13] prettyunits_1.0.2      colorspace_1.3-2       blob_1.1.0            
 ##  [16] rrcov_1.4-3            xfun_0.1               dplyr_0.7.4           
@@ -492,8 +492,8 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ##  [31] prabclus_2.2-6         DEoptimR_1.0-8         SparseM_1.77          
 ##  [34] VIM_4.7.0              scales_0.5.0           sgeostat_1.0-27       
 ##  [37] mvtnorm_1.0-7          DBI_0.7                GGally_1.3.2          
-##  [40] edgeR_3.20.7           Rcpp_0.12.15           sROC_0.1-2            
-##  [43] viridisLite_0.2.0      xtable_1.8-2           progress_1.1.2        
+##  [40] edgeR_3.20.8           Rcpp_0.12.15           sROC_0.1-2            
+##  [43] viridisLite_0.3.0      xtable_1.8-2           progress_1.1.2        
 ##  [46] laeken_0.4.6           bit_1.1-12             mclust_5.4            
 ##  [49] vcd_1.4-4              httr_1.3.1             RColorBrewer_1.1-2    
 ##  [52] fpc_2.1-11             modeltools_0.2-21      pkgconfig_2.0.1       
@@ -504,7 +504,7 @@ Perform exactly the same QC analysis with read counts of the same Blischak data.
 ##  [67] pls_2.6-0              evaluate_0.10.1        stringr_1.2.0         
 ##  [70] cvTools_0.3.2          yaml_2.1.16            bit64_0.9-7           
 ##  [73] robustbase_0.92-8      bindrcpp_0.2           nlme_3.1-129          
-##  [76] mime_0.5               quantreg_5.34          biomaRt_2.34.2        
+##  [76] mime_0.5               quantreg_5.35          biomaRt_2.34.2        
 ##  [79] compiler_3.4.3         pbkrtest_0.4-7         beeswarm_0.2.3        
 ##  [82] e1071_1.6-8            tibble_1.4.2           robCompositions_2.0.6 
 ##  [85] pcaPP_1.9-73           stringi_1.1.6          highr_0.6             

@@ -53,13 +53,13 @@ knit: bookdown::preview_chapter
 ## [13] BiocGenerics_0.24.0       
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] viridis_0.4.1          httr_1.3.1             edgeR_3.20.7          
-##  [4] bit64_0.9-7            viridisLite_0.2.0      shiny_1.0.5           
+##  [1] viridis_0.5.0          httr_1.3.1             edgeR_3.20.8          
+##  [4] bit64_0.9-7            viridisLite_0.3.0      shiny_1.0.5           
 ##  [7] assertthat_0.2.0       highr_0.6              blob_1.1.0            
 ## [10] vipor_0.4.5            GenomeInfoDbData_1.0.0 yaml_2.1.16           
 ## [13] progress_1.1.2         pillar_1.1.0           RSQLite_2.0           
 ## [16] backports_1.1.2        lattice_0.20-34        glue_1.2.0            
-## [19] limma_3.34.6           digest_0.6.15          XVector_0.18.0        
+## [19] limma_3.34.8           digest_0.6.15          XVector_0.18.0        
 ## [22] colorspace_1.3-2       cowplot_0.9.2          htmltools_0.3.6       
 ## [25] httpuv_1.3.5           Matrix_1.2-7.1         plyr_1.8.4            
 ## [28] XML_3.98-1.9           pkgconfig_2.0.1        biomaRt_2.34.2        

@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Jennifer Westoby (Jenni_Westoby), Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2018-02-05">
+<meta name="date" content="2018-02-06">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -320,13 +320,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="8.3.4" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-6"><i class="fa fa-check"></i><b>8.3.4</b> sessionInfo()</a></li>
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="biological-analysis.html"><a href="biological-analysis.html#pseudotime-analysis"><i class="fa fa-check"></i><b>8.4</b> Pseudotime analysis</a><ul>
-<li class="chapter" data-level="8.4.1" data-path="biological-analysis.html"><a href="biological-analysis.html#tscan"><i class="fa fa-check"></i><b>8.4.1</b> TSCAN</a></li>
-<li class="chapter" data-level="8.4.2" data-path="biological-analysis.html"><a href="biological-analysis.html#monocle"><i class="fa fa-check"></i><b>8.4.2</b> monocle</a></li>
-<li class="chapter" data-level="8.4.3" data-path="biological-analysis.html"><a href="biological-analysis.html#diffusion-maps"><i class="fa fa-check"></i><b>8.4.3</b> Diffusion maps</a></li>
-<li class="chapter" data-level="8.4.4" data-path="biological-analysis.html"><a href="biological-analysis.html#slicer"><i class="fa fa-check"></i><b>8.4.4</b> SLICER</a></li>
-<li class="chapter" data-level="8.4.5" data-path="biological-analysis.html"><a href="biological-analysis.html#comparison-of-the-methods"><i class="fa fa-check"></i><b>8.4.5</b> Comparison of the methods</a></li>
-<li class="chapter" data-level="8.4.6" data-path="biological-analysis.html"><a href="biological-analysis.html#expression-of-genes-through-time"><i class="fa fa-check"></i><b>8.4.6</b> Expression of genes through time</a></li>
-<li class="chapter" data-level="8.4.7" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-7"><i class="fa fa-check"></i><b>8.4.7</b> sessionInfo()</a></li>
+<li class="chapter" data-level="8.4.1" data-path="biological-analysis.html"><a href="biological-analysis.html#first-look-at-deng-data"><i class="fa fa-check"></i><b>8.4.1</b> First look at Deng data</a></li>
+<li class="chapter" data-level="8.4.2" data-path="biological-analysis.html"><a href="biological-analysis.html#tscan"><i class="fa fa-check"></i><b>8.4.2</b> TSCAN</a></li>
+<li class="chapter" data-level="8.4.3" data-path="biological-analysis.html"><a href="biological-analysis.html#monocle"><i class="fa fa-check"></i><b>8.4.3</b> monocle</a></li>
+<li class="chapter" data-level="8.4.4" data-path="biological-analysis.html"><a href="biological-analysis.html#diffusion-maps"><i class="fa fa-check"></i><b>8.4.4</b> Diffusion maps</a></li>
+<li class="chapter" data-level="8.4.5" data-path="biological-analysis.html"><a href="biological-analysis.html#slicer"><i class="fa fa-check"></i><b>8.4.5</b> SLICER</a></li>
+<li class="chapter" data-level="8.4.6" data-path="biological-analysis.html"><a href="biological-analysis.html#ouija"><i class="fa fa-check"></i><b>8.4.6</b> Ouija</a></li>
+<li class="chapter" data-level="8.4.7" data-path="biological-analysis.html"><a href="biological-analysis.html#comparison-of-the-methods"><i class="fa fa-check"></i><b>8.4.7</b> Comparison of the methods</a></li>
+<li class="chapter" data-level="8.4.8" data-path="biological-analysis.html"><a href="biological-analysis.html#expression-of-genes-through-time"><i class="fa fa-check"></i><b>8.4.8</b> Expression of genes through time</a></li>
+<li class="chapter" data-level="8.4.9" data-path="biological-analysis.html"><a href="biological-analysis.html#sessioninfo-7"><i class="fa fa-check"></i><b>8.4.9</b> sessionInfo()</a></li>
 </ul></li>
 <li class="chapter" data-level="8.5" data-path="biological-analysis.html"><a href="biological-analysis.html#imputation"><i class="fa fa-check"></i><b>8.5</b> Imputation</a><ul>
 <li class="chapter" data-level="8.5.1" data-path="biological-analysis.html"><a href="biological-analysis.html#scimpute"><i class="fa fa-check"></i><b>8.5.1</b> scImpute</a></li>
@@ -798,7 +800,7 @@ Figure 8.9: Clustering solutions of SINCERA method using found <span class="math
 ##  [16] cluster_2.0.6          shinydashboard_0.6.1   shiny_1.0.5           
 ##  [19] rrcov_1.4-3            compiler_3.4.3         httr_1.3.1            
 ##  [22] backports_1.1.2        assertthat_0.2.0       Matrix_1.2-7.1        
-##  [25] lazyeval_0.2.1         limma_3.34.6           htmltools_0.3.6       
+##  [25] lazyeval_0.2.1         limma_3.34.8           htmltools_0.3.6       
 ##  [28] prettyunits_1.0.2      tools_3.4.3            bindrcpp_0.2          
 ##  [31] gtable_0.2.0           glue_1.2.0             GenomeInfoDbData_1.0.0
 ##  [34] reshape2_1.4.3         dplyr_0.7.4            doRNG_1.6.6           
@@ -806,7 +808,7 @@ Figure 8.9: Clustering solutions of SINCERA method using found <span class="math
 ##  [40] xfun_0.1               stringr_1.2.0          mime_0.5              
 ##  [43] hypergeo_1.2-13        rngtools_1.2.4         gtools_3.5.0          
 ##  [46] WriteXLS_4.0.0         statmod_1.4.30         XML_3.98-1.9          
-##  [49] edgeR_3.20.7           DEoptimR_1.0-8         MASS_7.3-45           
+##  [49] edgeR_3.20.8           DEoptimR_1.0-8         MASS_7.3-45           
 ##  [52] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
 ##  [55] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
 ##  [58] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.2        
@@ -820,12 +822,12 @@ Figure 8.9: Clustering solutions of SINCERA method using found <span class="math
 ##  [82] plyr_1.8.4             magrittr_1.5           bookdown_0.6          
 ##  [85] R6_2.2.2               gplots_3.0.1           DBI_0.7               
 ##  [88] pillar_1.1.0           RCurl_1.95-4.10        tibble_1.4.2          
-##  [91] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.4.1         
+##  [91] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.5.0         
 ##  [94] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
 ##  [97] data.table_1.10.4-3    blob_1.1.0             digest_0.6.15         
 ## [100] xtable_1.8-2           httpuv_1.3.5           elliptic_1.3-7        
 ## [103] munsell_0.4.3          registry_0.5           beeswarm_0.2.3        
-## [106] viridisLite_0.2.0      vipor_0.4.5</code></pre>
+## [106] viridisLite_0.3.0      vipor_0.4.5</code></pre>
 
 </div>
 </div>
@@ -1038,10 +1040,16 @@ PCA_genes &lt;-<span class="st"> </span><span class="kw">names</span>(score[<spa
 <span class="kw">library</span>(monocle)
 <span class="kw">library</span>(destiny)
 <span class="kw">library</span>(SLICER)
+<span class="kw">library</span>(ouija)
+<span class="kw">library</span>(scater)
+<span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(ggthemes)
+<span class="kw">library</span>(ggbeeswarm)
+<span class="kw">library</span>(corrplot)
 <span class="kw">set.seed</span>(<span class="dv">1</span>)</code></pre></div>
 <p>In many situations, one is studying a process where cells change continuously. This includes, for example, many differentiation processes taking place during development: following a stimulus, cells will change from one cell-type to another. Ideally, we would like to monitor the expression levels of an individual cell over time. Unfortunately, such monitoring is not possible with scRNA-seq since the cell is lysed (destroyed) when the RNA is extracted.</p>
 <p>Instead, we must sample at multiple time-points and obtain snapshots of the gene expression profiles. Since some of the cells will proceed faster along the differentiation than others, each snapshot may contain cells at varying points along the developmental progression. We use statistical methods to order the cells along one or more trajectories which represent the underlying developmental trajectories, this ordering is referred to as “pseudotime”.</p>
-<p>In this chapter we will consider four different tools: Monocle, TSCAN, destiny and SLICER for ordering cells according to their pseudotime development. To illustrate the methods we will be using a dataset on mouse embryonic development <span class="citation">(Deng et al. <a href="#ref-Deng2014-mx">2014</a>)</span>. The dataset consists of 268 cells from 10 different time-points of early mouse development. In this case, there is no need for pseudotime alignment since the cell labels provide information about the development trajectory. Thus, the labels allow us to establish a ground truth so that we can evaluate and compare the different methods.</p>
+<p>In this chapter we will consider five different tools: Monocle, TSCAN, destiny, SLICER and ouija for ordering cells according to their pseudotime development. To illustrate the methods we will be using a dataset on mouse embryonic development <span class="citation">(Deng et al. <a href="#ref-Deng2014-mx">2014</a>)</span>. The dataset consists of 268 cells from 10 different time-points of early mouse development. In this case, there is no need for pseudotime alignment since the cell labels provide information about the development trajectory. Thus, the labels allow us to establish a ground truth so that we can evaluate and compare the different methods.</p>
 <p>A recent review by Cannoodt et al provides a detailed summary of the various computational methods for trajectory inference from single-cell transcriptomics <span class="citation">(Cannoodt, Saelens, and Saeys <a href="#ref-Cannoodt2016-uj">2016</a>)</span>. They discuss several tools, but unfortunately for our purposes many of these tools do not have complete or well-maintained implementations, and/or are not implemented in R.</p>
 <p>Cannoodt et al cover:</p>
 <ul>
@@ -1069,45 +1077,68 @@ Figure 8.10: Descriptions of trajectory inference methods for single-cell transc
 Figure 8.11: Characterization of trajectory inference methods for single-cell transcriptomics data (Fig. 3 from Cannoodt et al, 2016).
 </p>
 </div>
-<div id="tscan" class="section level3">
-<h3><span class="header-section-number">8.4.1</span> TSCAN</h3>
-<p>TSCAN combines clustering with pseudotime analysis. First it clusters the cells using <code>mclust</code>, which is based on a mixture of normal distributions. Then it builds a minimum spanning tree to connect the clusters. The branch of this tree that connects the largest number of clusters is the main branch which is used to determine pseudotime.</p>
-<p>First we will try to use all genes to order the cells.</p>
+<div id="first-look-at-deng-data" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> First look at Deng data</h3>
+<p>Let us take a first look at the Deng data, without yet applying sophisticated pseudotime methods. As the plot below shows, simple PCA does a very good job of displaying the structure in these data. It is only once we reach the blast cell types (“earlyblast”, “midblast”, “lateblast”) that PCA struggles to separate the distinct cell types.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">deng_SCE &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;deng/deng-reads.rds&quot;</span>)
-cellLabels &lt;-<span class="st"> </span><span class="kw">colData</span>(deng_SCE)<span class="op">$</span>cell_type2
+deng_SCE<span class="op">$</span>cell_type2 &lt;-<span class="st"> </span><span class="kw">factor</span>(
+    deng_SCE<span class="op">$</span>cell_type2,
+    <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;zy&quot;</span>, <span class="st">&quot;early2cell&quot;</span>, <span class="st">&quot;mid2cell&quot;</span>, <span class="st">&quot;late2cell&quot;</span>,
+                        <span class="st">&quot;4cell&quot;</span>, <span class="st">&quot;8cell&quot;</span>, <span class="st">&quot;16cell&quot;</span>, <span class="st">&quot;earlyblast&quot;</span>,
+                        <span class="st">&quot;midblast&quot;</span>, <span class="st">&quot;lateblast&quot;</span>)
+)
+cellLabels &lt;-<span class="st"> </span>deng_SCE<span class="op">$</span>cell_type2
 deng &lt;-<span class="st"> </span><span class="kw">counts</span>(deng_SCE)
 <span class="kw">colnames</span>(deng) &lt;-<span class="st"> </span>cellLabels
-procdeng &lt;-<span class="st"> </span>TSCAN<span class="op">::</span><span class="kw">preprocess</span>(deng)
+deng_SCE &lt;-<span class="st"> </span><span class="kw">plotPCA</span>(deng_SCE, <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>, 
+                    <span class="dt">return_SCE =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/data-overview-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>PCA, here, provides a useful baseline for assessing different pseudotime methods. For a very naive pseudotime we can just take the co-ordinates of the first principal component.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">deng_SCE<span class="op">$</span>PC1 &lt;-<span class="st"> </span><span class="kw">reducedDim</span>(deng_SCE, <span class="st">&quot;PCA&quot;</span>)[,<span class="dv">1</span>]
+<span class="kw">ggplot</span>(<span class="kw">as.data.frame</span>(<span class="kw">colData</span>(deng_SCE)), <span class="kw">aes</span>(<span class="dt">x =</span> PC1, <span class="dt">y =</span> cell_type2, 
+                              <span class="dt">colour =</span> cell_type2)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_quasirandom</span>(<span class="dt">groupOnX =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;First principal component&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Timepoint&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Cells ordered by first principal component&quot;</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/pca-pseudotime-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>As the plot above shows, PC1 struggles to correctly order cells early and late in the developmental timecourse, but overall does a relatively good job of ordering cells by developmental time.</p>
+<p>Can bespoke pseudotime methods do better than naive application of PCA?</p>
+</div>
+<div id="tscan" class="section level3">
+<h3><span class="header-section-number">8.4.2</span> TSCAN</h3>
+<p>TSCAN combines clustering with pseudotime analysis. First it clusters the cells using <code>mclust</code>, which is based on a mixture of normal distributions. Then it builds a minimum spanning tree to connect the clusters. The branch of this tree that connects the largest number of clusters is the main branch which is used to determine pseudotime.</p>
+<p>First we will try to use all genes to order the cells.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">procdeng &lt;-<span class="st"> </span>TSCAN<span class="op">::</span><span class="kw">preprocess</span>(deng)
 <span class="kw">colnames</span>(procdeng) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(deng)
 dengclust &lt;-<span class="st"> </span>TSCAN<span class="op">::</span><span class="kw">exprmclust</span>(procdeng, <span class="dt">clusternum =</span> <span class="dv">10</span>)
 TSCAN<span class="op">::</span><span class="kw">plotmclust</span>(dengclust)</code></pre></div>
 <p><img src="27-pseudotime_files/figure-html/tscan-all-genes-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dengorderTSCAN &lt;-<span class="st"> </span>TSCAN<span class="op">::</span><span class="kw">TSCANorder</span>(dengclust, <span class="dt">orderonly =</span> F)
-pseudotime_order_tscan &lt;-<span class="st"> </span><span class="kw">as.character</span>(dengorderTSCAN<span class="op">$</span>sample_name)</code></pre></div>
-<p>We can also examine which timepoints have been assigned to each state:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dengorderTSCAN &lt;-<span class="st"> </span>TSCAN<span class="op">::</span><span class="kw">TSCANorder</span>(dengclust, <span class="dt">orderonly =</span> <span class="ot">FALSE</span>)
+pseudotime_order_tscan &lt;-<span class="st"> </span><span class="kw">as.character</span>(dengorderTSCAN<span class="op">$</span>sample_name)
+deng_SCE<span class="op">$</span>pseudotime_order_tscan &lt;-<span class="st"> </span><span class="ot">NA</span>
+deng_SCE<span class="op">$</span>pseudotime_order_tscan[<span class="kw">as.numeric</span>(dengorderTSCAN<span class="op">$</span>sample_name)] &lt;-<span class="st"> </span>
+<span class="st">    </span>dengorderTSCAN<span class="op">$</span>Pseudotime</code></pre></div>
+<p>Frustratingly, TSCAN only provides pseudotime values for 221 of 268 cells, silently returning missing values for non-assigned cells.</p>
+<p>Again, we examine which timepoints have been assigned to each state:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cellLabels[dengclust<span class="op">$</span>clusterid <span class="op">==</span><span class="st"> </span><span class="dv">10</span>]</code></pre></div>
 <pre><code>##  [1] late2cell late2cell late2cell late2cell late2cell late2cell late2cell
 ##  [8] late2cell late2cell late2cell
-## 10 Levels: 16cell 4cell 8cell early2cell earlyblast ... zy</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">colours &lt;-<span class="st"> </span><span class="kw">rainbow</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="co"># red = early, violet = late</span>
-tmp &lt;-
-<span class="st">    </span><span class="kw">factor</span>(
-        cellLabels[<span class="kw">as.numeric</span>(pseudotime_order_tscan)],
-        <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;early2cell&quot;</span>, <span class="st">&quot;mid2cell&quot;</span>, <span class="st">&quot;late2cell&quot;</span>, <span class="st">&quot;4cell&quot;</span>, <span class="st">&quot;8cell&quot;</span>,
-                   <span class="st">&quot;16cell&quot;</span>, <span class="st">&quot;earlyblast&quot;</span>, <span class="st">&quot;midblast&quot;</span>, <span class="st">&quot;lateblast&quot;</span>)
-    )
-<span class="kw">plot</span>(
-    <span class="kw">as.numeric</span>(tmp),
-    <span class="dt">xlab =</span> <span class="st">&quot;Pseudotime Order&quot;</span>,
-    <span class="dt">ylab =</span> <span class="st">&quot;Timepoint&quot;</span>,
-    <span class="dt">col =</span> colours[tmp],
-    <span class="dt">pch =</span> <span class="dv">16</span>
-)</code></pre></div>
+## 10 Levels: zy early2cell mid2cell late2cell 4cell 8cell ... lateblast</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">as.data.frame</span>(<span class="kw">colData</span>(deng_SCE)), 
+       <span class="kw">aes</span>(<span class="dt">x =</span> pseudotime_order_tscan, 
+           <span class="dt">y =</span> cell_type2, <span class="dt">colour =</span> cell_type2)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_quasirandom</span>(<span class="dt">groupOnX =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;TSCAN pseudotime&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Timepoint&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Cells ordered by TSCAN pseudotime&quot;</span>)</code></pre></div>
+<pre><code>## Warning: Removed 47 rows containing missing values (position_quasirandom).</code></pre>
 <p><img src="27-pseudotime_files/figure-html/tscan-vs-truth-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>TSCAN gets the development trajectory the “wrong way around”, in the sense that later pseudotime values correspond to early timepoints and vice versa. This is not inherently a problem (it is easy enough to reverse the ordering to get the intuitive interpretation of pseudotime), but overall it would be a stretch to suggest that TSCAN performs better than PCA on this dataset. (As it is a PCA-based method, perhaps this is not entirely surprising.)</p>
 <p><strong>Exercise 1</strong> Compare results for different numbers of clusters (<code>clusternum</code>).</p>
 </div>
 <div id="monocle" class="section level3">
-<h3><span class="header-section-number">8.4.2</span> monocle</h3>
+<h3><span class="header-section-number">8.4.3</span> monocle</h3>
 <p>Monocle skips the clustering stage of TSCAN and directly builds a minimum spanning tree on a reduced dimension representation of the cells to connect all cells. Monocle then identifies the longest path in this tree to determine pseudotime. If the data contains diverging trajectories (i.e. one cell type differentiates into two different cell-types), monocle can identify these. Each of the resulting forked paths is defined as a separate cell state.</p>
 <p>Unfortunately, Monocle does not work when all the genes are used, so we must carry out feature selection. First, we use M3Drop:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m3dGenes &lt;-<span class="st"> </span><span class="kw">as.character</span>(
@@ -1139,67 +1170,60 @@ pseudotime_monocle &lt;-
 <span class="st">    </span><span class="kw">data.frame</span>(
         <span class="dt">Timepoint =</span> <span class="kw">phenoData</span>(dCellDataSet)<span class="op">$</span>timepoint,
         <span class="dt">pseudotime =</span> <span class="kw">phenoData</span>(dCellDataSet)<span class="op">$</span>Pseudotime,
-        <span class="dt">State=</span><span class="kw">phenoData</span>(dCellDataSet)<span class="op">$</span>State
+        <span class="dt">State =</span> <span class="kw">phenoData</span>(dCellDataSet)<span class="op">$</span>State
     )
 <span class="kw">rownames</span>(pseudotime_monocle) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(d)
 pseudotime_order_monocle &lt;-
 <span class="st">    </span><span class="kw">rownames</span>(pseudotime_monocle[<span class="kw">order</span>(pseudotime_monocle<span class="op">$</span>pseudotime), ])</code></pre></div>
 <p>We can again compare the inferred pseudotime to the known sampling timepoints.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">monocle_time_point &lt;-<span class="st"> </span><span class="kw">factor</span>(
-     pseudotime_monocle<span class="op">$</span>Timepoint,
-     <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;early2cell&quot;</span>, <span class="st">&quot;mid2cell&quot;</span>, <span class="st">&quot;late2cell&quot;</span>, <span class="st">&quot;4cell&quot;</span>, <span class="st">&quot;8cell&quot;</span>,
-                   <span class="st">&quot;16cell&quot;</span>, <span class="st">&quot;earlyblast&quot;</span>, <span class="st">&quot;midblast&quot;</span>, <span class="st">&quot;lateblast&quot;</span>)
-)
-
-<span class="kw">plot</span>(
-    pseudotime_monocle<span class="op">$</span>pseudotime,
-    monocle_time_point,
-    <span class="dt">xlab =</span> <span class="st">&quot;Pseudotime&quot;</span>,
-    <span class="dt">ylab =</span> <span class="st">&quot;Timepoint&quot;</span>,
-    <span class="dt">col =</span> colours[monocle_time_point],
-    <span class="dt">pch =</span> <span class="dv">16</span>
-)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">deng_SCE<span class="op">$</span>pseudotime_monocle &lt;-<span class="st"> </span>pseudotime_monocle<span class="op">$</span>pseudotime
+<span class="kw">ggplot</span>(<span class="kw">as.data.frame</span>(<span class="kw">colData</span>(deng_SCE)), 
+       <span class="kw">aes</span>(<span class="dt">x =</span> pseudotime_monocle, 
+           <span class="dt">y =</span> cell_type2, <span class="dt">colour =</span> cell_type2)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_quasirandom</span>(<span class="dt">groupOnX =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;monocle pseudotime&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Timepoint&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Cells ordered by monocle pseudotime&quot;</span>)</code></pre></div>
 <p><img src="27-pseudotime_files/figure-html/monocle-vs-truth-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Monocle - at least with its default settings - performs poorly on these data. The “late2cell” group is completely separated from the “zy”, “early2cell” and “mid2cell” cells (though these are correctly ordered), and there is no separation at all of “4cell”, “8cell”, “16cell” or any blast cell groups.</p>
 </div>
 <div id="diffusion-maps" class="section level3">
-<h3><span class="header-section-number">8.4.3</span> Diffusion maps</h3>
+<h3><span class="header-section-number">8.4.4</span> Diffusion maps</h3>
 <p><a href="https://en.wikipedia.org/wiki/Diffusion_map">Diffusion maps</a> were introduced by <a href="http://www.sciencedirect.com/science/article/pii/S1063520306000546">Ronald Coifman and Stephane Lafon</a>, and the underlying idea is to assume that the data are samples from a diffusion process. The method infers the low-dimensional manifold by estimating the eigenvalues and eigenvectors for the diffusion operator related to the data.</p>
 <p><a href="http://biorxiv.org/content/biorxiv/early/2015/08/04/023309.full.pdf">Haghverdi et al</a> have applied the diffusion maps concept to the analysis of single-cell RNA-seq data to create an R package called <a href="http://bioconductor.org/packages/destiny">destiny</a>.</p>
+<p>We will take the ranko prder of cells in the first diffusion map component as “diffusion map pseudotime” here.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">deng &lt;-<span class="st"> </span><span class="kw">logcounts</span>(deng_SCE)
 <span class="kw">colnames</span>(deng) &lt;-<span class="st"> </span>cellLabels
 dm &lt;-<span class="st"> </span><span class="kw">DiffusionMap</span>(<span class="kw">t</span>(deng))
-tmp &lt;-<span class="st"> </span><span class="kw">factor</span>(
-    <span class="kw">colnames</span>(deng),
-    <span class="dt">levels =</span> <span class="kw">c</span>(
-        <span class="st">&quot;early2cell&quot;</span>,
-        <span class="st">&quot;mid2cell&quot;</span>,
-        <span class="st">&quot;late2cell&quot;</span>,
-        <span class="st">&quot;4cell&quot;</span>,
-        <span class="st">&quot;8cell&quot;</span>,
-        <span class="st">&quot;16cell&quot;</span>,
-        <span class="st">&quot;earlyblast&quot;</span>,
-        <span class="st">&quot;midblast&quot;</span>,
-        <span class="st">&quot;lateblast&quot;</span>
-    )
-)
-<span class="kw">plot</span>(
-    <span class="kw">eigenvectors</span>(dm)[,<span class="dv">1</span>],
-    <span class="kw">eigenvectors</span>(dm)[,<span class="dv">2</span>],
-    <span class="dt">xlab =</span> <span class="st">&quot;Diffusion component 1&quot;</span>,
-    <span class="dt">ylab =</span> <span class="st">&quot;Diffusion component 2&quot;</span>,
-    <span class="dt">col =</span> colours[tmp],
-    <span class="dt">pch =</span> <span class="dv">16</span>
-)</code></pre></div>
+
+tmp &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">DC1 =</span> <span class="kw">eigenvectors</span>(dm)[,<span class="dv">1</span>],
+                  <span class="dt">DC2 =</span> <span class="kw">eigenvectors</span>(dm)[,<span class="dv">2</span>],
+                  <span class="dt">Timepoint =</span> deng_SCE<span class="op">$</span>cell_type2)
+<span class="kw">ggplot</span>(tmp, <span class="kw">aes</span>(<span class="dt">x =</span> DC1, <span class="dt">y =</span> DC2, <span class="dt">colour =</span> Timepoint)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Diffusion component 1&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Diffusion component 2&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">theme_classic</span>()</code></pre></div>
 <p><img src="27-pseudotime_files/figure-html/destiny-deng-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Like the other methods, destiny does a good job at ordering the early time-points, but it is unable to distinguish the later ones.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">deng_SCE<span class="op">$</span>pseudotime_diffusionmap &lt;-<span class="st"> </span><span class="kw">rank</span>(<span class="kw">eigenvectors</span>(dm)[,<span class="dv">1</span>])
+<span class="kw">ggplot</span>(<span class="kw">as.data.frame</span>(<span class="kw">colData</span>(deng_SCE)), 
+       <span class="kw">aes</span>(<span class="dt">x =</span> pseudotime_diffusionmap, 
+           <span class="dt">y =</span> cell_type2, <span class="dt">colour =</span> cell_type2)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_quasirandom</span>(<span class="dt">groupOnX =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Diffusion map pseudotime (first diffusion map component)&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Timepoint&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Cells ordered by diffusion map pseudotime&quot;</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/destiny-deng-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Like the other methods, using the first diffusion map component from destiny as pseudotime does a good job at ordering the early time-points (if we take high values as “earlier” in developement), but it is unable to distinguish the later ones.</p>
 <p><strong>Exercise 2</strong> Do you get a better resolution between the later time points by considering additional eigenvectors?</p>
 <p><strong>Exercise 3</strong> How does the ordering change if you only use the genes identified by M3Drop?</p>
 </div>
 <div id="slicer" class="section level3">
-<h3><span class="header-section-number">8.4.4</span> SLICER</h3>
+<h3><span class="header-section-number">8.4.5</span> SLICER</h3>
 <p>The SLICER method is an algorithm for constructing trajectories that describe gene expression changes during a sequential biological process, just as Monocle and TSCAN are. SLICER is designed to capture highly nonlinear gene expression changes, automatically select genes related to the process, and detect multiple branch and loop features in the trajectory <span class="citation">(Welch, Hartemink, and Prins <a href="#ref-Welch2016-jr">2016</a>)</span>. The SLICER R package is available from its <a href="https://github.com/jw156605/SLICER">GitHub repository</a> and can be installed from there using the <code>devtools</code> package.</p>
 <p>We use the <code>select_genes</code> function in SLICER to automatically select the genes to use in builing the cell trajectory. The function uses “neighbourhood variance” to identify genes that vary smoothly, rather than fluctuating randomly, across the set of cells. Following this, we determine which value of “k” (number of nearest neighbours) yields an embedding that most resembles a trajectory. Then we estimate the <a href="https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction">locally linear embedding</a> of the cells.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(<span class="st">&quot;lle&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;lle&quot;</span>)
 slicer_genes &lt;-<span class="st"> </span><span class="kw">select_genes</span>(<span class="kw">t</span>(deng))
 k &lt;-<span class="st"> </span><span class="kw">select_k</span>(<span class="kw">t</span>(deng[slicer_genes,]), <span class="dt">kmin =</span> <span class="dv">30</span>, <span class="dt">kmax=</span><span class="dv">60</span>)</code></pre></div>
 <pre><code>## finding neighbours
@@ -1227,9 +1251,10 @@ k &lt;-<span class="st"> </span><span class="kw">select_k</span>(<span class="kw
 <pre><code>## finding neighbours
 ## calculating weights
 ## computing coordinates</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(slicer_traj_lle, <span class="dt">xlab =</span> <span class="st">&quot;LLE Comp 1&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;LLE Comp 2&quot;</span>,
-     <span class="dt">main =</span> <span class="st">&quot;Locally linear embedding of cells from SLICER&quot;</span>, 
-     <span class="dt">col=</span>colours[tmp], <span class="dt">pch=</span><span class="dv">16</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">reducedDim</span>(deng_SCE, <span class="st">&quot;LLE&quot;</span>) &lt;-<span class="st"> </span>slicer_traj_lle
+<span class="kw">plotReducedDim</span>(deng_SCE, <span class="dt">use_dimred =</span> <span class="st">&quot;LLE&quot;</span>, <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;LLE component 1&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;LLE component 2&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Locally linear embedding of cells from SLICER&quot;</span>)</code></pre></div>
 <p><img src="27-pseudotime_files/figure-html/slicer-analyis-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>With the locally linear embedding computed we can construct a k-nearest neighbour graph that is fully connected. This plot displays a (yellow) circle for each cell, with the cell ID number overlaid in blue. Here we show the graph computed using 10 nearest neighbours. Here, SLICER appears to detect one major trajectory with one branch.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">slicer_traj_graph &lt;-<span class="st"> </span><span class="kw">conn_knn_graph</span>(slicer_traj_lle, <span class="dv">10</span>)
@@ -1250,68 +1275,201 @@ pseudotime_slicer &lt;-
         <span class="dt">State =</span> branches
     )
 pseudotime_slicer<span class="op">$</span>pseudotime[pseudotime_order_slicer] &lt;-
-<span class="st">    </span><span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(pseudotime_order_slicer)</code></pre></div>
+<span class="st">    </span><span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(pseudotime_order_slicer)
+deng_SCE<span class="op">$</span>pseudotime_slicer &lt;-<span class="st"> </span>pseudotime_slicer<span class="op">$</span>pseudotime</code></pre></div>
 <p>We can again compare the inferred pseudotime to the known sampling timepoints. SLICER does not provide a pseudotime value per se, just an ordering of cells.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">slicer_time_point &lt;-<span class="st"> </span><span class="kw">factor</span>(
-     pseudotime_slicer<span class="op">$</span>Timepoint,
-     <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;early2cell&quot;</span>, <span class="st">&quot;mid2cell&quot;</span>, <span class="st">&quot;late2cell&quot;</span>, <span class="st">&quot;4cell&quot;</span>, <span class="st">&quot;8cell&quot;</span>,
-                   <span class="st">&quot;16cell&quot;</span>, <span class="st">&quot;earlyblast&quot;</span>, <span class="st">&quot;midblast&quot;</span>, <span class="st">&quot;lateblast&quot;</span>)
-)
-
-<span class="kw">plot</span>(
-    pseudotime_slicer<span class="op">$</span>pseudotime,
-    slicer_time_point,
-    <span class="dt">xlab =</span> <span class="st">&quot;Pseudotime&quot;</span>,
-    <span class="dt">ylab =</span> <span class="st">&quot;Timepoint&quot;</span>,
-    <span class="dt">col =</span> colours[slicer_time_point],
-    <span class="dt">pch =</span> <span class="dv">16</span>
-)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">as.data.frame</span>(<span class="kw">colData</span>(deng_SCE)), 
+       <span class="kw">aes</span>(<span class="dt">x =</span> pseudotime_slicer, 
+           <span class="dt">y =</span> cell_type2, <span class="dt">colour =</span> cell_type2)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_quasirandom</span>(<span class="dt">groupOnX =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;SLICER pseudotime (cell ordering)&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Timepoint&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">theme_classic</span>()</code></pre></div>
 <p><img src="27-pseudotime_files/figure-html/slicer-vs-truth-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Like the previous method, SLICER here provides a good ordering for the early time points and struggles for later time points.</p>
+<p>Like the previous method, SLICER here provides a good ordering for the early time points. It places “16cell” cells before “8cell” cells, but provides better ordering for blast cells than many of the earlier methods.</p>
 <p><strong>Exercise 4</strong> How do the results change for different k? (e.g. k = 5) What about changing the number of nearest neighbours in the call to <code>conn_knn_graph</code>?</p>
 <p><strong>Exercise 5</strong> How does the ordering change if you use a different set of genes from those chosen by SLICER (e.g. the genes identified by M3Drop)?</p>
 </div>
+<div id="ouija" class="section level3">
+<h3><span class="header-section-number">8.4.6</span> Ouija</h3>
+<p>Ouija (<a href="http://kieranrcampbell.github.io/ouija/" class="uri">http://kieranrcampbell.github.io/ouija/</a>) takes a different approach from the pseudotime estimation methods we have looked at so far. Earlier methods have all been “unsupervised”, which is to say that apart from perhaps selecting informative genes we do not supply the method with any prior information about how we expect certain genes or the trajectory as a whole to behave.</p>
+<p>Ouija, in contrast, is a probabilistic framework that allows for interpretable learning of single-cell pseudotimes using only small panels of marker genes. This method:</p>
+<ul>
+<li>infers pseudotimes from a small number of marker genes letting you understand why the pseudotimes have been learned in terms of those genes;</li>
+<li>provides parameter estimates (with uncertainty) for interpretable gene regulation behaviour (such as the peak time or the upregulation time);</li>
+<li>has a Bayesian hypothesis test to find genes regulated before others along the trajectory;</li>
+<li>identifies metastable states, ie discrete cell types along the continuous trajectory.</li>
+</ul>
+<p>We will supply the following marker genes to Ouija (with timepoints where they are expected to be highly expressed):</p>
+<ul>
+<li>Early timepoints: Dazl, Rnf17, Sycp3, Nanog, Pou5f1, Fgf8, Egfr, Bmp5, Bmp15</li>
+<li>Mid timepoints: Zscan4b, Foxa1, Prdm14, Sox21</li>
+<li>Late timepoints: Creb3, Gpx4, Krt8, Elf5, Eomes, Cdx2, Tdgf1, Gdf3</li>
+</ul>
+<p>With Ouija we can model genes as either exhibiting monotonic up or down regulation (known as switch-like behaviour), or transient behaviour where the gene briefly peaks. By default, Ouija assumes all genes exhibit switch-like behaviour (the authors assure us not to worry if we get it wrong - the noise model means incorrectly specifying a transient gene as switch-like has minimal effect).</p>
+<p>Here we can “cheat” a little and check that our selected marker genes do actually identify different timepoints of the differentiation process.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ouija_markers_down &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Dazl&quot;</span>, <span class="st">&quot;Rnf17&quot;</span>, <span class="st">&quot;Sycp3&quot;</span>, <span class="st">&quot;Fgf8&quot;</span>, 
+                        <span class="st">&quot;Egfr&quot;</span>, <span class="st">&quot;Bmp5&quot;</span>, <span class="st">&quot;Bmp15&quot;</span>, <span class="st">&quot;Pou5f1&quot;</span>)
+ouija_markers_up &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Creb3&quot;</span>, <span class="st">&quot;Gpx4&quot;</span>, <span class="st">&quot;Krt8&quot;</span>, <span class="st">&quot;Elf5&quot;</span>, <span class="st">&quot;Cdx2&quot;</span>, 
+                      <span class="st">&quot;Tdgf1&quot;</span>, <span class="st">&quot;Gdf3&quot;</span>, <span class="st">&quot;Eomes&quot;</span>)
+ouija_markers_transient &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Zscan4b&quot;</span>, <span class="st">&quot;Foxa1&quot;</span>, <span class="st">&quot;Prdm14&quot;</span>, <span class="st">&quot;Sox21&quot;</span>)
+ouija_markers &lt;-<span class="st"> </span><span class="kw">c</span>(ouija_markers_down, ouija_markers_up, 
+                   ouija_markers_transient)
+<span class="kw">plotExpression</span>(deng_SCE, ouija_markers, <span class="dt">x =</span> <span class="st">&quot;cell_type2&quot;</span>, <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">60</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-response-type-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>In order to fit the pseudotimes wesimply call <code>ouija</code>, passing in the expected response types. Note that if no response types are provided then they are all assumed to be switch-like by default, which we will do here. The input to Ouija can be a cell-by-gene matrix of non-negative expression values, or an ExpressionSet object, or, happily, by selecting the <code>logcounts</code> values from a SingleCellExperiment object.</p>
+<p>We can apply prior information about whether genes are up- or down-regulated across the differentiation process, and also provide prior information about when the switch in expression or a peak in expression is likely to occur.</p>
+<p>We can fit the Ouija model using either:</p>
+<ul>
+<li>Hamiltonian Monte Carlo (HMC) - full MCMC inference where gradient information of the log-posterior is used to “guide” the random walk through the parameter space, or</li>
+<li>Automatic Differentiation Variational Bayes (ADVI or simply VI) - approximate inference where the KL divergence to an approximate distribution is minimised.</li>
+</ul>
+<p>In general, HMC will provide more accurate inference with approximately correct posterior variance for all parameters. However, VB is orders of magnitude quicker than HMC and while it may underestimate posterior variance, the Ouija authors suggest that anecdotally it often performs as well as HMC for discovering posterior pseudotimes.</p>
+<p>To help the Ouija model, we provide it with prior information about the strength of switches for up- and down-regulated genes. By setting switch strength to -10 for down-regulated genes and 10 for up-regulated genes with a prior strength standard deviation of 0.5 we are telling the model that we are confident about the expected behaviour of these genes across the differentiation process.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">options</span>(<span class="dt">mc.cores =</span> parallel<span class="op">::</span><span class="kw">detectCores</span>())
+response_type &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;switch&quot;</span>, <span class="kw">length</span>(ouija_markers_down) <span class="op">+</span><span class="st"> </span>
+<span class="st">                           </span><span class="kw">length</span>(ouija_markers_up)), 
+                   <span class="kw">rep</span>(<span class="st">&quot;transient&quot;</span>, <span class="kw">length</span>(ouija_markers_transient)))
+switch_strengths &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="op">-</span><span class="dv">10</span>, <span class="kw">length</span>(ouija_markers_down)),
+                      <span class="kw">rep</span>(<span class="dv">10</span>, <span class="kw">length</span>(ouija_markers_up)))
+switch_strength_sd &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="fl">0.5</span>, <span class="kw">length</span>(ouija_markers_down)),
+                      <span class="kw">rep</span>(<span class="fl">0.5</span>, <span class="kw">length</span>(ouija_markers_up)))
+garbage &lt;-<span class="st"> </span><span class="kw">capture.output</span>(
+    oui_vb &lt;-<span class="st"> </span><span class="kw">ouija</span>(deng_SCE[ouija_markers,],
+                    <span class="dt">single_cell_experiment_assay =</span> <span class="st">&quot;logcounts&quot;</span>, 
+                    <span class="dt">response_type =</span> response_type,
+                    <span class="dt">switch_strengths =</span> switch_strengths,
+                    <span class="dt">switch_strength_sd =</span> switch_strength_sd,
+                    <span class="dt">inference_type =</span> <span class="st">&quot;vb&quot;</span>)
+)
+
+<span class="kw">print</span>(oui_vb)</code></pre></div>
+<pre><code>## A Ouija fit with 268 cells and 20 marker genes 
+## Inference type:  Variational Bayes 
+## (Gene behaviour) Switch/transient: 16 / 4</code></pre>
+<p>We can plot the gene expression over pseudotime along with the maximum a posteriori (MAP) estimates of the mean function (the sigmoid or Gaussian transient function) using the plot_expression function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot_expression</span>(oui_vb)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-plot-exprs-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>We can also visualise when in the trajectory gene regulation behaviour occurs, either in the form of the switch time or the peak time (for switch-like or transient genes) using the plot_switch_times and plot_transient_times functions:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot_switch_times</span>(oui_vb)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-plot-switch-times-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot_peak_times</span>(oui_vb)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-plot-switch-times-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Identify metastable states using consistency matrices.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cmo &lt;-<span class="st"> </span><span class="kw">consistency_matrix</span>(oui_vb)
+<span class="kw">plot_consistency</span>(oui_vb)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-consistency-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cell_classifications &lt;-<span class="st"> </span><span class="kw">cluster_consistency</span>(cmo)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">map_pst &lt;-<span class="st"> </span><span class="kw">map_pseudotime</span>(oui_vb)
+ouija_pseudotime &lt;-<span class="st"> </span><span class="kw">data.frame</span>(map_pst, cell_classifications)
+
+<span class="kw">ggplot</span>(ouija_pseudotime, <span class="kw">aes</span>(<span class="dt">x =</span> map_pst, <span class="dt">y =</span> cell_classifications)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;MAP pseudotime&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Cell classification&quot;</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-pseudotime-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">deng_SCE<span class="op">$</span>pseudotime_ouija &lt;-<span class="st"> </span>ouija_pseudotime<span class="op">$</span>map_pst
+deng_SCE<span class="op">$</span>ouija_cell_class &lt;-<span class="st"> </span>ouija_pseudotime<span class="op">$</span>cell_classifications
+
+<span class="kw">ggplot</span>(<span class="kw">as.data.frame</span>(<span class="kw">colData</span>(deng_SCE)), 
+       <span class="kw">aes</span>(<span class="dt">x =</span> pseudotime_ouija, 
+           <span class="dt">y =</span> cell_type2, <span class="dt">colour =</span> cell_type2)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_quasirandom</span>(<span class="dt">groupOnX =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Ouija pseudotime&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Timepoint&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">theme_classic</span>()</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-pseudotime-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Ouija does quite well in the ordering of the cells here, although it can be sensitive to the choice of marker genes and prior information supplied. How do the results change if you select different marker genes or change the priors?</p>
+<p>Ouija identifies four metastable states here, which we might annotate as “zygote/2cell”, “4/8/16 cell”, “blast1” and “blast2”.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">as.data.frame</span>(<span class="kw">colData</span>(deng_SCE)), 
+       <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">as.factor</span>(ouija_cell_class), 
+           <span class="dt">y =</span> pseudotime_ouija, <span class="dt">colour =</span> cell_type2)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">coord_flip</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">scale_color_tableau</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Ouija cell classification&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Ouija pseudotime&quot;</span>) <span class="op">+</span>
+<span class="st">    </span><span class="kw">theme_classic</span>()</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/ouija-states-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>A common analysis is to work out the regulation orderings of genes. For example, is gene A upregulated before gene B? Does gene C peak before the downregulation of gene D? Ouija answers these questions in terms of a Bayesian hypothesis test of whether the difference in regulation timing (either switch time or peak time) is significantly different to 0. This is collated using the gene_regulation function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gene_regs &lt;-<span class="st"> </span><span class="kw">gene_regulation</span>(oui_vb)
+<span class="kw">head</span>(gene_regs)</code></pre></div>
+<pre><code>## # A tibble: 6 x 7
+## # Groups:   label, gene_A [6]
+##   label        gene_A gene_B mean_difference lower_95 upper_95 significant
+##   &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;lgl&gt;      
+## 1 Bmp15 - Cdx2 Bmp15  Cdx2           -0.0434 -0.0912   0.0110  F          
+## 2 Bmp15 - Cre… Bmp15  Creb3           0.278   0.220    0.330   T          
+## 3 Bmp15 - Elf5 Bmp15  Elf5           -0.656  -0.688   -0.618   T          
+## 4 Bmp15 - Eom… Bmp15  Eomes           0.0766  0.00433  0.153   T          
+## 5 Bmp15 - Fox… Bmp15  Foxa1          -0.0266 -0.0611   0.00287 F          
+## 6 Bmp15 - Gdf3 Bmp15  Gdf3            0.0704  0.00963  0.134   T</code></pre>
+<p>What conclusions can you draw from the gene regulation output from Ouija?</p>
+<p>If you have time, you might try the HMC inference method and see if that changes the Ouija results in any way.</p>
+</div>
 <div id="comparison-of-the-methods" class="section level3">
-<h3><span class="header-section-number">8.4.5</span> Comparison of the methods</h3>
-<p>How do the trajectories inferred by TSCAN and Monocle compare?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">matched_ordering &lt;-
-<span class="st">    </span><span class="kw">match</span>(
-        pseudotime_order_tscan,
-        pseudotime_order_monocle
-    )
-timepoint_ordered &lt;-
-<span class="st">    </span>monocle_time_point[<span class="kw">order</span>(pseudotime_monocle<span class="op">$</span>pseudotime)]
-<span class="kw">plot</span>(
-    matched_ordering,
-    <span class="dt">xlab =</span> <span class="st">&quot;Monocle Order&quot;</span>,
-    <span class="dt">ylab =</span> <span class="st">&quot;TSCAN Order&quot;</span>,
-    <span class="dt">col =</span> colours[timepoint_ordered],
-    <span class="dt">pch =</span> <span class="dv">16</span>
-)</code></pre></div>
-<p><img src="27-pseudotime_files/figure-html/tscan-monocle-compare-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p><strong>Exercise 6</strong>: Compare destiny and SLICER to TSCAN and Monocle.</p>
+<h3><span class="header-section-number">8.4.7</span> Comparison of the methods</h3>
+<p>How do the trajectories inferred by TSCAN, Monocle, Diffusion Map, SLICER and Ouija compare?</p>
+<p>TSCAN and Diffusion Map methods get the trajectory the “wrong way round”, so we’ll adjust that for these comparisons.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df_pseudotime &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(
+    <span class="kw">colData</span>(deng_SCE)[, <span class="kw">grep</span>(<span class="st">&quot;pseudotime&quot;</span>, <span class="kw">colnames</span>(<span class="kw">colData</span>(deng_SCE)))]
+)
+<span class="kw">colnames</span>(df_pseudotime) &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;pseudotime_&quot;</span>, <span class="st">&quot;&quot;</span>, 
+                                <span class="kw">colnames</span>(df_pseudotime))
+df_pseudotime<span class="op">$</span>PC1 &lt;-<span class="st"> </span>deng_SCE<span class="op">$</span>PC1
+df_pseudotime<span class="op">$</span>order_tscan &lt;-<span class="st"> </span><span class="op">-</span>df_pseudotime<span class="op">$</span>order_tscan
+df_pseudotime<span class="op">$</span>diffusionmap &lt;-<span class="st"> </span><span class="op">-</span>df_pseudotime<span class="op">$</span>diffusionmap
+
+<span class="kw">corrplot.mixed</span>(<span class="kw">cor</span>(df_pseudotime, <span class="dt">use =</span> <span class="st">&quot;na.or.complete&quot;</span>), 
+               <span class="dt">order =</span> <span class="st">&quot;hclust&quot;</span>, <span class="dt">tl.col =</span> <span class="st">&quot;black&quot;</span>,
+               <span class="dt">main =</span> <span class="st">&quot;Correlation matrix for pseudotime results&quot;</span>,
+               <span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">3.1</span>, <span class="dv">0</span>))</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/compare-results-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>We see here that Ouija, TSCAN and SLICER all give trajectories that are similar and strongly correlated with PC1. Diffusion Map is less strongly correlated with these methods, and Monocle gives very different results.</p>
+<p><strong>Exercise 6</strong>: Compare destiny and SLICER to TSCAN, Monocle and Ouija in more depth. Where and how do they differ?</p>
 </div>
 <div id="expression-of-genes-through-time" class="section level3">
-<h3><span class="header-section-number">8.4.6</span> Expression of genes through time</h3>
+<h3><span class="header-section-number">8.4.8</span> Expression of genes through time</h3>
 <p>Each package also enables the visualization of expression through pseudotime. Following individual genes is very helpful for identifying genes that play an important role in the differentiation process. We illustrate the procedure using the <code>Rhoa</code> gene.</p>
+<p>We have added the pseudotime values computed with all methods here to the <code>colData</code> slot of an <code>SCE</code> object. Having done that, the full plotting capabilities of the <code>scater</code> package can be used to investigate relationships between gene expression, cell populations and pseudotime. This is particularly useful for the packages such as SLICER that do not provide plotting functions.</p>
+<p><strong>Principal components</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotExpression</span>(deng_SCE, <span class="st">&quot;Rhoa&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;PC1&quot;</span>, 
+               <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>, <span class="dt">show_violin =</span> <span class="ot">FALSE</span>,
+               <span class="dt">show_smooth =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/Rhoa-pc1-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><strong>TSCAN</strong></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(deng) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(deng)
-TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
-    deng[<span class="kw">rownames</span>(deng) <span class="op">==</span><span class="st"> &quot;Rhoa&quot;</span>, ],
-    dengorderTSCAN
-)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotExpression</span>(deng_SCE, <span class="st">&quot;Rhoa&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;pseudotime_order_tscan&quot;</span>, 
+               <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>, <span class="dt">show_violin =</span> <span class="ot">FALSE</span>,
+               <span class="dt">show_smooth =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <p><img src="27-pseudotime_files/figure-html/Rhoa-tscan-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><strong>Monocle</strong></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">monocle<span class="op">::</span><span class="kw">plot_genes_in_pseudotime</span>(
-    dCellDataSet[<span class="kw">fData</span>(dCellDataSet)<span class="op">$</span>gene <span class="op">==</span><span class="st"> &quot;Rhoa&quot;</span>,],
-    <span class="dt">color_by =</span> <span class="st">&quot;timepoint&quot;</span>
-)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotExpression</span>(deng_SCE, <span class="st">&quot;Rhoa&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;pseudotime_monocle&quot;</span>, 
+               <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>, <span class="dt">show_violin =</span> <span class="ot">FALSE</span>,
+               <span class="dt">show_smooth =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <p><img src="27-pseudotime_files/figure-html/Rhoa-monocle-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Of course, pseudotime values computed with any method can be added to the <code>colData</code> slot of an <code>SCE</code> object. Having done that, the full plotting capabilities of the <code>scater</code> package can be used to investigate relationships between gene expression, cell populations and pseudotime. This would be particularly useful for the SLICER results, as SLICER does not provide plotting functions.</p>
+<p><strong>Diffusion Map</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotExpression</span>(deng_SCE, <span class="st">&quot;Rhoa&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;pseudotime_diffusionmap&quot;</span>, 
+               <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>, <span class="dt">show_violin =</span> <span class="ot">FALSE</span>,
+               <span class="dt">show_smooth =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/Rhoa-diff-map-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>SLICER</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotExpression</span>(deng_SCE, <span class="st">&quot;Rhoa&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;pseudotime_slicer&quot;</span>, 
+               <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>, <span class="dt">show_violin =</span> <span class="ot">FALSE</span>,
+               <span class="dt">show_smooth =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/Rhoa-slicer-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Ouija</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotExpression</span>(deng_SCE, <span class="st">&quot;Rhoa&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;pseudotime_ouija&quot;</span>, 
+               <span class="dt">colour_by =</span> <span class="st">&quot;cell_type2&quot;</span>, <span class="dt">show_violin =</span> <span class="ot">FALSE</span>,
+               <span class="dt">show_smooth =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="27-pseudotime_files/figure-html/Rhoa-ouija-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>How many of these methods outperform the naive approach of using the first principal component to represent pseudotime for these data?</p>
 <p><strong>Exercise 7</strong>: Repeat the exercise using a subset of the genes, e.g. the set of highly variable genes that can be obtained using <code>Brennecke_getVariableGenes()</code></p>
 </div>
 <div id="sessioninfo-7" class="section level3">
-<h3><span class="header-section-number">8.4.7</span> sessionInfo()</h3>
+<h3><span class="header-section-number">8.4.9</span> sessionInfo()</h3>
 <pre><code>## R version 3.4.3 (2017-11-30)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Debian GNU/Linux 9 (stretch)
@@ -1333,65 +1491,80 @@ TSCAN<span class="op">::</span><span class="kw">singlegeneplot</span>(
 ##  [8] utils     datasets  base     
 ## 
 ## other attached packages:
-##  [1] lle_1.1                    snowfall_1.84-6.1         
-##  [3] snow_0.4-2                 MASS_7.3-45               
-##  [5] scatterplot3d_0.3-40       SLICER_0.2.0              
-##  [7] destiny_2.6.1              monocle_2.6.1             
-##  [9] DDRTree_0.1.5              irlba_2.3.2               
-## [11] VGAM_1.0-4                 ggplot2_2.2.1             
-## [13] Matrix_1.2-7.1             M3Drop_3.05.00            
-## [15] numDeriv_2016.8-1          TSCAN_1.16.0              
-## [17] SingleCellExperiment_1.0.0 SummarizedExperiment_1.8.1
-## [19] DelayedArray_0.4.1         matrixStats_0.53.0        
-## [21] Biobase_2.38.0             GenomicRanges_1.30.1      
-## [23] GenomeInfoDb_1.14.0        IRanges_2.12.0            
-## [25] S4Vectors_0.16.0           BiocGenerics_0.24.0       
-## [27] knitr_1.19                
+##  [1] bindrcpp_0.2               rstan_2.17.3              
+##  [3] StanHeaders_2.17.2         lle_1.1                   
+##  [5] snowfall_1.84-6.1          snow_0.4-2                
+##  [7] MASS_7.3-45                scatterplot3d_0.3-40      
+##  [9] corrplot_0.84              ggbeeswarm_0.6.0          
+## [11] ggthemes_3.4.0             scater_1.6.2              
+## [13] ouija_0.99.0               Rcpp_0.12.15              
+## [15] SLICER_0.2.0               destiny_2.6.1             
+## [17] monocle_2.6.1              DDRTree_0.1.5             
+## [19] irlba_2.3.2                VGAM_1.0-4                
+## [21] ggplot2_2.2.1              Matrix_1.2-7.1            
+## [23] M3Drop_3.05.00             numDeriv_2016.8-1         
+## [25] TSCAN_1.16.0               SingleCellExperiment_1.0.0
+## [27] SummarizedExperiment_1.8.1 DelayedArray_0.4.1        
+## [29] matrixStats_0.53.0         Biobase_2.38.0            
+## [31] GenomicRanges_1.30.1       GenomeInfoDb_1.14.0       
+## [33] IRanges_2.12.0             S4Vectors_0.16.0          
+## [35] BiocGenerics_0.24.0        knitr_1.19                
 ## 
 ## loaded via a namespace (and not attached):
-##   [1] backports_1.1.2        Hmisc_4.1-1            RcppEigen_0.3.3.3.1   
-##   [4] plyr_1.8.4             igraph_1.1.2           lazyeval_0.2.1        
-##   [7] sp_1.2-7               densityClust_0.3       fastICA_1.2-1         
-##  [10] digest_0.6.15          htmltools_0.3.6        viridis_0.4.1         
-##  [13] gdata_2.18.0           magrittr_1.5           checkmate_1.8.5       
-##  [16] tensor_1.5             cluster_2.0.6          limma_3.34.6          
-##  [19] tripack_1.3-8          R.utils_2.6.0          xts_0.10-1            
-##  [22] colorspace_1.3-2       ggrepel_0.7.0          xfun_0.1              
-##  [25] dplyr_0.7.4            RCurl_1.95-4.10        spatstat.data_1.2-0   
-##  [28] spatstat_1.55-0        lme4_1.1-15            bindr_0.1             
-##  [31] survival_2.40-1        zoo_1.8-1              glue_1.2.0            
-##  [34] polyclip_1.6-1         gtable_0.2.0           zlibbioc_1.24.0       
-##  [37] XVector_0.18.0         MatrixModels_0.4-1     car_2.1-6             
-##  [40] DEoptimR_1.0-8         abind_1.4-5            sgeostat_1.0-27       
-##  [43] reldist_1.6-6          SparseM_1.77           VIM_4.7.0             
-##  [46] scales_0.5.0           pheatmap_1.0.8         Rcpp_0.12.15          
-##  [49] viridisLite_0.2.0      xtable_1.8-2           laeken_0.4.6          
-##  [52] htmlTable_1.11.2       foreign_0.8-67         proxy_0.4-21          
-##  [55] mclust_5.4             Formula_1.2-2          vcd_1.4-4             
-##  [58] htmlwidgets_1.0        FNN_1.1                gplots_3.0.1          
-##  [61] RColorBrewer_1.1-2     acepack_1.4.1          R.methodsS3_1.7.1     
-##  [64] pkgconfig_2.0.1        deldir_0.1-14          nnet_7.3-12           
-##  [67] alphahull_2.1          labeling_0.3           rlang_0.1.6           
-##  [70] reshape2_1.4.3         munsell_0.4.3          tools_3.4.3           
-##  [73] splancs_2.01-40        evaluate_0.10.1        stringr_1.2.0         
-##  [76] goftest_1.1-1          yaml_2.1.16            robustbase_0.92-8     
-##  [79] caTools_1.17.1         RANN_2.5.1             bindrcpp_0.2          
-##  [82] nlme_3.1-129           mime_0.5               quantreg_5.34         
-##  [85] slam_0.1-42            R.oo_1.21.0            compiler_3.4.3        
-##  [88] pbkrtest_0.4-7         rstudioapi_0.7         curl_3.1              
-##  [91] e1071_1.6-8            spatstat.utils_1.8-0   smoother_1.1          
-##  [94] tibble_1.4.2           statmod_1.4.30         stringi_1.1.6         
-##  [97] highr_0.6              lattice_0.20-34        nloptr_1.0.4          
-## [100] HSMMSingleCell_0.112.0 pillar_1.1.0           combinat_0.0-8        
-## [103] lmtest_0.9-35          data.table_1.10.4-3    bitops_1.0-6          
-## [106] httpuv_1.3.5           R6_2.2.2               latticeExtra_0.6-28   
-## [109] bookdown_0.6           KernSmooth_2.23-15     gridExtra_2.3         
-## [112] boot_1.3-18            gtools_3.5.0           assertthat_0.2.0      
-## [115] rprojroot_1.3-2        qlcMatrix_0.9.5        GenomeInfoDbData_1.0.0
-## [118] mgcv_1.8-23            grid_3.4.3             rpart_4.1-10          
-## [121] class_7.3-14           minqa_1.2.4            rmarkdown_1.8         
-## [124] Rtsne_0.13             TTR_0.23-3             bbmle_1.0.20          
-## [127] shiny_1.0.5            base64enc_0.1-3</code></pre>
+##   [1] utf8_1.1.3             shinydashboard_0.6.1   R.utils_2.6.0         
+##   [4] tidyselect_0.2.3       lme4_1.1-15            RSQLite_2.0           
+##   [7] AnnotationDbi_1.40.0   htmlwidgets_1.0        grid_3.4.3            
+##  [10] combinat_0.0-8         Rtsne_0.13             munsell_0.4.3         
+##  [13] codetools_0.2-15       statmod_1.4.30         colorspace_1.3-2      
+##  [16] fastICA_1.2-1          highr_0.6              rstudioapi_0.7        
+##  [19] robustbase_0.92-8      vcd_1.4-4              tensor_1.5            
+##  [22] VIM_4.7.0              TTR_0.23-3             labeling_0.3          
+##  [25] slam_0.1-42            splancs_2.01-40        tximport_1.6.0        
+##  [28] bbmle_1.0.20           GenomeInfoDbData_1.0.0 polyclip_1.6-1        
+##  [31] bit64_0.9-7            pheatmap_1.0.8         rhdf5_2.22.0          
+##  [34] rprojroot_1.3-2        coda_0.19-1            xfun_0.1              
+##  [37] R6_2.2.2               RcppEigen_0.3.3.3.1    locfit_1.5-9.1        
+##  [40] bitops_1.0-6           spatstat.utils_1.8-0   assertthat_0.2.0      
+##  [43] scales_0.5.0           nnet_7.3-12            beeswarm_0.2.3        
+##  [46] gtable_0.2.0           goftest_1.1-1          rlang_0.1.6           
+##  [49] MatrixModels_0.4-1     lazyeval_0.2.1         acepack_1.4.1         
+##  [52] checkmate_1.8.5        inline_0.3.14          yaml_2.1.16           
+##  [55] reshape2_1.4.3         abind_1.4-5            backports_1.1.2       
+##  [58] httpuv_1.3.5           Hmisc_4.1-1            tensorA_0.36          
+##  [61] tools_3.4.3            bookdown_0.6           cubature_1.3-11       
+##  [64] gplots_3.0.1           RColorBrewer_1.1-2     proxy_0.4-21          
+##  [67] MCMCglmm_2.25          plyr_1.8.4             progress_1.1.2        
+##  [70] base64enc_0.1-3        zlibbioc_1.24.0        purrr_0.2.4           
+##  [73] RCurl_1.95-4.10        densityClust_0.3       prettyunits_1.0.2     
+##  [76] rpart_4.1-10           alphahull_2.1          deldir_0.1-14         
+##  [79] reldist_1.6-6          viridis_0.5.0          cowplot_0.9.2         
+##  [82] zoo_1.8-1              ggrepel_0.7.0          cluster_2.0.6         
+##  [85] magrittr_1.5           data.table_1.10.4-3    SparseM_1.77          
+##  [88] lmtest_0.9-35          RANN_2.5.1             mime_0.5              
+##  [91] evaluate_0.10.1        xtable_1.8-2           XML_3.98-1.9          
+##  [94] smoother_1.1           pbkrtest_0.4-7         mclust_5.4            
+##  [97] gridExtra_2.3          biomaRt_2.34.2         HSMMSingleCell_0.112.0
+## [100] compiler_3.4.3         tibble_1.4.2           crayon_1.3.4          
+## [103] KernSmooth_2.23-15     minqa_1.2.4            R.oo_1.21.0           
+## [106] htmltools_0.3.6        mgcv_1.8-23            corpcor_1.6.9         
+## [109] Formula_1.2-2          tidyr_0.8.0            DBI_0.7               
+## [112] boot_1.3-18            car_2.1-6              cli_1.0.0             
+## [115] sgeostat_1.0-27        R.methodsS3_1.7.1      gdata_2.18.0          
+## [118] bindr_0.1              igraph_1.1.2           pkgconfig_2.0.1       
+## [121] foreign_0.8-67         laeken_0.4.6           sp_1.2-7              
+## [124] vipor_0.4.5            XVector_0.18.0         stringr_1.2.0         
+## [127] digest_0.6.15          spatstat.data_1.2-0    rmarkdown_1.8         
+## [130] htmlTable_1.11.2       edgeR_3.20.8           curl_3.1              
+## [133] shiny_1.0.5            gtools_3.5.0           quantreg_5.35         
+## [136] rjson_0.2.15           nloptr_1.0.4           nlme_3.1-129          
+## [139] viridisLite_0.3.0      limma_3.34.8           pillar_1.1.0          
+## [142] lattice_0.20-34        httr_1.3.1             DEoptimR_1.0-8        
+## [145] survival_2.40-1        glue_1.2.0             xts_0.10-1            
+## [148] qlcMatrix_0.9.5        FNN_1.1                spatstat_1.55-0       
+## [151] bit_1.1-12             class_7.3-14           stringi_1.1.6         
+## [154] blob_1.1.0             memoise_1.1.0          latticeExtra_0.6-28   
+## [157] caTools_1.17.1         dplyr_0.7.4            e1071_1.6-8           
+## [160] ape_5.0                tripack_1.3-8</code></pre>
 
 </div>
 </div>
@@ -1555,13 +1728,13 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ## [16] shinydashboard_0.6.1   shiny_1.0.5            rrcov_1.4-3           
 ## [19] compiler_3.4.3         httr_1.3.1             backports_1.1.2       
 ## [22] assertthat_0.2.0       Matrix_1.2-7.1         lazyeval_0.2.1        
-## [25] limma_3.34.6           htmltools_0.3.6        prettyunits_1.0.2     
+## [25] limma_3.34.8           htmltools_0.3.6        prettyunits_1.0.2     
 ## [28] tools_3.4.3            bindrcpp_0.2           gtable_0.2.0          
 ## [31] glue_1.2.0             GenomeInfoDbData_1.0.0 reshape2_1.4.3        
 ## [34] dplyr_0.7.4            doRNG_1.6.6            Rcpp_0.12.15          
 ## [37] gdata_2.18.0           xfun_0.1               stringr_1.2.0         
 ## [40] mime_0.5               rngtools_1.2.4         gtools_3.5.0          
-## [43] WriteXLS_4.0.0         XML_3.98-1.9           edgeR_3.20.7          
+## [43] WriteXLS_4.0.0         XML_3.98-1.9           edgeR_3.20.8          
 ## [46] DEoptimR_1.0-8         zlibbioc_1.24.0        scales_0.5.0          
 ## [49] rhdf5_2.22.0           RColorBrewer_1.1-2     yaml_2.1.16           
 ## [52] memoise_1.1.0          gridExtra_2.3          pkgmaker_0.22         
@@ -1574,11 +1747,11 @@ res &lt;-<span class="st"> </span><span class="kw">SingleCellExperiment</span>(
 ## [73] bookdown_0.6           R6_2.2.2               gplots_3.0.1          
 ## [76] DBI_0.7                pillar_1.1.0           RCurl_1.95-4.10       
 ## [79] tibble_1.4.2           KernSmooth_2.23-15     rmarkdown_1.8         
-## [82] viridis_0.4.1          progress_1.1.2         locfit_1.5-9.1        
+## [82] viridis_0.5.0          progress_1.1.2         locfit_1.5-9.1        
 ## [85] grid_3.4.3             data.table_1.10.4-3    blob_1.1.0            
 ## [88] digest_0.6.15          xtable_1.8-2           httpuv_1.3.5          
 ## [91] munsell_0.4.3          registry_0.5           beeswarm_0.2.3        
-## [94] viridisLite_0.2.0      vipor_0.4.5</code></pre>
+## [94] viridisLite_0.3.0      vipor_0.4.5</code></pre>
 
 </div>
 </div>
@@ -1989,7 +2162,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">pnorm</span>(<span class="k
 ## [13] irlba_2.3.2                VGAM_1.0-4                
 ## [15] ggplot2_2.2.1              Biobase_2.38.0            
 ## [17] BiocGenerics_0.24.0        Matrix_1.2-7.1            
-## [19] edgeR_3.20.7               limma_3.34.6              
+## [19] edgeR_3.20.8               limma_3.34.8              
 ## [21] scRNA.seq.funcs_0.1.0      knitr_1.19                
 ## 
 ## loaded via a namespace (and not attached):
@@ -2005,7 +2178,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">pnorm</span>(<span class="k
 ## [28] bindr_0.1              combinat_0.0-8         gtools_3.5.0          
 ## [31] dplyr_0.7.4            RCurl_1.95-4.10        magrittr_1.5          
 ## [34] GenomeInfoDbData_1.0.0 Rcpp_0.12.15           munsell_0.4.3         
-## [37] abind_1.4-5            viridis_0.4.1          stringi_1.1.6         
+## [37] abind_1.4-5            viridis_0.5.0          stringi_1.1.6         
 ## [40] yaml_2.1.16            MASS_7.3-45            zlibbioc_1.24.0       
 ## [43] Rtsne_0.13             plyr_1.8.4             grid_3.4.3            
 ## [46] gdata_2.18.0           ggrepel_0.7.0          contfrac_1.1-11       
@@ -2014,7 +2187,7 @@ pVals &lt;-<span class="st"> </span><span class="kw">pnorm</span>(<span class="k
 ## [55] evaluate_0.10.1        data.table_1.10.4-3    deSolve_1.20          
 ## [58] gtable_0.2.0           RANN_2.5.1             assertthat_0.2.0      
 ## [61] xfun_0.1               qlcMatrix_0.9.5        HSMMSingleCell_0.112.0
-## [64] viridisLite_0.2.0      tibble_1.4.2           pheatmap_1.0.8        
+## [64] viridisLite_0.3.0      tibble_1.4.2           pheatmap_1.0.8        
 ## [67] elliptic_1.3-7         bindrcpp_0.2           cluster_2.0.6         
 ## [70] fastICA_1.2-1          densityClust_0.3       statmod_1.4.30</code></pre>
 
@@ -2192,12 +2365,12 @@ segerstolpe &lt;-<span class="st"> </span><span class="kw">indexCluster</span>(s
 <p>We can also visualize these tables using a <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey">Sankey diagram</a>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">getSankey</span>(<span class="kw">colData</span>(muraro)<span class="op">$</span>cell_type1,  muraro_to_seger<span class="op">$</span>scmap_cluster_labs[,<span class="dv">1</span>], <span class="dt">plot_height=</span><span class="dv">400</span>))</code></pre></div>
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Mon Feb  5 15:40:40 2018 -->
+<!-- Tue Feb  6 23:38:56 2018 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7ae6ef9322b () {
+function gvisDataSankeyID7e7249fc6df () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2395,8 +2568,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7ae6ef9322b() {
-var data = gvisDataSankeyID7ae6ef9322b();
+function drawChartSankeyID7e7249fc6df() {
+var data = gvisDataSankeyID7e7249fc6df();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -2415,7 +2588,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7ae6ef9322b')
+    document.getElementById('SankeyID7e7249fc6df')
     );
     chart.draw(data,options);
     
@@ -2439,9 +2612,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7ae6ef9322b);
+callbacks.push(drawChartSankeyID7e7249fc6df);
 })();
-function displayChartSankeyID7ae6ef9322b() {
+function displayChartSankeyID7e7249fc6df() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2464,9 +2637,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7ae6ef9322b"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7e7249fc6df"></script>
 <!-- divChart -->
-<div id="SankeyID7ae6ef9322b" style="width: 400; height: 400;">
+<div id="SankeyID7e7249fc6df" style="width: 400; height: 400;">
 
 </div>
 <p><strong>Exercise</strong> How many of the previously unclassified cells would be be able to assign to cell-types using scmap?</p>
@@ -2741,14 +2914,14 @@ Figure 8.26: After Aligning
 ## [22] scales_0.5.0           randomForest_4.6-12    proxy_0.4-21          
 ## [25] stringr_1.2.0          digest_0.6.15          rmarkdown_1.8         
 ## [28] XVector_0.18.0         pkgconfig_2.0.1        htmltools_0.3.6       
-## [31] limma_3.34.6           highr_0.6              htmlwidgets_1.0       
+## [31] limma_3.34.8           highr_0.6              htmlwidgets_1.0       
 ## [34] rlang_0.1.6            RSQLite_2.0            FNN_1.1               
 ## [37] shiny_1.0.5            bindr_0.1              zoo_1.8-1             
 ## [40] jsonlite_1.5           dplyr_0.7.4            RCurl_1.95-4.10       
 ## [43] magrittr_1.5           GenomeInfoDbData_1.0.0 Matrix_1.2-7.1        
 ## [46] Rcpp_0.12.15           ggbeeswarm_0.6.0       munsell_0.4.3         
-## [49] viridis_0.4.1          stringi_1.1.6          yaml_2.1.16           
-## [52] edgeR_3.20.7           zlibbioc_1.24.0        rhdf5_2.22.0          
+## [49] viridis_0.5.0          stringi_1.1.6          yaml_2.1.16           
+## [52] edgeR_3.20.8           zlibbioc_1.24.0        rhdf5_2.22.0          
 ## [55] plyr_1.8.4             grid_3.4.3             blob_1.1.0            
 ## [58] shinydashboard_0.6.1   lattice_0.20-34        locfit_1.5-9.1        
 ## [61] pillar_1.1.0           igraph_1.1.2           rjson_0.2.15          
@@ -2757,7 +2930,7 @@ Figure 8.26: After Aligning
 ## [70] data.table_1.10.4-3    httpuv_1.3.5           gtable_0.2.0          
 ## [73] assertthat_0.2.0       xfun_0.1               mime_0.5              
 ## [76] xtable_1.8-2           e1071_1.6-8            class_7.3-14          
-## [79] viridisLite_0.2.0      tibble_1.4.2           AnnotationDbi_1.40.0  
+## [79] viridisLite_0.3.0      tibble_1.4.2           AnnotationDbi_1.40.0  
 ## [82] beeswarm_0.2.3         memoise_1.1.0          tximport_1.6.0        
 ## [85] statmod_1.4.30</code></pre>
 

@@ -433,10 +433,10 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ##  [1] RColorBrewer_1.1-2         reshape2_1.4.3            
 ##  [3] sva_3.26.0                 genefilter_1.60.0         
 ##  [5] mgcv_1.8-23                nlme_3.1-129              
-##  [7] kBET_0.99.3                scran_1.6.7               
+##  [7] kBET_0.99.5                scran_1.6.7               
 ##  [9] scater_1.6.2               SingleCellExperiment_1.0.0
 ## [11] ggplot2_2.2.1              RUVSeq_1.12.0             
-## [13] edgeR_3.20.7               limma_3.34.6              
+## [13] edgeR_3.20.8               limma_3.34.8              
 ## [15] EDASeq_2.12.0              ShortRead_1.36.0          
 ## [17] GenomicAlignments_1.14.1   SummarizedExperiment_1.8.1
 ## [19] DelayedArray_0.4.1         matrixStats_0.53.0        
@@ -467,7 +467,7 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [49] rhdf5_2.22.0           yaml_2.1.16            memoise_1.1.0         
 ## [52] gridExtra_2.3          biomaRt_2.34.2         latticeExtra_0.6-28   
 ## [55] stringi_1.1.6          RSQLite_2.0            highr_0.6             
-## [58] RMySQL_0.10.13         orthopolynom_1.0-5     GenomicFeatures_1.30.2
+## [58] RMySQL_0.10.13         orthopolynom_1.0-5     GenomicFeatures_1.30.3
 ## [61] contfrac_1.1-11        rlang_0.1.6            pkgconfig_2.0.1       
 ## [64] moments_0.14           bitops_1.0-6           evaluate_0.10.1       
 ## [67] lattice_0.20-34        bindr_0.1              labeling_0.3          
@@ -475,11 +475,11 @@ Perform the same analysis with read counts of the `tung` data. Use `tung/reads.r
 ## [73] deSolve_1.20           plyr_1.8.4             magrittr_1.5          
 ## [76] bookdown_0.6           R6_2.2.2               DBI_0.7               
 ## [79] pillar_1.1.0           survival_2.40-1        RCurl_1.95-4.10       
-## [82] tibble_1.4.2           rmarkdown_1.8          viridis_0.4.1         
+## [82] tibble_1.4.2           rmarkdown_1.8          viridis_0.5.0         
 ## [85] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
 ## [88] data.table_1.10.4-3    FNN_1.1                blob_1.1.0            
 ## [91] digest_0.6.15          xtable_1.8-2           httpuv_1.3.5          
 ## [94] elliptic_1.3-7         R.utils_2.6.0          munsell_0.4.3         
-## [97] beeswarm_0.2.3         viridisLite_0.2.0      vipor_0.4.5
+## [97] beeswarm_0.2.3         viridisLite_0.3.0      vipor_0.4.5
 ```
 
