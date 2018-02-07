@@ -64,7 +64,9 @@ A simple PCA analysis already separates some strong cell types and provides some
 plotPCA(deng, colour_by = "cell_type2")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-5-1} \end{center}
 As you can see, the early cell types separate quite well, but the three blastocyst timepoints are more difficult to distinguish.
 
 ### SC3
@@ -95,7 +97,9 @@ Interestingly, the number of cell types predicted by `SC3` is smaller than in th
 plotPCA(deng, colour_by = "cell_type1")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-7-1} \end{center}
 
 Now we are ready to run `SC3` (we also ask it to calculate biological properties of the clusters): 
 
@@ -135,7 +139,9 @@ Consensus matrix:
 sc3_plot_consensus(deng, k = 10, show_pdata = "cell_type2")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-9-1} \end{center}
 
 Silhouette plot:
 
@@ -143,7 +149,9 @@ Silhouette plot:
 sc3_plot_silhouette(deng, k = 10)
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-10-1} \end{center}
 
 Heatmap of the expression matrix:
 
@@ -151,7 +159,9 @@ Heatmap of the expression matrix:
 sc3_plot_expression(deng, k = 10, show_pdata = "cell_type2")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-11-1} \end{center}
 
 Identified marker genes:
 
@@ -159,7 +169,9 @@ Identified marker genes:
 sc3_plot_markers(deng, k = 10, show_pdata = "cell_type2")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-12-1} \end{center}
 
 PCA plot with highlighted `SC3` clusters:
 
@@ -167,7 +179,9 @@ PCA plot with highlighted `SC3` clusters:
 plotPCA(deng, colour_by = "sc3_10_clusters")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-13-1} \end{center}
 
 Compare the results of `SC3` clustering with the original publication cell type labels:
 
@@ -225,17 +239,23 @@ colData(deng)$pcaReduce <- as.character(pca.red[,32 - 10])
 plotPCA(deng, colour_by = "pcaReduce")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-18-1} \end{center}
 
 __Exercise 5__: Run pcaReduce for $k=2$ and plot a similar PCA plot. Does it look good?
 
 __Hint__: When running pcaReduce for different $k$s you do not need to rerun PCAreduce function, just use already calculated `pca.red` object.
 
 __Our solution__:
-<div class="figure" style="text-align: center">
-<img src="25-clustering_files/figure-html/clust-pca-reduce2-1.png" alt="Clustering solutions of pcaReduce method for $k=2$." width="672" />
-<p class="caption">(\#fig:clust-pca-reduce2)Clustering solutions of pcaReduce method for $k=2$.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics{25-clustering_files/figure-latex/clust-pca-reduce2-1} 
+
+}
+
+\caption{Clustering solutions of pcaReduce method for $k=2$.}(\#fig:clust-pca-reduce2)
+\end{figure}
 
 __Exercise 6__: Compare the results between `pcaReduce` and the original publication cell types for $k=10$.
 
@@ -253,10 +273,14 @@ __Our solution__:
 deng <- plotTSNE(deng, rand_seed = 1, return_SCE = TRUE)
 ```
 
-<div class="figure" style="text-align: center">
-<img src="25-clustering_files/figure-html/clust-tsne-1.png" alt="tSNE map of the patient data" width="672" />
-<p class="caption">(\#fig:clust-tsne)tSNE map of the patient data</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics{25-clustering_files/figure-latex/clust-tsne-1} 
+
+}
+
+\caption{tSNE map of the patient data}(\#fig:clust-tsne)
+\end{figure}
 
 Note that all points on the plot above are black. This is different from what we saw before, when the cells were coloured based on the annotation. Here we do not have any annotation and all cells come from the same batch, therefore all dots are black.
 
@@ -269,10 +293,14 @@ colData(deng)$tSNE_kmeans <- as.character(kmeans(deng@reducedDims$TSNE, centers 
 plotTSNE(deng, rand_seed = 1, colour_by = "tSNE_kmeans")
 ```
 
-<div class="figure" style="text-align: center">
-<img src="25-clustering_files/figure-html/clust-tsne-kmeans2-1.png" alt="tSNE map of the patient data with 8 colored clusters, identified by the k-means clustering algorithm" width="672" />
-<p class="caption">(\#fig:clust-tsne-kmeans2)tSNE map of the patient data with 8 colored clusters, identified by the k-means clustering algorithm</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics{25-clustering_files/figure-latex/clust-tsne-kmeans2-1} 
+
+}
+
+\caption{tSNE map of the patient data with 8 colored clusters, identified by the k-means clustering algorithm}(\#fig:clust-tsne-kmeans2)
+\end{figure}
 
 __Exercise 7__: Make the same plot for $k=10$.
 
@@ -336,7 +364,9 @@ colData(deng)$SNNCliq <- as.character(snn.res[,1])
 plotPCA(deng, colour_by = "SNNCliq")
 ```
 
-<img src="25-clustering_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{25-clustering_files/figure-latex/unnamed-chunk-21-1} \end{center}
 
 __Exercise 9__: Compare the results between `SNN-Cliq` and the original publication cell types.
 
@@ -393,10 +423,14 @@ pheatmap(
 )
 ```
 
-<div class="figure" style="text-align: center">
-<img src="25-clustering_files/figure-html/clust-sincera-1.png" alt="Clustering solutions of SINCERA method using found $k$" width="672" />
-<p class="caption">(\#fig:clust-sincera)Clustering solutions of SINCERA method using found $k$</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics{25-clustering_files/figure-latex/clust-sincera-1} 
+
+}
+
+\caption{Clustering solutions of SINCERA method using found $k$}(\#fig:clust-sincera)
+\end{figure}
 
 __Exercise 10__: Compare the results between `SINCERA` and the original publication cell types.
 
@@ -465,20 +499,20 @@ __Exercise 11__: Is using the singleton cluster criteria for finding __k__ a goo
 ##  [52] zlibbioc_1.24.0        scales_0.5.0           rhdf5_2.22.0          
 ##  [55] RColorBrewer_1.1-2     yaml_2.1.16            memoise_1.1.0         
 ##  [58] gridExtra_2.3          pkgmaker_0.22          biomaRt_2.34.2        
-##  [61] stringi_1.1.6          RSQLite_2.0            highr_0.6             
-##  [64] pcaPP_1.9-73           foreach_1.4.4          orthopolynom_1.0-5    
-##  [67] e1071_1.6-8            contfrac_1.1-11        caTools_1.17.1        
-##  [70] moments_0.14           rlang_0.1.6            pkgconfig_2.0.1       
-##  [73] bitops_1.0-6           evaluate_0.10.1        lattice_0.20-34       
-##  [76] ROCR_1.0-7             bindr_0.1              labeling_0.3          
-##  [79] cowplot_0.9.2          bit_1.1-12             deSolve_1.20          
-##  [82] plyr_1.8.4             magrittr_1.5           bookdown_0.6          
-##  [85] R6_2.2.2               gplots_3.0.1           DBI_0.7               
-##  [88] pillar_1.1.0           RCurl_1.95-4.10        tibble_1.4.2          
-##  [91] KernSmooth_2.23-15     rmarkdown_1.8          viridis_0.5.0         
-##  [94] progress_1.1.2         locfit_1.5-9.1         grid_3.4.3            
-##  [97] data.table_1.10.4-3    blob_1.1.0             digest_0.6.15         
-## [100] xtable_1.8-2           httpuv_1.3.5           elliptic_1.3-7        
-## [103] munsell_0.4.3          registry_0.5           beeswarm_0.2.3        
-## [106] viridisLite_0.3.0      vipor_0.4.5
+##  [61] stringi_1.1.6          RSQLite_2.0            pcaPP_1.9-73          
+##  [64] foreach_1.4.4          orthopolynom_1.0-5     e1071_1.6-8           
+##  [67] contfrac_1.1-11        caTools_1.17.1         moments_0.14          
+##  [70] rlang_0.1.6            pkgconfig_2.0.1        bitops_1.0-6          
+##  [73] evaluate_0.10.1        lattice_0.20-34        ROCR_1.0-7            
+##  [76] bindr_0.1              labeling_0.3           cowplot_0.9.2         
+##  [79] bit_1.1-12             deSolve_1.20           plyr_1.8.4            
+##  [82] magrittr_1.5           bookdown_0.6           R6_2.2.2              
+##  [85] gplots_3.0.1           DBI_0.7                pillar_1.1.0          
+##  [88] RCurl_1.95-4.10        tibble_1.4.2           KernSmooth_2.23-15    
+##  [91] rmarkdown_1.8          viridis_0.5.0          progress_1.1.2        
+##  [94] locfit_1.5-9.1         grid_3.4.3             data.table_1.10.4-3   
+##  [97] blob_1.1.0             digest_0.6.15          xtable_1.8-2          
+## [100] httpuv_1.3.5           elliptic_1.3-7         munsell_0.4.3         
+## [103] registry_0.5           beeswarm_0.2.3         viridisLite_0.3.0     
+## [106] vipor_0.4.5
 ```
