@@ -71,15 +71,23 @@ gold standard of open-source software hosted in a reputable repository.
 The following figures from the paper summarise some of the features of
 the various tools.
 
-<div class="figure" style="text-align: center">
-<img src="figures/cannoodt_pseudotime_properties.png" alt="Descriptions of trajectory inference methods for single-cell transcriptomics data (Fig. 2 from Cannoodt et al, 2016)." width="90%" />
-<p class="caption">(\#fig:pseudotime-methods-description)Descriptions of trajectory inference methods for single-cell transcriptomics data (Fig. 2 from Cannoodt et al, 2016).</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="figures/cannoodt_pseudotime_methods.png" alt="Characterization of trajectory inference methods for single-cell transcriptomics data (Fig. 3 from Cannoodt et al, 2016)." width="90%" />
-<p class="caption">(\#fig:pseudotime-methods)Characterization of trajectory inference methods for single-cell transcriptomics data (Fig. 3 from Cannoodt et al, 2016).</p>
-</div>
+{\centering \includegraphics[width=0.9\linewidth]{figures/cannoodt_pseudotime_properties} 
+
+}
+
+\caption{Descriptions of trajectory inference methods for single-cell transcriptomics data (Fig. 2 from Cannoodt et al, 2016).}(\#fig:pseudotime-methods-description)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{figures/cannoodt_pseudotime_methods} 
+
+}
+
+\caption{Characterization of trajectory inference methods for single-cell transcriptomics data (Fig. 3 from Cannoodt et al, 2016).}(\#fig:pseudotime-methods)
+\end{figure}
 
 
 ### First look at Deng data
@@ -102,7 +110,9 @@ deng_SCE <- plotPCA(deng_SCE, colour_by = "cell_type2",
                     return_SCE = TRUE)
 ```
 
-<img src="27-pseudotime_files/figure-html/data-overview-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/data-overview-1} \end{center}
 
 PCA, here, provides a useful baseline for assessing different pseudotime methods. For a very naive pseudotime we can just take the co-ordinates of the first principal component.
 
@@ -117,7 +127,9 @@ ggplot(as.data.frame(colData(deng_SCE)), aes(x = PC1, y = cell_type2,
     ggtitle("Cells ordered by first principal component")
 ```
 
-<img src="27-pseudotime_files/figure-html/pca-pseudotime-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/pca-pseudotime-1} \end{center}
 
 As the plot above shows, PC1 struggles to correctly order cells early and late in the developmental timecourse, but overall does a relatively good job of ordering cells by developmental time.   
 
@@ -138,7 +150,9 @@ dengclust <- TSCAN::exprmclust(procdeng, clusternum = 10)
 TSCAN::plotmclust(dengclust)
 ```
 
-<img src="27-pseudotime_files/figure-html/tscan-all-genes-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/tscan-all-genes-1} \end{center}
 
 ```r
 dengorderTSCAN <- TSCAN::TSCANorder(dengclust, orderonly = FALSE)
@@ -177,7 +191,9 @@ ggplot(as.data.frame(colData(deng_SCE)),
 ## Warning: Removed 47 rows containing missing values (position_quasirandom).
 ```
 
-<img src="27-pseudotime_files/figure-html/tscan-vs-truth-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/tscan-vs-truth-1} \end{center}
 
 TSCAN gets the development trajectory the "wrong way around", in the sense that later pseudotime values correspond to early timepoints and vice versa. This is not inherently a problem (it is easy enough to reverse the ordering to get the intuitive interpretation of pseudotime), but overall it would be a stretch to suggest that TSCAN performs better than PCA on this dataset. (As it is a PCA-based method, perhaps this is not entirely surprising.)
 
@@ -208,7 +224,9 @@ m3dGenes <- as.character(
 ## genes.
 ```
 
-<img src="27-pseudotime_files/figure-html/m3d-select-genes-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/m3d-select-genes-1} \end{center}
 
 ```r
 d <- deng[which(rownames(deng) %in% m3dGenes), ]
@@ -234,7 +252,9 @@ dCellDataSet <- orderCells(dCellDataSet, reverse = FALSE)
 plot_cell_trajectory(dCellDataSet)
 ```
 
-<img src="27-pseudotime_files/figure-html/monocle-all-genes-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/monocle-all-genes-1} \end{center}
 
 ```r
 # Store the ordering
@@ -262,7 +282,9 @@ ggplot(as.data.frame(colData(deng_SCE)),
     ggtitle("Cells ordered by monocle pseudotime")
 ```
 
-<img src="27-pseudotime_files/figure-html/monocle-vs-truth-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/monocle-vs-truth-1} \end{center}
 
 Monocle - at least with its default settings - performs poorly on these data. The "late2cell" group is completely separated from the "zy", "early2cell" and "mid2cell" cells (though these are correctly ordered), and there is no separation at all of "4cell", "8cell", "16cell" or any blast cell groups.
 
@@ -291,7 +313,9 @@ ggplot(tmp, aes(x = DC1, y = DC2, colour = Timepoint)) +
     theme_classic()
 ```
 
-<img src="27-pseudotime_files/figure-html/destiny-deng-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/destiny-deng-1} \end{center}
 
 ```r
 deng_SCE$pseudotime_diffusionmap <- rank(eigenvectors(dm)[,1])
@@ -305,7 +329,9 @@ ggplot(as.data.frame(colData(deng_SCE)),
     ggtitle("Cells ordered by diffusion map pseudotime")
 ```
 
-<img src="27-pseudotime_files/figure-html/destiny-deng-2.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/destiny-deng-2} \end{center}
 
 Like the other methods, using the first diffusion map component from destiny as pseudotime does a good job at ordering the early time-points (if we take high values as "earlier" in developement), but it is unable to distinguish the later ones.
 
@@ -381,7 +407,9 @@ plotReducedDim(deng_SCE, use_dimred = "LLE", colour_by = "cell_type2") +
     ggtitle("Locally linear embedding of cells from SLICER")
 ```
 
-<img src="27-pseudotime_files/figure-html/slicer-analyis-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/slicer-analyis-1} \end{center}
 
 With the locally linear embedding computed we can construct a
 k-nearest neighbour graph that is fully connected. This plot displays
@@ -396,7 +424,9 @@ slicer_traj_graph <- conn_knn_graph(slicer_traj_lle, 10)
 plot(slicer_traj_graph, main = "Fully connected kNN graph from SLICER")
 ```
 
-<img src="27-pseudotime_files/figure-html/slicer-build-graph-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/slicer-build-graph-1} \end{center}
 
 From this graph we can identify "extreme" cells that are candidates
 for start/end cells in the trajectory.
@@ -406,7 +436,9 @@ for start/end cells in the trajectory.
 ends <- find_extreme_cells(slicer_traj_graph, slicer_traj_lle)
 ```
 
-<img src="27-pseudotime_files/figure-html/slicer-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/slicer-1} \end{center}
 
 ```r
 start <- ends[1]
@@ -446,7 +478,9 @@ ggplot(as.data.frame(colData(deng_SCE)),
     theme_classic()
 ```
 
-<img src="27-pseudotime_files/figure-html/slicer-vs-truth-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/slicer-vs-truth-1} \end{center}
 
 Like the previous method, SLICER here provides a good ordering for the
 early time points. It places "16cell" cells before "8cell" cells, but provides better ordering for blast cells than many of the earlier methods.
@@ -491,7 +525,9 @@ plotExpression(deng_SCE, ouija_markers, x = "cell_type2", colour_by = "cell_type
     theme(axis.text.x = element_text(angle = 60, hjust = 1))
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-response-type-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-response-type-1} \end{center}
 
 In order to fit the pseudotimes wesimply call `ouija`, passing in the expected response types. Note that if no response types are provided then they are all assumed to be switch-like by default, which we will do here. The input to Ouija can be a cell-by-gene matrix of non-negative expression values, or an ExpressionSet object, or, happily, by selecting the `logcounts` values from a SingleCellExperiment object.
 
@@ -542,7 +578,9 @@ We can plot the gene expression over pseudotime along with the maximum a posteri
 plot_expression(oui_vb)
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-plot-exprs-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-plot-exprs-1} \end{center}
 
 We can also visualise when in the trajectory gene regulation behaviour occurs, either in the form of the switch time or the peak time (for switch-like or transient genes) using the plot_switch_times and plot_transient_times functions:
 
@@ -551,13 +589,17 @@ We can also visualise when in the trajectory gene regulation behaviour occurs, e
 plot_switch_times(oui_vb)
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-plot-switch-times-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-plot-switch-times-1} \end{center}
 
 ```r
 plot_peak_times(oui_vb)
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-plot-switch-times-2.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-plot-switch-times-2} \end{center}
 
 Identify metastable states using consistency matrices.
 
@@ -567,7 +609,343 @@ cmo <- consistency_matrix(oui_vb)
 plot_consistency(oui_vb)
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-consistency-1.png" width="672" style="display: block; margin: auto;" />
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font
+## metrics unknown for Unicode character U+2192
+
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font
+## metrics unknown for Unicode character U+2192
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): conversion
+## failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted for <e2>
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): conversion
+## failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted for <86>
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): conversion
+## failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted for <92>
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font
+## metrics unknown for Unicode character U+2192
+
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font
+## metrics unknown for Unicode character U+2192
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): conversion
+## failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted for <e2>
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): conversion
+## failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted for <86>
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): conversion
+## failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x
+## $y, : conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot
+## substituted for <e2>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x
+## $y, : conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot
+## substituted for <86>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x
+## $y, : conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot
+## substituted for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <e2>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <86>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot substituted
+## for <92>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x
+## $y, : conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot
+## substituted for <e2>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x
+## $y, : conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot
+## substituted for <86>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x
+## $y, : conversion failure on 'Pseudotime order →' in 'mbcsToSbcs': dot
+## substituted for <92>
+```
+
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-consistency-1} \end{center}
 
 ```r
 cell_classifications <- cluster_consistency(cmo)
@@ -584,7 +962,9 @@ ggplot(ouija_pseudotime, aes(x = map_pst, y = cell_classifications)) +
   ylab("Cell classification")
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-pseudotime-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-pseudotime-1} \end{center}
 
 ```r
 deng_SCE$pseudotime_ouija <- ouija_pseudotime$map_pst
@@ -600,7 +980,9 @@ ggplot(as.data.frame(colData(deng_SCE)),
     theme_classic()
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-pseudotime-2.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-pseudotime-2} \end{center}
 
 Ouija does quite well in the ordering of the cells here, although it can be sensitive to the choice of marker genes and prior information supplied. How do the results change if you select different marker genes or change the priors?
 
@@ -619,7 +1001,9 @@ ggplot(as.data.frame(colData(deng_SCE)),
     theme_classic()
 ```
 
-<img src="27-pseudotime_files/figure-html/ouija-states-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/ouija-states-1} \end{center}
 
 A common analysis is to work out the regulation orderings of genes. For example, is gene A upregulated before gene B? Does gene C peak before the downregulation of gene D? Ouija answers these questions in terms of a Bayesian hypothesis test of whether the difference in regulation timing (either switch time or peak time) is significantly different to 0. This is collated using the gene_regulation function.
 
@@ -635,10 +1019,10 @@ head(gene_regs)
 ##   label        gene_A gene_B mean_difference lower_95 upper_95 significant
 ##   <chr>        <chr>  <chr>            <dbl>    <dbl>    <dbl> <lgl>      
 ## 1 Bmp15 - Cdx2 Bmp15  Cdx2           -0.0434 -0.0912   0.0110  F          
-## 2 Bmp15 - Cre… Bmp15  Creb3           0.278   0.220    0.330   T          
+## 2 Bmp15 - Cre~ Bmp15  Creb3           0.278   0.220    0.330   T          
 ## 3 Bmp15 - Elf5 Bmp15  Elf5           -0.656  -0.688   -0.618   T          
-## 4 Bmp15 - Eom… Bmp15  Eomes           0.0766  0.00433  0.153   T          
-## 5 Bmp15 - Fox… Bmp15  Foxa1          -0.0266 -0.0611   0.00287 F          
+## 4 Bmp15 - Eom~ Bmp15  Eomes           0.0766  0.00433  0.153   T          
+## 5 Bmp15 - Fox~ Bmp15  Foxa1          -0.0266 -0.0611   0.00287 F          
 ## 6 Bmp15 - Gdf3 Bmp15  Gdf3            0.0704  0.00963  0.134   T
 ```
 
@@ -670,7 +1054,9 @@ corrplot.mixed(cor(df_pseudotime, use = "na.or.complete"),
                mar = c(0, 0, 3.1, 0))
 ```
 
-<img src="27-pseudotime_files/figure-html/compare-results-1.png" width="960" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/compare-results-1} \end{center}
 
 We see here that Ouija, TSCAN and SLICER all give trajectories that are similar and strongly correlated with PC1. Diffusion Map is less strongly correlated with these methods, and Monocle gives very different results.
 
@@ -697,7 +1083,9 @@ plotExpression(deng_SCE, "Rhoa", x = "PC1",
                show_smooth = TRUE)
 ```
 
-<img src="27-pseudotime_files/figure-html/Rhoa-pc1-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/Rhoa-pc1-1} \end{center}
 
 __TSCAN__
 
@@ -707,7 +1095,9 @@ plotExpression(deng_SCE, "Rhoa", x = "pseudotime_order_tscan",
                show_smooth = TRUE)
 ```
 
-<img src="27-pseudotime_files/figure-html/Rhoa-tscan-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/Rhoa-tscan-1} \end{center}
 
 __Monocle__
 
@@ -717,7 +1107,9 @@ plotExpression(deng_SCE, "Rhoa", x = "pseudotime_monocle",
                show_smooth = TRUE)
 ```
 
-<img src="27-pseudotime_files/figure-html/Rhoa-monocle-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/Rhoa-monocle-1} \end{center}
 
 __Diffusion Map__
 
@@ -727,7 +1119,9 @@ plotExpression(deng_SCE, "Rhoa", x = "pseudotime_diffusionmap",
                show_smooth = TRUE)
 ```
 
-<img src="27-pseudotime_files/figure-html/Rhoa-diff-map-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/Rhoa-diff-map-1} \end{center}
 
 
 __SLICER__
@@ -738,7 +1132,9 @@ plotExpression(deng_SCE, "Rhoa", x = "pseudotime_slicer",
                show_smooth = TRUE)
 ```
 
-<img src="27-pseudotime_files/figure-html/Rhoa-slicer-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/Rhoa-slicer-1} \end{center}
 
 __Ouija__
 
@@ -748,7 +1144,9 @@ plotExpression(deng_SCE, "Rhoa", x = "pseudotime_ouija",
                show_smooth = TRUE)
 ```
 
-<img src="27-pseudotime_files/figure-html/Rhoa-ouija-1.png" width="672" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics{27-pseudotime_files/figure-latex/Rhoa-ouija-1} \end{center}
 
 How many of these methods outperform the naive approach of using the first principal component to represent pseudotime for these data?
 
@@ -804,53 +1202,53 @@ __Exercise 7__: Repeat the exercise using a subset of the genes, e.g. the set of
 ##   [7] AnnotationDbi_1.40.0   htmlwidgets_1.0        grid_3.4.3            
 ##  [10] combinat_0.0-8         Rtsne_0.13             munsell_0.4.3         
 ##  [13] codetools_0.2-15       statmod_1.4.30         colorspace_1.3-2      
-##  [16] fastICA_1.2-1          highr_0.6              rstudioapi_0.7        
-##  [19] robustbase_0.92-8      vcd_1.4-4              tensor_1.5            
-##  [22] VIM_4.7.0              TTR_0.23-3             labeling_0.3          
-##  [25] slam_0.1-42            splancs_2.01-40        tximport_1.6.0        
-##  [28] bbmle_1.0.20           GenomeInfoDbData_1.0.0 polyclip_1.6-1        
-##  [31] bit64_0.9-7            pheatmap_1.0.8         rhdf5_2.22.0          
-##  [34] rprojroot_1.3-2        coda_0.19-1            xfun_0.1              
-##  [37] R6_2.2.2               RcppEigen_0.3.3.3.1    locfit_1.5-9.1        
-##  [40] bitops_1.0-6           spatstat.utils_1.8-0   assertthat_0.2.0      
-##  [43] scales_0.5.0           nnet_7.3-12            beeswarm_0.2.3        
-##  [46] gtable_0.2.0           goftest_1.1-1          rlang_0.1.6           
-##  [49] MatrixModels_0.4-1     lazyeval_0.2.1         acepack_1.4.1         
-##  [52] checkmate_1.8.5        inline_0.3.14          yaml_2.1.16           
-##  [55] reshape2_1.4.3         abind_1.4-5            backports_1.1.2       
-##  [58] httpuv_1.3.5           Hmisc_4.1-1            tensorA_0.36          
-##  [61] tools_3.4.3            bookdown_0.6           cubature_1.3-11       
-##  [64] gplots_3.0.1           RColorBrewer_1.1-2     proxy_0.4-21          
-##  [67] MCMCglmm_2.25          plyr_1.8.4             progress_1.1.2        
-##  [70] base64enc_0.1-3        zlibbioc_1.24.0        purrr_0.2.4           
-##  [73] RCurl_1.95-4.10        densityClust_0.3       prettyunits_1.0.2     
-##  [76] rpart_4.1-10           alphahull_2.1          deldir_0.1-14         
-##  [79] reldist_1.6-6          viridis_0.5.0          cowplot_0.9.2         
-##  [82] zoo_1.8-1              ggrepel_0.7.0          cluster_2.0.6         
-##  [85] magrittr_1.5           data.table_1.10.4-3    SparseM_1.77          
-##  [88] lmtest_0.9-35          RANN_2.5.1             mime_0.5              
-##  [91] evaluate_0.10.1        xtable_1.8-2           XML_3.98-1.9          
-##  [94] smoother_1.1           pbkrtest_0.4-7         mclust_5.4            
-##  [97] gridExtra_2.3          biomaRt_2.34.2         HSMMSingleCell_0.112.0
-## [100] compiler_3.4.3         tibble_1.4.2           crayon_1.3.4          
-## [103] KernSmooth_2.23-15     minqa_1.2.4            R.oo_1.21.0           
-## [106] htmltools_0.3.6        mgcv_1.8-23            corpcor_1.6.9         
-## [109] Formula_1.2-2          tidyr_0.8.0            DBI_0.7               
-## [112] boot_1.3-18            car_2.1-6              cli_1.0.0             
-## [115] sgeostat_1.0-27        R.methodsS3_1.7.1      gdata_2.18.0          
-## [118] bindr_0.1              igraph_1.1.2           pkgconfig_2.0.1       
-## [121] foreign_0.8-67         laeken_0.4.6           sp_1.2-7              
-## [124] vipor_0.4.5            XVector_0.18.0         stringr_1.2.0         
-## [127] digest_0.6.15          spatstat.data_1.2-0    rmarkdown_1.8         
-## [130] htmlTable_1.11.2       edgeR_3.20.8           curl_3.1              
-## [133] shiny_1.0.5            gtools_3.5.0           quantreg_5.35         
-## [136] rjson_0.2.15           nloptr_1.0.4           nlme_3.1-129          
-## [139] viridisLite_0.3.0      limma_3.34.8           pillar_1.1.0          
-## [142] lattice_0.20-34        httr_1.3.1             DEoptimR_1.0-8        
-## [145] survival_2.40-1        glue_1.2.0             xts_0.10-1            
-## [148] qlcMatrix_0.9.5        FNN_1.1                spatstat_1.55-0       
-## [151] bit_1.1-12             class_7.3-14           stringi_1.1.6         
-## [154] blob_1.1.0             memoise_1.1.0          latticeExtra_0.6-28   
-## [157] caTools_1.17.1         dplyr_0.7.4            e1071_1.6-8           
-## [160] ape_5.0                tripack_1.3-8
+##  [16] fastICA_1.2-1          rstudioapi_0.7         robustbase_0.92-8     
+##  [19] vcd_1.4-4              tensor_1.5             VIM_4.7.0             
+##  [22] TTR_0.23-3             labeling_0.3           slam_0.1-42           
+##  [25] splancs_2.01-40        tximport_1.6.0         bbmle_1.0.20          
+##  [28] GenomeInfoDbData_1.0.0 polyclip_1.6-1         bit64_0.9-7           
+##  [31] pheatmap_1.0.8         rhdf5_2.22.0           rprojroot_1.3-2       
+##  [34] coda_0.19-1            xfun_0.1               R6_2.2.2              
+##  [37] RcppEigen_0.3.3.3.1    locfit_1.5-9.1         bitops_1.0-6          
+##  [40] spatstat.utils_1.8-0   assertthat_0.2.0       scales_0.5.0          
+##  [43] nnet_7.3-12            beeswarm_0.2.3         gtable_0.2.0          
+##  [46] goftest_1.1-1          rlang_0.1.6            MatrixModels_0.4-1    
+##  [49] lazyeval_0.2.1         acepack_1.4.1          checkmate_1.8.5       
+##  [52] inline_0.3.14          yaml_2.1.16            reshape2_1.4.3        
+##  [55] abind_1.4-5            backports_1.1.2        httpuv_1.3.5          
+##  [58] Hmisc_4.1-1            tensorA_0.36           tools_3.4.3           
+##  [61] bookdown_0.6           cubature_1.3-11        gplots_3.0.1          
+##  [64] RColorBrewer_1.1-2     proxy_0.4-21           MCMCglmm_2.25         
+##  [67] plyr_1.8.4             progress_1.1.2         base64enc_0.1-3       
+##  [70] zlibbioc_1.24.0        purrr_0.2.4            RCurl_1.95-4.10       
+##  [73] densityClust_0.3       prettyunits_1.0.2      rpart_4.1-10          
+##  [76] alphahull_2.1          deldir_0.1-14          reldist_1.6-6         
+##  [79] viridis_0.5.0          cowplot_0.9.2          zoo_1.8-1             
+##  [82] ggrepel_0.7.0          cluster_2.0.6          magrittr_1.5          
+##  [85] data.table_1.10.4-3    SparseM_1.77           lmtest_0.9-35         
+##  [88] RANN_2.5.1             mime_0.5               evaluate_0.10.1       
+##  [91] xtable_1.8-2           XML_3.98-1.9           smoother_1.1          
+##  [94] pbkrtest_0.4-7         mclust_5.4             gridExtra_2.3         
+##  [97] biomaRt_2.34.2         HSMMSingleCell_0.112.0 compiler_3.4.3        
+## [100] tibble_1.4.2           crayon_1.3.4           KernSmooth_2.23-15    
+## [103] minqa_1.2.4            R.oo_1.21.0            htmltools_0.3.6       
+## [106] mgcv_1.8-23            corpcor_1.6.9          Formula_1.2-2         
+## [109] tidyr_0.8.0            DBI_0.7                boot_1.3-18           
+## [112] car_2.1-6              cli_1.0.0              sgeostat_1.0-27       
+## [115] R.methodsS3_1.7.1      gdata_2.18.0           bindr_0.1             
+## [118] igraph_1.1.2           pkgconfig_2.0.1        foreign_0.8-67        
+## [121] laeken_0.4.6           sp_1.2-7               vipor_0.4.5           
+## [124] XVector_0.18.0         stringr_1.2.0          digest_0.6.15         
+## [127] spatstat.data_1.2-0    rmarkdown_1.8          htmlTable_1.11.2      
+## [130] edgeR_3.20.8           curl_3.1               shiny_1.0.5           
+## [133] gtools_3.5.0           quantreg_5.35          rjson_0.2.15          
+## [136] nloptr_1.0.4           nlme_3.1-129           viridisLite_0.3.0     
+## [139] limma_3.34.8           pillar_1.1.0           lattice_0.20-34       
+## [142] httr_1.3.1             DEoptimR_1.0-8         survival_2.40-1       
+## [145] glue_1.2.0             xts_0.10-1             qlcMatrix_0.9.5       
+## [148] FNN_1.1                spatstat_1.55-0        bit_1.1-12            
+## [151] class_7.3-14           stringi_1.1.6          blob_1.1.0            
+## [154] memoise_1.1.0          latticeExtra_0.6-28    caTools_1.17.1        
+## [157] dplyr_0.7.4            e1071_1.6-8            ape_5.0               
+## [160] tripack_1.3-8
 ```
