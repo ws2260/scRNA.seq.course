@@ -26,10 +26,14 @@ plotPCA(
 )
 ```
 
-<div class="figure" style="text-align: center">
-<img src="17-exprs-overview-reads_files/figure-html/expr-overview-pca-before-qc-reads1-1.png" alt="PCA plot of the tung data" width="90%" />
-<p class="caption">(\#fig:expr-overview-pca-before-qc-reads1)PCA plot of the tung data</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{17-exprs-overview-reads_files/figure-latex/expr-overview-pca-before-qc-reads1-1} 
+
+}
+
+\caption{PCA plot of the tung data}(\#fig:expr-overview-pca-before-qc-reads1)
+\end{figure}
 
 
 ```r
@@ -42,10 +46,14 @@ plotPCA(
 )
 ```
 
-<div class="figure" style="text-align: center">
-<img src="17-exprs-overview-reads_files/figure-html/expr-overview-pca-before-qc-reads2-1.png" alt="PCA plot of the tung data" width="90%" />
-<p class="caption">(\#fig:expr-overview-pca-before-qc-reads2)PCA plot of the tung data</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{17-exprs-overview-reads_files/figure-latex/expr-overview-pca-before-qc-reads2-1} 
+
+}
+
+\caption{PCA plot of the tung data}(\#fig:expr-overview-pca-before-qc-reads2)
+\end{figure}
 
 
 ```r
@@ -58,10 +66,14 @@ plotPCA(
 )
 ```
 
-<div class="figure" style="text-align: center">
-<img src="17-exprs-overview-reads_files/figure-html/expr-overview-pca-after-qc-reads-1.png" alt="PCA plot of the tung data" width="90%" />
-<p class="caption">(\#fig:expr-overview-pca-after-qc-reads)PCA plot of the tung data</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{17-exprs-overview-reads_files/figure-latex/expr-overview-pca-after-qc-reads-1} 
+
+}
+
+\caption{PCA plot of the tung data}(\#fig:expr-overview-pca-after-qc-reads)
+\end{figure}
 
 
 ```r
@@ -76,10 +88,14 @@ plotTSNE(
 )
 ```
 
-<div class="figure" style="text-align: center">
-<img src="17-exprs-overview-reads_files/figure-html/expr-overview-tsne-before-qc-reads-1.png" alt="tSNE map of the tung data" width="90%" />
-<p class="caption">(\#fig:expr-overview-tsne-before-qc-reads)tSNE map of the tung data</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{17-exprs-overview-reads_files/figure-latex/expr-overview-tsne-before-qc-reads-1} 
+
+}
+
+\caption{tSNE map of the tung data}(\#fig:expr-overview-tsne-before-qc-reads)
+\end{figure}
 
 
 ```r
@@ -94,20 +110,32 @@ plotTSNE(
 )
 ```
 
-<div class="figure" style="text-align: center">
-<img src="17-exprs-overview-reads_files/figure-html/expr-overview-tsne-after-qc-reads-1.png" alt="tSNE map of the tung data" width="90%" />
-<p class="caption">(\#fig:expr-overview-tsne-after-qc-reads)tSNE map of the tung data</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="17-exprs-overview-reads_files/figure-html/expr-overview-tsne-after-qc-exercise2-1-1.png" alt="tSNE map of the tung data (perplexity = 10)" width="90%" />
-<p class="caption">(\#fig:expr-overview-tsne-after-qc-exercise2-1)tSNE map of the tung data (perplexity = 10)</p>
-</div>
+{\centering \includegraphics[width=0.9\linewidth]{17-exprs-overview-reads_files/figure-latex/expr-overview-tsne-after-qc-reads-1} 
 
-<div class="figure" style="text-align: center">
-<img src="17-exprs-overview-reads_files/figure-html/expr-overview-tsne-after-qc-exercise2-2-1.png" alt="tSNE map of the tung data (perplexity = 200)" width="90%" />
-<p class="caption">(\#fig:expr-overview-tsne-after-qc-exercise2-2)tSNE map of the tung data (perplexity = 200)</p>
-</div>
+}
+
+\caption{tSNE map of the tung data}(\#fig:expr-overview-tsne-after-qc-reads)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{17-exprs-overview-reads_files/figure-latex/expr-overview-tsne-after-qc-exercise2-1-1} 
+
+}
+
+\caption{tSNE map of the tung data (perplexity = 10)}(\#fig:expr-overview-tsne-after-qc-exercise2-1)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{17-exprs-overview-reads_files/figure-latex/expr-overview-tsne-after-qc-exercise2-2-1} 
+
+}
+
+\caption{tSNE map of the tung data (perplexity = 200)}(\#fig:expr-overview-tsne-after-qc-exercise2-2)
+\end{figure}
 
 
 ```r
@@ -147,27 +175,27 @@ sessionInfo()
 ## loaded via a namespace (and not attached):
 ##  [1] viridis_0.5.0          httr_1.3.1             edgeR_3.20.8          
 ##  [4] bit64_0.9-7            viridisLite_0.3.0      shiny_1.0.5           
-##  [7] assertthat_0.2.0       highr_0.6              blob_1.1.0            
-## [10] vipor_0.4.5            GenomeInfoDbData_1.0.0 yaml_2.1.16           
-## [13] progress_1.1.2         pillar_1.1.0           RSQLite_2.0           
-## [16] backports_1.1.2        lattice_0.20-34        glue_1.2.0            
-## [19] limma_3.34.8           digest_0.6.15          XVector_0.18.0        
-## [22] colorspace_1.3-2       cowplot_0.9.2          htmltools_0.3.6       
-## [25] httpuv_1.3.5           Matrix_1.2-7.1         plyr_1.8.4            
-## [28] XML_3.98-1.9           pkgconfig_2.0.1        biomaRt_2.34.2        
-## [31] bookdown_0.6           zlibbioc_1.24.0        xtable_1.8-2          
-## [34] scales_0.5.0           Rtsne_0.13             tibble_1.4.2          
-## [37] lazyeval_0.2.1         magrittr_1.5           mime_0.5              
-## [40] memoise_1.1.0          evaluate_0.10.1        beeswarm_0.2.3        
-## [43] shinydashboard_0.6.1   tools_3.4.3            data.table_1.10.4-3   
-## [46] prettyunits_1.0.2      stringr_1.2.0          munsell_0.4.3         
-## [49] locfit_1.5-9.1         AnnotationDbi_1.40.0   bindrcpp_0.2          
-## [52] compiler_3.4.3         rlang_0.1.6            rhdf5_2.22.0          
-## [55] grid_3.4.3             RCurl_1.95-4.10        tximport_1.6.0        
-## [58] rjson_0.2.15           labeling_0.3           bitops_1.0-6          
-## [61] rmarkdown_1.8          gtable_0.2.0           DBI_0.7               
-## [64] reshape2_1.4.3         R6_2.2.2               gridExtra_2.3         
-## [67] dplyr_0.7.4            bit_1.1-12             bindr_0.1             
-## [70] rprojroot_1.3-2        ggbeeswarm_0.6.0       stringi_1.1.6         
-## [73] Rcpp_0.12.15           xfun_0.1
+##  [7] assertthat_0.2.0       blob_1.1.0             vipor_0.4.5           
+## [10] GenomeInfoDbData_1.0.0 yaml_2.1.16            progress_1.1.2        
+## [13] pillar_1.1.0           RSQLite_2.0            backports_1.1.2       
+## [16] lattice_0.20-34        glue_1.2.0             limma_3.34.8          
+## [19] digest_0.6.15          XVector_0.18.0         colorspace_1.3-2      
+## [22] cowplot_0.9.2          htmltools_0.3.6        httpuv_1.3.5          
+## [25] Matrix_1.2-7.1         plyr_1.8.4             XML_3.98-1.9          
+## [28] pkgconfig_2.0.1        biomaRt_2.34.2         bookdown_0.6          
+## [31] zlibbioc_1.24.0        xtable_1.8-2           scales_0.5.0          
+## [34] Rtsne_0.13             tibble_1.4.2           lazyeval_0.2.1        
+## [37] magrittr_1.5           mime_0.5               memoise_1.1.0         
+## [40] evaluate_0.10.1        beeswarm_0.2.3         shinydashboard_0.6.1  
+## [43] tools_3.4.3            data.table_1.10.4-3    prettyunits_1.0.2     
+## [46] stringr_1.2.0          munsell_0.4.3          locfit_1.5-9.1        
+## [49] AnnotationDbi_1.40.0   bindrcpp_0.2           compiler_3.4.3        
+## [52] rlang_0.1.6            rhdf5_2.22.0           grid_3.4.3            
+## [55] RCurl_1.95-4.10        tximport_1.6.0         rjson_0.2.15          
+## [58] labeling_0.3           bitops_1.0-6           rmarkdown_1.8         
+## [61] gtable_0.2.0           DBI_0.7                reshape2_1.4.3        
+## [64] R6_2.2.2               gridExtra_2.3          dplyr_0.7.4           
+## [67] bit_1.1-12             bindr_0.1              rprojroot_1.3-2       
+## [70] ggbeeswarm_0.6.0       stringi_1.1.6          Rcpp_0.12.15          
+## [73] xfun_0.1
 ```

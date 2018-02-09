@@ -247,7 +247,9 @@ reds
 barplot(c(1,1,1), col=reds, names=c("by_name", "by_rgb", "by_hsv"))
 ```
 
-<img src="09-L3-intro-to-R_files/figure-html/unnamed-chunk-16-1.png" width="90%" style="display: block; margin: auto;" />
+
+
+\begin{center}\includegraphics[width=0.9\linewidth]{09-L3-intro-to-R_files/figure-latex/unnamed-chunk-16-1} \end{center}
 
 ### Logical
 
@@ -562,7 +564,7 @@ ll
 ## $even_a_function
 ## function (..., deparse.level = 1) 
 ## .Internal(cbind(deparse.level, ...))
-## <bytecode: 0x7fd8002c4978>
+## <bytecode: 0x7f3bf97ae978>
 ## <environment: namespace:base>
 ```
 
