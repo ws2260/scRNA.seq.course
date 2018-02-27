@@ -309,7 +309,7 @@ __Exercise 8__: Compare the results between `tSNE+kmeans` and the original publi
 __Our solution__:
 
 ```
-## [1] 0.3976772
+## [1] 0.3701639
 ```
 
 As you may have noticed, both `pcaReduce` and `tSNE+kmeans` are stochastic

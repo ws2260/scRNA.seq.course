@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Jennifer Westoby (Jenni_Westoby), Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2018-02-07">
+<meta name="date" content="2018-02-27">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -670,7 +670,7 @@ Figure 8.8: tSNE map of the patient data with 8 colored clusters, identified by 
 <p><strong>Exercise 7</strong>: Make the same plot for <span class="math inline">\(k=10\)</span>.</p>
 <p><strong>Exercise 8</strong>: Compare the results between <code>tSNE+kmeans</code> and the original publication cell types. Can the results be improved by changing the <code>perplexity</code> parameter?</p>
 <p><strong>Our solution</strong>:</p>
-<pre><code>## [1] 0.3976772</code></pre>
+<pre><code>## [1] 0.3701639</code></pre>
 <p>As you may have noticed, both <code>pcaReduce</code> and <code>tSNE+kmeans</code> are stochastic and give different results every time they are run. To get a better overview of the solutions, we need to run the methods multiple times. <code>SC3</code> is also stochastic, but thanks to the consensus step, it is more robust and less likely to produce different outcomes.</p>
 </div>
 <div id="snn-cliq-1" class="section level3">
@@ -2365,12 +2365,12 @@ segerstolpe &lt;-<span class="st"> </span><span class="kw">indexCluster</span>(s
 <p>We can also visualize these tables using a <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey">Sankey diagram</a>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">getSankey</span>(<span class="kw">colData</span>(muraro)<span class="op">$</span>cell_type1,  muraro_to_seger<span class="op">$</span>scmap_cluster_labs[,<span class="dv">1</span>], <span class="dt">plot_height=</span><span class="dv">400</span>))</code></pre></div>
 <!-- Sankey generated in R 3.4.3 by googleVis 0.6.2 package -->
-<!-- Wed Feb  7 12:08:25 2018 -->
+<!-- Tue Feb 27 20:01:58 2018 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID7e777cba2aa () {
+function gvisDataSankeyIDdd7466886e9 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2568,8 +2568,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID7e777cba2aa() {
-var data = gvisDataSankeyID7e777cba2aa();
+function drawChartSankeyIDdd7466886e9() {
+var data = gvisDataSankeyIDdd7466886e9();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
@@ -2588,7 +2588,7 @@ options["sankey"] = {
             };
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID7e777cba2aa')
+    document.getElementById('SankeyIDdd7466886e9')
     );
     chart.draw(data,options);
     
@@ -2612,9 +2612,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID7e777cba2aa);
+callbacks.push(drawChartSankeyIDdd7466886e9);
 })();
-function displayChartSankeyID7e777cba2aa() {
+function displayChartSankeyIDdd7466886e9() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2637,9 +2637,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID7e777cba2aa"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyIDdd7466886e9"></script>
 <!-- divChart -->
-<div id="SankeyID7e777cba2aa" style="width: 400; height: 400;">
+<div id="SankeyIDdd7466886e9" style="width: 400; height: 400;">
 
 </div>
 <p><strong>Exercise</strong> How many of the previously unclassified cells would be be able to assign to cell-types using scmap?</p>

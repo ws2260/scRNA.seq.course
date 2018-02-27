@@ -162,10 +162,10 @@ seuset <- RunPCA(
 ## [1] ""
 ## [1] ""
 ## [1] "PC3"
+## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
+## [1] ""
 ## [1] "Efnb2"         "Gm9125"        "Pabpn1"        "Mad2l1bp"     
 ## [5] "1600025M17Rik"
-## [1] ""
-## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
 ## [1] ""
 ## [1] ""
 ## [1] "PC4"
@@ -202,10 +202,10 @@ PrintPCA(object = seuset, pcs.print = 1:5, genes.print = 5, use.full = FALSE)
 ## [1] ""
 ## [1] ""
 ## [1] "PC3"
+## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
+## [1] ""
 ## [1] "Efnb2"         "Gm9125"        "Pabpn1"        "Mad2l1bp"     
 ## [5] "1600025M17Rik"
-## [1] ""
-## [1] "Psrc1"  "Ninj2"  "Gja4"   "Tdrd12" "Wdr76" 
 ## [1] ""
 ## [1] ""
 ## [1] "PC4"
@@ -315,7 +315,7 @@ PrintFindClustersParams(object = seuset)
 ```
 
 ```
-## Parameters used in latest FindClusters calculation run on: 2018-02-07 13:16:03
+## Parameters used in latest FindClusters calculation run on: 2018-02-27 21:15:36
 ## =============================================================================
 ## Resolution: 1
 ## -----------------------------------------------------------------------------
@@ -504,5 +504,5 @@ __Exercise__: Compare marker genes provided by `Seurat` and `SC3`.
 ## [121] grid_3.4.3             rpart_4.1-10           timeDate_3042.101     
 ## [124] tidyr_0.8.0            class_7.3-14           rmarkdown_1.8         
 ## [127] segmented_0.5-3.0      Rtsne_0.13             numDeriv_2016.8-1     
-## [130] scatterplot3d_0.3-40   lubridate_1.7.1        base64enc_0.1-3
+## [130] scatterplot3d_0.3-40   lubridate_1.7.2        base64enc_0.1-3
 ```
