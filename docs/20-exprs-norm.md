@@ -436,7 +436,18 @@ plotRLE(
 
 \caption{Cell-wise RLE of the tung data}(\#fig:norm-ours-rle-scran)
 \end{figure}
+scran sometimes calculates negative or zero size factors. These will completely distort the normalized expression matrix. 
+We can check the size factors scran has computed like so:
 
+```r
+summary(sizeFactors(umi.qc))
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.4646  0.7768  0.9562  1.0000  1.1444  3.4348
+```
+For this dataset all the size factors are reasonable so we are done. If you find scran has calculated negative size factors try increasing the cluster and pool sizes until they are all positive.
 
 ### Downsampling 
 

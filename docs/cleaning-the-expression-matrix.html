@@ -25,7 +25,7 @@
 <meta name="author" content="Vladimir Kiselev (wikiselev), Tallulah Andrews, Jennifer Westoby (Jenni_Westoby), Davis McCarthy (davisjmcc), Maren Büttner (marenbuettner) and Martin Hemberg (m_hemberg)">
 
 
-<meta name="date" content="2018-02-07">
+<meta name="date" content="2018-02-27">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1919,6 +1919,11 @@ Figure 7.45: PCA plot of the tung data after LSF normalisation
 Figure 7.46: Cell-wise RLE of the tung data
 </p>
 </div>
+<p>scran sometimes calculates negative or zero size factors. These will completely distort the normalized expression matrix. We can check the size factors scran has computed like so:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">sizeFactors</span>(umi.qc))</code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.4646  0.7768  0.9562  1.0000  1.1444  3.4348</code></pre>
+<p>For this dataset all the size factors are reasonable so we are done. If you find scran has calculated negative size factors try increasing the cluster and pool sizes until they are all positive.</p>
 </div>
 <div id="downsampling-1" class="section level3">
 <h3><span class="header-section-number">7.8.7</span> Downsampling</h3>

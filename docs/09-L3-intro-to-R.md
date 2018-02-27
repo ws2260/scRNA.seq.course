@@ -161,7 +161,7 @@ b
 ## [1] 5
 ```
 
-In addition to standard alphanumeric characters, strings can also store various special characters. Special characters are identified using a backlash followed by a single character, the most relevant are the special character for tab : "\t" and new line : "\n". To demonstrate the these special characters lets concatenate (cat) together two strings with these characters separating (sep) them:
+In addition to standard alphanumeric characters, strings can also store various special characters. Special characters are identified using a backlash followed by a single character, the most relevant are the special character for tab : `\t` and new line : `\n`. To demonstrate the these special characters lets concatenate (cat) together two strings with these characters separating (sep) them:
 
 ```r
 cat("Hello", "World", sep= " ")
@@ -187,7 +187,7 @@ cat("Hello", "World", sep= "\n")
 ## Hello
 ## World
 ```
-Note that special characters work differently in different functions. For instance the "paste" function does the same thing as "cat" but does not recognize special characters.
+Note that special characters work differently in different functions. For instance the `paste` function does the same thing as `cat` but does not recognize special characters.
 
 
 ```r
@@ -214,7 +214,7 @@ paste("Hello", "World", sep= "\n")
 ## [1] "Hello\nWorld"
 ```
 
-Single or double backslash is also used as an "escape" character to turn off special characters or allow quotation marks to be included in strings:
+Single or double backslash is also used as an `escape` character to turn off special characters or allow quotation marks to be included in strings:
 
 
 ```r
@@ -231,7 +231,7 @@ Special characters are generally only used in pattern matching, and reading/writ
 dat = read.delim("file.tsv", sep="\t")
 ```
 
-Another special type of character data are colours. Colours can be specified in three main ways: by name from those [available](http://bxhorn.com/r-color-tables/), by red, green, blue values using the "rgb" function, and by hue (colour), saturation (colour vs white) and value (colour/white vs black) using the "hsv" function. By default rgb and hsv expect three values in 0-1 with an optional fourth value for transparency. Alternatively, sets of predetermined colours with useful properties can be loaded from many different packages with [RColorBrewer](http://colorbrewer2.org/) being one of the most popular.
+Another special type of character data are colours. Colours can be specified in three main ways: by name from those [available](http://bxhorn.com/r-color-tables/), by red, green, blue values using the `rgb` function, and by hue (colour), saturation (colour vs white) and value (colour/white vs black) using the `hsv` function. By default rgb and hsv expect three values in 0-1 with an optional fourth value for transparency. Alternatively, sets of predetermined colours with useful properties can be loaded from many different packages with [RColorBrewer](http://colorbrewer2.org/) being one of the most popular.
 
 
 ```r
@@ -253,7 +253,7 @@ barplot(c(1,1,1), col=reds, names=c("by_name", "by_rgb", "by_hsv"))
 
 ### Logical
 
-The "logical" class stores boolean truth values, i.e. TRUE and FALSE. It is used for storing the results of logical operations and conditional statements will be coerced to this class. Most other data-types can be coerced to boolean without triggering (or "throwing") error messages, which may cause unexpected behaviour.
+The `logical` class stores boolean truth values, i.e. TRUE and FALSE. It is used for storing the results of logical operations and conditional statements will be coerced to this class. Most other data-types can be coerced to boolean without triggering (or "throwing") error messages, which may cause unexpected behaviour.
 
 
 ```r
@@ -368,14 +368,14 @@ as.numeric(as.character(x))
 ## [1] 20 25 23 38 20 40 25 30
 ```
 
-To make R read text as character data instead of factors set the environment option "stringsAsFactors=FALSE". This must be done at the start of each R session.
+To make R read text as character data instead of factors set the environment option `stringsAsFactors=FALSE`. This must be done at the start of each R session.
 
 
 ```r
 options(stringsAsFactors=FALSE)
 ```
 __Exercise__
-How would you use factors to create a vector of colours for an arbitrarily long vector of fruits like "str_vector" above?
+How would you use factors to create a vector of colours for an arbitrarily long vector of fruits like `str_vector` above?
 __Answer__
 
 
@@ -437,9 +437,9 @@ class(x)
 ```
 ## [1] "character"
 ```
-Here we tried to put character, numeric and logical data into a single vector so all the values were coerced to "character" data.
+Here we tried to put character, numeric and logical data into a single vector so all the values were coerced to `character` data.
 
-A "matrix" is the two dimensional version of a vector, it also requires all data to be of the same type. 
+A `matrix` is the two dimensional version of a vector, it also requires all data to be of the same type. 
 If we combine a character vector and a numeric vector into a matrix, all the data will be coerced to characters:
 
 
@@ -517,7 +517,7 @@ class(z[,1])
 ## [1] "factor"
 ```
 
-Another difference between matrices and dataframes is the ability to select columns using the "$" operator:
+Another difference between matrices and dataframes is the ability to select columns using the `$` operator:
 
 
 ```r
@@ -525,7 +525,7 @@ m$x # throws an error
 z$x # ok
 ```
 
-The final basic data structure is the "list". Lists allow data of different types and different lengths to be stored in a single object. Each element of a list can be any other R object : data of any type, any data structure, even other lists or functions. 
+The final basic data structure is the `list`. Lists allow data of different types and different lengths to be stored in a single object. Each element of a list can be any other R object : data of any type, any data structure, even other lists or functions. 
 
 
 ```r
@@ -564,7 +564,7 @@ ll
 ## $even_a_function
 ## function (..., deparse.level = 1) 
 ## .Internal(cbind(deparse.level, ...))
-## <bytecode: 0x7f3bf97ae978>
+## <bytecode: 0x55e4ded2f378>
 ## <environment: namespace:base>
 ```
 
@@ -572,4 +572,4 @@ Lists are most commonly used when returning a large number of results from a fun
 
 ## More information
 
-You can get more information about any R commands relevant to these datatypes using by typing "?function" in an interactive session.
+You can get more information about any R commands relevant to these datatypes using by typing `?function` in an interactive session.
